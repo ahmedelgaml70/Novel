@@ -14,12 +14,35 @@ DEFAULT_FIXTURE = ROOT / "tests" / "fixtures" / "entity_match_cases.json"
 DEFAULT_REPORT = ROOT / "data" / "reports" / "entity_match_benchmark.md"
 
 
+def current_normalize(value: str) -> str:
+    """Mirror scripts/evidence_collectors.py production normalization."""
+    value = (value or "").lower()
+    value = re.sub(r"[^\w\s]", " ", value, flags=re.UNICODE)
+    return " ".join(value.split())
+
+
 def normalize(value: str) -> str:
+    """Candidate normalization used only by experimental matchers B/C."""
     value = unicodedata.normalize("NFKD", value or "")
     value = "".join(ch for ch in value if not unicodedata.combining(ch)).lower()
     value = value.replace("&", " and ")
     value = re.sub(r"[^a-z0-9\s]", " ", value)
     return " ".join(value.split())
+
+
+def current_normalize_author(value: str) -> str:
+    value = current_normalize(value)
+    value = re.sub(r"\b\d{3,4}\b", " ", value)
+    return " ".join(value.split())
+
+
+def current_author_compatible(expected: str, actual: str) -> bool:
+    e = set(current_normalize_author(expected).split())
+    a = set(current_normalize_author(actual).split())
+    if not e or not a:
+        return False
+    overlap = len(e & a)
+    return overlap >= 2 and overlap / max(1, min(len(e), len(a))) >= 0.8
 
 
 def normalize_author(value: str) -> str:
@@ -59,9 +82,9 @@ def suspicious_container_or_partial(value: str) -> bool:
 def current_strict(case: dict) -> str:
     c = case["candidate"]
     e = case["external"]
-    if normalize(c["title"]) != normalize(e["title"]):
+    if current_normalize(c["title"]) != current_normalize(e["title"]):
         return "NO_MATCH"
-    if any(author_compatible(c["author"], a) for a in e.get("authors", [])):
+    if any(current_author_compatible(c["author"], a) for a in e.get("authors", [])):
         return "STRONG"
     return "NO_MATCH"
 
