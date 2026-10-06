@@ -9,7 +9,7 @@ It currently does four things:
 3. perform conservative deterministic triage;
 4. produce a Markdown report.
 
-It deliberately does **not** yet claim final novel identity, rights approval, full-text integrity, or creative ranking.
+It now includes an evidence-backed literary-form resolver. It still does **not** claim rights approval, full-text integrity, or creative ranking.
 
 ## Requirements
 
@@ -29,6 +29,8 @@ Then run the included fixture through the complete current slice:
 ```bash
 make scout-sample
 ```
+
+The sample loads **synthetic test evidence only** to exercise the resolver. It is not production bibliographic research.
 
 Outputs are placed under `data/`, which is ignored by Git.
 
@@ -75,6 +77,42 @@ python3 scripts/scout_library.py sync --catalog /path/to/pg_catalog.csv
 
 This conservatism is intentional. The next slice resolves literary form using independent evidence rather than making the catalog do a job it cannot reliably do.
 
+## Literary-form resolution
+
+After a real catalog sync:
+
+```bash
+make scout-materialize
+```
+
+This creates explicit `works` and `edition_sources` entities.
+
+Evidence is stored as claims attached to a Work. A production evidence item records:
+- provider,
+- authority level,
+- independence key,
+- source locator,
+- claim,
+- optional supporting text/raw record.
+
+Once evidence collection adapters are added, resolve stored evidence with:
+
+```bash
+make scout-resolve
+make scout-form-report
+```
+
+Current policy requires two independent high-quality sources agreeing on the same literary form and no high-quality conflict.
+
+Possible form states:
+- `NOVEL` — eligible on literary form;
+- `NOVELLA` — resolved but excluded from this niche;
+- `NOT_NOVEL` — resolved incompatible literary form;
+- `DISPUTED` — high-quality evidence conflicts;
+- `UNKNOWN` — insufficient evidence.
+
+The LLM is not treated as a bibliographic source.
+
 ## SQLite ownership
 
 The database is operational state, not source code. It is stored under `data/` and is not committed.
@@ -83,4 +121,4 @@ Git stores code, rules/config, tests, fixtures, schemas, decisions, and document
 
 ## Next planned slice
 
-Step 1B.2 adds evidence-backed **novel-form resolution** and explicit Work-vs-Edition records, then source availability and rights precheck.
+Step 1B.3 adds real evidence collection/enrichment adapters, then verifies complete source availability and begins the rights precheck for the **exact edition/source** we would use.
