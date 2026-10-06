@@ -18,6 +18,7 @@ import sys
 import time
 import urllib.parse
 import urllib.request
+import unicodedata
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -26,7 +27,7 @@ DEFAULT_CONFIG = ROOT / "config" / "library_miner.json"
 DEFAULT_DB = ROOT / "data" / "novel_scout.sqlite3"
 DEFAULT_CACHE = ROOT / "data" / "cache" / "evidence"
 
-PARSER_VERSION = "evidence-collectors-v0.1"
+PARSER_VERSION = "evidence-collectors-v0.2"
 
 
 def utc_now() -> str:
@@ -40,16 +41,53 @@ def load_config(path: Path) -> dict:
 
 
 def normalize_text(value: str) -> str:
-    value = (value or "").lower()
+    value = unicodedata.normalize("NFKD", value or "")
+    value = "".join(ch for ch in value if not unicodedata.combining(ch)).lower()
+    value = value.replace("&", " and ")
     value = re.sub(r"[^\w\s]", " ", value, flags=re.UNICODE)
     return " ".join(value.split())
 
 
 def normalize_author(value: str) -> str:
     value = normalize_text(value)
-    # Keep the full normalized string, but remove common date fragments.
     value = re.sub(r"\b\d{3,4}\b", " ", value)
     return " ".join(value.split())
+
+
+def author_compatible(expected: str, actual: str) -> bool:
+    expected_tokens = set(normalize_author(expected).split())
+    actual_tokens = set(normalize_author(actual).split())
+    if not expected_tokens or not actual_tokens:
+        return False
+    overlap = len(expected_tokens & actual_tokens)
+    return (
+        overlap >= 2
+        and overlap / max(1, min(len(expected_tokens), len(actual_tokens))) >= 0.8
+    )
+
+
+def title_core(value: str) -> str:
+    head = re.split(r"\s*[:;]\s*", value or "", maxsplit=1)[0]
+    return normalize_text(head)
+
+
+def suspicious_relationship_title(value: str) -> bool:
+    normalized = normalize_text(value)
+    markers = (
+        "and other stories",
+        "other stories",
+        "selected stories",
+        "collected stories",
+        "a play",
+        "play founded on",
+        "adapted from",
+        "based on",
+        "annotated for",
+        "backgrounds and sources",
+        "essays in criticism",
+        "criticism",
+    )
+    return any(marker in normalized for marker in markers)
 
 
 def stable_hash(*parts: str) -> str:
@@ -86,6 +124,22 @@ def open_db(path: Path) -> sqlite3.Connection:
             evidence_items INTEGER NOT NULL DEFAULT 0,
             status TEXT NOT NULL
         );
+
+        CREATE TABLE IF NOT EXISTS record_matches (
+            match_id TEXT PRIMARY KEY,
+            work_id TEXT NOT NULL,
+            provider TEXT NOT NULL,
+            source_locator TEXT NOT NULL,
+            match_status TEXT NOT NULL,
+            match_basis_json TEXT NOT NULL,
+            record_title TEXT NOT NULL,
+            record_authors_json TEXT NOT NULL,
+            raw_json TEXT NOT NULL,
+            collected_at TEXT NOT NULL
+        );
+
+        CREATE INDEX IF NOT EXISTS idx_record_matches_work
+            ON record_matches(work_id, provider, match_status);
         """
     )
     return con
@@ -139,28 +193,102 @@ def primary_author(work: sqlite3.Row) -> str:
     return authors[0] if authors else ""
 
 
-def strong_match(work: sqlite3.Row, title: str, authors: list[str]) -> tuple[bool, list[str]]:
-    """Conservative v0.1 entity matcher: exact normalized title + compatible author."""
-    expected_title = work["normalized_title"]
+def match_record(
+    work: sqlite3.Row, title: str, authors: list[str]
+) -> tuple[str, list[str]]:
+    """Hybrid v0.2 matcher.
+
+    STRONG is intentionally narrow and is the only state allowed to attach
+    bibliographic evidence automatically. Plausible subtitle/composite/
+    derivative relationships become REVIEW instead of being discarded or
+    silently accepted.
+    """
+    expected_author = primary_author(work)
+    author_ok = any(author_compatible(expected_author, a) for a in authors if a)
+    if not author_ok:
+        return "NO_MATCH", []
+
+    expected_title = normalize_text(work["canonical_title"])
     got_title = normalize_text(title)
-    basis = []
-    if got_title != expected_title:
-        return False, basis
-    basis.append("exact_normalized_title")
+    basis = ["compatible_author"]
 
-    expected_author = normalize_author(primary_author(work))
-    if not expected_author:
-        return False, basis
+    if expected_title == got_title:
+        return "STRONG", ["exact_normalized_title", *basis]
 
-    author_norms = [normalize_author(a) for a in authors if a]
-    if not any(
-        a == expected_author
-        or (a and expected_author and (a in expected_author or expected_author in a))
-        for a in author_norms
+    expected_core = title_core(work["canonical_title"])
+    got_core = title_core(title)
+    overlap = set(expected_title.split()) & set(got_title.split())
+
+    if suspicious_relationship_title(title):
+        if expected_core == got_core or len(overlap) >= 2:
+            return "REVIEW", ["relationship_marker", *basis]
+        return "NO_MATCH", []
+
+    if (
+        expected_core == got_core
+        or expected_core == got_title
+        or expected_title == got_core
+        or len(overlap) >= 2
     ):
-        return False, basis
-    basis.append("compatible_author")
-    return True, basis
+        return "REVIEW", ["title_variant_or_overlap", *basis]
+
+    return "NO_MATCH", []
+
+
+def strong_match(
+    work: sqlite3.Row, title: str, authors: list[str]
+) -> tuple[bool, list[str]]:
+    """Backward-compatible wrapper used by older tests/callers."""
+    status, basis = match_record(work, title, authors)
+    return status == "STRONG", basis
+
+
+def store_record_match(
+    con: sqlite3.Connection,
+    work_id: str,
+    provider: str,
+    source_locator: str,
+    status: str,
+    basis: list[str],
+    title: str,
+    authors: list[str],
+    raw: dict,
+) -> str:
+    match_id = stable_hash(
+        "record_match",
+        work_id,
+        provider,
+        source_locator,
+        normalize_text(title),
+        "|".join(normalize_author(a) for a in authors),
+    )[:32]
+    con.execute(
+        """
+        INSERT INTO record_matches(
+            match_id, work_id, provider, source_locator, match_status,
+            match_basis_json, record_title, record_authors_json, raw_json,
+            collected_at
+        ) VALUES(?,?,?,?,?,?,?,?,?,?)
+        ON CONFLICT(match_id) DO UPDATE SET
+            match_status=excluded.match_status,
+            match_basis_json=excluded.match_basis_json,
+            raw_json=excluded.raw_json,
+            collected_at=excluded.collected_at
+        """,
+        (
+            match_id,
+            work_id,
+            provider,
+            source_locator,
+            status,
+            json.dumps(basis, ensure_ascii=False),
+            title,
+            json.dumps(authors, ensure_ascii=False),
+            json.dumps(raw, ensure_ascii=False, sort_keys=True),
+            utc_now(),
+        ),
+    )
+    return match_id
 
 
 def cache_key(provider: str, work: sqlite3.Row) -> str:
@@ -323,14 +451,26 @@ def collect_openlibrary_for_work(
         body = body_override
 
     matched = 0
+    strong_matches = 0
+    review_matches = 0
     inserted = 0
     for doc in parse_openlibrary(body):
         title = doc.get("title") or ""
         authors = doc.get("author_name") or []
-        ok, basis = strong_match(work, title, authors)
-        if not ok:
+        status, basis = match_record(work, title, authors)
+        if status == "NO_MATCH":
             continue
         matched += 1
+        strong_matches += int(status == "STRONG")
+        review_matches += int(status == "REVIEW")
+        locator = f"https://openlibrary.org{doc.get('key','')}" if doc.get("key") else url
+        store_record_match(
+            con, work["work_id"], provider, locator, status, basis,
+            title, authors, doc,
+        )
+        if status != "STRONG":
+            continue
+
         subjects = doc.get("subject") or []
         claims = []
         for subject in subjects:
@@ -338,7 +478,6 @@ def collect_openlibrary_for_work(
             if claim and claim not in claims:
                 claims.append(claim)
         for claim in claims:
-            locator = f"https://openlibrary.org{doc.get('key','')}" if doc.get("key") else url
             insert_evidence(
                 con,
                 work["work_id"],
@@ -347,11 +486,16 @@ def collect_openlibrary_for_work(
                 "bibliographic",
                 locator,
                 next((s for s in subjects if explicit_form_claim(s) == claim), claim),
-                {"match_basis": basis, "record": doc},
+                {"match_status": status, "match_basis": basis, "record": doc},
             )
             inserted += 1
     con.commit()
-    return {"matched_records": matched, "evidence_items": inserted}
+    return {
+        "matched_records": matched,
+        "strong_matches": strong_matches,
+        "review_matches": review_matches,
+        "evidence_items": inserted,
+    }
 
 
 def build_loc_url(work: sqlite3.Row, config: dict) -> str:
@@ -436,20 +580,31 @@ def collect_loc_for_work(
         body = body_override
 
     matched = 0
+    strong_matches = 0
+    review_matches = 0
     inserted = 0
     for record in parse_loc_records(body):
-        ok, basis = strong_match(work, record["title"], record["authors"])
-        if not ok:
+        status, basis = match_record(work, record["title"], record["authors"])
+        if status == "NO_MATCH":
             continue
         matched += 1
+        strong_matches += int(status == "STRONG")
+        review_matches += int(status == "REVIEW")
+        lccn = record["lccn"][0].strip() if record["lccn"] else ""
+        locator = f"https://lccn.loc.gov/{urllib.parse.quote(lccn)}" if lccn else url
+        store_record_match(
+            con, work["work_id"], provider, locator, status, basis,
+            record["title"], record["authors"], record,
+        )
+        if status != "STRONG":
+            continue
+
         claims = []
         for term in record["forms"]:
             claim = explicit_form_claim(term)
             if claim and claim not in claims:
                 claims.append(claim)
         for claim in claims:
-            lccn = record["lccn"][0].strip() if record["lccn"] else ""
-            locator = f"https://lccn.loc.gov/{urllib.parse.quote(lccn)}" if lccn else url
             insert_evidence(
                 con,
                 work["work_id"],
@@ -458,11 +613,16 @@ def collect_loc_for_work(
                 "authoritative",
                 locator,
                 next((t for t in record["forms"] if explicit_form_claim(t) == claim), claim),
-                {"match_basis": basis, "record": record},
+                {"match_status": status, "match_basis": basis, "record": record},
             )
             inserted += 1
     con.commit()
-    return {"matched_records": matched, "evidence_items": inserted}
+    return {
+        "matched_records": matched,
+        "strong_matches": strong_matches,
+        "review_matches": review_matches,
+        "evidence_items": inserted,
+    }
 
 
 def collect(
