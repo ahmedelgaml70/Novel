@@ -1,0 +1,24 @@
+{
+  "numFound": 1,
+  "docs": [
+    {
+      "key": "/works/OL24638W",
+      "title": "Frankenstein; Or, The Modern Prometheus",
+      "author_name": [
+        "Shelley, Mary Wollstonecraft, 1797-1851"
+      ],
+      "first_publish_year": 1818,
+      "subject": [
+        "Novels",
+        "Gothic fiction",
+        "Science fiction"
+      ],
+      "lccn": [
+        "16001102"
+      ],
+      "edition_key": [
+        "OL20449252M"
+      ]
+    }
+  ]
+}
