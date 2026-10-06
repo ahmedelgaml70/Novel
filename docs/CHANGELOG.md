@@ -61,6 +61,17 @@ This file records meaningful changes to the Novel machine. Design rationale belo
 - Synthetic results: current strict 5 true-strong / 8 true-miss / 0 false-strong; subtitle-tolerant 10 / 3 / 0; identifier-hybrid 7 true-strong + 3 true-review / 3 true-miss / 0 false-strong.
 - No production matcher change was made; real provider-record benchmarking is required first.
 
+### Entity matcher v0.2 promoted
+- Added a 13-record real-provider benchmark using preserved Open Library and Library of Congress metadata.
+- Introduced relationship ground truth: direct edition, augmented edition, composite containing the Work, derivative adaptation, and secondary work about the Work.
+- Real benchmark results:
+  - current strict: 6 direct strong, 0 unsafe strong, 7 unsafe discarded;
+  - subtitle-tolerant: 6 direct strong, **2 unsafe strong** — failed safety gate;
+  - hybrid: 6 direct strong, **0 unsafe strong**, 5 unsafe review, 2 unsafe no-match.
+- Promoted the hybrid three-state matcher to production collectors.
+- Added `record_matches` persistence for reviewable relationships.
+- `REVIEW` records cannot create literary-form evidence.
+
 ### Verification
 - Existing Library Miner fixture tests: **3/3 passing**.\n- New literary-form resolver tests: **5/5 passing**.
 - Sample ingest: **7 records**, producing 4 `TYPE_REVIEW`, 2 `REJECT_OBVIOUS_NON_NOVEL`, and 1 `REJECT_NON_TEXT`.
