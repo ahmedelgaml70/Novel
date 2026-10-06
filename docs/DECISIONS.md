@@ -184,6 +184,26 @@ Current automatic-resolution policy:
 
 This threshold is a conservative operational policy, not a universal bibliographic law. It may be revised if testing shows systematic false positives or false negatives.
 
+## D-015 — Bibliographic evidence collectors
+
+**Status:** Accepted
+
+Literary-form evidence collection uses multiple independent bibliographic ecosystems and a separate entity-match gate.
+
+Accepted v1 policy:
+
+1. **Library of Congress SRU/MARC** is the first authoritative form-evidence adapter.
+2. **Open Library** is a targeted, cached bibliographic adapter; its evidence counts only when the matched record contains an explicit usable literary-form signal.
+3. **Wikidata** may later provide supporting identity/form evidence but does not count toward the two-high-quality-source threshold in v1.
+4. **Project Gutenberg** remains discovery/catalog evidence; generic fiction metadata does not prove novel form.
+5. A provider record must pass a strong entity match before its form claim may attach to a Work.
+6. Weak matches cannot contribute evidence. Probable matches must be reviewed or corroborated.
+7. External requests are cache-first, auditable, rate-limited, and use documented machine interfaces rather than HTML crawling.
+8. Independence is counted at the **provider/ecosystem level**. Multiple records or editions from the same provider cannot satisfy the two-source rule by themselves.
+9. The initial optimization target is near-zero false-positive `NOVEL` classification, even if this leaves more true novels unresolved.
+
+The first collectors implemented are Open Library Search and Library of Congress SRU/MARC.
+
 ## Open decisions
 
 The following are intentionally **not yet locked**:
