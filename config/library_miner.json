@@ -57,7 +57,7 @@
       "delay_seconds": 0.25
     },
     "loc": {
-      "sru_url": "http://lx2.loc.gov:210/LCDB",
+      "sru_url": "https://lx2.loc.gov/sru/lcdb",
       "delay_seconds": 0.25
     }
   }
