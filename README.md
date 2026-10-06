@@ -112,15 +112,31 @@ Unsettled ideas must be marked as proposals or hypotheses rather than silently b
 
 **Step 1: Novel Scout + Eligibility Gate**
 
-Agreed:
-- candidate selection has two stages;
-- Stage A is a hard, evidence-driven eligibility gate;
-- Stage B is a comparative creative-opportunity evaluation;
-- hard failures such as unsuitable source type, insufficient source, or unresolved rights do not get averaged away by a score.
+Implemented foundation:
+- two-arm Scout architecture accepted;
+- Library Miner v0.1 implemented;
+- Project Gutenberg bulk CSV adapter configured;
+- raw provenance + normalized records stored in SQLite;
+- conservative deterministic triage implemented;
+- medium-confidence duplicate/edition grouping implemented without destructive merging;
+- adversarial fixture and repeatability tests added;
+- local runtime data excluded from Git.
 
-The detailed Scout design is still under review.
+Run:
+
+```bash
+make test
+make scout-sample
+make scout-sync
+make scout-report
+```
+
+The current miner intentionally stops before final novel classification, rights approval, and full-text QA. Those are the next evidence-backed stages.
 
 See:
 - [docs/DECISIONS.md](docs/DECISIONS.md)
 - [docs/STANDARDS.md](docs/STANDARDS.md)
 - [docs/NOVEL_SCOUT_PROPOSAL.md](docs/NOVEL_SCOUT_PROPOSAL.md)
+- [docs/LIBRARY_MINER_PROPOSAL.md](docs/LIBRARY_MINER_PROPOSAL.md)
+- [docs/RUN_LIBRARY_MINER.md](docs/RUN_LIBRARY_MINER.md)
+- [docs/CHANGELOG.md](docs/CHANGELOG.md)
