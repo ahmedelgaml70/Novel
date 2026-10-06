@@ -1,0 +1,286 @@
+{
+  "version": 1,
+  "description": "Synthetic adversarial cases for Work identity matching. same_work is ground truth for benchmark purposes.",
+  "cases": [
+    {
+      "case_id": "exact_frankenstein",
+      "same_work": true,
+      "candidate": {
+        "title": "Frankenstein; Or, The Modern Prometheus",
+        "author": "Shelley, Mary Wollstonecraft, 1797-1851"
+      },
+      "external": {
+        "title": "Frankenstein; Or, The Modern Prometheus",
+        "authors": [
+          "Shelley, Mary Wollstonecraft, 1797-1851"
+        ]
+      }
+    },
+    {
+      "case_id": "subtitle_dropped",
+      "same_work": true,
+      "candidate": {
+        "title": "Frankenstein; Or, The Modern Prometheus",
+        "author": "Shelley, Mary Wollstonecraft, 1797-1851"
+      },
+      "external": {
+        "title": "Frankenstein",
+        "authors": [
+          "Mary Wollstonecraft Shelley"
+        ]
+      }
+    },
+    {
+      "case_id": "ampersand",
+      "same_work": true,
+      "candidate": {
+        "title": "Pride and Prejudice",
+        "author": "Austen, Jane, 1775-1817"
+      },
+      "external": {
+        "title": "Pride & Prejudice",
+        "authors": [
+          "Jane Austen"
+        ]
+      }
+    },
+    {
+      "case_id": "author_reordered",
+      "same_work": true,
+      "candidate": {
+        "title": "Dracula",
+        "author": "Stoker, Bram, 1847-1912"
+      },
+      "external": {
+        "title": "Dracula",
+        "authors": [
+          "Bram Stoker"
+        ]
+      }
+    },
+    {
+      "case_id": "punctuation",
+      "same_work": true,
+      "candidate": {
+        "title": "The Picture of Dorian Gray",
+        "author": "Wilde, Oscar, 1854-1900"
+      },
+      "external": {
+        "title": "The Picture of Dorian Gray.",
+        "authors": [
+          "Oscar Wilde"
+        ]
+      }
+    },
+    {
+      "case_id": "same_title_wrong_author",
+      "same_work": false,
+      "candidate": {
+        "title": "The Castle",
+        "author": "Kafka, Franz, 1883-1924"
+      },
+      "external": {
+        "title": "The Castle",
+        "authors": [
+          "John Smith"
+        ]
+      }
+    },
+    {
+      "case_id": "same_author_different_work",
+      "same_work": false,
+      "candidate": {
+        "title": "Emma",
+        "author": "Austen, Jane, 1775-1817"
+      },
+      "external": {
+        "title": "Persuasion",
+        "authors": [
+          "Jane Austen"
+        ]
+      }
+    },
+    {
+      "case_id": "overlap_same_author_different_work",
+      "same_work": false,
+      "candidate": {
+        "title": "Alice's Adventures in Wonderland",
+        "author": "Carroll, Lewis, 1832-1898"
+      },
+      "external": {
+        "title": "Through the Looking-Glass and What Alice Found There",
+        "authors": [
+          "Lewis Carroll"
+        ]
+      }
+    },
+    {
+      "case_id": "partial_volume",
+      "same_work": false,
+      "candidate": {
+        "title": "The Count of Monte Cristo",
+        "author": "Dumas, Alexandre, 1802-1870"
+      },
+      "external": {
+        "title": "The Count of Monte Cristo, Volume 1",
+        "authors": [
+          "Alexandre Dumas"
+        ]
+      }
+    },
+    {
+      "case_id": "collection_containing_title",
+      "same_work": false,
+      "candidate": {
+        "title": "Frankenstein",
+        "author": "Shelley, Mary Wollstonecraft, 1797-1851"
+      },
+      "external": {
+        "title": "Frankenstein and Other Stories",
+        "authors": [
+          "Mary Wollstonecraft Shelley"
+        ]
+      }
+    },
+    {
+      "case_id": "shared_id_variant_title",
+      "same_work": true,
+      "candidate": {
+        "title": "Frankenstein; Or, The Modern Prometheus",
+        "author": "Shelley, Mary Wollstonecraft, 1797-1851"
+      },
+      "external": {
+        "title": "Frankenstein",
+        "authors": [
+          "Mary Wollstonecraft Shelley"
+        ]
+      },
+      "shared_authoritative_id": true
+    },
+    {
+      "case_id": "shared_id_author_conflict",
+      "same_work": false,
+      "candidate": {
+        "title": "Dracula",
+        "author": "Stoker, Bram, 1847-1912"
+      },
+      "external": {
+        "title": "Dracula",
+        "authors": [
+          "John Smith"
+        ]
+      },
+      "shared_authoritative_id": true
+    },
+    {
+      "case_id": "colon_subtitle",
+      "same_work": true,
+      "candidate": {
+        "title": "The Time Machine: An Invention",
+        "author": "Wells, H. G. (Herbert George), 1866-1946"
+      },
+      "external": {
+        "title": "The Time Machine",
+        "authors": [
+          "H. G. Wells"
+        ]
+      }
+    },
+    {
+      "case_id": "edition_descriptor",
+      "same_work": true,
+      "candidate": {
+        "title": "Jane Eyre",
+        "author": "Brontë, Charlotte, 1816-1855"
+      },
+      "external": {
+        "title": "Jane Eyre: An Autobiography",
+        "authors": [
+          "Charlotte Brontë"
+        ]
+      }
+    },
+    {
+      "case_id": "same_title_same_author",
+      "same_work": true,
+      "candidate": {
+        "title": "The Trial",
+        "author": "Kafka, Franz, 1883-1924"
+      },
+      "external": {
+        "title": "The Trial",
+        "authors": [
+          "Franz Kafka"
+        ]
+      }
+    },
+    {
+      "case_id": "author_transliteration",
+      "same_work": true,
+      "candidate": {
+        "title": "Crime and Punishment",
+        "author": "Dostoyevsky, Fyodor, 1821-1881"
+      },
+      "external": {
+        "title": "Crime and Punishment",
+        "authors": [
+          "Fyodor Dostoevsky"
+        ]
+      }
+    },
+    {
+      "case_id": "alternate_translation_title",
+      "same_work": true,
+      "candidate": {
+        "title": "Les Misérables",
+        "author": "Hugo, Victor, 1802-1885"
+      },
+      "external": {
+        "title": "The Wretched",
+        "authors": [
+          "Victor Hugo"
+        ]
+      }
+    },
+    {
+      "case_id": "same_author_wrong_title",
+      "same_work": false,
+      "candidate": {
+        "title": "Northanger Abbey",
+        "author": "Austen, Jane, 1775-1817"
+      },
+      "external": {
+        "title": "Mansfield Park",
+        "authors": [
+          "Jane Austen"
+        ]
+      }
+    },
+    {
+      "case_id": "author_initials",
+      "same_work": true,
+      "candidate": {
+        "title": "The War of the Worlds",
+        "author": "Wells, H. G. (Herbert George), 1866-1946"
+      },
+      "external": {
+        "title": "The War of the Worlds",
+        "authors": [
+          "H. G. Wells"
+        ]
+      }
+    },
+    {
+      "case_id": "missing_external_author",
+      "same_work": true,
+      "candidate": {
+        "title": "Dracula",
+        "author": "Stoker, Bram, 1847-1912"
+      },
+      "external": {
+        "title": "Dracula",
+        "authors": []
+      }
+    }
+  ]
+}
