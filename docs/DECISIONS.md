@@ -204,6 +204,31 @@ Accepted v1 policy:
 
 The first collectors implemented are Open Library Search and Library of Congress SRU/MARC.
 
+## D-016 — Hybrid entity matching with explicit review state
+
+**Status:** Accepted
+
+Production bibliographic collectors use a three-state Work-record matcher:
+
+- `STRONG` — safe enough to attach explicit bibliographic evidence automatically;
+- `REVIEW` — plausible relationship retained for inspection but **cannot** contribute evidence automatically;
+- `NO_MATCH` — ignored for this Work.
+
+Accepted v0.2 policy:
+
+1. `STRONG` requires an exact normalized title plus compatible author identity.
+2. Normalization handles Unicode diacritics, punctuation, and `&` versus `and`.
+3. Subtitle/core-title overlap, composite-looking titles, annotated/critical editions, and derivative-looking records route to `REVIEW`, not `STRONG`.
+4. Author mismatch prevents automatic attachment.
+5. `REVIEW` matches are persisted in the runtime database so they are not lost.
+6. Only `STRONG` records may create literary-form evidence.
+7. Production matching must continue to be benchmarked against both synthetic adversarial cases and preserved real-provider metadata.
+
+Evidence for this decision:
+- synthetic benchmark: hybrid produced zero false-strong matches while reducing missed legitimate variants versus the original strict matcher;
+- real-provider benchmark: 6/6 direct editions were strong, 0 unsafe records were strong, 5 risky relationships were routed to review, and 2 were correctly ignored;
+- the more aggressive subtitle-tolerant alternative produced 2 unsafe strong matches on real provider metadata and therefore failed the safety gate.
+
 ## Open decisions
 
 The following are intentionally **not yet locked**:
