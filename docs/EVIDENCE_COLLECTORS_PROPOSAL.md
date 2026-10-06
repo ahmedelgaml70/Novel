@@ -1,6 +1,6 @@
 # Bibliographic Evidence Collectors — Step 1B.3 Proposal
 
-**Status: DRAFT / UNDER REVIEW**
+**Status: ACCEPTED; v0.1 IMPLEMENTED**
 
 This stage supplies real evidence to the literary-form resolver implemented in Step 1B.2.
 
@@ -270,3 +270,16 @@ It should be near zero before automatic filtering is trusted.
 5. External entity matching is a separate gate; weak matches cannot contribute evidence.
 6. All external evidence requests are cache-first and auditable.
 7. We optimize first for near-zero false-positive `NOVEL` classification rather than maximum automatic coverage.
+
+## Implementation status
+
+Implemented in `scripts/evidence_collectors.py`:
+- cache-first Open Library Search adapter;
+- Library of Congress SRU/MARCXML adapter;
+- strong entity-match gate;
+- explicit genre/form parsing;
+- provider-level independence;
+- collector run history and cached raw responses;
+- offline parser/matcher fixtures and tests.
+
+Current v0.1 hypothesis: exact normalized title + compatible author is intentionally conservative. Benchmarking must measure how many valid records it misses before matching is relaxed.
