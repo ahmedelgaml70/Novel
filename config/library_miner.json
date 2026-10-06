@@ -1,0 +1,32 @@
+{
+  "sources": {
+    "gutenberg": {
+      "catalog_url": "https://www.gutenberg.org/cache/epub/feeds/pg_catalog.csv",
+      "source_system": "gutenberg"
+    }
+  },
+  "classification": {
+    "obvious_non_novel_terms": [
+      "poetry",
+      "poems",
+      "drama",
+      "plays",
+      "short stories",
+      "essays",
+      "speeches",
+      "periodicals",
+      "dictionaries",
+      "reference"
+    ],
+    "fiction_signals": [
+      "fiction",
+      "novel",
+      "gothic fiction",
+      "science fiction",
+      "historical fiction",
+      "detective fiction",
+      "mystery fiction",
+      "romance fiction"
+    ]
+  }
+}
