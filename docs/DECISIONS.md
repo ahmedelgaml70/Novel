@@ -162,6 +162,28 @@ Reasons:
 
 The SQLite database itself is runtime data and is not committed to Git.
 
+## D-014 — Evidence-backed literary-form resolution
+
+**Status:** Accepted
+
+The system explicitly separates **Work** identity from **Edition/Source** identity.
+
+Literary form is resolved from stored evidence claims rather than from an LLM's unsupported opinion.
+
+Current automatic-resolution policy:
+
+- final states are `NOVEL`, `NOVELLA`, `NOT_NOVEL`, `DISPUTED`, or `UNKNOWN`;
+- **novellas are outside the niche** and therefore do not pass the novel eligibility gate;
+- catalog fiction signals may route a work into form review but do not by themselves prove that it is a novel;
+- automatic form resolution requires at least **two independent high-quality evidence sources** that map to the same form;
+- accepted high-quality authority levels in v1 are `authoritative`, `bibliographic`, and `scholarly`;
+- repeated claims using the same independence key count once;
+- conflicting high-quality form evidence produces `DISPUTED`;
+- one high-quality supporting source is insufficient for automatic finalization and remains `UNKNOWN`;
+- LLMs may later interpret or reconcile evidence, but the LLM itself is not the evidence source.
+
+This threshold is a conservative operational policy, not a universal bibliographic law. It may be revised if testing shows systematic false positives or false negatives.
+
 ## Open decisions
 
 The following are intentionally **not yet locked**:
