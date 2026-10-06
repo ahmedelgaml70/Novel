@@ -54,6 +54,13 @@ This file records meaningful changes to the Novel machine. Design rationale belo
 - Added offline fixtures and five collector/parser/entity-match tests.
 - Live network collector execution has not been claimed from the development sandbox because outbound DNS is unavailable there.
 
+### Experiment E-001 — entity matching
+- Added a 20-case adversarial Work-identity benchmark.
+- Added three matcher strategies: current strict, subtitle-tolerant, and identifier-hybrid.
+- Corrected the baseline to mirror the production matcher exactly.
+- Synthetic results: current strict 5 true-strong / 8 true-miss / 0 false-strong; subtitle-tolerant 10 / 3 / 0; identifier-hybrid 7 true-strong + 3 true-review / 3 true-miss / 0 false-strong.
+- No production matcher change was made; real provider-record benchmarking is required first.
+
 ### Verification
 - Existing Library Miner fixture tests: **3/3 passing**.\n- New literary-form resolver tests: **5/5 passing**.
 - Sample ingest: **7 records**, producing 4 `TYPE_REVIEW`, 2 `REJECT_OBVIOUS_NON_NOVEL`, and 1 `REJECT_NON_TEXT`.
