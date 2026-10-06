@@ -119,6 +119,10 @@ Implemented foundation:
 - raw provenance + normalized records stored in SQLite;
 - conservative deterministic triage implemented;
 - medium-confidence duplicate/edition grouping implemented without destructive merging;
+- explicit Work and Edition/Source entities implemented;
+- evidence-backed literary-form resolver implemented;
+- two-independent-source rule for automatic form resolution implemented;
+- novellas remain explicitly distinct and outside the niche;
 - adversarial fixture and repeatability tests added;
 - local runtime data excluded from Git.
 
@@ -131,7 +135,7 @@ make scout-sync
 make scout-report
 ```
 
-The current miner intentionally stops before final novel classification, rights approval, and full-text QA. Those are the next evidence-backed stages.
+The current miner can now resolve literary form when sufficient independent evidence is stored. It intentionally stops before production-grade evidence collection, rights approval, and full-text QA. Those are the next evidence-backed stages.
 
 See:
 - [docs/DECISIONS.md](docs/DECISIONS.md)
