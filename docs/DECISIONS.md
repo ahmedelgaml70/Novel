@@ -120,6 +120,48 @@ This dual design avoids two opposite failure modes:
 - a library-only system repeatedly rediscovering the same canonical classics;
 - an opportunity-only system wasting effort on exciting works that cannot legally or practically enter production.
 
+## D-011 — GitHub, runtime database, and orchestration have separate responsibilities
+
+**Status:** Accepted
+
+- **GitHub repository:** source of truth for code, schemas, prompts, tests, documentation, migrations, standards, and decision history.
+- **Runtime database:** operational state—discovered candidates, evidence, statuses, run history, and other mutable production knowledge.
+- **Orchestrator:** schedules stable capabilities, coordinates external services, retries operations, and manages human approval gates.
+
+The orchestrator must not become the authoritative home of core Novel algorithms.
+
+n8n is a candidate orchestrator, but it is intentionally deferred until the underlying commands are stable.
+
+## D-012 — Library Miner v1 source strategy
+
+**Status:** Accepted
+
+1. Project Gutenberg CSV is the first bulk catalog adapter.
+2. Standard Ebooks is supplementary/targeted unless broad machine-readable access is available.
+3. Open Library is cached, targeted enrichment in v1; bulk dumps may be added later if justified.
+4. Work identity is separate from Edition/Source identity.
+5. Raw upstream records are preserved before normalization.
+6. Deterministic rules run before LLM judgment.
+7. Ambiguity routes to review rather than forced classification.
+8. Large catalogs and full-text corpora stay out of Git; Git stores code, schemas, manifests, fixtures, and decisions.
+9. An adversarial fixture corpus must pass before full-catalog ingestion.
+
+## D-013 — Library Miner v1 local persistence
+
+**Status:** Accepted for v1 implementation
+
+Library Miner v1 uses **SQLite** for local operational state.
+
+Reasons:
+- no database server required,
+- transaction-safe,
+- queryable and inspectable,
+- suitable for the initial single-machine workload,
+- included with Python's standard library,
+- migration to a hosted database remains possible if concurrency or deployment later requires it.
+
+The SQLite database itself is runtime data and is not committed to Git.
+
 ## Open decisions
 
 The following are intentionally **not yet locked**:
