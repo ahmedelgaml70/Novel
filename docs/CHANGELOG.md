@@ -44,7 +44,7 @@ This file records meaningful changes to the Novel machine. Design rationale belo
 - Added five isolated resolver tests; all five pass.
 
 ### Verification
-- Local fixture test suite: **3/3 passing**.
+- Existing Library Miner fixture tests: **3/3 passing**.\n- New literary-form resolver tests: **5/5 passing**.
 - Sample ingest: **7 records**, producing 4 `TYPE_REVIEW`, 2 `REJECT_OBVIOUS_NON_NOVEL`, and 1 `REJECT_NON_TEXT`.
 - Live catalog endpoint availability and current catalog publication were verified independently.
 - A live catalog download could not be executed inside the development sandbox because outbound DNS/network access is unavailable there; this is an environment limitation, not recorded as a successful live run.
