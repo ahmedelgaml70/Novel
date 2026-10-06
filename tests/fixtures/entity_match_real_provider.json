@@ -1,0 +1,223 @@
+{
+  "version": 1,
+  "description": "Real-provider metadata benchmark captured from Open Library and Library of Congress public records on 2026-10-06. relationship is manually adjudicated for benchmark purposes.",
+  "relationships": {
+    "DIRECT_EDITION": "Direct edition/record of the target Work; safe candidate for automatic Work evidence attachment after strong match.",
+    "AUGMENTED_EDITION": "Contains the target Work plus substantial editorial/critical material; same literary work but requires review before source/evidence use.",
+    "COMPOSITE_CONTAINS_WORK": "Volume contains target Work plus one or more other literary works; requires review.",
+    "DERIVATIVE_ADAPTATION": "Adaptation based on the target Work; must not attach as direct Work evidence.",
+    "ABOUT_WORK": "Secondary work about the target; must not attach as direct Work evidence."
+  },
+  "cases": [
+    {
+      "case_id": "loc_frankenstein_1891",
+      "relationship": "DIRECT_EDITION",
+      "provider": "library_of_congress",
+      "source_url": "https://www.loc.gov/item/04017550/",
+      "candidate": {
+        "title": "Frankenstein; Or, The Modern Prometheus",
+        "author": "Shelley, Mary Wollstonecraft, 1797-1851"
+      },
+      "external": {
+        "title": "Frankenstein; or, The modern Prometheus",
+        "authors": [
+          "Shelley, Mary Wollstonecraft, 1797-1851"
+        ]
+      }
+    },
+    {
+      "case_id": "loc_frankenstein_1818",
+      "relationship": "DIRECT_EDITION",
+      "provider": "library_of_congress",
+      "source_url": "https://www.loc.gov/item/53051218/",
+      "candidate": {
+        "title": "Frankenstein; Or, The Modern Prometheus",
+        "author": "Shelley, Mary Wollstonecraft, 1797-1851"
+      },
+      "external": {
+        "title": "Frankenstein; or, The modern Prometheus",
+        "authors": [
+          "Shelley, Mary Wollstonecraft, 1797-1851"
+        ]
+      }
+    },
+    {
+      "case_id": "loc_frankenstein_annotated_2017",
+      "relationship": "AUGMENTED_EDITION",
+      "provider": "library_of_congress",
+      "source_url": "https://www.loc.gov/item/2019668013/",
+      "candidate": {
+        "title": "Frankenstein; Or, The Modern Prometheus",
+        "author": "Shelley, Mary Wollstonecraft, 1797-1851"
+      },
+      "external": {
+        "title": "Frankenstein : or, the modern Prometheus : annotated for scientists, engineers, and creators of all kinds",
+        "authors": [
+          "Shelley, Mary Wollstonecraft, 1797-1851"
+        ]
+      }
+    },
+    {
+      "case_id": "loc_frankenstein_film_1910",
+      "relationship": "DERIVATIVE_ADAPTATION",
+      "provider": "library_of_congress",
+      "source_url": "https://www.loc.gov/item/2017600664/",
+      "candidate": {
+        "title": "Frankenstein; Or, The Modern Prometheus",
+        "author": "Shelley, Mary Wollstonecraft, 1797-1851"
+      },
+      "external": {
+        "title": "Frankenstein",
+        "authors": [
+          "Dawley, J. Searle",
+          "Edison, Thomas A."
+        ]
+      }
+    },
+    {
+      "case_id": "loc_frankenstein_criticism",
+      "relationship": "ABOUT_WORK",
+      "provider": "library_of_congress",
+      "source_url": "https://www.loc.gov/item/2019394423/",
+      "candidate": {
+        "title": "Frankenstein; Or, The Modern Prometheus",
+        "author": "Shelley, Mary Wollstonecraft, 1797-1851"
+      },
+      "external": {
+        "title": "The medium is the monster : Canadian adaptations of Frankenstein and the discourse of technology",
+        "authors": [
+          "McCutcheon, Mark A."
+        ]
+      }
+    },
+    {
+      "case_id": "ol_turn_of_screw_1949",
+      "relationship": "DIRECT_EDITION",
+      "provider": "openlibrary",
+      "source_url": "https://openlibrary.org/books/OL6061677M/The_turn_of_the_screw",
+      "candidate": {
+        "title": "The Turn of the Screw",
+        "author": "James, Henry, 1843-1916"
+      },
+      "external": {
+        "title": "The turn of the screw",
+        "authors": [
+          "Henry James"
+        ]
+      }
+    },
+    {
+      "case_id": "ol_turn_of_screw_other_stories",
+      "relationship": "COMPOSITE_CONTAINS_WORK",
+      "provider": "openlibrary",
+      "source_url": "https://openlibrary.org/books/OL24222537M/The_turn_of_the_screw",
+      "candidate": {
+        "title": "The Turn of the Screw",
+        "author": "James, Henry, 1843-1916"
+      },
+      "external": {
+        "title": "The turn of the screw: and other stories",
+        "authors": [
+          "Henry James"
+        ]
+      }
+    },
+    {
+      "case_id": "ol_turn_of_screw_lesson_master",
+      "relationship": "COMPOSITE_CONTAINS_WORK",
+      "provider": "openlibrary",
+      "source_url": "https://openlibrary.org/books/OL972752M/The_turn_of_the_screw",
+      "candidate": {
+        "title": "The Turn of the Screw",
+        "author": "James, Henry, 1843-1916"
+      },
+      "external": {
+        "title": "The turn of the screw & The lesson of the master",
+        "authors": [
+          "Henry James"
+        ]
+      }
+    },
+    {
+      "case_id": "ol_heart_darkness_pure",
+      "relationship": "DIRECT_EDITION",
+      "provider": "openlibrary",
+      "source_url": "https://openlibrary.org/books/OL3945112M/Heart_of_darkness",
+      "candidate": {
+        "title": "Heart of Darkness",
+        "author": "Conrad, Joseph, 1857-1924"
+      },
+      "external": {
+        "title": "Heart of darkness",
+        "authors": [
+          "Joseph Conrad"
+        ]
+      }
+    },
+    {
+      "case_id": "ol_heart_darkness_secret_agent",
+      "relationship": "COMPOSITE_CONTAINS_WORK",
+      "provider": "openlibrary",
+      "source_url": "https://openlibrary.org/books/OL678040M/Heart_of_darkness",
+      "candidate": {
+        "title": "Heart of Darkness",
+        "author": "Conrad, Joseph, 1857-1924"
+      },
+      "external": {
+        "title": "Heart of darkness and, The secret agent",
+        "authors": [
+          "Joseph Conrad"
+        ]
+      }
+    },
+    {
+      "case_id": "ol_sherlock_adventures_1892",
+      "relationship": "DIRECT_EDITION",
+      "provider": "openlibrary",
+      "source_url": "https://openlibrary.org/books/OL24349267M/The_Adventures_of_Sherlock_Holmes",
+      "candidate": {
+        "title": "The Adventures of Sherlock Holmes",
+        "author": "Doyle, Arthur Conan, 1859-1930"
+      },
+      "external": {
+        "title": "The Adventures of Sherlock Holmes",
+        "authors": [
+          "Arthur Conan Doyle"
+        ]
+      }
+    },
+    {
+      "case_id": "loc_pride_prejudice_1917",
+      "relationship": "DIRECT_EDITION",
+      "provider": "library_of_congress",
+      "source_url": "https://www.loc.gov/item/18001222/",
+      "candidate": {
+        "title": "Pride and Prejudice",
+        "author": "Austen, Jane, 1775-1817"
+      },
+      "external": {
+        "title": "Pride and prejudice",
+        "authors": [
+          "Austen, Jane, 1775-1817"
+        ]
+      }
+    },
+    {
+      "case_id": "loc_pride_prejudice_play_1906",
+      "relationship": "DERIVATIVE_ADAPTATION",
+      "provider": "library_of_congress",
+      "source_url": "https://www.loc.gov/item/06034819/",
+      "candidate": {
+        "title": "Pride and Prejudice",
+        "author": "Austen, Jane, 1775-1817"
+      },
+      "external": {
+        "title": "Pride and prejudice; a play, founded on Jane Austen's novel",
+        "authors": [
+          "MacKaye, Steele, Mrs., 1845-1924",
+          "Austen, Jane, 1775-1817"
+        ]
+      }
+    }
+  ]
+}
