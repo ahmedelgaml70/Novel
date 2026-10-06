@@ -113,6 +113,38 @@ Possible form states:
 
 The LLM is not treated as a bibliographic source.
 
+## Collect real bibliographic evidence
+
+After syncing and materializing Works:
+
+```bash
+make scout-collect-evidence
+make scout-resolve
+make scout-form-report
+```
+
+Or limit the first live smoke test:
+
+```bash
+python3 scripts/evidence_collectors.py collect --provider all --limit 10
+```
+
+Provider-specific runs:
+
+```bash
+python3 scripts/evidence_collectors.py collect --provider openlibrary --limit 10
+python3 scripts/evidence_collectors.py collect --provider loc --limit 10
+```
+
+Use `--refresh` only when you intentionally want to bypass a stored provider response.
+
+The collector:
+- caches external responses;
+- requires strong title/author identity matching before evidence is attached;
+- accepts explicit literary-form terms only;
+- treats generic `fiction` as insufficient;
+- counts each bibliographic ecosystem once for independence.
+
 ## SQLite ownership
 
 The database is operational state, not source code. It is stored under `data/` and is not committed.
