@@ -43,6 +43,17 @@ This file records meaningful changes to the Novel machine. Design rationale belo
 - Added a synthetic evidence fixture for end-to-end sample execution.
 - Added five isolated resolver tests; all five pass.
 
+### Library Miner v0.3 — real bibliographic collectors
+- Added cache-first Open Library Search collector.
+- Added Library of Congress SRU/MARCXML collector.
+- Added explicit entity-match gate requiring exact normalized title plus compatible author in v0.1.
+- Added MARC 655 genre/form extraction.
+- Added conservative form-term parser that does not promote generic `fiction` into `novel`.
+- Provider/ecosystem identity now defines evidence independence; multiple editions from one provider cannot satisfy the two-source rule.
+- Added collector cache and run-history tables.
+- Added offline fixtures and five collector/parser/entity-match tests.
+- Live network collector execution has not been claimed from the development sandbox because outbound DNS is unavailable there.
+
 ### Verification
 - Existing Library Miner fixture tests: **3/3 passing**.\n- New literary-form resolver tests: **5/5 passing**.
 - Sample ingest: **7 records**, producing 4 `TYPE_REVIEW`, 2 `REJECT_OBVIOUS_NON_NOVEL`, and 1 `REJECT_NON_TEXT`.
