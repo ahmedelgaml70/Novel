@@ -1,6 +1,6 @@
 # Experiment E-001 — Work Entity Matching
 
-**Status:** Synthetic benchmark complete; real-provider benchmark required before production change.
+**Status:** COMPLETE — hybrid matcher promoted to production v0.2.
 
 ## Question
 
@@ -103,3 +103,52 @@ A replacement production matcher may be considered only if:
 3. it materially lowers TRUE_MISS or review burden;
 4. risky partial/collection records are never silently upgraded to strong;
 5. results are reproducible from stored provider fixtures.
+
+
+## Real-provider benchmark
+
+A second benchmark used 13 actual metadata records captured from Open Library and the Library of Congress.
+
+Ground-truth relationships:
+
+- `DIRECT_EDITION`
+- `AUGMENTED_EDITION`
+- `COMPOSITE_CONTAINS_WORK`
+- `DERIVATIVE_ADAPTATION`
+- `ABOUT_WORK`
+
+Only `DIRECT_EDITION` is safe for automatic STRONG attachment in this experiment.
+
+| Matcher | Direct strong | Direct review | Direct miss | Unsafe strong | Unsafe review | Unsafe no-match |
+|---|---:|---:|---:|---:|---:|---:|
+| A — current strict | 6 | 0 | 0 | **0** | 0 | 7 |
+| B — subtitle tolerant | 6 | 0 | 0 | **2** | 0 | 5 |
+| C — hybrid | 6 | 0 | 0 | **0** | 5 | 2 |
+
+The aggressive subtitle matcher failed because title-core logic can confuse derivative or augmented records with the original Work.
+
+The hybrid matcher passed the safety gate and additionally preserves risky relationships for review rather than discarding them.
+
+## Decision
+
+Promote the hybrid behavior to production:
+
+```text
+exact normalized title + compatible author
+        → STRONG
+
+plausible title/core relationship + compatible author
+or composite / annotated / derivative-looking title
+        → REVIEW
+
+author mismatch or weak relation
+        → NO_MATCH
+```
+
+Only STRONG may create bibliographic form evidence.
+
+REVIEW is persisted and visible for later human or higher-confidence resolution.
+
+## Residual risk
+
+This benchmark is still small and curated. Promotion is justified because the change broadens observability more than automatic authority: uncertain records become REVIEW rather than STRONG. Future benchmark growth should continue to prioritize zero unsafe strong attachments.
