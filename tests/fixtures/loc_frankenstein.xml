@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<searchRetrieveResponse xmlns="http://www.loc.gov/zing/srw/">
+  <numberOfRecords>1</numberOfRecords>
+  <records>
+    <record>
+      <recordData>
+        <record xmlns="http://www.loc.gov/MARC21/slim">
+          <datafield tag="010" ind1=" " ind2=" ">
+            <subfield code="a">16001102</subfield>
+          </datafield>
+          <datafield tag="100" ind1="1" ind2=" ">
+            <subfield code="a">Shelley, Mary Wollstonecraft, 1797-1851</subfield>
+          </datafield>
+          <datafield tag="245" ind1="1" ind2="0">
+            <subfield code="a">Frankenstein; Or, The Modern Prometheus</subfield>
+          </datafield>
+          <datafield tag="655" ind1=" " ind2="7">
+            <subfield code="a">Novels</subfield>
+          </datafield>
+        </record>
+      </recordData>
+    </record>
+  </records>
+</searchRetrieveResponse>
