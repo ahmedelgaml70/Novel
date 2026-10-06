@@ -1,6 +1,6 @@
-# Run Library Miner v0.1
+# Run Library Miner v0.2
 
-Library Miner v0.1 is the first executable slice of Novel Scout.
+Library Miner v0.2 includes the first executable Scout slice plus evidence-backed literary-form resolution.
 
 It currently does four things:
 
@@ -16,7 +16,7 @@ It now includes an evidence-backed literary-form resolver. It still does **not**
 - Python 3.10+
 - Internet access only when downloading the live Gutenberg catalog
 
-No Python packages are required for v0.1.
+No Python packages are required for v0.2.
 
 ## Validate the machine first
 
@@ -75,7 +75,7 @@ python3 scripts/scout_library.py sync --catalog /path/to/pg_catalog.csv
 - `TYPE_REVIEW` — fiction-like metadata exists, but the catalog cannot prove novel form.
 - `METADATA_REVIEW` — insufficient deterministic evidence either way.
 
-This conservatism is intentional. The next slice resolves literary form using independent evidence rather than making the catalog do a job it cannot reliably do.
+This conservatism is intentional. Literary form is resolved by the separate evidence-backed resolver; catalog metadata alone remains insufficient for ambiguous fiction.
 
 ## Literary-form resolution
 
