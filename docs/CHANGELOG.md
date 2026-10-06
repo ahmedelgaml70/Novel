@@ -32,6 +32,17 @@ This file records meaningful changes to the Novel machine. Design rationale belo
 - Added Makefile commands and run documentation.
 - Runtime catalogs/databases/reports are excluded from Git.
 
+### Library Miner v0.2 — literary-form resolution
+- Added explicit `works` and `edition_sources` entities.
+- Added provenance-preserving evidence records.
+- Added configurable literary-form claim mapping and evidence thresholds.
+- Automatic form resolution now requires two independent high-quality sources with no high-quality conflict.
+- Duplicate evidence with the same independence key does not double-count.
+- Conflicting high-quality evidence becomes `DISPUTED`.
+- `NOVELLA` is kept distinct from `NOVEL` and does not pass the novel-only niche gate.
+- Added a synthetic evidence fixture for end-to-end sample execution.
+- Added five isolated resolver tests; all five pass.
+
 ### Verification
 - Local fixture test suite: **3/3 passing**.
 - Sample ingest: **7 records**, producing 4 `TYPE_REVIEW`, 2 `REJECT_OBVIOUS_NON_NOVEL`, and 1 `REJECT_NON_TEXT`.
@@ -39,7 +50,7 @@ This file records meaningful changes to the Novel machine. Design rationale belo
 - A live catalog download could not be executed inside the development sandbox because outbound DNS/network access is unavailable there; this is an environment limitation, not recorded as a successful live run.
 
 ### Next
-- Step 1B.2: evidence-backed novel-form resolution.
-- Explicit Work vs Edition/Source entities.
+- Step 1B.3: production-grade bibliographic evidence collectors.
 - Complete-source availability checks.
-- Rights precheck and evidence records.
+- Exact edition/source integrity checks.
+- Rights precheck and rights evidence records.
