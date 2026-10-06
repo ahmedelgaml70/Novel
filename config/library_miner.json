@@ -28,5 +28,26 @@
       "mystery fiction",
       "romance fiction"
     ]
+  },
+  "form_resolution": {
+    "min_independent_high_quality_sources": 2,
+    "high_quality_authority_levels": [
+      "authoritative",
+      "bibliographic",
+      "scholarly"
+    ],
+    "claim_map": {
+      "novel": "NOVEL",
+      "novella": "NOVELLA",
+      "short_story": "NOT_NOVEL",
+      "short_story_collection": "NOT_NOVEL",
+      "story_collection": "NOT_NOVEL",
+      "play": "NOT_NOVEL",
+      "drama": "NOT_NOVEL",
+      "poetry": "NOT_NOVEL",
+      "essay": "NOT_NOVEL",
+      "essay_collection": "NOT_NOVEL",
+      "nonfiction": "NOT_NOVEL"
+    }
   }
 }
