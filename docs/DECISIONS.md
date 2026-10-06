@@ -94,6 +94,32 @@ The production system should ground adaptation in the complete source novel rath
 
 The conceptual system is not a one-way generator. QC should be able to route a failure back to the smallest responsible stage—for example, one shot, one audio element, or one narrative decision—without unnecessarily rebuilding the entire film.
 
+## D-010 — Two-arm Novel Scout
+
+**Status:** Accepted
+
+Novel discovery uses two complementary arms:
+
+### Library Miner
+
+Systematically mines rights-aware and bibliographic book corpora to build dependable production inventory.
+
+Its job is breadth, repeatability, source traceability, and efficient elimination of ineligible works.
+
+### Opportunity Hunter
+
+Searches beyond the safe library corpus for culturally interesting, underused, newly relevant, or unusually cinematic novels.
+
+Its job is exploration and differentiation.
+
+Both arms converge into the same normalization, identity-resolution, hard-eligibility, and candidate-state system.
+
+The Opportunity Hunter may discover a promising work, but it cannot bypass source or rights gates.
+
+This dual design avoids two opposite failure modes:
+- a library-only system repeatedly rediscovering the same canonical classics;
+- an opportunity-only system wasting effort on exciting works that cannot legally or practically enter production.
+
 ## Open decisions
 
 The following are intentionally **not yet locked**:
