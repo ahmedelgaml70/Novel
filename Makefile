@@ -1,4 +1,4 @@
-.PHONY: test scout-sample scout-sync scout-report scout-materialize scout-load-sample-evidence scout-resolve scout-form-report
+.PHONY: test scout-sample scout-sync scout-report scout-materialize scout-collect-evidence scout-resolve scout-form-report
 
 test:
 	python3 -m unittest discover -s tests -p 'test_*.py' -v
@@ -26,3 +26,6 @@ scout-report:
 
 scout-form-report:
 	python3 scripts/form_resolver.py report
+
+scout-collect-evidence:
+	python3 scripts/evidence_collectors.py collect --provider all
