@@ -121,7 +121,7 @@ Implemented foundation:
 - medium-confidence duplicate/edition grouping implemented without destructive merging;
 - explicit Work and Edition/Source entities implemented;
 - evidence-backed literary-form resolver implemented;
-- two-independent-source rule for automatic form resolution implemented;\n- real cache-first Open Library + Library of Congress evidence collectors implemented;\n- strong entity matching required before external form evidence attaches to a Work;\n- entity-matching benchmark harness added; production matcher remains unchanged pending real-record validation;
+- two-independent-source rule for automatic form resolution implemented;\n- real cache-first Open Library + Library of Congress evidence collectors implemented;\n- strong entity matching required before external form evidence attaches to a Work;\n- synthetic + real-provider entity-matching benchmarks added; hybrid STRONG/REVIEW/NO_MATCH matcher promoted after the aggressive subtitle matcher failed the real safety gate;
 - novellas remain explicitly distinct and outside the niche;
 - adversarial fixture and repeatability tests added;
 - local runtime data excluded from Git.
