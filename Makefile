@@ -1,4 +1,4 @@
-.PHONY: test scout-sample scout-sync scout-report scout-materialize scout-collect-evidence scout-resolve scout-form-report scout-benchmark-entity
+.PHONY: test scout-sample scout-sync scout-report scout-materialize scout-collect-evidence scout-resolve scout-form-report scout-benchmark-entity scout-benchmark-entity-real
 
 test:
 	python3 -m unittest discover -s tests -p 'test_*.py' -v
@@ -32,3 +32,6 @@ scout-collect-evidence:
 
 scout-benchmark-entity:
 	python3 scripts/benchmark_entity_match.py
+
+scout-benchmark-entity-real:
+	python3 scripts/benchmark_entity_match_real.py
