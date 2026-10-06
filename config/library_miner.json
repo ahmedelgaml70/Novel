@@ -49,5 +49,16 @@
       "essay_collection": "NOT_NOVEL",
       "nonfiction": "NOT_NOVEL"
     }
+  },
+  "evidence_collectors": {
+    "user_agent": "Novel-Scout/0.1 (+https://github.com/ahmedelgaml70/Novel)",
+    "openlibrary": {
+      "search_url": "https://openlibrary.org/search.json",
+      "delay_seconds": 0.25
+    },
+    "loc": {
+      "sru_url": "http://lx2.loc.gov:210/LCDB",
+      "delay_seconds": 0.25
+    }
   }
 }
