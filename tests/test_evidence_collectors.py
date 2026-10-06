@@ -74,6 +74,45 @@ class EvidenceCollectorTests(unittest.TestCase):
         bad, _ = collector.strong_match(self.work, "Frankenstein", ["Somebody Else"])
         self.assertFalse(bad)
 
+    def test_review_match_is_preserved_but_cannot_create_evidence(self):
+        body = json.dumps(
+            {
+                "numFound": 1,
+                "docs": [
+                    {
+                        "key": "/works/OLTEST",
+                        "title": "Frankenstein: annotated for scientists",
+                        "author_name": ["Mary Wollstonecraft Shelley"],
+                        "subject": ["Novels"],
+                    }
+                ],
+            }
+        ).encode("utf-8")
+        con = collector.open_db(self.db)
+        result = collector.collect_openlibrary_for_work(
+            con, self.work, self.config, body_override=body
+        )
+        match = con.execute(
+            "SELECT match_status FROM record_matches"
+        ).fetchone()
+        evidence_count = con.execute(
+            "SELECT COUNT(*) FROM evidence"
+        ).fetchone()[0]
+        con.close()
+
+        self.assertEqual(result["review_matches"], 1)
+        self.assertEqual(match[0], "REVIEW")
+        self.assertEqual(evidence_count, 0)
+
+    def test_play_adaptation_is_review_not_strong(self):
+        status, basis = collector.match_record(
+            self.work,
+            "Frankenstein; a play, founded on Mary Shelley's novel",
+            ["Mary Wollstonecraft Shelley"],
+        )
+        self.assertEqual(status, "REVIEW")
+        self.assertIn("relationship_marker", basis)
+
     def test_openlibrary_fixture_extracts_explicit_novel_evidence(self):
         body = (ROOT / "tests" / "fixtures" / "openlibrary_frankenstein.json").read_bytes()
         con = collector.open_db(self.db)
