@@ -327,3 +327,17 @@ Lesson scopes are EPISODE, STYLE, CATEGORY and GLOBAL.
 A lesson is not considered complete merely because it is documented in a version log. Where appropriate, it must change a validator/test, structured record, checklist, method rule, benchmark or other prevention mechanism.
 
 Episode-specific facts are not promoted to global rules without a generalizable mechanism or supporting evidence.
+
+## D-025 — Ready-free-first before custom asset construction
+
+**Status:** Accepted
+
+The production system searches ready free rights-cleared assets before custom modeling, rigging, animation or environment construction.
+
+The preferred order is: compatible ready ecosystem -> adaptable ready asset -> free fallback/retarget -> modify/combine ready assets -> custom authoring only when the ready search fails.
+
+Ready does not mean approved. Every asset still has to satisfy the Item requirements and actual shot.
+
+For the first real-animation proof, Quaternius is the primary humanoid ecosystem because its Universal Base Characters, Universal Animation Library, Universal Animation Library 2 and modular outfit packs are designed to work together and are CC0. KayKit is the current fallback.
+
+This choice is revisable if another free ecosystem proves simpler or better.
