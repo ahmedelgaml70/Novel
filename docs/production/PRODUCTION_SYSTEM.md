@@ -159,3 +159,17 @@ The universal system does not prescribe one visible-art medium.
 A HERO Item may be best served by a rights-cleared historical source, bespoke redraw, generated illustration, procedural vector, 3D asset or another method. The method is selected because it best satisfies the Item and shot, not because it is the current favorite technology.
 
 The renderer/director and the art-authoring method are separate decisions. A JavaScript film may therefore contain handpicked or bespoke assets while remaining fully deterministic in composition, camera, lighting, timing, atmosphere, editing and final rendering.
+
+## Ready-free-first asset search
+
+Before custom modeling, rigging, animation, environment construction, or prop authoring, search the approved ready-free asset ecosystems.
+
+The universal rule is:
+
+READY + COMPATIBLE + RIGHTS-CLEAR -> READY + ADAPTABLE -> FREE FALLBACK / RETARGET -> MODIFY READY ASSET -> CUSTOM ONLY WHEN NECESSARY
+
+This is a search-order rule, not an instruction to accept mediocre assets. Ready assets remain candidates and must still win the Item/shot comparison.
+
+Prefer compatible ecosystems that supply rigged characters, outfits and animation clips together because they remove retargeting and custom rig work.
+
+See `READY_FREE_ASSET_STRATEGY.md` and `production/knowledge/ready_free_asset_sources.json`.
