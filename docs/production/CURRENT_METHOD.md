@@ -823,3 +823,39 @@ When an Item is removed or replaced:
 Do not leave an obsolete Item active merely because it once existed in the renderer. This creates false blockers and makes the documentation contradict the current film.
 
 If an inactive Item returns later, reopen its requirements and validation rather than silently reactivating its old approval.
+
+## 38. Rigged-animation architecture — ready assets first
+
+The moving-still character architecture is no longer the target for real character performance.
+
+For shots where character action matters, use a real skinned/rigged 3D character with ready animation clips.
+
+Current simplest target stack:
+
+Quaternius Universal Base Characters + Quaternius Universal Animation Library + compatible ready outfits/environment/props + Three.js.
+
+The first proof does not build:
+- a human rig;
+- walk/recoil/reach cycles;
+- a room mesh from scratch;
+- furniture from scratch;
+- a custom engraving shader.
+
+The director only selects, assembles, blends, places, lights, shoots and stylizes ready assets.
+
+Start the visual treatment with Three.js MeshToonMaterial + OutlineEffect / toon outline. Add custom engraving/hatching only after genuine skeletal animation succeeds.
+
+Use `docs/production/READY_FREE_ASSET_STRATEGY.md` for the search/escalation order.
+
+## 39. Real-animation proof gate
+
+Before returning to the 3-minute film, pass one 8–10 second proof in which:
+1. a rigged actor walks using a ready clip;
+2. the actor reaches/interacts using a ready clip;
+3. a second rigged actor moves independently using a ready reaction/body-motion clip;
+4. the first actor recoils/steps back using a ready reaction/dodge clip;
+5. camera, light and atmosphere run independently.
+
+The gate fails if the result can still be described as a still image being translated, scaled or zoomed.
+
+Success requires visible joint-level movement across hips, knees, spine, shoulders, arms, head and planted feet.
