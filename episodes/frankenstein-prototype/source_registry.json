@@ -39,7 +39,8 @@
       },
       "discovered_at": "2026-10-07",
       "status": "ACTIVE_REFERENCE",
-      "notes": "Canonical 1831 visual reference. Current use is reference-only; the renderer redraws layered elements rather than embedding the raster."
+      "notes": "Canonical 1831 visual reference. Current use is reference-only; the renderer redraws layered elements rather than embedding the raster.",
+      "last_verified_at": "2026-10-07"
     },
     {
       "id": "SRC-FR-002",
@@ -191,7 +192,8 @@
       },
       "discovered_at": "2026-10-07",
       "status": "ACTIVE_REFERENCE",
-      "notes": "Use object geometry/catalogue facts; image-specific reuse must be checked separately."
+      "notes": "Use object geometry/catalogue facts; image-specific reuse must be checked separately.",
+      "last_verified_at": "2026-10-07"
     },
     {
       "id": "SRC-FR-007",
@@ -315,8 +317,11 @@
         "period_proximity": "PRIMARY"
       },
       "discovered_at": "2026-10-07",
-      "status": "PREFERRED_LOCATION_REFERENCE",
-      "notes": "Preferred primary direction for rebuilding the exterior because it is location-specific and near the story period."
+      "status": "PROTOTYPE_ASSET_SELECTED",
+      "notes": "Preferred primary direction for rebuilding the exterior because it is location-specific and near the story period. V5.3 embeds the city strip; heraldry, captions and garden excluded. Candidate best for named-city background; crop/night grade remains prototype-only.",
+      "last_verified_at": "2026-10-07",
+      "local_asset": "production/living_engraving/assets/references/ingolstadt-1800.jpg",
+      "asset_sha256": "f30d435667449dc979dcfb9c1d1039e6c3ac421e7ee3dc597c9423317c8610c6"
     },
     {
       "id": "SRC-FR-011",
@@ -350,7 +355,7 @@
     },
     {
       "id": "SRC-FR-012",
-      "title": "Frankenstein; Or, The Modern Prometheus — 1818 edition, Project Gutenberg eBook #41445",
+      "title": "Frankenstein; Or, The Modern Prometheus \u2014 1818 edition, Project Gutenberg eBook #41445",
       "creator": "Mary Wollstonecraft Shelley",
       "date": "1818 edition; digital transcription updated 2026-10-06",
       "provider": "Project Gutenberg",
@@ -374,7 +379,12 @@
         "creature_eye",
         "creature_rise_motion",
         "interior_lightning",
-        "victor_recoil_pose"
+        "victor_recoil_pose",
+        "candle_stub",
+        "candle_flame",
+        "candle_light_pool",
+        "creature_hand",
+        "rain_patter_audio"
       ],
       "rights": {
         "status": "PUBLIC_DOMAIN_IN_USA_PROJECT_GUTENBERG_TERMS_APPLY_TO_GUTENBERG_EDITION",
@@ -387,11 +397,12 @@
       },
       "discovered_at": "2026-10-07",
       "status": "PREFERRED_1818_TEXT_REFERENCE",
-      "notes": "Photo-reprint transcription of the 1818 edition. Creation passage: one in the morning, rain against panes, nearly burnt-out candle, dull yellow eye, hard breathing, convulsive limb motion; limbs proportionate, flowing lustrous black hair, watery pale eyes, shrivelled complexion, straight black lips. Ingolstadt arrival mentions a high white steeple. Do not infer a specific electrical apparatus from 'instruments of life'."
+      "notes": "Photo-reprint transcription of the 1818 edition. Creation passage: one in the morning, rain against panes, nearly burnt-out candle, dull yellow eye, hard breathing, convulsive limb motion; limbs proportionate, flowing lustrous black hair, watery pale eyes, shrivelled complexion, straight black lips. Ingolstadt arrival mentions a high white steeple. Do not infer a specific electrical apparatus from 'instruments of life'.",
+      "last_verified_at": "2026-10-07"
     },
     {
       "id": "SRC-FR-013",
-      "title": "Frankenstein; Or, The Modern Prometheus — 1831 edition, Project Gutenberg eBook #42324",
+      "title": "Frankenstein; Or, The Modern Prometheus \u2014 1831 edition, Project Gutenberg eBook #42324",
       "creator": "Mary Wollstonecraft Shelley",
       "date": "1831 edition",
       "provider": "Project Gutenberg",
@@ -420,6 +431,35 @@
       "discovered_at": "2026-10-07",
       "status": "ALTERNATIVE_EDITION_REFERENCE",
       "notes": "Use to compare edition-dependent wording/art-direction decisions. Do not mix 1818 and 1831 source contracts silently."
+    },
+    {
+      "id": "SRC-FR-014",
+      "title": "EB Garamond variable Roman font and SIL Open Font License",
+      "creator": "Georg Duffner / Octavio Pardo; Google Fonts distribution",
+      "date": "modern digitization",
+      "provider": "Google Fonts / upstream EB Garamond",
+      "url": "https://github.com/google/fonts/tree/7085eb89a950e85db5b166b7a58d414544b4140c/ofl/ebgaramond",
+      "roles": [
+        "TYPOGRAPHY_REFERENCE",
+        "ASSET_CANDIDATE_SOURCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "title_frankenstein",
+        "subtitle_modern_prometheus"
+      ],
+      "rights": {
+        "status": "SIL_OPEN_FONT_LICENSE_1_1",
+        "commercial_asset_use": "ELIGIBLE_WITH_BUNDLED_OFL",
+        "evidence_url": "https://github.com/google/fonts/blob/7085eb89a950e85db5b166b7a58d414544b4140c/ofl/ebgaramond/OFL.txt"
+      },
+      "quality": {
+        "authority": "PRIMARY_DISTRIBUTOR",
+        "period_proximity": "MODERN_REVIVAL_NOT_1818_TYPE_FACSIMILE"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "PROTOTYPE_FONT_SELECTED",
+      "notes": "Downloaded Roman variable TTF with OFL; edition-faithful typography remains pending. Compared portable bundled font against Linux-only dependency and system serif fallback. Upstream design reference https://github.com/georgd/EB-Garamond; modern revival does not prove the 1818 title font."
     }
   ]
 }

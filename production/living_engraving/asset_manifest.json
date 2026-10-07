@@ -1,0 +1,23 @@
+{
+  "version": "5.3",
+  "assets": [
+    {
+      "path": "assets/fonts/EBGaramond.ttf",
+      "source_id": "SRC-FR-014",
+      "rights": "SIL OFL 1.1",
+      "sha256": "ef9512f92f6d579e5dc75af59a5a4b1b8b47d2eda89e00b954d44520e5369027"
+    },
+    {
+      "path": "assets/fonts/OFL.txt",
+      "source_id": "SRC-FR-014",
+      "rights": "font licence",
+      "sha256": "0985066662eb755ed3683ae5482a81a9195b49ce3f7e165cc2388b3dbece7dd7"
+    },
+    {
+      "path": "assets/references/ingolstadt-1800.jpg",
+      "source_id": "SRC-FR-010",
+      "rights": "Public-domain scan; see source_registry",
+      "sha256": "f30d435667449dc979dcfb9c1d1039e6c3ac421e7ee3dc597c9423317c8610c6"
+    }
+  ]
+}

@@ -53,3 +53,20 @@ Make every visible/audible/edit decision individually inspectable and prevent fi
 
 ### Next improvement target
 Rebuild the highest-risk HERO Items first: Ingolstadt exterior, Victor profile/pose/hands/costume, creature anatomy/eye/drapery, and apparatus contact macro. Do not spend effort polishing low-impact texture while HERO Items remain weak.
+
+## V5.3 — rendered revision and complete Item diagnostics
+
+### Intent
+Turn the atomic audit into visible review artifacts and correct concrete defects in the reproduced V5.1 frames.
+
+### Compared and replaced
+Generic block skyline and a minimal two-tower redraw → cropped 1800 city engraving. Round oversized heads/triangular planes → smaller profiles with separate features. Missing digit articulation → five-digit hand drawings. Uniform diagonal mesh → short curved surface strokes. Glowing apparatus → plate/jar material parts and a brief local spark. Unmotivated interior lightning → nearly exhausted candle. Linux-only font path → bundled licensed Roman font. Sinusoidal breath → envelope-shaped noise. Whole-frame arc transition → hard cut. Stationary footstep Foley → retired.
+
+### Implemented
+67 records / 64 active, 67 decision records, 14 source records. Diagnostic generator provides transparent layers, marked context, integrated-detail/style/composition frames, motion endpoints with film segments and solo stems. Locked npm dependency tree, bundled assets with hashes, portable font, manifest/version checks and stricter evidence-bearing final gate.
+
+### Observed improvement and remaining ceiling
+Head proportions, eye colour, candle presence, cloth planes and apparatus parts are visibly more specific; exterior now has a named-place primary plate. Human illustration is still schematic, the macro grip is provisional, the apparatus circuit/spark are unvalidated, and costume/apparatus era remains unresolved. The three-minute film is not earned by extending these weak hero drawings.
+
+### Evidence
+See [reviews/V5_3_REVIEW.md](reviews/V5_3_REVIEW.md), generated [reviews/review_summary.json](reviews/review_summary.json), and review contact sheet. The diagnostic evidence is not final approval. Structural gate and all 26 tests pass; strict-final remains red. V5.3 output is exactly 24 seconds, 1280×720, 24 fps, H.264/AAC stereo when assembled with the canonical script.

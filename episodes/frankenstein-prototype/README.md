@@ -1,8 +1,8 @@
 # Frankenstein — Production Governance Prototype
 
-**Episode ID:** `frankenstein-prototype`  
-**Visual baseline:** Living Engraving V5.1, 24 seconds  
-**Governance method:** V5.2  
+**Episode ID:** `frankenstein-prototype`
+**Visual baseline:** Living Engraving V5.3, 24 seconds
+**Governance method:** V5.3
 **Status:** prototype benchmark / not final-asset approved
 
 This folder is the first worked example of the atomic production-governance method.
@@ -11,7 +11,7 @@ This folder is the first worked example of the atomic production-governance meth
 
 V5.1 is useful as a visual benchmark, but it was built before the current requirements-before-search and candidate-comparison rules existed. Therefore its Items are **not grandfathered** into final approval.
 
-The current audit isolates 62 independently judgeable Items across:
+The current audit covers 67 records, 64 active Items across:
 
 - global paper/ink/material treatment;
 - Ingolstadt exterior;
@@ -37,4 +37,4 @@ Structural governance passes. Final-production approval does not.
 
 That is intentional: the validator must not confuse “documented” with “good enough to publish.”
 
-The next visual version is earned only after the highest-risk HERO/PRIMARY Items are re-researched, redesigned and approved under V5.2.
+V5.3 supplies the revised movie and diagnostic gallery. Use [reviews/V5_3_REVIEW.md](reviews/V5_3_REVIEW.md) for the comparison findings and remaining defects. Final approval still requires the per-Item process.

@@ -116,3 +116,7 @@ This file records meaningful changes to the Novel machine. Design rationale belo
 ### Reproducibility
 - Added the canonical Living Engraving JavaScript renderer, manifest, method state, validator, render command and pinned `skia-canvas` dependency under `production/living_engraving/`.
 - Shot-local audio/light cues remain in the scene manifest rather than a hidden absolute timeline.
+
+## 2026-10-07 — Living Engraving V5.3
+
+Rendered Frankenstein revision and implemented 67-record diagnostic gallery, solo audio, bundled historical/font assets, dependency lockfile, version/manifest/hash checks and an adversarial regression test for evidence-free final labels. Structural validation and 26 tests pass; final art approval remains pending. See `episodes/frankenstein-prototype/reviews/V5_3_REVIEW.md` for concrete changes, comparison limits and remaining defects.

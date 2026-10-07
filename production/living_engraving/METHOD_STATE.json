@@ -1,7 +1,7 @@
 {
   "method_name": "Living Engraving",
-  "version": "5.2",
-  "status": "current_governance_method",
+  "version": "5.3",
+  "status": "current_prototype_and_review_method",
   "canonical_renderer": "render_current.js",
   "canonical_manifest": "scene_manifest.json",
   "canonical_guide": "../../docs/production/CURRENT_METHOD.md",
@@ -11,8 +11,9 @@
     "period_fit": 8,
     "style_fit": 8
   },
-  "visible_third_party_assets_embedded": false,
-  "visual_baseline": "Frankenstein V5.1 (24 s)",
+  "visible_third_party_assets_embedded": true,
+  "visual_baseline": "Frankenstein V5.3 (24 s)",
   "atomic_item_governance": true,
-  "strict_final_requires_item_revalidation": true
+  "strict_final_requires_item_revalidation": true,
+  "diagnostics_cover_all_items": true
 }

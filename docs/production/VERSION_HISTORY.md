@@ -94,3 +94,7 @@ Each visual version must answer four questions:
 4. What new defect or ceiling became visible after the change?
 
 A version number is not earned by cosmetic code changes. It must represent a meaningful visual, methodological or pipeline improvement that is documented and reproducible.
+
+## V5.3 — rendered revision plus per-Item review artifacts
+
+The renderer now implements the 1818 candle/yellow-eye constraints and embeds a location-specific 1800 city plate. New diagnostic output distinguishes real transparent layers from integrated source details, style, composition, motion and audio. Asset hashes, bundled font and npm lockfile fix platform-dependent reproduction. The final gate now rejects missing score/evidence fields and applies to every active Item. Historical decisions and remaining defects are in the episode’s V5.3 review; current instructions remain solely in CURRENT_METHOD.md. No final-quality scores or approval verdicts have been fabricated.

@@ -1,8 +1,8 @@
 # Living Engraving — Current Production Method
 
-**Method version:** 5.2  
-**Status:** canonical / current  
-**Visual baseline:** Frankenstein V5.1. V5.2 is a governance/method update; it does not claim a new visual render.  
+**Method version:** 5.3
+**Status:** canonical / current
+**Visual baseline:** Frankenstein V5.3, a 24-second prototype and per-Item diagnostic review. Final asset approval remains pending.
 **Goal:** produce an authored, cinematic, approximately three-minute novel adaptation in JavaScript without generic visible assets.
 
 This document contains **only the active method**. Historical approaches and failed experiments belong in `VERSION_HISTORY.md`. When a method changes, remove the obsolete instruction here, replace it with the new one, update the version history, validate, and rerender. Never keep competing current instructions.
@@ -60,7 +60,7 @@ The current house style is **Living Engraving**:
 - irregular profiles and silhouettes;
 - dense hatch/cross-hatch in shadow;
 - paper fibre and ink texture;
-- deterministic micro-jitter/line boil;
+- deterministic segmented curves following surface form;
 - restrained character motion;
 - purposeful camera movement;
 - atmosphere, cloth and light carrying much of the motion.
@@ -374,7 +374,7 @@ Determine:
 - duration;
 - font licence.
 
-Historical title pages may guide proportion and hierarchy but should not be copied blindly. The current Frankenstein title remains provisional until the 1818-versus-1831 typography direction is deliberately selected.
+Historical title pages may guide proportion and hierarchy but should not be copied blindly. The current title uses a bundled EB Garamond Roman under SIL OFL 1.1, logged as SRC-FR-014. This is a modern revival chosen for portable prototype rendering, not proof of an exact 1818 typeface. Final edition-specific typography remains provisional.
 
 ## 18. Audio is atomic too
 
@@ -408,7 +408,7 @@ Each shot contains at least:
   "renderer": "galvanicContact",
   "duration": 4.0,
   "purpose": "...",
-  "transition_out": "arc_match_cut",
+  "transition_out": "hard_cut",
   "cues": {
     "electrical_crackle": [[0.8, 3.7]],
     "arc_hits": [1.34, 2.17, 3.13]
@@ -420,17 +420,40 @@ Renderer code should implement reusable primitives and shot renderers; it should
 
 ## 20. Rendering
 
-Current baseline requirements:
+The current renderer uses Node, skia-canvas 3.0.8, 1280×720 at 24 fps, 48 kHz stereo audio and FFmpeg H.264/AAC output. All code-generated variation is deterministic. Install Node 22 LTS and FFmpeg through the environment’s ordinary package manager, then use the committed npm lockfile:
 
-- JavaScript/Node renderer;
-- deterministic frame generation;
-- 1280×720 prototype delivery;
-- 24 fps current baseline;
-- 48 kHz stereo audio;
-- FFmpeg for H.264/AAC assembly;
-- procedural randomness seeded so rerenders are reproducible.
+```bash
+cd production/living_engraving
+npm ci --no-audit --no-fund
+npm run validate
+npm run render
+npm run review
+```
 
-Render partial frame ranges during development. Do not rerender a full three-minute film to inspect one Item.
+`npm run render` recreates `frames/`, `soundscape.wav`, and `living_engraving_current.mp4`. `npm run review` creates `review-output/index.html`, shot stills, isolated transparent crops, marked context frames and solo audio WAVs. Those generated files are ignored by Git; reviewed summaries and selected evidence frames belong under the episode’s `reviews/` directory. The generated gallery is an inspection aid, not an approval.
+
+For a partial render:
+
+```bash
+START_FRAME=432 END_FRAME=480 node render_current.js
+```
+
+Ranges are half-open frame numbers. Partial rendering is for inspection only; run the complete render before encoding a master. Review stills use integer frames divided by FPS, so they correspond to the encoded film. A chosen per-Item review frame is recorded in `review-summary.json`.
+
+Assets are bundled, not fetched during rendering. `asset_manifest.json` binds the font, font licence and historical city plate to SHA-256. The renderer loads `assets/fonts/EBGaramond.ttf` explicitly and fails when missing. It never silently substitutes a system font. The episode and renderer manifests must match byte-for-byte as parsed objects; `validate_method.js` checks this and version agreement.
+
+For each independently drawable component, enclose drawing calls in `paint(ctx, itemId, callback)`. Apply scene transforms outside the wrapper so solo layers preserve shot coordinates. `render(ctx, frame/FPS, itemId)` returns the selected layer with transparency; cropping is measured from nontransparent pixels. If an active Item mapped as a layer produces no pixels, review generation fails.
+
+Do not mislabel other kinds of Item as transparent sprites:
+
+- historical city windows are an integrated detail of the source plate;
+- hatching/palette are shared visual attributes, reviewed on representative shots;
+- composition/shadow masks are inspected with context;
+- camera, pose motion and transitions require start/end frames and the actual video segment;
+- audio requires a solo stem and listening in context;
+- removed elements are explicitly retired, not silently dropped from the record.
+
+Inspect the gallery at delivery size, then watch the encoded movie and listen to its mix. Still frames alone cannot approve movement or sound. See `episodes/frankenstein-prototype/reviews/V5_3_REVIEW.md` for observed defects and review limits.
 
 ## 21. Validation and shot lock
 
@@ -445,7 +468,7 @@ Structural PASS means records are internally consistent. It does **not** mean as
 A shot cannot be locked until:
 
 - every HERO Item is `FINAL_APPROVED`;
-- every PRIMARY Item is at least `CONTINUITY_APPROVED`;
+- every active Item, including support, atmospheric, style, edit and audio Items, is `FINAL_APPROVED`;
 - no visible Item remains `NEEDS_REVALIDATION`, blocked, or unknown-rights;
 - approval frame/motion test passes;
 - audio passes in context;
@@ -458,7 +481,9 @@ Before calling the film final:
 make production-validate-final
 ```
 
-The strict-final gate must fail while unresolved Items remain. That failure is correct and informative.
+The strict-final gate must fail while unresolved Items remain. It checks all active Items, requires explicit critical scores in 8–10 (missing values fail), the selected candidate’s final status, comparison coverage, external provenance, dated approved evidence with a verified file hash and real shot binding, and continuity evidence for recurring Items. Do not mark subjective scores or review verdicts merely to make the command green.
+
+Decision evidence entries use `review_evidence: [{path, sha256, shot_id, reviewed_at, verdict}]`. Paths must be repository-relative existing files; `verdict` must be `APPROVED`. `continuity_evidence` must describe review across every recurring appearance. Keep this evidence separate from automatically generated diagnostic summaries.
 
 ## 22. Scaling to three minutes
 
@@ -493,21 +518,21 @@ There must be one obvious current solution.
 
 ## 24. Current Frankenstein status
 
-Frankenstein V5.1 is a benchmark prototype, not a final asset-approved film.
+Frankenstein V5.3 is a 24-second benchmark prototype, not a final asset-approved film. The current inventory has **67 records, 64 active**. Three retired elements remain in decision history: interior lightning, unsynchronized footstep cues and the full-screen arc transition.
 
-The V5.2 audit isolates **62 Items** across global material, exterior, chamber, Victor, creature, apparatus, atmosphere/edit, typography and audio.
+The literary source is the 1818 text (SRC-FR-012, volume I chapter IV). The illustration contract deliberately borrows the 1831 frontispiece tableau (SRC-FR-001) and tests early-19th-century apparatus. Publication date is not the date of the novel’s action. The pile reference dated 1801–1805 and later costumes are interpretive choices that must be resolved before claiming a historically exact adaptation. The novel leaves the instruments of creation unspecified.
 
-The current strict-final validator intentionally fails because many Items were created before requirements-before-search and candidate-comparison rules existed.
+Current selections for prototype testing:
 
-Known current examples:
+- masked 1800 Ingolstadt city engraving behind an invented foreground laboratory; the laboratory location is not historical evidence;
+- separate human profile planes, five-digit hand drawings and curved segmented surface marks;
+- flowing black creature hair and a restrained dull yellow eye;
+- short candle and local light falloff, with interior lightning removed;
+- plate separators, glass/foil/stopper jar components and brief contact-only cinematic spark;
+- wrist-led reach in the apparatus macro;
+- portable licensed font and per-Item diagnostic review.
 
-- the generic Ingolstadt roofline is rejected for final use and must be rebuilt from location-specific historical evidence;
-- Victor’s coat is provisional until costume direction is deliberately resolved;
-- the current voltaic pile/Leyden jars are promising bespoke reconstructions but require final historical/shot-fit comparisons;
-- the title treatment remains provisional;
-- parent composition cannot override failed child Items.
-
-V5.1 Items are **not grandfathered** into approval.
+The remaining ceiling is illustration quality, anatomical gesture, physical grip, cloth folds, costume/source-era consistency and acoustics. The current eye portrait still reuses profile geometry; a dedicated hero close-up drawing is required before final approval. The apparatus circuit and sparks are cinematic hypotheses, not certified historical/electrical behavior. Every candidate record carries its unresolved tradeoff. None is grandfathered into final approval.
 
 ## 25. Improvement loop
 

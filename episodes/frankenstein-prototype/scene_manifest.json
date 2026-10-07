@@ -1,13 +1,16 @@
 {
   "schema_version": "3.0",
   "film": {
-    "title": "Frankenstein — Living Engraving V5.1",
+    "title": "Frankenstein \u2014 Living Engraving V5.3",
     "width": 1280,
     "height": 720,
     "fps": 24,
     "audio_sample_rate": 48000,
     "runtime_seconds": 24,
-    "status": "prototype_benchmark"
+    "status": "prototype_benchmark",
+    "visual_version": "5.3",
+    "source_edition": "1818",
+    "adaptation_contract": "1818 creation-passage study using an 1831-inspired tableau and explicitly interpretive early-19th-century props; not an exact eighteenth-century reconstruction."
   },
   "shots": [
     {
@@ -30,32 +33,18 @@
         "thunder": [
           1.16,
           2.74
-        ]
+        ],
+        "rain": true
       }
     },
     {
       "id": "creation_chamber",
       "renderer": "creationChamber",
       "duration": 5,
-      "purpose": "Story-specific tableau: creature under drapery, Victor at doorway, book/skull foreground and period galvanic apparatus.",
+      "purpose": "Fading candle, proportionate draped body and Victor at doorway; tableau inspired by the 1831 frontispiece.",
       "transition_out": "hard_cut",
       "cues": {
-        "lightning": [
-          {
-            "time": 2.2,
-            "strength": 0.35
-          }
-        ],
-        "electrical_crackle": [
-          [
-            2,
-            3.8
-          ]
-        ],
-        "footsteps": [
-          0.72,
-          1.38
-        ]
+        "rain": true
       }
     },
     {
@@ -65,21 +54,15 @@
       "purpose": "Hold on Victor's fear with the face partly obscured rather than a generic front-facing portrait.",
       "transition_out": "shadow_cut",
       "cues": {
-        "breath": true,
-        "lightning": [
-          {
-            "time": 2.65,
-            "strength": 0.16
-          }
-        ]
+        "breath": true
       }
     },
     {
       "id": "galvanic_contact",
       "renderer": "galvanicContact",
       "duration": 4,
-      "purpose": "Macro shot of voltaic pile, Leyden jar, brass contact and copper wire.",
-      "transition_out": "arc_match_cut",
+      "purpose": "Interpretive apparatus study, with wrist-led reach and brief cinematic contact spark.",
+      "transition_out": "hard_cut",
       "cues": {
         "electrical_crackle": [
           [
@@ -98,16 +81,10 @@
       "id": "first_eye",
       "renderer": "firstEye",
       "duration": 4,
-      "purpose": "Extreme close-up: only eye, cheek, nose edge and hair emerge from darkness.",
+      "purpose": "Dull yellow eye opens in candle shadow; restrained portrait crop.",
       "transition_out": "hard_cut",
       "cues": {
-        "heartbeat": true,
-        "lightning": [
-          {
-            "time": 2.86,
-            "strength": 0.24
-          }
-        ]
+        "heartbeat": true
       }
     },
     {
@@ -117,19 +94,7 @@
       "purpose": "Return to the tableau as the creature rises and Victor recoils, then resolve into title.",
       "transition_out": "none",
       "cues": {
-        "thunder": [
-          0.7
-        ],
-        "lightning": [
-          {
-            "time": 0.58,
-            "strength": 0.56
-          },
-          {
-            "time": 2.42,
-            "strength": 0.19
-          }
-        ]
+        "rain": true
       }
     }
   ]

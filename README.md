@@ -158,9 +158,9 @@ Current production governance:
 - structural reproducibility and final asset approval are separate gates;
 - current instructions and historical version learning are stored separately.
 
-First worked audit: `episodes/frankenstein-prototype/` — 62 Items, 62 decision records, 11 current research sources, six benchmark shots.
+First worked audit: `episodes/frankenstein-prototype/` — 67 records (64 active), 67 decision records, 14 research sources, six benchmark shots.
 
-The V5.1 film is a prototype benchmark, **not** final-approved. The V5.2 strict-final gate intentionally remains red until each important Item wins its own evidence/candidate/shot-fit process.
+The V5.3 film is a rendered 24-second prototype with an item review gallery, **not** final-approved. The strict-final gate remains red until every active Item has sufficient comparison, scores, approved shot/audio evidence and recurring-shot continuity. See the [V5.3 review](episodes/frankenstein-prototype/reviews/V5_3_REVIEW.md) for the concrete improvements and remaining defects.
 
 See:
 - [docs/production/CURRENT_METHOD.md](docs/production/CURRENT_METHOD.md)

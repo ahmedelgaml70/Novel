@@ -2,10 +2,10 @@
 """Validate atomic production governance records.
 
 Default mode checks structure/references.
---strict-final is a publication/lock gate and is expected to fail for the current V5.1 prototype.
+--strict-final is a publication/lock gate and is expected to fail for the current V5.3 prototype.
 """
 from __future__ import annotations
-import argparse, json, sys
+import argparse, hashlib, json, math, sys
 from pathlib import Path
 
 REQUIREMENT_FIELDS=("story","period","visual","motion","continuity","technical","rights")
@@ -39,6 +39,12 @@ def main():
     shots=manifest["shots"]
     shot_ids={s["id"] for s in shots}
     items=inv["items"]; sources=sr["sources"]; decisions=dec["decisions"]
+    if inv.get("method_version")!=dec.get("method_version"):
+        errors.append("inventory and decision method versions differ")
+    if inv.get("counts",{}).get("items",len(items))!=len(items):
+        errors.append("inventory count metadata differs from records")
+    if dec.get("counts",{}).get("decisions",len(decisions))!=len(decisions):
+        errors.append("decision count metadata differs from records")
     item_map={}; source_map={}; decision_map={}
 
     runtime=sum(float(s["duration"]) for s in shots)
@@ -108,25 +114,52 @@ def main():
 
     if args.strict_final:
         for it in items:
-            if it["importance"] not in FINAL_REQUIRED:
+            if it.get("active",True) is False:
                 continue
-            d=decision_map[it["decision_id"]]
+            d=decision_map.get(it.get("decision_id"))
+            if not d:
+                continue
+            iid=it["id"]
             if it["status"]!="FINAL_APPROVED":
-                errors.append(f"strict final: {it['id']} is {it['status']}, not FINAL_APPROVED")
+                errors.append(f"strict final: {iid} is {it['status']}, not FINAL_APPROVED")
             if not d.get("requirements_locked_before_search"):
-                errors.append(f"strict final: {it['id']} requirements were not locked before search")
-            if not d.get("selected_candidate_id"):
-                errors.append(f"strict final: {it['id']} has no selected candidate")
-            if it["importance"]=="HERO" and len(d.get("candidates",[]))<2:
-                errors.append(f"strict final: HERO {it['id']} has insufficient documented comparison")
+                errors.append(f"strict final: {iid} requirements were not locked before search")
             selected=d.get("selected_candidate_id")
-            if selected:
-                cand=next((c for c in d.get("candidates",[]) if c.get("candidate_id")==selected),None)
-                if cand:
-                    scores=cand.get("scores",{})
-                    for key in ("story_specificity","period_fit","style_fit","rights_confidence"):
-                        if key in scores and scores[key]<8:
-                            errors.append(f"strict final: {it['id']} selected candidate fails {key}: {scores[key]}")
+            cand=next((c for c in d.get("candidates",[]) if c.get("candidate_id")==selected),None) if selected else None
+            if not cand:
+                errors.append(f"strict final: {iid} has no selected candidate")
+                continue
+            if it["importance"] in FINAL_REQUIRED:
+                candidates=d.get("candidates",[])
+                origins={sid for c in candidates for sid in c.get("source_ids",[])}
+                bespoke=cand.get("origin","").startswith(("BESPOKE","PROCEDURAL"))
+                compared=len(candidates)>=3 and (len(origins)>=2 or bespoke)
+                if not compared:
+                    errors.append(f"strict final: {iid} insufficient candidate/source comparison")
+            scores=cand.get("scores",{})
+            for key in ("story_specificity","period_fit","style_fit","rights_confidence","shot_fit"):
+                val=scores.get(key)
+                if isinstance(val,bool) or not isinstance(val,(int,float)) or not math.isfinite(val) or not 8<=val<=10:
+                    errors.append(f"strict final: {iid} missing/invalid critical score {key}: {val}")
+            if cand.get("status")!="FINAL_APPROVED":
+                errors.append(f"strict final: {iid} candidate is not FINAL_APPROVED")
+            if not cand.get("source_ids") and not cand.get("origin","").startswith(("BESPOKE","PROCEDURAL")):
+                errors.append(f"strict final: {iid} external asset has no source provenance")
+            evidence=d.get("review_evidence",[])
+            if not evidence:
+                errors.append(f"strict final: {iid} has no reviewed shot/audio evidence")
+            for ev in evidence:
+                relative=Path(ev.get("path","")); target=(root/relative).resolve()
+                safe=not relative.is_absolute() and root.resolve() in target.parents
+                if not safe or not target.is_file():
+                    errors.append(f"strict final: {iid} missing/unsafe evidence file")
+                    continue
+                if ev.get("sha256")!=hashlib.sha256(target.read_bytes()).hexdigest():
+                    errors.append(f"strict final: {iid} review evidence hash differs")
+                if ev.get("verdict")!="APPROVED" or not ev.get("reviewed_at") or ev.get("shot_id") not in shot_ids:
+                    errors.append(f"strict final: {iid} review is not dated, approved and bound to a real shot")
+            if len(it.get("shot_ids",[]))>1 and not d.get("continuity_evidence"):
+                errors.append(f"strict final: {iid} has no recurring-shot continuity review")
 
     if errors:
         print("\n".join("ERROR: "+e for e in errors))
