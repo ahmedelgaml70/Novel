@@ -53,3 +53,12 @@ Make every visible/audible/edit decision individually inspectable and prevent fi
 
 ### Next improvement target
 Rebuild the highest-risk HERO Items first: Ingolstadt exterior, Victor profile/pose/hands/costume, creature anatomy/eye/drapery, and apparatus contact macro. Do not spend effort polishing low-impact texture while HERO Items remain weak.
+
+
+### V5.2.1 source-fidelity layer
+
+- Designated Project Gutenberg eBook #42324 (1831 edition) as the prototype literary source record and retained #41445 (1818 edition) as comparative evidence.
+- Added source-fidelity obligations for the Chapter V awakening sequence.
+- Identified the nearly exhausted candle and hard breathing as currently underrepresented/missing rather than silently accepting their absence.
+- Explicitly marked the galvanic apparatus as an interpretive historical reconstruction: the novel says “instruments of life” but does not specify a voltaic-pile/Leyden-jar setup.
+- Added crosslinks from affected Items back to source obligations.
