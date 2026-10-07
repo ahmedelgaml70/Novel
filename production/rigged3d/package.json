@@ -5,10 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "vite build"
+    "build": "vite build",
+    "merge:quaternius": "node tools/merge_quaternius.mjs",
+    "list:clips": "node tools/list_clips.mjs public/assets/human_male.glb"
   },
   "dependencies": {
-    "three": "^0.181.0"
+    "three": "^0.181.0",
+    "@gltf-transform/core": "^4.5.0",
+    "@gltf-transform/extensions": "^4.5.0"
   },
   "devDependencies": {
     "vite": "^7.1.0"
