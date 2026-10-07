@@ -1,6 +1,6 @@
 # Living Engraving — Current Production Method
 
-**Method version:** 5.2.1  
+**Method version:** 5.2.2  
 **Status:** canonical / current  
 **Visual baseline:** Frankenstein V5.1. V5.2 is a governance/method update; it does not claim a new visual render.  
 **Goal:** produce an authored, cinematic, approximately three-minute novel adaptation in JavaScript without generic visible assets.
