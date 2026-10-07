@@ -54,7 +54,11 @@ jobs:
             https://raw.githubusercontent.com/evanly-gh/evanly.me/9fa3fdcf08165f0bb9130026dab94a2302a0b4bc/public/models/quaternius/Lever.glb \
             -o production/rigged3d/public/assets/lever.glb
 
-          for file in brick-wall.glb altar-stone.glb candle.glb; do
+          curl -L --fail --retry 3 \
+            https://raw.githubusercontent.com/BibliothecaDAO/eternum/ab239125af10c3001518a7c1ee27152c5c5100ab/apps/game/public/models/characters/quaternius/peasant-male.glb \
+            -o production/rigged3d/public/assets/victor_peasant.glb
+
+          for file in brick-wall.glb candle.glb; do
             curl -L --fail --retry 3 \
               "https://raw.githubusercontent.com/georg-doc/kayfabizarro/2215b8895588b1dcf787cd55c08fe76371895f59/media/3D_Assets/GLB_graveyard/$file" \
               -o "production/rigged3d/public/assets/graveyard/$file"
@@ -67,6 +71,7 @@ jobs:
           sha256sum production/rigged3d/public/assets/human_male.glb \
                     production/rigged3d/public/assets/table.glb \
                     production/rigged3d/public/assets/lever.glb \
+                    production/rigged3d/public/assets/victor_peasant.glb \
                     production/rigged3d/public/assets/graveyard/*.glb
 
       - name: Start Vite
@@ -95,7 +100,7 @@ jobs:
         run: |
           ffmpeg -y -framerate 24 -i frankenstein-output/frames/frame_%04d.png \
             -c:v libx264 -pix_fmt yuv420p -crf 18 -movflags +faststart \
-            frankenstein-output/frankenstein_fast_path_v5_4_2.mp4
+            frankenstein-output/frankenstein_fast_path_v5_4_3.mp4
 
           ffmpeg -y -i frankenstein-output/frankenstein_fast_path_v5_4_2.mp4 \
             -vf "fps=1,scale=320:-1,tile=5x2" -frames:v 1 \
@@ -104,7 +109,7 @@ jobs:
       - name: Upload proof
         uses: actions/upload-artifact@v4
         with:
-          name: frankenstein-fast-path-v5-4-2
+          name: frankenstein-fast-path-v5-4-3
           path: |
             production/rigged3d/frankenstein-output/frankenstein_fast_path_v5_4_2.mp4
             production/rigged3d/frankenstein-output/contact_sheet.jpg
