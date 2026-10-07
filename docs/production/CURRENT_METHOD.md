@@ -791,3 +791,19 @@ JavaScript currently owns:
 - final rendering.
 
 The visible art-authoring method remains per-Item. Primitive geometry is retained where it is genuinely best (for example a controllable contact lever), not as a requirement for every visible object.
+
+## 36. Alpha-isolation QC
+
+A visually cropped asset is not automatically a clean isolated asset.
+
+For assets expected to be one connected object:
+1. inspect the alpha mask;
+2. count connected non-transparent components;
+3. inspect the bounds/area of every component;
+4. keep only the intended object component(s);
+5. rerender the actual shot at the tightest approved scale;
+6. reject unexplained floating fragments before approval.
+
+Manual rectangular erasing is only a first cleanup pass. Macro/close-up Items require structural alpha QC because tiny source-sheet fragments can become conspicuous after scaling.
+
+For intentionally disconnected objects (for example separate wires/parts), define the expected component set instead of blindly keeping only the largest component.
