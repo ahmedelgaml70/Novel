@@ -19,7 +19,7 @@ page.on('pageerror',e=>console.error('[pageerror]',e));
 await page.goto(base,{waitUntil:'networkidle',timeout:120000});
 await page.waitForFunction(()=>window.__ready===true,{timeout:120000});
 
-const meta=await page.evaluate(()=>({clips:window.__clipInventory,chosen:window.__chosenClips}));
+const meta=await page.evaluate(()=>({clips:window.__clipInventory,chosen:window.__chosenClips,contactAudit:window.__contactAudit||null}));
 await fs.writeFile(path.join(out,'clip_inventory.json'),JSON.stringify(meta,null,2));
 
 const total=Math.round(duration*fps);
