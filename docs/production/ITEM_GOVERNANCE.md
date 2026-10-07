@@ -253,3 +253,21 @@ When an Item fails or an improvement materially succeeds, decide whether the fin
 A meaningful issue is not closed by replacement alone. Record the reusable lesson in the learning system when appropriate, including root cause, prevention and detection. Then encode the prevention in the strongest reasonable mechanism: validator/test, structured record, checklist, method rule, benchmark or episode-only note.
 
 Do not promote novel-specific facts into global rules. See `LEARNING_SYSTEM.md`.
+
+## Asset-authoring method decision
+
+The Item record/decision must not assume that JavaScript primitives, AI generation, historical art, SVG, 3D, or any other medium is inherently preferred.
+
+Choose the authoring method that best satisfies the locked Item requirements and the real shot. Record why the method was selected when the choice materially affects quality, rights, animation or continuity.
+
+For HERO Items that require alpha-safe reuse, use an independent source file where practical. If a multi-object sheet is used, it must pass an extraction test before the asset is treated as viable.
+
+## Motion-structure gate
+
+Before final approval of any moving Item, classify the required motion as `RIGID/SUBTLE`, `DEFORMABLE`, or `ARTICULATED` and ensure the chosen asset has the necessary degrees of freedom.
+
+A high-quality still does not prove animation suitability.
+
+## Detail-hierarchy check
+
+Shot approval also checks relative quality: a strong HERO Item can make nearby SUPPORT assets fail by comparison. Replace, simplify or remove mismatched filler rather than hiding it with post-processing.
