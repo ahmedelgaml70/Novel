@@ -347,6 +347,69 @@
       "discovered_at": "2026-10-07",
       "status": "SUPPORTING_REFERENCE",
       "notes": "Supports identity of historic university architecture; not sufficient alone for the 1800 city roofline."
+    },
+    {
+      "id": "SRC-FR-012",
+      "title": "Frankenstein; Or, The Modern Prometheus — 1831 edition (Project Gutenberg eBook #42324)",
+      "creator": "Mary Wollstonecraft Shelley",
+      "date": "1831",
+      "provider": "Project Gutenberg",
+      "url": "https://www.gutenberg.org/ebooks/42324",
+      "roles": [
+        "DESIGNATED_SOURCE_TEXT",
+        "SOURCE_FIDELITY_EVIDENCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "rain_field",
+        "creature_eye",
+        "creature_body_proportions",
+        "creature_hair",
+        "victor_recoil_pose",
+        "title_frankenstein",
+        "subtitle_modern_prometheus"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN_IN_US_PROVIDER_STATEMENT",
+        "commercial_asset_use": "TEXT_SOURCE_ONLY_JURISDICTION_POLICY_STILL_APPLIES",
+        "evidence_url": "https://www.gutenberg.org/ebooks/42324"
+      },
+      "quality": {
+        "authority": "PRIMARY_TEXT_PROVIDER",
+        "period_proximity": "EXACT_1831_EDITION_TEXT"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "DESIGNATED_PROTOTYPE_SOURCE_TEXT",
+      "notes": "Project Gutenberg identifies this ebook as the 1831 edition. Use this exact edition for prototype source-fidelity obligations unless the production source contract is deliberately changed."
+    },
+    {
+      "id": "SRC-FR-013",
+      "title": "Frankenstein; Or, The Modern Prometheus — 1818 edition (Project Gutenberg eBook #41445)",
+      "creator": "Mary Wollstonecraft Shelley",
+      "date": "1818",
+      "provider": "Project Gutenberg",
+      "url": "https://www.gutenberg.org/ebooks/41445",
+      "roles": [
+        "COMPARATIVE_SOURCE_TEXT",
+        "SOURCE_FIDELITY_EVIDENCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "title_frankenstein",
+        "subtitle_modern_prometheus"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN_IN_US_PROVIDER_STATEMENT",
+        "commercial_asset_use": "TEXT_SOURCE_ONLY_JURISDICTION_POLICY_STILL_APPLIES",
+        "evidence_url": "https://www.gutenberg.org/ebooks/41445"
+      },
+      "quality": {
+        "authority": "PRIMARY_TEXT_PROVIDER",
+        "period_proximity": "EXACT_1818_EDITION_TEXT"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "COMPARATIVE_REFERENCE",
+      "notes": "Retained because adaptation/title/wording choices can differ by edition. Do not silently mix 1818 and 1831 details."
     }
   ]
 }
