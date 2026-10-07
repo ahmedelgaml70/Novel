@@ -528,52 +528,305 @@
     {
       "id": "DEC-creature_body_proportions",
       "item_id": "creature_body_proportions",
-      "requirements_locked_before_search": false,
-      "candidates": [],
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "CBODY-A-text-anatomy-synthesis",
+          "origin": "BESPOKE_REFERENCE_DRIVEN",
+          "source_ids": [
+            "SRC-FR-012",
+            "SRC-FR-013",
+            "SRC-FR-014",
+            "SRC-FR-015",
+            "SRC-FR-016",
+            "SRC-FR-001"
+          ],
+          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
+          "scores": {
+            "story_specificity": 10,
+            "source_fidelity": 9,
+            "period_fit": 9,
+            "rights_confidence": 10
+          },
+          "reason": "Bespoke proportional human figure built from literary constraints, Bell surface/action anatomy, skeletal/anatomical references, and period engraving language. Best research direction so far because it preserves proportion/beauty while allowing uncanny surface treatment; must still survive the actual shot."
+        },
+        {
+          "candidate_id": "CBODY-B-vonholst-silhouette-led",
+          "origin": "BESPOKE_REDRAW_FROM_PERIOD_ART_DIRECTION_REFERENCE",
+          "source_ids": [
+            "SRC-FR-001",
+            "SRC-FR-002",
+            "SRC-FR-012",
+            "SRC-FR-013"
+          ],
+          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
+          "scores": {
+            "story_specificity": 9,
+            "source_fidelity": 7,
+            "period_fit": 10,
+            "rights_confidence": 10
+          },
+          "reason": "Uses von Holst's early Frankenstein silhouette/proportion language as the dominant visual reference. Strong period identity and story connection, but a single historical illustration may overconstrain anatomy and angles; needs comparison against a more anatomy-driven bespoke design."
+        },
+        {
+          "candidate_id": "CBODY-C-direct-anatomy-plate",
+          "origin": "PUBLIC_DOMAIN_ANATOMY_PLATE_AS_VISIBLE_ASSET",
+          "source_ids": [
+            "SRC-FR-015",
+            "SRC-FR-016"
+          ],
+          "status": "REJECTED_AS_FINAL_VISIBLE_DIRECTION",
+          "scores": {
+            "story_specificity": 3,
+            "source_fidelity": 4,
+            "period_fit": 8,
+            "rights_confidence": 10
+          },
+          "reason": "Excellent anatomy evidence but poor final creature asset: too clinical, not story-specific, and would make the film look like an imported anatomy plate. Retain only as design/reference evidence."
+        }
+      ],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "decision_status": "CANDIDATES_COMPARED_REQUIRES_SHOT_TEST",
+      "why_selected_or_pending": "Two bespoke directions remain viable. Render A and B in the creation/recoil framing before selection; do not select from research scores alone.",
+      "remaining_risk": "Anatomy, silhouette, drapery interaction and delivery-size readability remain untested."
     },
     {
       "id": "DEC-creature_head_shape",
       "item_id": "creature_head_shape",
-      "requirements_locked_before_search": false,
-      "candidates": [],
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "CHEAD-A-proportional-beauty-corrupted",
+          "origin": "BESPOKE_REFERENCE_DRIVEN",
+          "source_ids": [
+            "SRC-FR-012",
+            "SRC-FR-013",
+            "SRC-FR-014",
+            "SRC-FR-015",
+            "SRC-FR-001"
+          ],
+          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
+          "scores": {
+            "story_specificity": 10,
+            "source_fidelity": 9,
+            "period_fit": 9,
+            "rights_confidence": 10
+          },
+          "reason": "Start from a proportionate, potentially beautiful human head and create horror through pallor, sockets, lips, eye treatment, shadow and animation rather than arbitrary cranial deformation."
+        },
+        {
+          "candidate_id": "CHEAD-B-vonholst-profile-led",
+          "origin": "BESPOKE_REDRAW_FROM_PERIOD_ART_DIRECTION_REFERENCE",
+          "source_ids": [
+            "SRC-FR-001",
+            "SRC-FR-002"
+          ],
+          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
+          "scores": {
+            "story_specificity": 9,
+            "source_fidelity": 7,
+            "period_fit": 10,
+            "rights_confidence": 10
+          },
+          "reason": "Builds the head/profile language from the 1831 frontispiece. Strong Frankenstein identity and engraving fit, but must be checked against source-contract choice and close-up anatomy."
+        },
+        {
+          "candidate_id": "CHEAD-C-generic-grotesque-monster",
+          "origin": "GENERIC_HORROR_DIRECTION",
+          "source_ids": [],
+          "status": "REJECTED",
+          "scores": {
+            "story_specificity": 2,
+            "source_fidelity": 2,
+            "period_fit": 4,
+            "rights_confidence": 10
+          },
+          "reason": "Blockheaded/scarred/deformed monster shorthand is rejected because it is generic, later-iconography driven, and conflicts with the source idea of proportionate limbs/features originally selected as beautiful."
+        }
+      ],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "decision_status": "CANDIDATES_COMPARED_REQUIRES_SHOT_TEST",
+      "why_selected_or_pending": "A and B require matched close-up tests under identical lighting/crop. No head direction is selected from concept description alone.",
+      "remaining_risk": "Face anatomy and expression may still feel illustrative or generic at final pixel size."
     },
     {
       "id": "DEC-creature_hair",
       "item_id": "creature_hair",
-      "requirements_locked_before_search": false,
-      "candidates": [],
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "CHAIR-A-flowing-engraved-mass",
+          "origin": "BESPOKE_TEXT_AND_PERIOD_ART_DIRECTION",
+          "source_ids": [
+            "SRC-FR-012",
+            "SRC-FR-013",
+            "SRC-FR-001"
+          ],
+          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
+          "scores": {
+            "story_specificity": 10,
+            "source_fidelity": 10,
+            "period_fit": 9,
+            "rights_confidence": 10
+          },
+          "reason": "Long lustrous black hair treated as several flowing engraved masses that break the silhouette and partially obscure the face."
+        },
+        {
+          "candidate_id": "CHAIR-B-fine-locks-rimlit",
+          "origin": "BESPOKE_TEXT_DRIVEN",
+          "source_ids": [
+            "SRC-FR-012",
+            "SRC-FR-013"
+          ],
+          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
+          "scores": {
+            "story_specificity": 9,
+            "source_fidelity": 10,
+            "period_fit": 8,
+            "rights_confidence": 10
+          },
+          "reason": "More individual flowing locks with restrained rim light. Could read more human and beautiful before becoming uncanny, but may be expensive/noisy at video resolution."
+        },
+        {
+          "candidate_id": "CHAIR-C-heavy-shadow-curtain",
+          "origin": "BESPOKE_CHIAROSCURO_DIRECTION",
+          "source_ids": [
+            "SRC-FR-001",
+            "SRC-FR-002",
+            "SRC-FR-012",
+            "SRC-FR-013"
+          ],
+          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
+          "scores": {
+            "story_specificity": 8,
+            "source_fidelity": 9,
+            "period_fit": 10,
+            "rights_confidence": 10
+          },
+          "reason": "Hair acts as a nearly solid black curtain with a few flowing cuts, maximizing silhouette clarity and hiding facial information. Risk: may lose the 'lustrous' quality."
+        }
+      ],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "decision_status": "CANDIDATES_COMPARED_REQUIRES_SHOT_TEST",
+      "why_selected_or_pending": "All three remain viable until tested at medium and close-up scales.",
+      "remaining_risk": "Need continuity across body shot and eye close-up without adding excessive line noise."
     },
     {
       "id": "DEC-creature_eye",
       "item_id": "creature_eye",
-      "requirements_locked_before_search": false,
-      "candidates": [],
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "CEYE-A-dull-yellow-waterlogged",
+          "origin": "BESPOKE_TEXT_AND_ANATOMY_DRIVEN",
+          "source_ids": [
+            "SRC-FR-012",
+            "SRC-FR-013",
+            "SRC-FR-014",
+            "SRC-FR-015"
+          ],
+          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
+          "scores": {
+            "story_specificity": 10,
+            "source_fidelity": 10,
+            "period_fit": 9,
+            "rights_confidence": 10
+          },
+          "reason": "A dull yellow/watery eye with low luminance contrast, pale socket and subtle wet specular detail. Horror comes from life appearing in something almost dead, not from neon emission."
+        },
+        {
+          "candidate_id": "CEYE-B-engraving-shadow-eye",
+          "origin": "BESPOKE_PERIOD_ENGRAVING_DIRECTION",
+          "source_ids": [
+            "SRC-FR-001",
+            "SRC-FR-002",
+            "SRC-FR-014"
+          ],
+          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
+          "scores": {
+            "story_specificity": 9,
+            "source_fidelity": 8,
+            "period_fit": 10,
+            "rights_confidence": 10
+          },
+          "reason": "Keeps most of the eye in engraving shadow and reveals only a small dull-yellow iris/scleral plane. Strong style integration, but may become unreadable in the macro shot."
+        },
+        {
+          "candidate_id": "CEYE-C-electric-blue-glow",
+          "origin": "GENERIC_CINEMATIC_EFFECT",
+          "source_ids": [],
+          "status": "REJECTED",
+          "scores": {
+            "story_specificity": 3,
+            "source_fidelity": 1,
+            "period_fit": 2,
+            "rights_confidence": 10
+          },
+          "reason": "Rejected despite visual punch: it turns the eye into a modern sci-fi/electrical trope and directly weakens the dull-yellow/watery source description."
+        }
+      ],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "decision_status": "CANDIDATES_COMPARED_REQUIRES_SHOT_TEST",
+      "why_selected_or_pending": "Render A and B at the exact first-eye crop, including shadow mask and motion. Select based on readability, dread and integration—not brightness.",
+      "remaining_risk": "Macro readability versus subtlety is unresolved."
     },
     {
       "id": "DEC-creature_rise_motion",
       "item_id": "creature_rise_motion",
-      "requirements_locked_before_search": false,
-      "candidates": [],
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "CMOTION-A-breath-spasm-rise",
+          "origin": "BESPOKE_SOURCE_AND_ANATOMY_DRIVEN_MOTION",
+          "source_ids": [
+            "SRC-FR-012",
+            "SRC-FR-013",
+            "SRC-FR-014"
+          ],
+          "status": "RESEARCH_QUALIFIED_NOT_MOTION_TESTED",
+          "scores": {
+            "story_specificity": 10,
+            "source_fidelity": 10,
+            "period_fit": 10,
+            "rights_confidence": 10
+          },
+          "reason": "Sequence: hard breath/chest expansion -> distal finger/hand spasm -> asymmetric convulsive limb motion -> incomplete head/torso rise. Closely maps source event order while remaining cinematic."
+        },
+        {
+          "candidate_id": "CMOTION-B-convulsion-stillness-headturn",
+          "origin": "BESPOKE_SOURCE_DRIVEN_MOTION",
+          "source_ids": [
+            "SRC-FR-012",
+            "SRC-FR-013",
+            "SRC-FR-014"
+          ],
+          "status": "RESEARCH_QUALIFIED_NOT_MOTION_TESTED",
+          "scores": {
+            "story_specificity": 9,
+            "source_fidelity": 9,
+            "period_fit": 10,
+            "rights_confidence": 10
+          },
+          "reason": "One stronger whole-body convulsion followed by unnerving stillness, then a small head/eye movement. Less literal breathing emphasis but potentially stronger horror rhythm."
+        },
+        {
+          "candidate_id": "CMOTION-C-slow-zombie-rise",
+          "origin": "GENERIC_HORROR_MOTION",
+          "source_ids": [],
+          "status": "REJECTED",
+          "scores": {
+            "story_specificity": 2,
+            "source_fidelity": 2,
+            "period_fit": 5,
+            "rights_confidence": 10
+          },
+          "reason": "Rejected because it imports a generic undead movement vocabulary and ignores the described hard breathing and convulsive first movement."
+        }
+      ],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "decision_status": "CANDIDATES_COMPARED_REQUIRES_SHOT_TEST",
+      "why_selected_or_pending": "Create short motion tests for A and B with identical framing/audio before selection.",
+      "remaining_risk": "Movement can become melodramatic or mechanically rigged; Bell-informed muscle/joint behavior must survive stylization."
     },
     {
       "id": "DEC-voltaic_pile",
