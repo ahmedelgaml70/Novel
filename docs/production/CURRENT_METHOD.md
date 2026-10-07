@@ -646,3 +646,38 @@ Use three practical motion classes:
 - `ARTICULATED` — independent limbs/fingers/joints; use separate parts, rig, mesh or dedicated animated asset.
 
 Do not approve a beautiful static HERO asset for an articulated action unless the required degrees of freedom are actually available.
+
+
+## 31. Asset approval is shot-scale specific
+
+An asset is not simply “approved” in the abstract.
+
+Record the scale/use cases it has actually passed, for example:
+- extreme close-up;
+- portrait;
+- medium;
+- full-body;
+- wide silhouette;
+- macro prop;
+- thumbnail/background.
+
+A candidate that passes at medium/full-body scale may still fail as a portrait source. Do not upscale beyond the validated information content and then compensate with filters.
+
+If a shot asks an otherwise strong asset to operate outside its validated scale, compare two options:
+1. author/acquire a dedicated higher-detail asset for that shot; or
+2. redesign the shot around the scale the asset genuinely supports.
+
+Choose whichever produces the stronger film. Shot design is revisable; the asset does not dictate the story.
+
+## 32. Weak interaction assets may be removed by shot redesign
+
+Do not keep a weak hand, face, prop or interaction merely because the initial storyboard included it.
+
+If the narrative beat can be expressed more clearly with a better-controllable primitive or edit, redesign it.
+
+Example pattern:
+- contaminated/weak hand on a switch fails the gate;
+- the shot instead uses a historically plausible lever/contact whose motion is deterministic in JavaScript;
+- the human presence can remain in the adjacent shot rather than forcing a bad hand close-up.
+
+This is not “working around quality.” It is choosing the strongest visual grammar for the beat.
