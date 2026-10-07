@@ -147,5 +147,34 @@
       "source": "https://polyhaven.com/",
       "notes": "Use when higher-detail assets are required; evaluate per Item."
     }
+  ],
+  "development_convenience_sources": [
+    {
+      "id": "QUATERNIUS_MERGED_GLBS_REFERENCE",
+      "purpose": "DEVELOPMENT_PROOF_ONLY",
+      "repository": "NafisRayan/Animate-Rigged-Humanoid-No-Blender",
+      "files": [
+        {
+          "path": "test/human_male.glb",
+          "size_bytes": 35190592,
+          "sha": "ad6e0e84b934007d2bc89acf2ebb947a79738333"
+        },
+        {
+          "path": "test/human_female.glb",
+          "size_bytes": 35752840,
+          "sha": "d3ebcbbcd14bb742b2962687640e36ee95977e3f"
+        }
+      ],
+      "evidence": {
+        "merged_clip_count": 86,
+        "matched_rig_nodes": 66,
+        "animation_library_license_files": [
+          "Universal Animation Library[Standard]/Universal Animation Library[Standard]/License.txt",
+          "Universal Animation Library 2[Standard]/Universal Animation Library 2[Standard]/License.txt"
+        ],
+        "license_text": "CC0 1.0 Universal / Public Domain Dedication for the Quaternius animation packs."
+      },
+      "policy": "May be used to remove asset-preparation friction during E-VID-006. For final production, prefer official Quaternius downloads or pin and record the exact binary SHA/provenance."
+    }
   ]
 }
