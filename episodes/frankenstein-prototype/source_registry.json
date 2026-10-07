@@ -347,6 +347,79 @@
       "discovered_at": "2026-10-07",
       "status": "SUPPORTING_REFERENCE",
       "notes": "Supports identity of historic university architecture; not sufficient alone for the 1800 city roofline."
+    },
+    {
+      "id": "SRC-FR-012",
+      "title": "Frankenstein; Or, The Modern Prometheus — 1818 edition, Project Gutenberg eBook #41445",
+      "creator": "Mary Wollstonecraft Shelley",
+      "date": "1818 edition; digital transcription updated 2026-10-06",
+      "provider": "Project Gutenberg",
+      "url": "https://www.gutenberg.org/ebooks/41445",
+      "roles": [
+        "NOVEL_SOURCE",
+        "PRIMARY_TEXT",
+        "SOURCE_FIDELITY_REFERENCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "ingolstadt_roofline",
+        "laboratory_exterior_building",
+        "gothic_laboratory_window",
+        "storm_sky",
+        "rain_field",
+        "creation_chamber_composition",
+        "creature_body_proportions",
+        "creature_head_shape",
+        "creature_hair",
+        "creature_eye",
+        "creature_rise_motion",
+        "interior_lightning",
+        "victor_recoil_pose"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN_IN_USA_PROJECT_GUTENBERG_TERMS_APPLY_TO_GUTENBERG_EDITION",
+        "commercial_asset_use": "TEXT_REFERENCE_ELIGIBLE_SUBJECT_TO_PROJECT_GUTENBERG_LICENSE_AND_LOCAL_JURISDICTION",
+        "evidence_url": "https://www.gutenberg.org/ebooks/41445"
+      },
+      "quality": {
+        "authority": "HIGH",
+        "period_proximity": "PRIMARY_TEXT_PHOTOREPRINT_OF_1818_EDITION"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "PREFERRED_1818_TEXT_REFERENCE",
+      "notes": "Photo-reprint transcription of the 1818 edition. Creation passage: one in the morning, rain against panes, nearly burnt-out candle, dull yellow eye, hard breathing, convulsive limb motion; limbs proportionate, flowing lustrous black hair, watery pale eyes, shrivelled complexion, straight black lips. Ingolstadt arrival mentions a high white steeple. Do not infer a specific electrical apparatus from 'instruments of life'."
+    },
+    {
+      "id": "SRC-FR-013",
+      "title": "Frankenstein; Or, The Modern Prometheus — 1831 edition, Project Gutenberg eBook #42324",
+      "creator": "Mary Wollstonecraft Shelley",
+      "date": "1831 edition",
+      "provider": "Project Gutenberg",
+      "url": "https://www.gutenberg.org/ebooks/42324",
+      "roles": [
+        "NOVEL_SOURCE_ALTERNATIVE_EDITION",
+        "SOURCE_FIDELITY_REFERENCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "title_frankenstein",
+        "subtitle_modern_prometheus",
+        "creation_chamber_composition",
+        "victor_recoil_pose",
+        "creature_eye"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN_IN_USA_PROJECT_GUTENBERG_TERMS_APPLY_TO_GUTENBERG_EDITION",
+        "commercial_asset_use": "TEXT_REFERENCE_ELIGIBLE_SUBJECT_TO_PROJECT_GUTENBERG_LICENSE_AND_LOCAL_JURISDICTION",
+        "evidence_url": "https://www.gutenberg.org/ebooks/42324"
+      },
+      "quality": {
+        "authority": "HIGH",
+        "period_proximity": "AUTHOR_REVISED_1831_EDITION"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "ALTERNATIVE_EDITION_REFERENCE",
+      "notes": "Use to compare edition-dependent wording/art-direction decisions. Do not mix 1818 and 1831 source contracts silently."
     }
   ]
 }
