@@ -143,6 +143,21 @@
       },
       "uniqueItems": true,
       "description": "Source-fidelity obligation IDs that currently constrain this Item."
+    },
+    "active_in_current_cut": {
+      "type": "boolean",
+      "description": "False keeps an Item's history while excluding it from current-cut approval/final gates."
+    },
+    "previous_shot_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "description": "Historical shot membership retained when an Item is removed/replaced."
+    },
+    "inactive_reason": {
+      "type": "string"
     }
   },
   "additionalProperties": true
