@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "episode_id": "frankenstein-prototype",
+  "status": "OPEN_REVISABLE",
+  "rule": "Do not conflate diegetic story time, publication/edition time, and art-direction reference time. Each may inform different Items.",
+  "layers": {
+    "diegetic_story_time": {
+      "status": "APPROXIMATE",
+      "evidence_source_ids": [
+        "SRC-FR-012",
+        "SRC-FR-013"
+      ],
+      "current_interpretation": "The frame narrative uses dates in the form 17—, and Victor's creation story occurs earlier than Walton's frame. Treat the world as late-18th-century unless a more precise episode decision is justified.",
+      "implications": [
+        "Costume/technology/world objects should not automatically inherit 1818 or 1831 publication fashions."
+      ]
+    },
+    "publication_and_edition_time": {
+      "source_ids": [
+        "SRC-FR-012",
+        "SRC-FR-013"
+      ],
+      "values": [
+        "1818 first edition",
+        "1831 author-revised edition"
+      ],
+      "implications": [
+        "Affects wording/source contract and can inform visual culture, but is not automatically the diegetic date."
+      ]
+    },
+    "visual_reference_time": {
+      "source_ids": [
+        "SRC-FR-001",
+        "SRC-FR-010",
+        "SRC-FR-014",
+        "SRC-FR-015",
+        "SRC-FR-017"
+      ],
+      "values": [
+        "1576 city comparison",
+        "1800 Ingolstadt view",
+        "1806 anatomy/expression",
+        "1831 visual/anatomical references"
+      ],
+      "implications": [
+        "References can teach line language, anatomy, composition or location even when their dates differ from the diegetic world; the difference must be deliberate and appropriate to the Item."
+      ]
+    }
+  },
+  "item_guidance": {
+    "victor_costume": "Prefer diegetic-time evidence first; compare later publication-era reinterpretation only as an explicit stylization alternative.",
+    "living_engraving_linework": "May draw from early-19th-century engraving language because style-reference date and diegetic costume date are separate decisions.",
+    "apparatus": "Validate against the technology/history required by the fictional event; do not infer exact apparatus from publication date alone."
+  }
+}
