@@ -171,3 +171,28 @@ A version number is not earned by cosmetic code changes. It must represent a mea
 **Current decision:** promote the **hybrid architecture** — high-information handpicked/bespoke assets + JavaScript direction/compositing/motion — but do not claim a final V5.3 film yet.
 
 **Remaining ceiling:** exterior/location layer and supporting chamber architecture still need to reach the new HERO quality floor; final individual source/provenance and articulated creature motion remain unresolved.
+
+## V5.3.0-dev — Hybrid high-information look-development
+
+**Goal:** raise the visual ceiling without sacrificing deterministic JavaScript direction.
+
+**First attempt:** improved primitive/vector redraws for creature, Victor and Ingolstadt.
+
+**Result:** rejected. Requirements and composition improved, but anatomy/architecture still looked like constructed code geometry.
+
+**Pivot:** separated art authoring from film direction. High-information HERO assets may now come from the best per-Item method (handpicked public-domain source, bespoke redraw, generated illustration, etc.), while JavaScript owns composition, masks, camera, lighting, atmosphere, mechanisms, timing and final render.
+
+**Important tests and findings:**
+- crowded multi-object asset sheet rejected for HERO extraction because overlaps damaged hair, hands, cloth and alpha edges;
+- individual/high-information creature body and head materially outperform primitive versions in actual shots;
+- real eye detail + JavaScript occlusion mask produces a stronger dull-yellow eye reveal than procedural/generic glow;
+- high-detail assets exposed the old room as too generic, leading to removal of weak shelf/anatomy/skull filler;
+- old timber-grid chamber lost a matched-frame comparison to a sparse stone/plaster architecture with arch rhythm;
+- rectangular Victor doorway read like a picture frame and was replaced by an arched opening with clipping/occlusion;
+- Victor asset is preferred only at medium/full-body scale; portrait enlargement is explicitly rejected;
+- contaminated hand interaction was removed and replaced by a controllable JavaScript brass contact/lever;
+- flat Creature body supports restrained breathing/lift, but independent convulsive limb articulation remains unresolved.
+
+**Current rule:** no full V5.3 film is promoted until HERO-shot locks pass.
+
+**Visual render:** partial lookdev and motion tests only. V5.1 remains the last complete baseline.
