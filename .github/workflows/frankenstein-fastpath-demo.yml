@@ -34,6 +34,13 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg
 
+      - name: Vendor Three.js Draco decoder
+        working-directory: production/rigged3d
+        run: |
+          mkdir -p public/draco
+          cp node_modules/three/examples/jsm/libs/draco/* public/draco/
+          ls -lh public/draco
+
       - name: Download V5.4.4 ready assets
         run: |
           set -eux
