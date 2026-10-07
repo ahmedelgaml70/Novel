@@ -386,8 +386,8 @@
         "period_proximity": "PRIMARY_TEXT_PHOTOREPRINT_OF_1818_EDITION"
       },
       "discovered_at": "2026-10-07",
-      "status": "PREFERRED_1818_TEXT_REFERENCE",
-      "notes": "Photo-reprint transcription of the 1818 edition. Creation passage: one in the morning, rain against panes, nearly burnt-out candle, dull yellow eye, hard breathing, convulsive limb motion; limbs proportionate, flowing lustrous black hair, watery pale eyes, shrivelled complexion, straight black lips. Ingolstadt arrival mentions a high white steeple. Do not infer a specific electrical apparatus from 'instruments of life'."
+      "status": "SOURCE_CONTRACT_CANDIDATE",
+      "notes": "Photo-reprint transcription of the 1818 edition. Creation passage: one in the morning, rain against panes, nearly burnt-out candle, dull yellow eye, hard breathing, convulsive limb motion; limbs proportionate, flowing lustrous black hair, watery pale eyes, shrivelled complexion, straight black lips. Ingolstadt arrival mentions a high white steeple. Do not infer a specific electrical apparatus from 'instruments of life'. No source contract is currently locked."
     },
     {
       "id": "SRC-FR-013",
@@ -418,8 +418,8 @@
         "period_proximity": "AUTHOR_REVISED_1831_EDITION"
       },
       "discovered_at": "2026-10-07",
-      "status": "ALTERNATIVE_EDITION_REFERENCE",
-      "notes": "Use to compare edition-dependent wording/art-direction decisions. Do not mix 1818 and 1831 source contracts silently."
+      "status": "SOURCE_CONTRACT_CANDIDATE",
+      "notes": "Use to compare edition-dependent wording/art-direction decisions. Do not mix 1818 and 1831 source contracts silently. No source contract is currently locked."
     }
   ]
 }
