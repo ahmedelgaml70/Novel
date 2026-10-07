@@ -124,3 +124,23 @@ V5.3 primitive lookdev improved research/source logic but still looked visibly c
 
 ### Decision
 Promote the asset-authoring architecture, not the current salvaged source files. Produce clean individual HERO assets, preserve JS direction/compositing, and continue lookdev before full render.
+
+
+### Phase 3 — intended-scale hybrid motion gate
+
+- Creature body/head/eye: promoted to preferred provisional direction after actual shot/motion tests.
+- Victor: medium/full-body recoil use passes directionally; portrait enlargement explicitly rejected.
+- Victor close-up shot: redesigned to medium doorway recoil rather than forcing weak portrait art.
+- Galvanic macro: isolated hand removed; JavaScript brass lever/contact now performs the action.
+- First-eye: real engraved eye retained; JS mask now creates closed -> partial -> open states.
+- Renderer bug found: ellipse primitive overwrote inherited alpha. Canonical helper now multiplies alpha and a regression test covers it.
+- Continuous 11.5-second Victor -> apparatus -> eye test rendered successfully.
+
+### Current blockers
+- Ingolstadt exterior still below target;
+- creation-chamber support/environment detail still below the new HERO floor;
+- clean individually authored final source files/provenance remain preferable to salvaged sheet-derived candidates;
+- true independent creature-limb convulsion needs articulated asset structure if retained visibly.
+
+### Decision
+Continue V5.3 lookdev. Do not promote a complete film until the exterior/environment gate and remaining source/articulation issues pass.
