@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "policy": "Search ready free compatible ecosystems before custom authoring. These entries are preferred search sources, not automatic asset selections.",
+  "ecosystems": [
+    {
+      "id": "QUATERNIUS_UNIVERSAL_HUMANOID",
+      "priority": 1,
+      "license": "CC0",
+      "roles": [
+        "rigged_characters",
+        "hairstyles",
+        "modular_outfits",
+        "humanoid_animations"
+      ],
+      "sources": [
+        {
+          "name": "Universal Base Characters",
+          "url": "https://quaternius.com/packs/universalbasecharacters.html",
+          "formats": [
+            "glTF",
+            "FBX"
+          ],
+          "notes": "6 base characters, 20 hairstyles, compatible with Universal Animation Library"
+        },
+        {
+          "name": "Universal Animation Library",
+          "url": "https://quaternius.com/packs/universalanimationlibrary.html",
+          "formats": [
+            "GLB",
+            "FBX"
+          ],
+          "notes": "120+ animations"
+        },
+        {
+          "name": "Universal Animation Library 2",
+          "url": "https://quaternius.com/packs/universalanimationlibrary2.html",
+          "formats": [
+            "GLB",
+            "FBX"
+          ],
+          "notes": "130+ additional animations"
+        },
+        {
+          "name": "Modular Character Outfits - Fantasy",
+          "url": "https://quaternius.com/packs/modularcharacteroutfitsfantasy.html",
+          "formats": [
+            "glTF",
+            "FBX"
+          ],
+          "notes": "12 outfits / 62 modular parts; compatible universal humanoid rig"
+        }
+      ],
+      "selection_reason": "Lowest-friction free stack because characters, outfits and animations are intended to share a humanoid ecosystem."
+    },
+    {
+      "id": "KAYKIT_HUMANOID",
+      "priority": 2,
+      "license": "CC0",
+      "roles": [
+        "rigged_characters",
+        "humanoid_animations"
+      ],
+      "sources": [
+        {
+          "name": "Characters: Adventurers",
+          "url": "https://kaylousberg.com/game-assets/characters-adventurers",
+          "formats": [
+            "glTF",
+            "FBX"
+          ]
+        },
+        {
+          "name": "Character Animations",
+          "url": "https://kaylousberg.com/game-assets/character-animations",
+          "formats": [
+            "glTF",
+            "FBX"
+          ]
+        }
+      ],
+      "selection_reason": "Fallback ready character/animation ecosystem when Quaternius lacks a required action or visual direction."
+    },
+    {
+      "id": "QUATERNIUS_ENV_PROPS",
+      "priority": 1,
+      "license": "CC0",
+      "roles": [
+        "modular_environments",
+        "props"
+      ],
+      "sources": [
+        {
+          "name": "Medieval Village MegaKit",
+          "url": "https://quaternius.com/packs/medievalvillagemegakit.html",
+          "formats": [
+            "glTF",
+            "FBX",
+            "OBJ"
+          ],
+          "notes": "300+ modular environment pieces"
+        },
+        {
+          "name": "Fantasy Props MegaKit",
+          "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+          "formats": [
+            "glTF",
+            "FBX",
+            "OBJ"
+          ],
+          "notes": "200+ props and furniture"
+        }
+      ]
+    },
+    {
+      "id": "KENNEY_3D",
+      "priority": 2,
+      "license": "CC0",
+      "roles": [
+        "modular_environments",
+        "props"
+      ],
+      "sources": [
+        {
+          "name": "Modular Dungeon Kit",
+          "url": "https://kenney.nl/assets/modular-dungeon-kit"
+        },
+        {
+          "name": "Castle Kit",
+          "url": "https://kenney.nl/assets/castle-kit"
+        },
+        {
+          "name": "Retro Medieval Kit",
+          "url": "https://kenney.nl/assets/retro-medieval-kit"
+        }
+      ]
+    },
+    {
+      "id": "POLY_HAVEN",
+      "priority": 3,
+      "license": "CC0",
+      "roles": [
+        "hero_props",
+        "furniture",
+        "textures",
+        "HDRI"
+      ],
+      "source": "https://polyhaven.com/",
+      "notes": "Use when higher-detail assets are required; evaluate per Item."
+    }
+  ]
+}
