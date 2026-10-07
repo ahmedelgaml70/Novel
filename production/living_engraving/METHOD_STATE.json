@@ -1,6 +1,6 @@
 {
   "method_name": "Living Engraving",
-  "version": "5.2",
+  "version": "5.2.1",
   "status": "current_governance_method",
   "canonical_renderer": "render_current.js",
   "canonical_manifest": "scene_manifest.json",
@@ -12,7 +12,9 @@
     "style_fit": 8
   },
   "visible_third_party_assets_embedded": false,
-  "visual_baseline": "Frankenstein V5.1 (24 s)",
+  "visual_baseline": "Frankenstein V5.1 (24 s); V5.2.1 is governance only",
   "atomic_item_governance": true,
-  "strict_final_requires_item_revalidation": true
+  "strict_final_requires_item_revalidation": true,
+  "source_obligation_governance": true,
+  "designated_frankenstein_text": "Project Gutenberg #41445 — 1818 edition"
 }
