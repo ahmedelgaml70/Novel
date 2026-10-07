@@ -669,6 +669,65 @@
       "discovered_at": "2026-10-08",
       "status": "ACTIVE_CANDIDATE_SOURCE",
       "notes": "High-information far-background candidate only. It is an 18th-century chemical laboratory engraving, not Victor's canonical room."
+    },
+    {
+      "id": "SRC-FR-024",
+      "title": "Quaternius Male Peasant outfit / prepared compatible runtime GLB",
+      "creator": "Quaternius",
+      "date": "2025–2026",
+      "provider": "Quaternius / Genesara runtime mirror",
+      "url": "https://quaternius.com/packs/modularcharacteroutfitsfantasy.html",
+      "roles": [
+        "READY_ASSET_SOURCE",
+        "CHARACTER_OUTFIT_CANDIDATE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "victor_coat",
+        "victor_silhouette"
+      ],
+      "rights": {
+        "status": "CC0",
+        "commercial_asset_use": "ELIGIBLE",
+        "evidence_url": "https://quaternius.com/packs/modularcharacteroutfitsfantasy.html"
+      },
+      "quality": {
+        "authority": "PRIMARY_ASSET_SOURCE",
+        "period_proximity": "GENERIC_FANTASY/MEDIEVAL; REQUIRES CHARACTER FIT"
+      },
+      "discovered_at": "2026-10-08",
+      "status": "ACTIVE_CANDIDATE_SOURCE",
+      "notes": "Prepared GLB mirror is pinned for the proof; underlying Quaternius pack is CC0 and compatible with Universal Base Characters/Animation Library."
+    },
+    {
+      "id": "SRC-FR-025",
+      "title": "KayKit Halloween Bits — brick wall and candle",
+      "creator": "Kay Lousberg",
+      "date": "2023–2026",
+      "provider": "KayKit / GitHub mirror",
+      "url": "https://kaylousberg.com/game-assets/halloween-bits",
+      "roles": [
+        "READY_ASSET_SOURCE",
+        "ENVIRONMENT_CANDIDATE",
+        "PROP_CANDIDATE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "creation_chamber_architecture",
+        "dying_candle"
+      ],
+      "rights": {
+        "status": "CC0",
+        "commercial_asset_use": "ELIGIBLE",
+        "evidence_url": "https://kaylousberg.com/game-assets/halloween-bits"
+      },
+      "quality": {
+        "authority": "PRIMARY_ASSET_SOURCE",
+        "period_proximity": "GENERIC_STYLIZED; REQUIRES SHOT FIT"
+      },
+      "discovered_at": "2026-10-08",
+      "status": "ACTIVE_CANDIDATE_SOURCE",
+      "notes": "Free pack is explicitly CC0. Proof uses ready brick-wall and candle files from a pinned mirror plus shared texture atlas."
     }
   ]
 }
