@@ -102,7 +102,7 @@ jobs:
             -c:v libx264 -pix_fmt yuv420p -crf 18 -movflags +faststart \
             frankenstein-output/frankenstein_fast_path_v5_4_3.mp4
 
-          ffmpeg -y -i frankenstein-output/frankenstein_fast_path_v5_4_2.mp4 \
+          ffmpeg -y -i frankenstein-output/frankenstein_fast_path_v5_4_3.mp4 \
             -vf "fps=1,scale=320:-1,tile=5x2" -frames:v 1 \
             frankenstein-output/contact_sheet.jpg
 
@@ -111,7 +111,7 @@ jobs:
         with:
           name: frankenstein-fast-path-v5-4-3
           path: |
-            production/rigged3d/frankenstein-output/frankenstein_fast_path_v5_4_2.mp4
+            production/rigged3d/frankenstein-output/frankenstein_fast_path_v5_4_3.mp4
             production/rigged3d/frankenstein-output/contact_sheet.jpg
             production/rigged3d/frankenstein-output/clip_inventory.json
           retention-days: 7
