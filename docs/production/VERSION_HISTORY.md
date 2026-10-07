@@ -135,3 +135,39 @@ A version number is not earned by cosmetic code changes. It must represent a mea
 **New standard:** a weakness is not considered learned merely because it appears in a changelog. Learning is complete only when root cause, scope, prevention and detection are captured and encoded where appropriate.
 
 **Visual render:** none claimed. V5.2.2 improves the machine that will produce the next render.
+
+
+## V5.3 — High-information asset + JavaScript direction lookdev
+
+**Goal:** test whether the quality ceiling improves when JavaScript stops being the sole illustrator and instead directs high-information story-specific assets.
+
+**Tried:**
+- requirements-first creature/exterior/character redesign;
+- primitive-only matched stills;
+- high-information engraved asset candidates;
+- extraction/alpha cleanup;
+- sparse-room recomposition;
+- intended-scale shot tests;
+- 3.04-second recoil motion test;
+- 11.5-second continuous Victor -> apparatus -> eye motion test.
+
+**What failed:**
+- primitive redraws remained visibly coded even when research was correct;
+- crowded asset sheets damaged HERO isolation;
+- imported Victor full-body art failed when enlarged into a portrait;
+- a weak isolated hand made the apparatus macro worse;
+- high-detail HERO assets exposed low-detail support/environment fillers;
+- a renderer primitive overwrote inherited alpha and broke the first-eye occlusion state.
+
+**What improved:**
+- creature body/head/eye became materially more anatomical and cinematic;
+- Victor works at medium/full-body recoil scale;
+- apparatus detail improved substantially;
+- weak hand interaction was removed and replaced by a deterministic brass lever;
+- first-eye shot now uses the real engraved eye with closed -> partial -> open occlusion;
+- renderer alpha semantics are fixed and covered by a regression test;
+- shot redesign is now explicitly allowed when an asset fails the required scale.
+
+**Current decision:** promote the **hybrid architecture** — high-information handpicked/bespoke assets + JavaScript direction/compositing/motion — but do not claim a final V5.3 film yet.
+
+**Remaining ceiling:** exterior/location layer and supporting chamber architecture still need to reach the new HERO quality floor; final individual source/provenance and articulated creature motion remain unresolved.
