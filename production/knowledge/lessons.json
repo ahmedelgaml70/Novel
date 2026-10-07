@@ -505,6 +505,35 @@
       "confidence": "HIGH",
       "status": "ENCODED",
       "superseded_by": null
+    },
+    {
+      "id": "LESSON-020",
+      "title": "Do not build rigs, clips or scene assets that a compatible free ecosystem already supplies",
+      "scope": "GLOBAL",
+      "source_context": [
+        "Transition from V5.3 hybrid tests to real skeletal animation"
+      ],
+      "observed_weakness": "The project spent effort authoring primitive characters, pseudo-motion and support geometry while mature CC0 ecosystems already provide rigged humans, modular outfits, hundreds of animations and modular environments.",
+      "evidence": [
+        "Quaternius Universal Base Characters are explicitly compatible with the Universal Animation Library.",
+        "Quaternius Universal Animation Library and Library 2 provide 120+ and 130+ ready humanoid animations.",
+        "Quaternius and Kenney provide large CC0 environment and prop libraries."
+      ],
+      "root_cause": "The pipeline optimized for self-authoring before exhausting ready compatible assets.",
+      "consequence": "More engineering, weaker motion and slower iteration without a corresponding quality benefit.",
+      "prevention_rule": "Search approved ready-free ecosystems before custom modeling, rigging, animation or environment construction. Custom authoring requires an explicit record of why ready candidates failed.",
+      "detection_method": "Every proposed custom rig, model or animation Item must record the ready-free sources searched and rejection reason unless no applicable ecosystem exists.",
+      "implementation_changes": [
+        "Added READY_FREE_ASSET_STRATEGY.md.",
+        "Added ready_free_asset_sources.json.",
+        "First real-animation proof forbids custom rigging and custom locomotion/action cycles."
+      ],
+      "validation": [
+        "E-VID-006 must use ready rigged characters and ready animation clips for the core performance."
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
     }
   ]
 }
