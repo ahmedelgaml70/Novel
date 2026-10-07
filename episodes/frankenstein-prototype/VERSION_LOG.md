@@ -53,3 +53,29 @@ Make every visible/audible/edit decision individually inspectable and prevent fi
 
 ### Next improvement target
 Rebuild the highest-risk HERO Items first: Ingolstadt exterior, Victor profile/pose/hands/costume, creature anatomy/eye/drapery, and apparatus contact macro. Do not spend effort polishing low-impact texture while HERO Items remain weak.
+
+
+## V5.2.1 — source-fidelity obligation audit
+
+### Intent
+Bind the existing Item audit to the exact 1818 production text rather than relying only on visual/historical references.
+
+### Added
+- 14 literary-source obligations;
+- Item cross-links for 19 affected Items;
+- explicit designated source: Project Gutenberg #41445 (1818);
+- 1831 edition retained as alternative/comparative evidence;
+- source-obligation schema and validation.
+
+### New defects exposed
+- nearly exhausted candle: missing from current render;
+- hard breathing: not directly represented;
+- dull-yellow eye / yellow-skin contrast: only partially represented;
+- creature's initial convulsive motion: only partially represented;
+- Ingolstadt steeple/location identity: too weak in current generic skyline.
+
+### Clarification
+The current voltaic pile, Leyden jars and electrical contact are interpretive historical reconstructions. They are not presented as apparatus explicitly named by Shelley.
+
+### Next visual priority
+Use the combined literary + historical constraints to rebuild the exterior, creature eye/skin/motion, dying practical light, Victor/creature reaction, and apparatus macro before any global polish pass.
