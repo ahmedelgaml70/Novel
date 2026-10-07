@@ -178,6 +178,48 @@
         "downloaded_size_bytes": 35190592
       },
       "policy": "May be used to remove asset-preparation friction during E-VID-006. For final production, prefer official Quaternius downloads or pin and record the exact binary SHA/provenance."
+    },
+    {
+      "id": "FRANKENSTEIN_FAST_PATH_PROPS",
+      "purpose": "STORY_SPECIFIC_DEVELOPMENT_PROOF",
+      "policy": "Pinned ready assets used to prove contact/staging. They do not establish final period/historical suitability.",
+      "assets": [
+        {
+          "role": "interaction_table",
+          "creator": "Quaternius",
+          "mirror_repo": "georg-doc/kayfabizarro",
+          "mirror_commit": "2215b8895588b1dcf787cd55c08fe76371895f59",
+          "path": "media/3D_Assets/quaternius_cc0-table-1411.glb",
+          "blob_sha": "88bc47fc5fdae74c08f3910ce506602441e83b4a",
+          "license_status": "CC0 reported by mirrored source naming/Quaternius provenance; final original-pack check required"
+        },
+        {
+          "role": "interaction_lever",
+          "creator": "Quaternius",
+          "mirror_repo": "evanly-gh/evanly.me",
+          "mirror_commit": "9fa3fdcf08165f0bb9130026dab94a2302a0b4bc",
+          "path": "public/models/quaternius/Lever.glb",
+          "blob_sha": "522f6cadcc59cc6bcc193d749dbc207e43eb236d",
+          "license_status": "Quaternius CC0 source claim; final original-pack check required"
+        },
+        {
+          "role": "altar_wall_candle",
+          "creator": "Kenney",
+          "mirror_repo": "georg-doc/kayfabizarro",
+          "mirror_commit": "2215b8895588b1dcf787cd55c08fe76371895f59",
+          "paths": [
+            "media/3D_Assets/GLB_graveyard/altar-stone.glb",
+            "media/3D_Assets/GLB_graveyard/brick-wall.glb",
+            "media/3D_Assets/GLB_graveyard/candle.glb"
+          ],
+          "blob_shas": [
+            "5d1d43c077a9b124644a5d8e12a7c23f796f7828",
+            "af0c35f012d69d321a526d769e18f92f663f7246",
+            "5f6351805ca6df386828bcd1acb0d6eed4300fb2"
+          ],
+          "license_status": "Mirror documentation identifies GLB_graveyard as Kenney Graveyard pack; Kenney packs are CC0. Final original-pack license file should be retained for production."
+        }
+      ]
     }
   ]
 }
