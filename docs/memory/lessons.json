@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0",
+  "lessons": [
+    {
+      "id": "L001",
+      "scope": "Novel/frankenstein-prototype",
+      "classification": "USER_REQUIREMENT",
+      "status": "ACTIVE",
+      "trigger": "Cables do not attach to apparatus",
+      "action": "Review every terminal and full route throughout motion and across all recurring shots.",
+      "evidence": [
+        "episodes/frankenstein-prototype/quality_review.json#Q001"
+      ],
+      "source": "User correction 2026-10-07; code audit where identified",
+      "promotion_rule": "Keep project-scoped; revise if later evidence contradicts the implementation hypothesis, never silently discard the requirement."
+    },
+    {
+      "id": "L002",
+      "scope": "Novel/frankenstein-prototype",
+      "classification": "USER_REQUIREMENT",
+      "status": "ACTIVE",
+      "trigger": "Hand, sleeve and lever move independently",
+      "action": "Review closed grip, thumb opposition, wrist contact, cuff overlap and contact timing in motion.",
+      "evidence": [
+        "episodes/frankenstein-prototype/quality_review.json#Q002"
+      ],
+      "source": "User correction 2026-10-07; code audit where identified",
+      "promotion_rule": "Keep project-scoped; revise if later evidence contradicts the implementation hypothesis, never silently discard the requirement."
+    },
+    {
+      "id": "L003",
+      "scope": "Novel/frankenstein-prototype",
+      "classification": "USER_REQUIREMENT",
+      "status": "ACTIVE",
+      "trigger": "Camera movement substitutes for meaningful action",
+      "action": "Watch with camera locked and audio muted; required action must remain clear. Deliberate stillness needs a story reason.",
+      "evidence": [
+        "episodes/frankenstein-prototype/quality_review.json#Q003"
+      ],
+      "source": "User correction 2026-10-07; code audit where identified",
+      "promotion_rule": "Keep project-scoped; revise if later evidence contradicts the implementation hypothesis, never silently discard the requirement."
+    },
+    {
+      "id": "L004",
+      "scope": "Novel/frankenstein-prototype",
+      "classification": "USER_REQUIREMENT",
+      "status": "ACTIVE",
+      "trigger": "View and scene are hard to understand",
+      "action": "An unfamiliar viewer identifies actor, action, target and change from first/middle/last frames and silent playback.",
+      "evidence": [
+        "episodes/frankenstein-prototype/quality_review.json#Q004"
+      ],
+      "source": "User correction 2026-10-07; code audit where identified",
+      "promotion_rule": "Keep project-scoped; revise if later evidence contradicts the implementation hypothesis, never silently discard the requirement."
+    },
+    {
+      "id": "L005",
+      "scope": "Novel/frankenstein-prototype",
+      "classification": "USER_REQUIREMENT",
+      "status": "ACTIVE",
+      "trigger": "Body proportions are poor",
+      "action": "Review head/body ratios, limb lengths, foreshortening and identity across every appearance.",
+      "evidence": [
+        "episodes/frankenstein-prototype/quality_review.json#Q005"
+      ],
+      "source": "User correction 2026-10-07; code audit where identified",
+      "promotion_rule": "Keep project-scoped; revise if later evidence contradicts the implementation hypothesis, never silently discard the requirement."
+    },
+    {
+      "id": "L006",
+      "scope": "Novel/frankenstein-prototype",
+      "classification": "USER_REQUIREMENT",
+      "status": "ACTIVE",
+      "trigger": "Hands look wrong",
+      "action": "Review finger count, lengths, knuckles, thumb opposition, gesture and contact at native resolution and in motion.",
+      "evidence": [
+        "episodes/frankenstein-prototype/quality_review.json#Q006"
+      ],
+      "source": "User correction 2026-10-07; code audit where identified",
+      "promotion_rule": "Keep project-scoped; revise if later evidence contradicts the implementation hypothesis, never silently discard the requirement."
+    },
+    {
+      "id": "L007",
+      "scope": "Novel/frankenstein-prototype",
+      "classification": "USER_REQUIREMENT",
+      "status": "ACTIVE",
+      "trigger": "Characters appear incomplete",
+      "action": "Review full construction without shadows/cloth and then final framing; every visible part has a plausible parent.",
+      "evidence": [
+        "episodes/frankenstein-prototype/quality_review.json#Q007"
+      ],
+      "source": "User correction 2026-10-07; code audit where identified",
+      "promotion_rule": "Keep project-scoped; revise if later evidence contradicts the implementation hypothesis, never silently discard the requirement."
+    },
+    {
+      "id": "L008",
+      "scope": "Novel/frankenstein-prototype",
+      "classification": "USER_REQUIREMENT",
+      "status": "ACTIVE",
+      "trigger": "Physics and effects lack causes",
+      "action": "Validate support, collision and event causes. Source any historical apparatus behavior; geometry tests do not certify electricity.",
+      "evidence": [
+        "episodes/frankenstein-prototype/quality_review.json#Q008"
+      ],
+      "source": "User correction 2026-10-07; code audit where identified",
+      "promotion_rule": "Keep project-scoped; revise if later evidence contradicts the implementation hypothesis, never silently discard the requirement."
+    },
+    {
+      "id": "L009",
+      "scope": "Novel/frankenstein-prototype",
+      "classification": "USER_REQUIREMENT",
+      "status": "ACTIVE",
+      "trigger": "Overall style rejected",
+      "action": "User accepts a concrete style frame and motion sample; unified art, anatomy, material and lighting pass review.",
+      "evidence": [
+        "episodes/frankenstein-prototype/quality_review.json#Q009"
+      ],
+      "source": "User correction 2026-10-07; code audit where identified",
+      "promotion_rule": "Keep project-scoped; revise if later evidence contradicts the implementation hypothesis, never silently discard the requirement."
+    },
+    {
+      "id": "L010",
+      "scope": "Novel/frankenstein-prototype",
+      "classification": "USER_REQUIREMENT",
+      "status": "ACTIVE",
+      "trigger": "Configuration passes without film quality",
+      "action": "A rejected style, open defect, missing review or stale evidence must fail strict-final even if Item statuses are final.",
+      "evidence": [
+        "episodes/frankenstein-prototype/quality_review.json#Q010"
+      ],
+      "source": "User correction 2026-10-07; code audit where identified",
+      "promotion_rule": "Keep project-scoped; revise if later evidence contradicts the implementation hypothesis, never silently discard the requirement."
+    }
+  ]
+}

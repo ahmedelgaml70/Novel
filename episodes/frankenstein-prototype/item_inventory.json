@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0",
   "episode_id": "frankenstein-prototype",
-  "method_version": "5.3",
-  "visual_baseline": "Frankenstein V5.3 prototype",
-  "generated_from": "V5.2 requirements plus V5.3 implemented diagnostic review",
-  "final_gate_note": "V5.3 is a prototype revision. No Item is grandfathered into final approval.",
+  "method_version": "5.4",
+  "visual_baseline": "V5.3 user-rejected; V5.4 repair experiment",
+  "generated_from": "User correction and renderer audit 2026-10-07",
+  "final_gate_note": "User-rejected art/style; mechanics diagnostics do not grant approval.",
   "counts": {
     "items": 67,
-    "active_items": 64
+    "active_items": 59
   },
   "items": [
     {
@@ -178,7 +178,7 @@
         "SRC-FR-002"
       ],
       "decision_id": "DEC-engraving_hatching",
-      "status": "CANDIDATES_COMPARED",
+      "status": "NEEDS_REVALIDATION",
       "active": true
     },
     {
@@ -262,7 +262,7 @@
         "SRC-FR-011"
       ],
       "decision_id": "DEC-ingolstadt_roofline",
-      "status": "CANDIDATES_COMPARED",
+      "status": "NEEDS_REVALIDATION",
       "active": true
     },
     {
@@ -303,7 +303,7 @@
         "SRC-FR-011"
       ],
       "decision_id": "DEC-laboratory_exterior_building",
-      "status": "CANDIDATES_COMPARED",
+      "status": "NEEDS_REVALIDATION",
       "active": true
     },
     {
@@ -750,7 +750,8 @@
       "importance": "SUPPORT",
       "shot_ids": [
         "creation_chamber",
-        "victor_at_door"
+        "victor_at_door",
+        "recoil_tableau"
       ],
       "purpose": "Suggest obsessive study without turning the room into generic clutter.",
       "checklist_profile": "prop",
@@ -862,7 +863,7 @@
         "SRC-FR-002"
       ],
       "decision_id": "DEC-creature_drapery",
-      "status": "CANDIDATES_COMPARED",
+      "status": "NEEDS_REVALIDATION",
       "active": true
     },
     {
@@ -984,8 +985,9 @@
         "SRC-FR-006"
       ],
       "decision_id": "DEC-foreground_copper_cable",
-      "status": "NEEDS_REVALIDATION",
-      "active": true
+      "status": "REPLACED",
+      "active": false,
+      "retirement_reason": "Disconnected decorative cable removed."
     },
     {
       "id": "victor_silhouette",
@@ -1037,7 +1039,8 @@
       "importance": "HERO",
       "shot_ids": [
         "victor_at_door",
-        "recoil_tableau"
+        "recoil_tableau",
+        "creation_chamber"
       ],
       "purpose": "Show fear/revulsion with a period-authored partial profile rather than avatar facial geometry.",
       "checklist_profile": "character",
@@ -1068,7 +1071,7 @@
         "SRC-FR-001"
       ],
       "decision_id": "DEC-victor_head_profile",
-      "status": "CANDIDATES_COMPARED",
+      "status": "NEEDS_REVALIDATION",
       "active": true
     },
     {
@@ -1077,7 +1080,8 @@
       "importance": "PRIMARY",
       "shot_ids": [
         "victor_at_door",
-        "recoil_tableau"
+        "recoil_tableau",
+        "creation_chamber"
       ],
       "purpose": "Support Victor's period silhouette and stressed state without modern grooming cues.",
       "checklist_profile": "character",
@@ -1202,7 +1206,8 @@
       "shot_ids": [
         "victor_at_door",
         "galvanic_contact",
-        "recoil_tableau"
+        "recoil_tableau",
+        "creation_chamber"
       ],
       "purpose": "Carry fear/control through believable hand anatomy, grip and gesture.",
       "checklist_profile": "anatomy",
@@ -1233,7 +1238,7 @@
         "SRC-FR-001"
       ],
       "decision_id": "DEC-victor_hand",
-      "status": "CANDIDATES_COMPARED",
+      "status": "NEEDS_REVALIDATION",
       "active": true
     },
     {
@@ -1242,7 +1247,8 @@
       "importance": "HERO",
       "shot_ids": [
         "victor_at_door",
-        "recoil_tableau"
+        "recoil_tableau",
+        "creation_chamber"
       ],
       "purpose": "Communicate the instant Victor rejects what he created through body weight and line of action.",
       "checklist_profile": "anatomy",
@@ -1285,7 +1291,7 @@
         "creation_chamber",
         "recoil_tableau"
       ],
-      "purpose": "Create an uncanny but anatomically coherent body based on the novel rather than later film clich\u00e9s.",
+      "purpose": "Create an uncanny but anatomically coherent body based on the novel rather than later film clichés.",
       "checklist_profile": "anatomy",
       "requirements": {
         "story": [
@@ -1325,7 +1331,8 @@
       "importance": "HERO",
       "shot_ids": [
         "first_eye",
-        "recoil_tableau"
+        "recoil_tableau",
+        "creation_chamber"
       ],
       "purpose": "Define a distinctive gaunt head that survives extreme close-up without copying later movie monsters.",
       "checklist_profile": "anatomy",
@@ -1357,7 +1364,7 @@
         "SRC-FR-001"
       ],
       "decision_id": "DEC-creature_head_shape",
-      "status": "CANDIDATES_COMPARED",
+      "status": "NEEDS_REVALIDATION",
       "active": true
     },
     {
@@ -1366,7 +1373,8 @@
       "importance": "PRIMARY",
       "shot_ids": [
         "first_eye",
-        "recoil_tableau"
+        "recoil_tableau",
+        "creation_chamber"
       ],
       "purpose": "Use long dark hair as a source-aligned identity cue and framing device.",
       "checklist_profile": "anatomy",
@@ -1399,7 +1407,7 @@
         "SRC-FR-001"
       ],
       "decision_id": "DEC-creature_hair",
-      "status": "CANDIDATES_COMPARED",
+      "status": "NEEDS_REVALIDATION",
       "active": true
     },
     {
@@ -1407,7 +1415,9 @@
       "category": "face_detail",
       "importance": "HERO",
       "shot_ids": [
-        "first_eye"
+        "first_eye",
+        "creation_chamber",
+        "recoil_tableau"
       ],
       "purpose": "Deliver the awakening beat through one believable, disturbing eye rather than an effect-first monster eye.",
       "checklist_profile": "anatomy",
@@ -1440,7 +1450,7 @@
         "SRC-FR-001"
       ],
       "decision_id": "DEC-creature_eye",
-      "status": "CANDIDATES_COMPARED",
+      "status": "NEEDS_REVALIDATION",
       "active": true
     },
     {
@@ -1522,7 +1532,7 @@
         "SRC-FR-006"
       ],
       "decision_id": "DEC-voltaic_pile",
-      "status": "CANDIDATES_COMPARED",
+      "status": "NEEDS_REVALIDATION",
       "active": true
     },
     {
@@ -1531,7 +1541,8 @@
       "importance": "PRIMARY",
       "shot_ids": [
         "creation_chamber",
-        "galvanic_contact"
+        "galvanic_contact",
+        "recoil_tableau"
       ],
       "purpose": "Provide a credible charge-storage form with period materials/construction.",
       "checklist_profile": "apparatus",
@@ -1563,7 +1574,7 @@
         "SRC-FR-005"
       ],
       "decision_id": "DEC-leyden_jar_primary",
-      "status": "CANDIDATES_COMPARED",
+      "status": "NEEDS_REVALIDATION",
       "active": true
     },
     {
@@ -1603,15 +1614,18 @@
         "SRC-FR-005"
       ],
       "decision_id": "DEC-leyden_jar_secondary",
-      "status": "NEEDS_REVALIDATION",
-      "active": true
+      "status": "REPLACED",
+      "active": false,
+      "retirement_reason": "Unconnected duplicate vessel removed."
     },
     {
       "id": "brass_contact",
       "category": "apparatus_detail",
       "importance": "HERO",
       "shot_ids": [
-        "galvanic_contact"
+        "galvanic_contact",
+        "creation_chamber",
+        "recoil_tableau"
       ],
       "purpose": "Create the exact tactile contact point that Victor manipulates at the shot's dramatic peak.",
       "checklist_profile": "apparatus",
@@ -1643,7 +1657,7 @@
         "SRC-FR-006"
       ],
       "decision_id": "DEC-brass_contact",
-      "status": "CANDIDATES_COMPARED",
+      "status": "NEEDS_REVALIDATION",
       "active": true
     },
     {
@@ -1726,8 +1740,9 @@
         "SRC-FR-006"
       ],
       "decision_id": "DEC-electric_arc",
-      "status": "CANDIDATES_COMPARED",
-      "active": true
+      "status": "REPLACED",
+      "active": false,
+      "retirement_reason": "Unsupported discharge removed; no validated electrical model."
     },
     {
       "id": "anatomy_pages",
@@ -2150,7 +2165,7 @@
         "SRC-FR-014"
       ],
       "decision_id": "DEC-title_frankenstein",
-      "status": "CANDIDATES_COMPARED",
+      "status": "NEEDS_REVALIDATION",
       "active": true
     },
     {
@@ -2387,8 +2402,9 @@
       },
       "source_ids": [],
       "decision_id": "DEC-electrical_crackle_audio",
-      "status": "NEEDS_REVALIDATION",
-      "active": true
+      "status": "REPLACED",
+      "active": false,
+      "retirement_reason": "Unsupported discharge sound removed."
     },
     {
       "id": "arc_hit_audio",
@@ -2424,8 +2440,9 @@
       },
       "source_ids": [],
       "decision_id": "DEC-arc_hit_audio",
-      "status": "NEEDS_REVALIDATION",
-      "active": true
+      "status": "REPLACED",
+      "active": false,
+      "retirement_reason": "Unsupported discharge sound removed."
     },
     {
       "id": "victor_breath",
@@ -2463,7 +2480,7 @@
         "SRC-FR-012"
       ],
       "decision_id": "DEC-victor_breath",
-      "status": "CANDIDATES_COMPARED",
+      "status": "NEEDS_REVALIDATION",
       "active": true
     },
     {
@@ -2523,7 +2540,7 @@
           "Plausible material and scale for the chosen early-19th-century illustration language."
         ],
         "visual": [
-          "Small, deliberate, readable element; inspect at 1280\u00d7720 in context."
+          "Small, deliberate, readable element; inspect at 1280×720 in context."
         ],
         "motion": [
           "Deterministic variation; avoid loop-like motion and independent drift."
@@ -2542,7 +2559,7 @@
         "SRC-FR-012"
       ],
       "decision_id": "DEC-candle_stub",
-      "status": "CANDIDATES_COMPARED",
+      "status": "NEEDS_REVALIDATION",
       "active": true
     },
     {
@@ -2565,7 +2582,7 @@
           "Plausible material and scale for the chosen early-19th-century illustration language."
         ],
         "visual": [
-          "Small, deliberate, readable element; inspect at 1280\u00d7720 in context."
+          "Small, deliberate, readable element; inspect at 1280×720 in context."
         ],
         "motion": [
           "Deterministic variation; avoid loop-like motion and independent drift."
@@ -2584,7 +2601,7 @@
         "SRC-FR-012"
       ],
       "decision_id": "DEC-candle_flame",
-      "status": "CANDIDATES_COMPARED",
+      "status": "NEEDS_REVALIDATION",
       "active": true
     },
     {
@@ -2606,7 +2623,7 @@
           "Plausible material and scale for the chosen early-19th-century illustration language."
         ],
         "visual": [
-          "Small, deliberate, readable element; inspect at 1280\u00d7720 in context."
+          "Small, deliberate, readable element; inspect at 1280×720 in context."
         ],
         "motion": [
           "Deterministic variation; avoid loop-like motion and independent drift."
@@ -2625,7 +2642,7 @@
         "SRC-FR-012"
       ],
       "decision_id": "DEC-candle_light_pool",
-      "status": "CANDIDATES_COMPARED",
+      "status": "NEEDS_REVALIDATION",
       "active": true
     },
     {
@@ -2647,7 +2664,7 @@
           "Plausible material and scale for the chosen early-19th-century illustration language."
         ],
         "visual": [
-          "Small, deliberate, readable element; inspect at 1280\u00d7720 in context."
+          "Small, deliberate, readable element; inspect at 1280×720 in context."
         ],
         "motion": [
           "Deterministic variation; avoid loop-like motion and independent drift."
@@ -2666,7 +2683,7 @@
         "SRC-FR-012"
       ],
       "decision_id": "DEC-creature_hand",
-      "status": "CANDIDATES_COMPARED",
+      "status": "NEEDS_REVALIDATION",
       "active": true
     },
     {
@@ -2689,7 +2706,7 @@
           "Plausible material and scale for the chosen early-19th-century illustration language."
         ],
         "visual": [
-          "Small, deliberate, readable element; inspect at 1280\u00d7720 in context."
+          "Small, deliberate, readable element; inspect at 1280×720 in context."
         ],
         "motion": [
           "Deterministic variation; avoid loop-like motion and independent drift."
@@ -2708,7 +2725,7 @@
         "SRC-FR-012"
       ],
       "decision_id": "DEC-rain_patter_audio",
-      "status": "CANDIDATES_COMPARED",
+      "status": "NEEDS_REVALIDATION",
       "active": true
     }
   ]

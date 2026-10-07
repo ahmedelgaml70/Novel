@@ -98,3 +98,13 @@ A version number is not earned by cosmetic code changes. It must represent a mea
 ## V5.3 — rendered revision plus per-Item review artifacts
 
 The renderer now implements the 1818 candle/yellow-eye constraints and embeds a location-specific 1800 city plate. New diagnostic output distinguishes real transparent layers from integrated source details, style, composition, motion and audio. Asset hashes, bundled font and npm lockfile fix platform-dependent reproduction. The final gate now rejects missing score/evidence fields and applies to every active Item. Historical decisions and remaining defects are in the episode’s V5.3 review; current instructions remain solely in CURRENT_METHOD.md. No final-quality scores or approval verdicts have been fabricated.
+
+## V5.4 — 2026-10-07: user rejection, constrained mechanics and persistent learning
+
+V5.3 rejected for style, anatomy, framing, connections, motion and physics.
+Shared ports replace literal wire endpoints; lever/grip/wrist/arm share state.
+Unused jar, loose decorative cable and unsupported spark/audio retired.
+Added AGENTS.md, project state, ten evidence-linked lessons, experiments and
+blocking shot quality reviews. All active Items require revalidation.
+This is a mechanics experiment; visual redesign remains required. Tests cannot
+prove artistic quality. Detailed checks and limitations live in memory experiments.

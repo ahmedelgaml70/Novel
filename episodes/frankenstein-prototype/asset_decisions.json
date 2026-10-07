@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "episode_id": "frankenstein-prototype",
-  "method_version": "5.3",
+  "method_version": "5.4",
   "policy": "No candidate is selected because it was found first. Unresolved Items remain unresolved rather than receiving generic filler.",
   "counts": {
     "decisions": 67
@@ -15,7 +15,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-ink_speck_grain",
@@ -25,7 +25,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-vignette_value_structure",
@@ -35,7 +35,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-engraving_hatching",
@@ -63,9 +63,9 @@
         }
       ],
       "selected_candidate_id": "V53-engraving_hatching",
-      "decision_status": "PROTOTYPE_SELECTED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Replaces the same diagonal mesh across skin, cloth, wood and metal.",
-      "remaining_risk": "Line density and contour variation still lack the complexity of period engraving.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
       "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
@@ -76,7 +76,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-ingolstadt_roofline",
@@ -176,9 +176,9 @@
         }
       ],
       "selected_candidate_id": "V53-ingolstadt_roofline",
-      "decision_status": "PROTOTYPE_SELECTED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Named-city evidence beats repeated generic roof blocks.",
-      "remaining_risk": "Backdrop loses independent building depth; lab position is invented; city scale/night grading require further approval.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
       "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
@@ -207,9 +207,9 @@
         }
       ],
       "selected_candidate_id": "V53-laboratory_exterior_building",
-      "decision_status": "PROTOTYPE_SELECTED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Separates factual city evidence from fictional laboratory location.",
-      "remaining_risk": "Exact exterior is not specified in the novel; must not be presented as a surveyed historical building.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
       "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
@@ -220,7 +220,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-city_window_pattern",
@@ -230,7 +230,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-storm_sky",
@@ -240,7 +240,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-rain_field",
@@ -250,7 +250,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-exterior_lightning",
@@ -260,7 +260,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-exterior_camera_push",
@@ -270,7 +270,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-creation_chamber_composition",
@@ -341,9 +341,9 @@
         }
       ],
       "selected_candidate_id": "current_v5_1_tableau",
-      "decision_status": "SELECTED_WITH_BLOCKERS",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Keep this composition direction, but final approval is blocked until character anatomy, period interior, apparatus, slab/drapery and foreground objects pass their atomic gates.",
-      "remaining_risk": "Parent composition cannot override failed child Items."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-creation_chamber_architecture",
@@ -353,7 +353,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-timber_wall_beams",
@@ -363,7 +363,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-laboratory_floor",
@@ -373,7 +373,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-laboratory_door",
@@ -383,7 +383,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-laboratory_shelves_papers",
@@ -393,7 +393,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-creation_bed_slab",
@@ -403,7 +403,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-creature_drapery",
@@ -431,9 +431,9 @@
         }
       ],
       "selected_candidate_id": "V53-creature_drapery",
-      "decision_status": "PROTOTYPE_SELECTED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Breaks the flat blanket shape and separates surface folds from global cross-hatch.",
-      "remaining_risk": "Fold mechanics and concealed body anatomy still unresolved.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
       "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
@@ -444,7 +444,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-skull_foreground",
@@ -454,7 +454,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-foreground_copper_cable",
@@ -462,8 +462,8 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "decision_status": "REPLACED",
+      "why_selected_or_pending": "Disconnected decorative cable removed.",
       "remaining_risk": "Prototype implementation must not be grandfathered into final production."
     },
     {
@@ -474,7 +474,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-victor_head_profile",
@@ -502,9 +502,9 @@
         }
       ],
       "selected_candidate_id": "V53-victor_head_profile",
-      "decision_status": "PROTOTYPE_SELECTED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Facial proportions are closer to a human profile and remain readable in wide and close views.",
-      "remaining_risk": "Drawing remains simplified; requires a better anatomy reference and independent shot review.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
       "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
@@ -515,7 +515,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-victor_coat",
@@ -606,9 +606,9 @@
         }
       ],
       "selected_candidate_id": null,
-      "decision_status": "CANDIDATES_COMPARED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "First lock whether costume art direction follows the story chronology or the 1831 visual-edition contract; then redraw Victor from the winning reference direction and compare in silhouette/close-up.",
-      "remaining_risk": "Costume date contract still unresolved."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-victor_collar_cravat",
@@ -618,7 +618,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-victor_hand",
@@ -646,9 +646,9 @@
         }
       ],
       "selected_candidate_id": "V53-victor_hand",
-      "decision_status": "PROTOTYPE_SELECTED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Corrects the missing-digit mitten shape and reverses the macro hand toward the contact.",
-      "remaining_risk": "Contact grip and foreshortening still provisional; no certified anatomical fit.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
       "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
@@ -659,7 +659,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-creature_body_proportions",
@@ -669,7 +669,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-creature_head_shape",
@@ -697,9 +697,9 @@
         }
       ],
       "selected_candidate_id": "V53-creature_head_shape",
-      "decision_status": "PROTOTYPE_SELECTED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Brow, nose, lips and jaw replace the triangular face wedge.",
-      "remaining_risk": "Hero illustration is still too schematic for final.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
       "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
@@ -728,9 +728,9 @@
         }
       ],
       "selected_candidate_id": "V53-creature_hair",
-      "decision_status": "PROTOTYPE_SELECTED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Replaces the rounded helmet mass with flowing black hair.",
-      "remaining_risk": "Strands still read too regular; density and temporal consistency need higher-quality art.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
       "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
@@ -759,9 +759,9 @@
         }
       ],
       "selected_candidate_id": "V53-creature_eye",
-      "decision_status": "PROTOTYPE_SELECTED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Novel calls for a dull yellow eye; a luminous cyan reveal or blank white dot loses fidelity.",
-      "remaining_risk": "No biological/anatomical reference yet; opening timing and wet highlight remain an artistic hypothesis.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
       "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
@@ -772,7 +772,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-voltaic_pile",
@@ -867,9 +867,9 @@
         }
       ],
       "selected_candidate_id": "V53-voltaic_pile",
-      "decision_status": "PROTOTYPE_SELECTED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Separators, supports and terminals give construction logic to the prop.",
-      "remaining_risk": "1801\u20131805 reference is later than the novel\u2019s implied eighteenth-century setting; explicitly interpretive, not exact apparatus.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
       "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
@@ -964,9 +964,9 @@
         }
       ],
       "selected_candidate_id": "V53-leyden_jar_primary",
-      "decision_status": "PROTOTYPE_SELECTED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Material parts replace a generic glowing jar.",
-      "remaining_risk": "Inside foil/contact connection and the circuit need further engineering review.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
       "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
@@ -1042,8 +1042,8 @@
         }
       ],
       "selected_candidate_id": null,
-      "decision_status": "CANDIDATES_COMPARED",
-      "why_selected_or_pending": "Redraw/adjust the jar after construction-detail comparison; do not use the museum raster image under its standard noncommercial image licence.",
+      "decision_status": "REPLACED",
+      "why_selected_or_pending": "Unconnected duplicate vessel removed.",
       "remaining_risk": "Final geometry and shot fit still unapproved."
     },
     {
@@ -1072,9 +1072,9 @@
         }
       ],
       "selected_candidate_id": "V53-brass_contact",
-      "decision_status": "PROTOTYPE_SELECTED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Hand orientation and terminal endpoints are inspectable.",
-      "remaining_risk": "A pile does not justify a large free-air arc; spark is an explicit cinematic invention, not validated electrical behavior.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
       "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
@@ -1085,7 +1085,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-electric_arc",
@@ -1098,10 +1098,11 @@
           "source_ids": [
             "SRC-FR-006"
           ],
-          "status": "PROTOTYPE_SELECTED",
+          "status": "REPLACED",
           "scores": {},
           "reason": "Removes continuous decorative electrical glow and confines effects to a contact.",
-          "description": "Small event-only contact spark"
+          "description": "Small event-only contact spark",
+          "rejection_reason": "Unsupported discharge removed; no validated electrical model."
         },
         {
           "candidate_id": "V51-electric_arc",
@@ -1113,8 +1114,8 @@
         }
       ],
       "selected_candidate_id": "V53-electric_arc",
-      "decision_status": "PROTOTYPE_SELECTED",
-      "why_selected_or_pending": "Removes continuous decorative electrical glow and confines effects to a contact.",
+      "decision_status": "REPLACED",
+      "why_selected_or_pending": "Unsupported discharge removed; no validated electrical model.",
       "remaining_risk": "Not historically or physically certified. Compare removing this effect altogether.",
       "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
@@ -1126,7 +1127,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-laboratory_fog",
@@ -1136,7 +1137,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-interior_lightning",
@@ -1144,9 +1145,9 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "REPLACED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Interior lightning is removed; the creation text motivates a failing candle.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-creation_camera_drift",
@@ -1156,7 +1157,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-victor_door_shadow",
@@ -1166,7 +1167,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-first_eye_shadow_mask",
@@ -1176,7 +1177,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-linen_closeup_edge",
@@ -1186,7 +1187,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-lightning_cut",
@@ -1196,7 +1197,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-shadow_cut",
@@ -1206,7 +1207,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-arc_match_cut",
@@ -1214,9 +1215,9 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "REPLACED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Removed whole-frame arc transition; the cut now uses the eye-opening beat.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-title_frankenstein",
@@ -1308,9 +1309,9 @@
         }
       ],
       "selected_candidate_id": "V53-title_frankenstein",
-      "decision_status": "PROTOTYPE_SELECTED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Portable licensed font eliminates silent platform-dependent substitutions.",
-      "remaining_risk": "Modern revival; exact 1818 typography remains unresolved.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
       "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
@@ -1321,7 +1322,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-audio_low_drone",
@@ -1331,7 +1332,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-audio_noise_roomtone",
@@ -1341,7 +1342,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-thunder_cues",
@@ -1351,7 +1352,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-footstep_cues",
@@ -1359,9 +1360,9 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "REPLACED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Removed because the tableau does not show steps that would justify Foley.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-electrical_crackle_audio",
@@ -1369,8 +1370,8 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "decision_status": "REPLACED",
+      "why_selected_or_pending": "Unsupported discharge sound removed.",
       "remaining_risk": "Prototype implementation must not be grandfathered into final production."
     },
     {
@@ -1379,8 +1380,8 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "decision_status": "REPLACED",
+      "why_selected_or_pending": "Unsupported discharge sound removed.",
       "remaining_risk": "Prototype implementation must not be grandfathered into final production."
     },
     {
@@ -1409,9 +1410,9 @@
         }
       ],
       "selected_candidate_id": "V53-victor_breath",
-      "decision_status": "PROTOTYPE_SELECTED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Replaces the sub-audible sinusoid labeled breath with an audible noise envelope.",
-      "remaining_risk": "Synthetic stem requires listening and room/acoustic refinement.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
       "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
@@ -1422,7 +1423,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-candle_stub",
@@ -1450,9 +1451,9 @@
         }
       ],
       "selected_candidate_id": "V53-candle_stub",
-      "decision_status": "PROTOTYPE_SELECTED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Makes the text\u2019s failing candle visible.",
-      "remaining_risk": "Wax/holder geometry provisional.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
       "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
@@ -1481,9 +1482,9 @@
         }
       ],
       "selected_candidate_id": "V53-candle_flame",
-      "decision_status": "PROTOTYPE_SELECTED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Local motion supplies the nearly extinguished light beat.",
-      "remaining_risk": "Need light/flame temporal coupling and extinction behavior.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
       "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
@@ -1512,9 +1513,9 @@
         }
       ],
       "selected_candidate_id": "V53-candle_light_pool",
-      "decision_status": "PROTOTYPE_SELECTED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Restores the source\u2019s glimmer rather than room-filling electrical light.",
-      "remaining_risk": "Light projection and character shadow directions remain expressionistic.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
       "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
@@ -1543,9 +1544,9 @@
         }
       ],
       "selected_candidate_id": "V53-creature_hand",
-      "decision_status": "PROTOTYPE_SELECTED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Separates creature hand from the body and gives it a dedicated diagnostic.",
-      "remaining_risk": "Proportions and gesture need anatomical reference beyond the prose.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
       "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
@@ -1574,9 +1575,9 @@
         }
       ],
       "selected_candidate_id": "V53-rain_patter_audio",
-      "decision_status": "PROTOTYPE_SELECTED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Adds the explicitly described rain as an independently auditionable layer.",
-      "remaining_risk": "Room filtering and exterior/interior perspective need further sound work.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
       "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     }
   ]

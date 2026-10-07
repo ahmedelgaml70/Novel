@@ -291,3 +291,17 @@ When a method is replaced, obsolete current instructions are removed rather than
 Assets/Items created before the current governance method do not automatically become approved because they already render.
 
 The Frankenstein V5.1 benchmark is explicitly subject to V5.2 atomic revalidation. Structural reproducibility and final asset approval are separate gates.
+
+## D006 — Persist user rejection and require shot quality review (2026-10-07)
+
+**Accepted user requirements:** avoid disconnected wires, confusing framing,
+static scenes disguised by camera movement, poor proportions, implausible hands,
+incomplete characters and wrong physics. The user rejects V5.3's style and asks
+for project memory and continuous learning/improvement.
+
+**Implementation:** project-scoped memory, atomic corrections and experiment
+records load through AGENTS.md. An independent quality gate blocks unfinished
+style/shot reviews and unresolved defects even when Item labels appear final.
+All active Items must be FINAL_APPROVED before shot lock. No global hooks or
+background observer are installed. V5.4 attachment constraints are a diagnostic
+experiment. Artistic direction and the full film are not approved.

@@ -109,3 +109,16 @@ Define narrative arc, harmonic/timbral language, instrumentation constraints, hi
 ## Silence
 
 Silence is an intentional audio Item. Record where layers are removed, what remains (room tone, breath, heartbeat), and why. It is not simply the absence of an audio file.
+
+## Rejection checks added after V5.3 review
+
+Review full character construction without cloth/shadow first. Intentional crops
+must have a camera reason and connected anatomy beyond the crop. Five fingers
+alone do not prove a plausible hand: review joints, lengths, thumb opposition,
+foreshortening and grip deformation. Hero close-ups need dedicated art.
+
+Required story action must pass silent playback with a locked camera. Check the
+support surface, center of mass, weight transfer, joint lengths, contact and
+collision. Bind terminals, grips, cuffs and effects to shared attachment state.
+No loose cable or disconnected vessel enters a shot by default. An intentional
+loose object must have an explicit story reason and reviewed framing.

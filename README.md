@@ -1,5 +1,10 @@
 # Novel — 3-Minute Novel Experience Machine
 
+Production status: **V5.3 user-rejected; V5.4 mechanics experiment only.**
+Start with [project instructions](AGENTS.md), [current memory](docs/memory/STATE.md)
+and [quality protocol](docs/production/QUALITY_REVIEW.md). Style and shot redesign
+are required before production can be approved.
+
 Novel is a reusable production system for discovering suitable **novels** and transforming an approved complete novel into an immersive, cinematic video of approximately three minutes.
 
 The repository is the source of truth for:
@@ -158,9 +163,9 @@ Current production governance:
 - structural reproducibility and final asset approval are separate gates;
 - current instructions and historical version learning are stored separately.
 
-First worked audit: `episodes/frankenstein-prototype/` — 67 records (64 active), 67 decision records, 14 research sources, six benchmark shots.
+First worked audit: `episodes/frankenstein-prototype/` — 67 records (59 active), 67 decision records, 14 research sources, six benchmark shots.
 
-The V5.3 film is a rendered 24-second prototype with an item review gallery, **not** final-approved. The strict-final gate remains red until every active Item has sufficient comparison, scores, approved shot/audio evidence and recurring-shot continuity. See the [V5.3 review](episodes/frankenstein-prototype/reviews/V5_3_REVIEW.md) for the concrete improvements and remaining defects.
+The V5.3 film is a user-rejected 24-second benchmark. V5.4 is a mechanics repair experiment with persistent corrections and a separate shot quality gate. The strict-final gate remains red until every active Item has sufficient comparison, scores, approved shot/audio evidence and recurring-shot continuity. See the [V5.3 review](episodes/frankenstein-prototype/reviews/V5_3_REVIEW.md) for the concrete improvements and remaining defects.
 
 See:
 - [docs/production/CURRENT_METHOD.md](docs/production/CURRENT_METHOD.md)

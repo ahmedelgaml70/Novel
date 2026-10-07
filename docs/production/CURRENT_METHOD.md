@@ -1,8 +1,8 @@
 # Living Engraving — Current Production Method
 
-**Method version:** 5.3
-**Status:** canonical / current
-**Visual baseline:** Frankenstein V5.3, a 24-second prototype and per-Item diagnostic review. Final asset approval remains pending.
+**Method version:** 5.4
+**Status:** canonical / current repair workflow; artistic production held for redesign
+**Visual baseline:** V5.3 USER_REJECTED. V5.4 is a mechanics repair experiment, not an approved film.
 **Goal:** produce an authored, cinematic, approximately three-minute novel adaptation in JavaScript without generic visible assets.
 
 This document contains **only the active method**. Historical approaches and failed experiments belong in `VERSION_HISTORY.md`. When a method changes, remove the obsolete instruction here, replace it with the new one, update the version history, validate, and rerender. Never keep competing current instructions.
@@ -16,6 +16,10 @@ The current production method is defined by:
 - `docs/production/ITEM_CHECKLISTS.md` — category-specific considerations;
 - `docs/production/SOURCE_POLICY.md` — source/provenance discipline;
 - `docs/production/VERSION_HISTORY.md` — historical learning only;
+- `AGENTS.md` — entry instructions for every production session;
+- `docs/memory/STATE.md`, `lessons.json`, `experiments.json` — current state, corrections and tested learning;
+- `docs/production/QUALITY_REVIEW.md` — shot quality and learning protocol;
+- `episodes/<episode>/quality_review.json` — blocking defects and human review evidence;
 - `episodes/<episode>/item_inventory.json` — every atomic visible/audible/edit Item;
 - `episodes/<episode>/source_registry.json` — every material source discovered;
 - `episodes/<episode>/asset_decisions.json` — candidates, rejections and selections;
@@ -47,25 +51,18 @@ rights/provenance known
 
 For HERO Items, all applicable critical dimensions should normally be >= 8.
 
-## 2. Current visual language
+## 2. Visual direction requires redesign
 
-The current house style is **Living Engraving**:
+V5.3's Living Engraving execution was rejected by the user for style and quality.
+Engraving is a candidate direction, not an approved house style. Do not treat
+incomplete drawings, generic schematic heads, repeated open-hand shapes, weak
+proportions or motionless tableaux as aesthetic conventions.
 
-- early-19th-century engraved/etched illustration;
-- black, parchment, smoke and muted sepia;
-- cold cyan reserved for unnatural/electrical light;
-- brass/copper only where materially justified;
-- strong chiaroscuro;
-- incomplete faces rather than clean avatar portraits;
-- irregular profiles and silhouettes;
-- dense hatch/cross-hatch in shadow;
-- paper fibre and ink texture;
-- deterministic segmented curves following surface form;
-- restrained character motion;
-- purposeful camera movement;
-- atmosphere, cloth and light carrying much of the motion.
-
-Readability comes from value separation, silhouette, rim light and composition—not by turning the palette bright or modern.
+Compare materially different frames for the same narrative beat before locking
+a direction. Test complete anatomy, readable action, palette, material, depth
+and dedicated hero art. Review a motion sample as well as a still. Texture,
+shadow and camera motion cannot rescue failed construction or unclear staging.
+The user's visual-direction preference remains pending; mechanics work can proceed.
 
 ## 3. Repository structure
 
@@ -302,7 +299,7 @@ Validate separately:
 - lighting exposure;
 - recurring-angle continuity.
 
-Avoid front-facing avatar geometry. In Living Engraving, faces should often emerge partially from shadow. Close-ups require dedicated design quality; never solve a close-up by merely zooming a weak full-body rig.
+Avoid front-facing avatar geometry. Intentional shadow may reveal only part of a face, but the underlying construction must remain complete and plausible. Close-ups require dedicated design quality; never solve a close-up by merely zooming a weak full-body rig.
 
 For creatures, start from the novel’s descriptors rather than later film iconography.
 
@@ -347,7 +344,7 @@ Every strong light should have a motivated source unless expressionism is explic
 
 Atmospheric layers—rain, fog, dust, cloth, smoke, lightning—must respond to scene depth, wind, light and story. They are not universal overlays.
 
-Electrical arcs are cinematic effects separate from the historical apparatus. Their origin/contact points, scale, duration and brightness must be deliberate; avoid modern neon aesthetics.
+Electrical arcs need documented behavior and motivated contact points. The current repair experiment removes unsupported arcs and their audio. A geometric attachment test does not validate a historical circuit or discharge. Every active cable must derive both endpoints from named device ports shared with its drawing.
 
 Global texture/post-processing happens after clean scene composition where practical. Heavy per-object/per-frame SVG filters are avoided because earlier testing showed they are computationally wasteful.
 
@@ -355,7 +352,7 @@ Global texture/post-processing happens after clean scene composition where pract
 
 Camera is an Item with its own narrative job. Record shot size, focal emphasis, horizon, angle, start/end composition, movement, easing, depth response and motivation.
 
-Reject camera motion whose only reason is “something should move.”
+Reject camera motion whose only reason is “something should move.” Required story action must read with the camera locked. Articulated movement, weight transfer and contact require their own motion review. Intentional stillness needs a narrative reason; atmosphere does not count as character action.
 
 Transitions are story grammar, not decoration. Prefer hard cuts when stronger. Do not repeat one signature transition until it becomes a template.
 
@@ -407,12 +404,10 @@ Each shot contains at least:
   "id": "galvanic_contact",
   "renderer": "galvanicContact",
   "duration": 4.0,
-  "purpose": "...",
+  "purpose": "Mechanics diagnostic; art and electrical behavior unapproved",
   "transition_out": "hard_cut",
-  "cues": {
-    "electrical_crackle": [[0.8, 3.7]],
-    "arc_hits": [1.34, 2.17, 3.13]
-  }
+  "quality_status": "REDESIGN_REQUIRED",
+  "cues": {}
 }
 ```
 
@@ -467,7 +462,7 @@ Structural PASS means records are internally consistent. It does **not** mean as
 
 A shot cannot be locked until:
 
-- every HERO Item is `FINAL_APPROVED`;
+- independent shot and style reviews are approved; all affecting defects are resolved;
 - every active Item, including support, atmospheric, style, edit and audio Items, is `FINAL_APPROVED`;
 - no visible Item remains `NEEDS_REVALIDATION`, blocked, or unknown-rights;
 - approval frame/motion test passes;
@@ -518,29 +513,40 @@ There must be one obvious current solution.
 
 ## 24. Current Frankenstein status
 
-Frankenstein V5.3 is a 24-second benchmark prototype, not a final asset-approved film. The current inventory has **67 records, 64 active**. Three retired elements remain in decision history: interior lightning, unsynchronized footstep cues and the full-screen arc transition.
+V5.3 is USER_REJECTED. V5.4 is a focused mechanics repair experiment; the other
+shots retain rejected benchmark construction and must not be presented as a
+finished revision. There are 67 Item records, 59 active and 8 retired. Active
+Items all require revalidation. Style, staging, hands, proportions, completeness,
+meaningful character action, physical support and audio remain open quality gates.
 
-The literary source is the 1818 text (SRC-FR-012, volume I chapter IV). The illustration contract deliberately borrows the 1831 frontispiece tableau (SRC-FR-001) and tests early-19th-century apparatus. Publication date is not the date of the novel’s action. The pile reference dated 1801–1805 and later costumes are interpretive choices that must be resolved before claiming a historically exact adaptation. The novel leaves the instruments of creation unspecified.
+Shared apparatus ports replace independent wire coordinates. The switch rotates
+toward its actual contact; grip, wrist and a two-link arm use one state. The
+unconnected foreground cable and duplicate jar are removed. Unsupported sparks,
+crackle and arc-hit audio are removed. These repairs establish geometric
+constraints only, not approved anatomy or a historically/electrically valid circuit.
 
-Current selections for prototype testing:
+The literary source remains the 1818 text (SRC-FR-012). The earlier tableau used
+the 1831 frontispiece (SRC-FR-001); the 1801–1805 pile and later costumes remain
+interpretive choices, not evidence of the novel's chronology. The novel leaves
+the instruments unspecified. Resolve the adaptation/source-era contract before
+claiming historical accuracy. Sources and rejected candidates remain preserved.
 
-- masked 1800 Ingolstadt city engraving behind an invented foreground laboratory; the laboratory location is not historical evidence;
-- separate human profile planes, five-digit hand drawings and curved segmented surface marks;
-- flowing black creature hair and a restrained dull yellow eye;
-- short candle and local light falloff, with interior lightning removed;
-- plate separators, glass/foil/stopper jar components and brief contact-only cinematic spark;
-- wrist-led reach in the apparatus macro;
-- portable licensed font and per-Item diagnostic review.
+## 25. Memory, quality and improvement loop
 
-The remaining ceiling is illustration quality, anatomical gesture, physical grip, cloth folds, costume/source-era consistency and acoustics. The current eye portrait still reuses profile geometry; a dedicated hero close-up drawing is required before final approval. The apparatus circuit and sparks are cinematic hypotheses, not certified historical/electrical behavior. Every candidate record carries its unresolved tradeoff. None is grandfathered into final approval.
+Read `docs/memory/STATE.md`, atomic lessons and the episode quality review before
+each production change. Identify the fault, compare solutions, write the experiment,
+make one focused repair and record actual results plus remaining limitations.
+Update memory at the end of the change so future chats inherit corrections.
 
-## 25. Improvement loop
+Follow `QUALITY_REVIEW.md`. Blocking defects stay open until each affected shot
+has dated, hash-bound human review evidence. Every shot needs readability,
+anatomy, motion, physics, continuity, style and audio review. Generated diagnostics
+and passing tests do not grant artistic approval. A pan is not proof of action.
 
-Every new visual version must answer:
+`make production-validate` checks memory and record integrity.
+`npm test` in the renderer tests geometric constraints.
+`make production-validate-final` combines Item approval with the independent
+quality gate. It must fail while style, shot reviews or defects remain unresolved.
 
-1. What exact defect did the previous version expose?
-2. What alternatives were considered?
-3. What changed, and why did it win?
-4. What new ceiling became visible after the improvement?
-
-A version number is earned by a meaningful visual, methodological or pipeline improvement—not by cosmetic code changes.
+A version is earned by a meaningful improvement and recorded learning. Do not
+extend to three minutes until one redesigned shot passes the complete quality gate.

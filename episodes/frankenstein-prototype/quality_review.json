@@ -1,0 +1,333 @@
+{
+  "schema_version": "1.0",
+  "episode_id": "frankenstein-prototype",
+  "reviewed_baseline": "V5.3",
+  "baseline_verdict": "USER_REJECTED",
+  "reported_at": "2026-10-07",
+  "current_candidate": "V5.4 mechanics repair experiment",
+  "style": {
+    "status": "REDESIGN_REQUIRED",
+    "direction": "UNDECIDED",
+    "evidence": []
+  },
+  "defects": [
+    {
+      "id": "Q001",
+      "title": "Cables do not attach to apparatus",
+      "severity": "BLOCKING",
+      "shot_ids": [
+        "creation_chamber",
+        "galvanic_contact",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "copper_wire_network",
+        "foreground_copper_cable",
+        "voltaic_pile",
+        "leyden_jar_primary",
+        "leyden_jar_secondary"
+      ],
+      "evidence_origin": "CODE_CONFIRMED",
+      "status": "REPAIR_IMPLEMENTED",
+      "finding": "Independent literal paths ended at empty space or missed foil/terminals.",
+      "repair": "Named device ports feed cable endpoints in both compositions; decorative cable and unused jar removed.",
+      "acceptance": "Review every terminal and full route throughout motion and across all recurring shots.",
+      "review_evidence": []
+    },
+    {
+      "id": "Q002",
+      "title": "Hand, sleeve and lever move independently",
+      "severity": "BLOCKING",
+      "shot_ids": [
+        "galvanic_contact"
+      ],
+      "item_ids": [
+        "victor_hand",
+        "victor_coat",
+        "brass_contact"
+      ],
+      "evidence_origin": "CODE_CONFIRMED",
+      "status": "REPAIR_IMPLEMENTED",
+      "finding": "Hand translated while lever and cuff stayed fixed.",
+      "repair": "One mechanism state drives rotating lever, grip, wrist and two-link arm. Dedicated grip candidate remains unapproved.",
+      "acceptance": "Review closed grip, thumb opposition, wrist contact, cuff overlap and contact timing in motion.",
+      "review_evidence": []
+    },
+    {
+      "id": "Q003",
+      "title": "Camera movement substitutes for meaningful action",
+      "severity": "BLOCKING",
+      "shot_ids": [
+        "creation_chamber",
+        "victor_at_door",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "creation_camera_drift",
+        "victor_recoil_pose",
+        "creature_rise_motion"
+      ],
+      "evidence_origin": "CODE_CONFIRMED",
+      "status": "OPEN",
+      "finding": "Static paths plus small whole-object translations do not establish believable action.",
+      "repair": "Rebuild blocking and articulated motion one shot at a time.",
+      "acceptance": "Watch with camera locked and audio muted; required action must remain clear. Deliberate stillness needs a story reason.",
+      "review_evidence": []
+    },
+    {
+      "id": "Q004",
+      "title": "View and scene are hard to understand",
+      "severity": "BLOCKING",
+      "shot_ids": [
+        "creation_chamber",
+        "galvanic_contact",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "creation_chamber_composition",
+        "creation_bed_slab"
+      ],
+      "evidence_origin": "USER_REPORTED",
+      "status": "OPEN",
+      "finding": "User reports poor views and unclear scenes; no viewer comprehension test exists.",
+      "repair": "Redesign camera, silhouettes, scale and action staging before texture.",
+      "acceptance": "An unfamiliar viewer identifies actor, action, target and change from first/middle/last frames and silent playback.",
+      "review_evidence": []
+    },
+    {
+      "id": "Q005",
+      "title": "Body proportions are poor",
+      "severity": "BLOCKING",
+      "shot_ids": [
+        "creation_chamber",
+        "victor_at_door",
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "victor_silhouette",
+        "victor_head_profile",
+        "creature_body_proportions",
+        "creature_head_shape"
+      ],
+      "evidence_origin": "USER_REPORTED",
+      "status": "OPEN",
+      "finding": "Shared schematic head is enlarged for hero portraits; body has no anatomical rig.",
+      "repair": "Create character model sheets and dedicated hero drawings, compare references.",
+      "acceptance": "Review head/body ratios, limb lengths, foreshortening and identity across every appearance.",
+      "review_evidence": []
+    },
+    {
+      "id": "Q006",
+      "title": "Hands look wrong",
+      "severity": "BLOCKING",
+      "shot_ids": [
+        "creation_chamber",
+        "victor_at_door",
+        "galvanic_contact",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "victor_hand",
+        "creature_hand"
+      ],
+      "evidence_origin": "USER_REPORTED",
+      "status": "OPEN",
+      "finding": "Finger count alone does not prove anatomy, grasp or gesture.",
+      "repair": "Compare referenced hand poses; macro grip candidate only addresses attachment.",
+      "acceptance": "Review finger count, lengths, knuckles, thumb opposition, gesture and contact at native resolution and in motion.",
+      "review_evidence": []
+    },
+    {
+      "id": "Q007",
+      "title": "Characters appear incomplete",
+      "severity": "BLOCKING",
+      "shot_ids": [
+        "creation_chamber",
+        "victor_at_door",
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "victor_silhouette",
+        "victor_recoil_pose",
+        "creature_body_proportions",
+        "creature_drapery"
+      ],
+      "evidence_origin": "USER_REPORTED",
+      "status": "OPEN",
+      "finding": "Unclear crops, floating parts or accidental omissions must not be justified as style.",
+      "repair": "Draw complete underlying anatomy and define intentional occlusion/cropping.",
+      "acceptance": "Review full construction without shadows/cloth and then final framing; every visible part has a plausible parent.",
+      "review_evidence": []
+    },
+    {
+      "id": "Q008",
+      "title": "Physics and effects lack causes",
+      "severity": "BLOCKING",
+      "shot_ids": [
+        "galvanic_contact",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "electric_arc",
+        "electrical_crackle_audio",
+        "arc_hit_audio",
+        "brass_contact",
+        "creature_rise_motion",
+        "victor_recoil_pose"
+      ],
+      "evidence_origin": "CODE_CONFIRMED",
+      "status": "OPEN",
+      "finding": "Sparks and crackle fired at scheduled times while a stationary lever never made contact; weight/support unverified.",
+      "repair": "Remove unsupported discharge; geometric constraints implemented. Circuit validity, body weight and collision remain unverified.",
+      "acceptance": "Validate support, collision and event causes. Source any historical apparatus behavior; geometry tests do not certify electricity.",
+      "review_evidence": []
+    },
+    {
+      "id": "Q009",
+      "title": "Overall style rejected",
+      "severity": "BLOCKING",
+      "shot_ids": [
+        "ingolstadt_storm",
+        "creation_chamber",
+        "victor_at_door",
+        "galvanic_contact",
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "living_engraving_palette",
+        "engraving_hatching",
+        "victor_head_profile",
+        "creature_head_shape"
+      ],
+      "evidence_origin": "USER_REPORTED",
+      "status": "OPEN",
+      "finding": "User rejects style. Previous house-style proposal was treated too much like an approved direction.",
+      "repair": "Compare materially different style frames using the same narrative beat; confirm direction before scaling.",
+      "acceptance": "User accepts a concrete style frame and motion sample; unified art, anatomy, material and lighting pass review.",
+      "review_evidence": []
+    },
+    {
+      "id": "Q010",
+      "title": "Configuration passes without film quality",
+      "severity": "BLOCKING",
+      "shot_ids": [
+        "ingolstadt_storm",
+        "creation_chamber",
+        "victor_at_door",
+        "galvanic_contact",
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "creation_chamber_composition"
+      ],
+      "evidence_origin": "CODE_CONFIRMED",
+      "status": "REPAIR_IMPLEMENTED",
+      "finding": "Renderer validation checked timing and hashes but not rejection state, shot reviews or open defects. Conflicting shot-lock documents.",
+      "repair": "Add memory and shot quality gate to strict-final; align all-active-item lock rules.",
+      "acceptance": "A rejected style, open defect, missing review or stale evidence must fail strict-final even if Item statuses are final.",
+      "review_evidence": []
+    }
+  ],
+  "shots": [
+    {
+      "shot_id": "ingolstadt_storm",
+      "status": "REDESIGN_REQUIRED",
+      "action": "Locate the story in a hostile historical city and visually target Victor's laboratory.",
+      "motion_policy": "UNREVIEWED",
+      "required_reviews": [
+        "readability",
+        "anatomy",
+        "motion",
+        "physics",
+        "continuity",
+        "style",
+        "audio"
+      ],
+      "review_evidence": []
+    },
+    {
+      "shot_id": "creation_chamber",
+      "status": "REDESIGN_REQUIRED",
+      "action": "Fading candle, proportionate draped body and Victor at doorway; tableau inspired by the 1831 frontispiece.",
+      "motion_policy": "UNREVIEWED",
+      "required_reviews": [
+        "readability",
+        "anatomy",
+        "motion",
+        "physics",
+        "continuity",
+        "style",
+        "audio"
+      ],
+      "review_evidence": []
+    },
+    {
+      "shot_id": "victor_at_door",
+      "status": "REDESIGN_REQUIRED",
+      "action": "Hold on Victor's fear with the face partly obscured rather than a generic front-facing portrait.",
+      "motion_policy": "UNREVIEWED",
+      "required_reviews": [
+        "readability",
+        "anatomy",
+        "motion",
+        "physics",
+        "continuity",
+        "style",
+        "audio"
+      ],
+      "review_evidence": []
+    },
+    {
+      "shot_id": "galvanic_contact",
+      "status": "REDESIGN_REQUIRED",
+      "action": "Diagnostic shared-anchor mechanism and coupled grip study; art, physics and historical circuit remain unapproved.",
+      "motion_policy": "UNREVIEWED",
+      "required_reviews": [
+        "readability",
+        "anatomy",
+        "motion",
+        "physics",
+        "continuity",
+        "style",
+        "audio"
+      ],
+      "review_evidence": []
+    },
+    {
+      "shot_id": "first_eye",
+      "status": "REDESIGN_REQUIRED",
+      "action": "Dull yellow eye opens in candle shadow; restrained portrait crop.",
+      "motion_policy": "UNREVIEWED",
+      "required_reviews": [
+        "readability",
+        "anatomy",
+        "motion",
+        "physics",
+        "continuity",
+        "style",
+        "audio"
+      ],
+      "review_evidence": []
+    },
+    {
+      "shot_id": "recoil_tableau",
+      "status": "REDESIGN_REQUIRED",
+      "action": "Return to the tableau as the creature rises and Victor recoils, then resolve into title.",
+      "motion_policy": "UNREVIEWED",
+      "required_reviews": [
+        "readability",
+        "anatomy",
+        "motion",
+        "physics",
+        "continuity",
+        "style",
+        "audio"
+      ],
+      "review_evidence": []
+    }
+  ]
+}

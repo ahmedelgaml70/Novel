@@ -18,3 +18,7 @@ production/living_engraving/frames/
 production/living_engraving/*.wav
 production/living_engraving/*.mp4
 production/living_engraving/review-output/
+
+# Local experiments and exported deliverables
+/work/
+/outputs/

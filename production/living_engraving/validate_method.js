@@ -1,6 +1,10 @@
 const fs=require('fs'),path=require('path'),crypto=require('crypto');
 const read=f=>JSON.parse(fs.readFileSync(path.join(__dirname,f),'utf8'));
 const state=read('METHOD_STATE.json'),manifest=read('scene_manifest.json'),pkg=read('package.json');
+const quality=JSON.parse(fs.readFileSync(path.resolve(__dirname,state.quality_review),'utf8'));
+if(quality.current_candidate.indexOf('V'+state.version)===-1)throw Error('Quality review candidate and method disagree');
+if(manifest.film.visual_version!==state.version)throw Error('Film and method versions disagree');
+if(!fs.existsSync(path.resolve(__dirname,state.project_memory)))throw Error('Project memory is missing');
 const guide=fs.readFileSync(path.resolve(__dirname,state.canonical_guide),'utf8');
 if(!guide.includes(`**Method version:** ${state.version}`))throw Error('Guide and method state versions disagree');
 if(!pkg.version.startsWith(state.version+'.'))throw Error('Package and method versions disagree');

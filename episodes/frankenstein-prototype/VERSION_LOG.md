@@ -70,3 +70,13 @@ Head proportions, eye colour, candle presence, cloth planes and apparatus parts 
 
 ### Evidence
 See [reviews/V5_3_REVIEW.md](reviews/V5_3_REVIEW.md), generated [reviews/review_summary.json](reviews/review_summary.json), and review contact sheet. The diagnostic evidence is not final approval. Structural gate and all 26 tests pass; strict-final remains red. V5.3 output is exactly 24 seconds, 1280×720, 24 fps, H.264/AAC stereo when assembled with the canonical script.
+
+## V5.4 — 2026-10-07: user rejection, constrained mechanics and persistent learning
+
+V5.3 rejected for style, anatomy, framing, connections, motion and physics.
+Shared ports replace literal wire endpoints; lever/grip/wrist/arm share state.
+Unused jar, loose decorative cable and unsupported spark/audio retired.
+Added AGENTS.md, project state, ten evidence-linked lessons, experiments and
+blocking shot quality reviews. All active Items require revalidation.
+This is a mechanics experiment; visual redesign remains required. Tests cannot
+prove artistic quality. Detailed checks and limitations live in memory experiments.

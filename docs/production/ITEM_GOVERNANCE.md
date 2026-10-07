@@ -218,8 +218,9 @@ See `SOURCE_POLICY.md`.
 
 A shot cannot be marked production-ready until:
 
-- all `HERO` Items are `FINAL_APPROVED`;
-- all `PRIMARY` Items are at least `CONTINUITY_APPROVED`;
+- every active Item, including support, atmosphere, edit and audio, is `FINAL_APPROVED`;
+- the independent shot quality review is `APPROVED` and all affecting defects are `RESOLVED`;
+- the visual direction has reviewed approval evidence;
 - no visible Item is `BLOCKED`, `UNKNOWN_RIGHTS`, or `NEEDS_REVALIDATION`;
 - the shot has an approval still or short motion test;
 - audio Items have been checked in context;
@@ -228,9 +229,10 @@ A shot cannot be marked production-ready until:
 
 ## Current Frankenstein consequence
 
-The existing V5.1 film is a **prototype benchmark**, not a final asset-approved production. It contains strong bespoke work, but many Items were selected before this atomic comparison protocol existed.
-
-They are therefore recorded as `NEEDS_REVALIDATION` until they have been compared under this policy. We do not grandfather them into approval merely because they already appear in the renderer.
+V5.3 is USER_REJECTED. V5.4 is a mechanics repair experiment, not an approved film.
+Every active Item requires revalidation. Shared-anchor checks do not approve
+hands, physics, style or staging. The episode `quality_review.json` independently
+blocks shot lock even if someone changes all Item labels to FINAL_APPROVED.
 
 ## Replacement discipline
 

@@ -1,3 +1,4 @@
+const {PORTS, mechanism} = require('./mechanism');
 const fs=require('fs');
 const path=require('path');
 const {Canvas,FontLibrary,Image,Path2D}=require('skia-canvas');
@@ -69,9 +70,9 @@ function room(ctx,t){
 function pile(ctx,x,y,s=1){transform(ctx,x,y,s,0,()=>paint(ctx,'voltaic_pile',()=>{
  ell(ctx,0,77,42,9,'#6a5335',P.ink,1.4);for(const x of [-35,35]){line(ctx,x,74,x,-108,3,'#3a2f21');line(ctx,x+1,72,x+1,-108,.7,'#b09a6c',.55)}
  for(let i=0;i<15;i++){const y=62-i*10;shape(ctx,`M-27 ${y-4} Q0 ${y+3} 27 ${y-4} L27 ${y+1} Q0 ${y+8} -27 ${y+1} Z`,i%2?'#765e3e':'#8e6541');ell(ctx,0,y-4,27,4,i%2?'#b2a587':'#a8784a',P.ink,.6);strokePath(ctx,`M-23 ${y} Q0 ${y+5} 21 ${y}`,P.paper,.45,.25);if(i<14)ell(ctx,0,y-7,25,3,'#6e6d54',P.ink,.5)}
- ell(ctx,0,-92,42,8,'#80734e',P.ink,1);line(ctx,0,-97,0,-119,2,P.brass);ell(ctx,0,-122,4,4,'#aa8754',P.ink,.5)
+ ell(ctx,0,-92,42,8,'#80734e',P.ink,1);line(ctx,0,-97,0,-119,2,P.brass);ell(ctx,...PORTS.pile.positive,4,4,'#aa8754',P.ink,.5);ell(ctx,...PORTS.pile.negative,4,4,'#aa8754',P.ink,.5)
  }))}
-function jar(ctx,x,y,s,id){transform(ctx,x,y,s,0,()=>paint(ctx,id,()=>{shape(ctx,'M-23 -63 Q-32 -57 -33 -45 L-34 58 Q0 75 34 58 L33 -45 Q32 -57 23 -63 Z','rgba(143,158,144,.08)',P.ink,1.7);shape(ctx,'M-32 4 Q0 12 32 4 L33 57 Q0 73 -33 57 Z','#777361',P.ink,.9);for(let i=0;i<11;i++)strokePath(ctx,`M${-30+i*6} 10 L${-30+i*6} 56`,P.ink,.6,.3);ell(ctx,0,-63,25,5,'#8c7654',P.ink,1);line(ctx,0,-65,0,-104,2,'#a28b5e');ell(ctx,0,-108,6,6,'#9b8154',P.ink,.8);strokePath(ctx,'M-26 -39 L-26 0','#d5d2b2',1,.35)}))}
+function jar(ctx,x,y,s,id){transform(ctx,x,y,s,0,()=>paint(ctx,id,()=>{shape(ctx,'M-23 -63 Q-32 -57 -33 -45 L-34 58 Q0 75 34 58 L33 -45 Q32 -57 23 -63 Z','rgba(143,158,144,.08)',P.ink,1.7);shape(ctx,'M-32 4 Q0 12 32 4 L33 57 Q0 73 -33 57 Z','#777361',P.ink,.9);for(let i=0;i<11;i++)strokePath(ctx,`M${-30+i*6} 10 L${-30+i*6} 56`,P.ink,.6,.3);ell(ctx,0,-63,25,5,'#8c7654',P.ink,1);line(ctx,0,-65,0,-104,2,'#a28b5e');ell(ctx,...PORTS.jar.inner,6,6,'#9b8154',P.ink,.8);ell(ctx,...PORTS.jar.foil,4,4,'#9b8154',P.ink,.8);strokePath(ctx,'M-26 -39 L-26 0','#d5d2b2',1,.35)}))}
 function hand(ctx,x,y,s,rot,creature=false){transform(ctx,x,y,s,rot,()=>paint(ctx,creature?'creature_hand':'victor_hand',()=>{
  // One thumb and four distinct fingers; flexed pose, rather than a mitten with three rays.
  const d='M-11 25 C-16 18 -18 7 -15 -4 L-13 -22 C-13 -28 -8 -29 -6 -23 L-7 -7 L-3 -34 C-2 -40 3 -39 4 -34 L3 -9 L9 -34 C10 -40 16 -38 15 -31 L10 -5 L17 -24 C20 -29 25 -26 23 -20 L16 2 L25 -5 C31 -8 34 -3 29 2 L14 16 L12 28 Z';
@@ -117,11 +118,28 @@ function folioSkull(ctx){
  paint(ctx,'open_folio',()=>transform(ctx,317,631,.85,-.09,()=>{shape(ctx,'M-97 0 Q-55 -20 -2 -6 L0 58 Q-51 39 -97 49 Z','#ae9b76');shape(ctx,'M-2 -6 Q44 -24 101 -10 L100 45 Q43 35 0 58 Z','#b9a782');for(let i=0;i<9;i++){strokePath(ctx,`M-87 ${4+i*4} Q-45 ${-7+i*4} -12 ${4+i*4}`,P.ink,.45,.5);strokePath(ctx,`M12 ${1+i*4} Q50 ${-7+i*4} 90 ${i*4}`,P.ink,.45,.5)}line(ctx,-2,-6,0,58,1,P.ink)}));
  paint(ctx,'skull_foreground',()=>transform(ctx,463,632,.78,.16,()=>{surface(ctx,'M-24 0 C-30 -21 -21 -37 1 -37 C24 -37 32 -24 30 -7 L24 8 L13 15 L16 27 Q4 34 -12 27 L-15 14 L-25 7 Z',[-30,-40,63,77],'#ad9c77',3);shape(ctx,'M-19 -12 Q-7 -17 -6 -6 Q-7 4 -16 0 Z','#2e2b20');shape(ctx,'M5 -13 Q20 -15 22 -5 Q15 4 6 -1 Z','#2e2b20');shape(ctx,'M-1 1 L-6 10 L4 11 Z','#2e2b20');for(let i=0;i<7;i++)line(ctx,-10+i*3,19,-10+i*3,27,.5,P.ink,.7)}));
 }
-function apparatus(ctx){pile(ctx,139,438,.82);jar(ctx,598,433,.82,'leyden_jar_primary');jar(ctx,675,440,.65,'leyden_jar_secondary');paint(ctx,'copper_wire_network',()=>{strokePath(ctx,'M139 338 C160 344 183 366 220 365 C391 355 423 326 598 344',P.copper,1.6,.65);strokePath(ctx,'M139 492 C197 517 293 515 302 424',P.copper,1.5,.6)})}
+function connectedApparatus(ctx,state){
+ pile(ctx,...state.pile.origin,state.pile.scale);jar(ctx,...state.jar.origin,state.jar.scale,'leyden_jar_primary');
+ paint(ctx,'copper_wire_network',()=>{for(const wire of state.wires){const [a,b]=wire.points;const bottom=wire.id==='return';const bow=bottom?Math.max(a[1],b[1])+65:(a[1]+b[1])*.5+22;strokePath(ctx,`M${a[0]} ${a[1]} C${a[0]+28} ${bow} ${b[0]-28} ${bow} ${b[0]} ${b[1]}`,P.copper,1.8,.85)}});
+ paint(ctx,'brass_contact',()=>{const {hinge:h,fixed:f,tip:p}=state;shape(ctx,`M${h[0]-23} ${h[1]+7} L${f[0]+23} ${f[1]+7} L${f[0]+32} ${f[1]+32} L${h[0]-15} ${h[1]+35} Z`,'#312919');ell(ctx,...h,9,6,'#977a46',P.ink,1);ell(ctx,...f,9,6,'#977a46',P.ink,1);line(ctx,...h,...p,6,'#927345');line(ctx,h[0],h[1]-2,p[0],p[1]-2,1,'#cab483',.7);ell(ctx,...p,5,5,'#b99b64',P.ink,1)});
+}
+function contactArm(ctx,state){
+ const {shoulder:a,elbow:b,wrist:c}=state.arm;
+ paint(ctx,'victor_coat',()=>{ctx.lineCap='round';ctx.lineJoin='round';ctx.beginPath();ctx.moveTo(...a);ctx.lineTo(...b);ctx.lineTo(...c);ctx.strokeStyle=P.ink;ctx.lineWidth=58;ctx.stroke();ctx.strokeStyle='#24281f';ctx.lineWidth=52;ctx.stroke();line(ctx,b[0]-6,b[1],c[0]-5,c[1],.8,P.paper2,.28)});
+ paint(ctx,'victor_coat',()=>{const dx=c[0]-b[0],dy=c[1]-b[1],len=Math.hypot(dx,dy);const nx=-dy/len*23,ny=dx/len*23;line(ctx,c[0]+nx,c[1]+ny,c[0]-nx,c[1]-ny,12,'#b0a185')});
+ // Dedicated closed grip candidate. Attachment is constrained; anatomy remains unapproved.
+ transform(ctx,...c,1,0,()=>paint(ctx,'victor_hand',()=>{
+   surface(ctx,'M-16 -7 L16 -7 C17 14 29 29 31 45 L31 65 Q35 73 25 79 L11 83 Q-3 78 -5 66 L-10 36 Z',[-18,-8,55,96],'#bba982',4);
+   shape(ctx,'M-4 40 Q-18 49 -11 60 L4 69 Q13 74 18 67 Q19 60 7 55 L4 46 Z','#aa9670',P.ink,.9);
+   for(let i=0;i<4;i++){const y=59+i*6;shape(ctx,`M9 ${y} Q25 ${y-4} 30 ${y+1} Q34 ${y+8} 25 ${y+9} L14 ${y+7} Q11 ${y+5} 16 ${y+2}`,i%2?'#b2a17d':'#a79571',P.ink,.7)}
+   strokePath(ctx,'M-7 3 Q3 9 13 2 M-3 22 Q9 29 20 29',P.ink,.8,.4)
+ }));
+}
+function apparatus(ctx){connectedApparatus(ctx,mechanism('tableau'))}
 function tableau(ctx,t,u,rise=0,ret=0){paper(ctx,t,.08);const drift=lerp(8,-12,ease(u));ctx.save();ctx.translate(drift,0);room(ctx,t);apparatus(ctx);
  paint(ctx,'creation_bed_slab',()=>{shape(ctx,'M104 483 L670 452 L791 567 L162 614 Z','#312b20',P.ink,2);line(ctx,145,509,150,619,7,'#1b1912');line(ctx,720,499,757,590,7,'#1b1912');for(let i=0;i<7;i++)strokePath(ctx,`M${165+i*84} 521 L${178+i*84} 581`,'#6e5c42',.6,.3)});
  creature(ctx,386,477,1.34,rise);victor(ctx,1107+ret*24,291,.9,ret);folioSkull(ctx);
- paint(ctx,'foreground_copper_cable',()=>strokePath(ctx,'M-30 698 C210 603 367 684 599 656 C820 624 978 689 1320 646','#6d5035',2,.7));ctx.restore();fog(ctx,t,.07);
+ ctx.restore();fog(ctx,t,.07);
  paint(ctx,'candle_light_pool',()=>{ctx.globalCompositeOperation='multiply';const g=ctx.createRadialGradient(828,318,40,828,318,960);g.addColorStop(0,'rgba(25,18,8,0)');g.addColorStop(.5,'rgba(9,12,9,.24)');g.addColorStop(1,'rgba(3,6,5,.79)');ctx.fillStyle=g;ctx.fillRect(0,0,W,H)});post(ctx,t,.55)
 }
 function shotStormExterior(ctx,t,u,S){paper(ctx,t,.08);
@@ -145,13 +163,7 @@ function shotVictorAtDoor(ctx,t,u,S){paper(ctx,t,.10);paint(ctx,'laboratory_door
  paint(ctx,'victor_door_shadow',()=>{ctx.globalCompositeOperation='multiply';const sh=ctx.createLinearGradient(370,0,1020,0);sh.addColorStop(0,'rgba(2,5,3,.82)');sh.addColorStop(.55,'rgba(2,5,3,.05)');sh.addColorStop(1,'rgba(2,5,3,.15)');ctx.fillStyle=sh;ctx.fillRect(0,0,W,H)});post(ctx,t,.61)
 }
 function shotGalvanicContact(ctx,t,u,S){paper(ctx,t,.10);paint(ctx,'creation_bed_slab',()=>{ctx.fillStyle='#22261e';ctx.fillRect(0,0,W,H);shape(ctx,'M0 528 L1280 425 L1280 720 L0 720 Z','#3d3628');for(let i=0;i<13;i++)strokePath(ctx,`M0 ${550+i*15} Q500 ${490+i*18} 1280 ${451+i*15}`,'#726045',.7,.28)});
- pile(ctx,270,474,1.55);jar(ctx,948,454,1.26,'leyden_jar_primary');jar(ctx,1110,478,.88,'leyden_jar_secondary');
- paint(ctx,'brass_contact',()=>{shape(ctx,'M504 511 L754 498 L774 530 L522 546 Z','#312919');ell(ctx,568,504,9,6,'#977a46',P.ink,1);ell(ctx,722,494,9,6,'#977a46',P.ink,1);line(ctx,568,504,693,466,6,'#927345');line(ctx,568,501,693,463,1,'#cab483',.5);ell(ctx,693,466,5,5,'#b99b64',P.ink,1)});
- paint(ctx,'copper_wire_network',()=>{strokePath(ctx,'M270 285 C310 348 409 462 568 504','#936540',2);strokePath(ctx,'M722 494 C763 475 864 280 948 318','#936540',2);strokePath(ctx,'M948 535 C842 587 449 587 270 580','#785133',1.7)});
- paint(ctx,'victor_coat',()=>{surface(ctx,'M556 -20 L650 -20 L750 290 L709 389 L647 362 L627 248 Z',[546,-30,213,447],'#22281f',7);shape(ctx,'M646 351 L704 370 L715 390 L649 377 Z','#b0a185')});
- hand(ctx,704,400+42*ease(u),.96,3.25);
- // A brief narrative spark is deliberately not a physically certified pile discharge.
- paint(ctx,'electric_arc',()=>{let a=0;for(const q of S.cues.arc_hits||[])a+=pulse(S.local,q,.025);if(a>.015){electricArc(ctx,693,467,715,492,a*.55,90+Math.floor(t*24))}});candle(ctx,1175,569,1.1,t);post(ctx,t,.55)
+ const state=mechanism('macro',u);connectedApparatus(ctx,state);contactArm(ctx,state);candle(ctx,1175,569,1.1,t);post(ctx,t,.55)
 }
 function shotFirstEye(ctx,t,u,S){paper(ctx,t,.10);paint(ctx,'first_eye_shadow_mask',()=>{ctx.fillStyle='#080d09';ctx.fillRect(0,0,W,H)});const op=smooth((u-.20)/.42);
  ctx.save();const z=1+.035*ease(u);ctx.translate(20*(1-z),20*(1-z));ctx.scale(z,z);head(ctx,755,405,7.1,-.12,true,op);ctx.restore();

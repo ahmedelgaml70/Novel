@@ -7,6 +7,7 @@ Default mode checks structure/references.
 from __future__ import annotations
 import argparse, hashlib, json, math, sys
 from pathlib import Path
+from validate_project_memory import check_project
 
 REQUIREMENT_FIELDS=("story","period","visual","motion","continuity","technical","rights")
 FINAL_REQUIRED={"HERO","PRIMARY"}
@@ -30,6 +31,8 @@ def main():
             errors.append(f"missing {ep/name}")
     if errors:
         print("\n".join("ERROR: "+e for e in errors)); return 2
+
+    errors.extend(check_project(root, args.episode, args.strict_final))
 
     manifest=load(ep/"scene_manifest.json")
     inv=load(ep/"item_inventory.json")

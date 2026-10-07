@@ -131,6 +131,15 @@ A weighted average cannot rescue a hard failure. At minimum, final visible asset
 HERO Items should normally score >= 8 on every applicable critical dimension.
 
 ### Shot lock
-A shot cannot be locked while any HERO Item is not `FINAL_APPROVED`, any PRIMARY Item lacks continuity approval, or a visible Item remains blocked, unknown-rights or `NEEDS_REVALIDATION`.
+A shot cannot be locked until every active Item is `FINAL_APPROVED`, the independent shot and style reviews are approved, and all affecting defects are resolved. Missing rights or review evidence blocks lock.
 
 See `docs/production/ITEM_GOVERNANCE.md`.
+
+## User correction and quality enforcement (2026-10-07)
+
+V5.3 is rejected. Complete anatomy, believable proportions/grips, connected
+objects, caused physical effects, readable staging and meaningful action are
+hard gates. Camera movement and atmosphere do not substitute for story action.
+Every active Item must be final before shot lock. The independent quality review
+also blocks unresolved defects or an unapproved style. See
+`docs/production/QUALITY_REVIEW.md` and `docs/memory/STATE.md`.
