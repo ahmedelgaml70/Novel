@@ -157,7 +157,8 @@
         {
           "path": "test/human_male.glb",
           "size_bytes": 35190592,
-          "sha": "ad6e0e84b934007d2bc89acf2ebb947a79738333"
+          "sha": "ad6e0e84b934007d2bc89acf2ebb947a79738333",
+          "sha256": "853d0a785345afadc3ed423bd3bb72144debe00cd0bb52c258e00387ab40f162"
         },
         {
           "path": "test/human_female.glb",
@@ -172,7 +173,9 @@
           "Universal Animation Library[Standard]/Universal Animation Library[Standard]/License.txt",
           "Universal Animation Library 2[Standard]/Universal Animation Library 2[Standard]/License.txt"
         ],
-        "license_text": "CC0 1.0 Universal / Public Domain Dedication for the Quaternius animation packs."
+        "license_text": "CC0 1.0 Universal / Public Domain Dedication for the Quaternius animation packs.",
+        "download_verified_at": "2026-10-07",
+        "downloaded_size_bytes": 35190592
       },
       "policy": "May be used to remove asset-preparation friction during E-VID-006. For final production, prefer official Quaternius downloads or pin and record the exact binary SHA/provenance."
     }
