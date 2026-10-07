@@ -172,3 +172,14 @@ Continue V5.3 lookdev. Do not promote a complete film until the exterior/environ
 - final environment continuity across the full sequence.
 
 No full V5.3 render is approved yet.
+
+## 2026-10-07 — Learning and baseline reconciliation
+
+The user abandoned the V5.5 generated-still/warp experiment. Preserve it as a
+failed attempt, not a film template. Follow V5.4.1's documented ready skeletal
+animation foundation and ready-free-first policy. Hyperframe/JavaScript is the
+user direction; actual Hyperframe integration remains unverified. The next
+experiment is one coherent Frankenstein beat with suitable ready outfits, set
+and props. Item-to-obligation links and activity aliases were repaired following
+the latest-main sync. All existing quality defects and approvals remain open.
+See docs/memory/LEARNING_REVIEW.md for actual checks and remaining limits.

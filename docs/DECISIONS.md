@@ -341,3 +341,14 @@ Ready does not mean approved. Every asset still has to satisfy the Item requirem
 For the first real-animation proof, Quaternius is the primary humanoid ecosystem because its Universal Base Characters, Universal Animation Library, Universal Animation Library 2 and modular outfit packs are designed to work together and are CC0. KayKit is the current fallback.
 
 This choice is revisable if another free ecosystem proves simpler or better.
+
+## D-026 — Abandon flattened-raster motion and follow the current ready-asset baseline
+
+**Status:** Accepted user direction, 2026-10-07
+
+The user rejected the generated-image/warp approach and instructed use of ready
+assets with Hyperframe and JavaScript. The latest repository documents a passed
+V5.4.1 ready-rigged Three.js architecture proof. Preserve that foundation; do not
+repeat it. Hyperframe's integration role is not yet verified or implemented.
+The next task is a story-specific beat with ready characters/outfits, set and
+props, retaining existing source, anatomy, contact and shot-quality gates.

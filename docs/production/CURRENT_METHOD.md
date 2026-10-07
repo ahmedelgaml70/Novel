@@ -1,8 +1,8 @@
 # Living Engraving — Current Production Method
 
-**Method version:** 5.3.0-dev  
-**Status:** canonical / current  
-**Visual baseline:** Frankenstein V5.1 remains the last complete baseline. V5.3 is active look-development: hybrid high-information assets + JavaScript direction. No full V5.3 film is promoted until HERO-shot locks pass.  
+**Method version:** 5.4 (legacy benchmark contract); performance baseline V5.4.1
+**Status:** canonical; V5.4.1 ready-asset skeletal baseline; legacy Canvas film remains diagnostic
+**Visual baseline:** V5.3 is USER_REJECTED. V5.4.1 passes the documented skeletal-animation architecture gate, not film/artistic approval. No new film is approved.
 **Goal:** produce an authored, cinematic, approximately three-minute novel adaptation in JavaScript without generic visible assets.
 
 This document contains **only the active method**. Historical approaches and failed experiments belong in `VERSION_HISTORY.md`. When a method changes, remove the obsolete instruction here, replace it with the new one, update the version history, validate, and rerender. Never keep competing current instructions.
@@ -47,25 +47,24 @@ rights/provenance known
 
 For HERO Items, all applicable critical dimensions should normally be >= 8.
 
-## 2. Current visual language
+## 2. Current visual and motion direction
 
-The current house style is **Living Engraving**:
+Use the documented V5.4.1 ready-rigged Three.js path for character performance.
+Ready-compatible characters, exact inventoried animation clips, outfits,
+environments and props come before custom construction. Start style testing
+with simple toon and outline; preserve readable skeletal movement.
 
-- early-19th-century engraved/etched illustration;
-- black, parchment, smoke and muted sepia;
-- cold cyan reserved for unnatural/electrical light;
-- brass/copper only where materially justified;
-- strong chiaroscuro;
-- incomplete faces rather than clean avatar portraits;
-- irregular profiles and silhouettes;
-- dense hatch/cross-hatch in shadow;
-- paper fibre and ink texture;
-- deterministic micro-jitter/line boil;
-- restrained character motion;
-- purposeful camera movement;
-- atmosphere, cloth and light carrying much of the motion.
+The user previously chose refined engraving as a direction to test, then rejected
+and abandoned the generated-still/warp approach. That approach is not current.
+A preference is not approval of the drawings, motion or finished style.
 
-Readability comes from value separation, silhouette, rim light and composition—not by turning the palette bright or modern.
+The user now requires ready assets usable with Hyperframe and JavaScript.
+The tested repository engine is Three.js. Hyperframe compatibility and its
+integration role remain to be verified; no Hyperframe implementation is claimed.
+
+See STATE.md, E-VID-006_FINDINGS.md and sections 38–39. Older Canvas-specific
+sections describe the retained diagnostic benchmark and may not override this
+performance architecture or the user's quality corrections.
 
 ## 3. Repository structure
 
@@ -495,7 +494,7 @@ There must be one obvious current solution.
 
 Frankenstein V5.1 is a benchmark prototype, not a final asset-approved film.
 
-The V5.2 audit isolates **62 Items** across global material, exterior, chamber, Victor, creature, apparatus, atmosphere/edit, typography and audio.
+The reconciled benchmark inventory contains **67 Items (59 active, 8 retired)** across global material, exterior, chamber, Victor, creature, apparatus, atmosphere/edit, typography and audio.
 
 The current strict-final validator intentionally fails because many Items were created before requirements-before-search and candidate-comparison rules existed.
 
@@ -859,3 +858,16 @@ Before returning to the 3-minute film, pass one 8–10 second proof in which:
 The gate fails if the result can still be described as a still image being translated, scaled or zoomed.
 
 Success requires visible joint-level movement across hips, knees, spine, shoulders, arms, head and planted feet.
+
+## 40. Read the current baseline before starting another experiment
+
+The documented V5.4.1 skeletal architecture gate has passed. Do not re-prove it
+or resume the rejected flattened-raster animation. The next experiment is one
+Frankenstein beat using ready character/outfit, environment and prop candidates
+while preserving the proven animation path. Inventory exact runtime capabilities
+before planning, then bind explicit clip names. Verify Hyperframe integration
+before relying on it. Source-specific acting, hands, contact, floor support,
+framing, audio and comprehension still need actual shot review.
+
+Read docs/memory/LEARNING_REVIEW.md for the synchronized source revision, the
+rejected local attempt and the records reconciled during the learning audit.

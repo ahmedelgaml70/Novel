@@ -241,3 +241,21 @@ It demonstrates:
 **Important failure learned:** fuzzy semantic matching originally mapped “idle” to Crouch_Idle_Loop and could not find “run” because the library names it Jog/Sprint. Final choreography now uses explicit runtime clip bindings after ingestion inventory.
 
 **Decision:** the real-animation gate passes. Flat still-image movement is no longer the default for performance shots. The next visual work should add ready free outfits/environments/props and styling on top of this skeletal foundation rather than revisiting the moving-still architecture.
+
+## 2026-10-07 — Current-baseline and learning reconciliation
+
+A separate local V5.5 attempt generated style stills and tried mesh-warped
+character motion while newer ready-rigged work existed upstream. The user rejected
+and abandoned that approach. It is preserved in Git stash
+8c11a8641bd19d805b2f4bc254faaf24f2cdbd5b, not an active production method.
+
+The checkout was fast-forwarded to acb1054. V5.4.1's documented skeletal proof is
+the foundation; it is not re-rendered or promoted into a final Frankenstein shot
+by this reconciliation. Current memory records the goal, ready-asset direction,
+Hyperframe requirement and unverified integration, and the next story-specific
+experiment. Missing source-obligation reverse links and activity-field aliases
+were reconciled without changing existing artistic status. Outdated test/audit
+counts were corrected to 67 Items, 59 active, 8 retired and 14 registered sources.
+The independent quality/memory gate is restored in the production validator,
+and strict-final checks every active Item. No new visual version or artistic
+approval is claimed.
