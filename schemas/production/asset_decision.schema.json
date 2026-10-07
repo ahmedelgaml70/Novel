@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Novel Asset Decision",
+  "type": "object",
+  "required": [
+    "id",
+    "item_id",
+    "requirements_locked_before_search",
+    "candidates",
+    "selected_candidate_id",
+    "decision_status",
+    "why_selected_or_pending",
+    "remaining_risk"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "item_id": {
+      "type": "string"
+    },
+    "requirements_locked_before_search": {
+      "type": "boolean"
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "candidate_id",
+          "origin",
+          "source_ids",
+          "status",
+          "scores",
+          "reason"
+        ],
+        "properties": {
+          "candidate_id": {
+            "type": "string"
+          },
+          "origin": {
+            "type": "string"
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "type": "string"
+          },
+          "scores": {
+            "type": "object"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "selected_candidate_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "decision_status": {
+      "type": "string"
+    },
+    "why_selected_or_pending": {
+      "type": "string"
+    },
+    "remaining_risk": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}
