@@ -315,6 +315,33 @@
       "confidence": "HIGH",
       "status": "ENCODED",
       "superseded_by": null
+    },
+    {
+      "id": "LESSON-013",
+      "title": "Hero assets should not share a crowded source sheet when clean isolation matters",
+      "scope": "CATEGORY",
+      "source_context": [
+        "E-VID-005 engraving asset-sheet isolation test"
+      ],
+      "observed_weakness": "A visually strong multi-asset sheet produced overlapping silhouettes and background contamination when individual HERO elements were extracted.",
+      "evidence": [
+        "Creature body and window could be isolated reasonably.",
+        "Creature head, Victor and apparatus lost boundaries or inherited neighboring pixels during extraction.",
+        "Hair, fingers, cloth edges and engraved linework are precisely the details that HERO animation must preserve."
+      ],
+      "root_cause": "The source composition optimized for a beautiful collage rather than for independent alpha-safe production assets.",
+      "consequence": "Post-isolation cleanup would consume time and can degrade the very detail the higher-quality asset layer was meant to preserve.",
+      "prevention_rule": "Generate/acquire HERO assets as individual isolated files with generous transparent margins. Use asset sheets only for ideation, SUPPORT props, or elements whose overlap cannot affect final quality.",
+      "detection_method": "Run an isolation/contact-sheet test before accepting any multi-object source. Reject it for HERO use if silhouette, hair, hands, cloth or transparency cannot be recovered cleanly.",
+      "implementation_changes": [
+        "E-VID-005 HERO workflow changed from sheet extraction to one-asset-per-file generation/acquisition."
+      ],
+      "validation": [
+        "Each HERO source file must pass alpha-edge inspection and an actual shot composite before selection."
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
     }
   ]
 }
