@@ -1,0 +1,194 @@
+{
+  "schema_version": "1.0",
+  "episode_id": "frankenstein-prototype",
+  "designated_source_id": "SRC-FR-012",
+  "scope": "Chapter V creation/awakening sequence used by the prototype",
+  "rule": "These are source facts and constraints, not automatic instructions to show every detail. Omission or transformation that affects the adaptation must be explicit rather than accidental.",
+  "obligations": [
+    {
+      "id": "OBL-FR-001",
+      "fact": "The awakening occurs on a dreary night in November.",
+      "shot_ids": [
+        "ingolstadt_storm",
+        "creation_chamber"
+      ],
+      "item_ids": [
+        "storm_sky"
+      ],
+      "importance": "PRIMARY",
+      "current_treatment": "REPRESENTED",
+      "decision": "Retain hostile night atmosphere; the month need not be shown literally unless it serves the film."
+    },
+    {
+      "id": "OBL-FR-002",
+      "fact": "It is already one in the morning.",
+      "shot_ids": [
+        "creation_chamber"
+      ],
+      "item_ids": [],
+      "importance": "SUPPORT",
+      "current_treatment": "NOT_EXPLICIT",
+      "decision": "Optional unless a clock/time insert materially improves suspense."
+    },
+    {
+      "id": "OBL-FR-003",
+      "fact": "Rain patters against the panes.",
+      "shot_ids": [
+        "ingolstadt_storm",
+        "creation_chamber"
+      ],
+      "item_ids": [
+        "rain_field",
+        "gothic_laboratory_window"
+      ],
+      "importance": "PRIMARY",
+      "current_treatment": "REPRESENTED",
+      "decision": "Retain the rain/window relationship."
+    },
+    {
+      "id": "OBL-FR-004",
+      "fact": "Victor's candle is nearly burnt out and the light is half-extinguished.",
+      "shot_ids": [
+        "creation_chamber"
+      ],
+      "item_ids": [],
+      "importance": "PRIMARY",
+      "current_treatment": "MISSING_FROM_CURRENT_RENDER",
+      "decision": "Next visual rebuild must compare adding a dying candle versus a justified omission; electric cyan light must not erase the source-era practical-light logic."
+    },
+    {
+      "id": "OBL-FR-005",
+      "fact": "Victor has collected the instruments of life around the creature.",
+      "shot_ids": [
+        "creation_chamber",
+        "galvanic_contact"
+      ],
+      "item_ids": [
+        "voltaic_pile",
+        "leyden_jar_primary",
+        "leyden_jar_secondary",
+        "brass_contact",
+        "copper_wire_network"
+      ],
+      "importance": "PRIMARY",
+      "current_treatment": "ADAPTED",
+      "decision": "Apparatus is an interpretive historical reconstruction because the novel does not specify exact instruments; each prop must be historically plausible and not presented as canon."
+    },
+    {
+      "id": "OBL-FR-006",
+      "fact": "The creature's dull yellow eye opens.",
+      "shot_ids": [
+        "first_eye"
+      ],
+      "item_ids": [
+        "creature_eye",
+        "first_eye_shadow_mask"
+      ],
+      "importance": "HERO",
+      "current_treatment": "PARTIALLY_REPRESENTED",
+      "decision": "Eye treatment must read dull/yellow rather than modern luminous science-fiction blue."
+    },
+    {
+      "id": "OBL-FR-007",
+      "fact": "The creature breathes hard.",
+      "shot_ids": [
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "creature_heartbeat"
+      ],
+      "importance": "PRIMARY",
+      "current_treatment": "NOT_DIRECTLY_REPRESENTED",
+      "decision": "Heartbeat is not a substitute for hard breathing; next audio pass must compare breath/airway Foley or explicit chest motion."
+    },
+    {
+      "id": "OBL-FR-008",
+      "fact": "A convulsive motion agitates the creature's limbs.",
+      "shot_ids": [
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "creature_rise_motion",
+        "creature_body_proportions"
+      ],
+      "importance": "PRIMARY",
+      "current_treatment": "PARTIALLY_REPRESENTED",
+      "decision": "Motion should feel involuntary/convulsive before purposeful rising."
+    },
+    {
+      "id": "OBL-FR-009",
+      "fact": "Victor says the creature's limbs are in proportion and its selected features were intended to be beautiful.",
+      "shot_ids": [
+        "creation_chamber",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "creature_body_proportions",
+        "creature_head_shape"
+      ],
+      "importance": "HERO",
+      "current_treatment": "NEEDS_REVALIDATION",
+      "decision": "Avoid the later pop-culture blockheaded-monster default; horror should come from the described contrast and awakening."
+    },
+    {
+      "id": "OBL-FR-010",
+      "fact": "The creature has yellow skin through which muscles and arteries are suggested.",
+      "shot_ids": [
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "creature_body_proportions",
+        "creature_head_shape"
+      ],
+      "importance": "HERO",
+      "current_treatment": "MISSING_OR_WEAK",
+      "decision": "Research an engraving-compatible way to suggest sallow/translucent skin and anatomy without generic zombie styling."
+    },
+    {
+      "id": "OBL-FR-011",
+      "fact": "The creature's hair is lustrous black and flowing.",
+      "shot_ids": [
+        "creation_chamber",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "creature_hair"
+      ],
+      "importance": "PRIMARY",
+      "current_treatment": "PARTIALLY_REPRESENTED",
+      "decision": "Retain long dark hair; refine mass and flow from the source description and period visual references."
+    },
+    {
+      "id": "OBL-FR-012",
+      "fact": "The creature has pearly white teeth, watery eyes, dun-white sockets, a shrivelled complexion, and straight black lips.",
+      "shot_ids": [
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "creature_eye",
+        "creature_head_shape"
+      ],
+      "importance": "PRIMARY",
+      "current_treatment": "MOSTLY_NOT_EXPLICIT",
+      "decision": "Do not cram every feature into one close-up; use details only where they improve the shot while preserving the described contrast."
+    },
+    {
+      "id": "OBL-FR-013",
+      "fact": "Victor recoils and flees from the awakened creature.",
+      "shot_ids": [
+        "victor_at_door",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "victor_recoil_pose",
+        "victor_door_shadow"
+      ],
+      "importance": "HERO",
+      "current_treatment": "REPRESENTED",
+      "decision": "Retain spatial separation and recoil as the emotional payoff."
+    }
+  ]
+}
