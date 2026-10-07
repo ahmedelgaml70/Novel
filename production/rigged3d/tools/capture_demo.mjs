@@ -9,10 +9,13 @@ const duration=Number(process.env.DURATION||9);
 await fs.rm(out,{recursive:true,force:true});
 await fs.mkdir(path.join(out,'frames'),{recursive:true});
 
-const browser=await chromium.launch({headless:true,args:[
-  '--use-gl=swiftshader','--enable-webgl','--ignore-gpu-blocklist',
+const launchOptions={headless:true,args:[
+  '--use-gl=swiftshader','--enable-unsafe-swiftshader','--enable-webgl','--ignore-gpu-blocklist',
   '--disable-dev-shm-usage','--no-sandbox'
-]});
+]};
+if(process.env.BROWSER_CHANNEL) launchOptions.channel=process.env.BROWSER_CHANNEL;
+if(process.env.BROWSER_EXECUTABLE) launchOptions.executablePath=process.env.BROWSER_EXECUTABLE;
+const browser=await chromium.launch(launchOptions);
 const page=await browser.newPage({viewport:{width:1280,height:720},deviceScaleFactor:1});
 page.on('console',m=>console.log('[browser]',m.text()));
 page.on('pageerror',e=>console.error('[pageerror]',e));
