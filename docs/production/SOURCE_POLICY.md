@@ -126,3 +126,12 @@ To promote a source image into the final film:
 ## Source maintenance
 
 If a URL disappears, keep the original record and add a replacement/mirror. Do not silently rewrite history. If rights information changes, record the new evidence and invalidate affected approvals until reviewed.
+
+
+## Exact literary-source records
+
+The novel text itself is a Source and must be entered in the episode source registry. Record the exact edition/source used for adaptation rather than citing a Work generically. When editions are compared, store both and mark one as designated and the others as comparative.
+
+Source-text facts that materially constrain the adaptation go into `source_obligations.json`. Visual/museum/art-history references do not replace the literary source, and the literary source does not establish the historical geometry of interpretive props. Evidence roles remain separate.
+
+A source obligation may be represented, adapted, or intentionally omitted, but the choice must be explicit. Missing HERO obligations or source contradictions block final approval.
