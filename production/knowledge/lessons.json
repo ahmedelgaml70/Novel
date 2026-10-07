@@ -615,6 +615,32 @@
       "confidence": "HIGH",
       "status": "ENCODED",
       "superseded_by": null
+    },
+    {
+      "id": "LESSON-024",
+      "title": "Ready GLB ingestion must support common compression extensions",
+      "scope": "GLOBAL",
+      "source_context": [
+        "Frankenstein fast-path proof v1"
+      ],
+      "observed_weakness": "Pinned ready props downloaded correctly but the scene failed to initialize because a GLB used KHR_draco_mesh_compression and GLTFLoader had no DRACOLoader.",
+      "evidence": [
+        "Browser runtime error: THREE.GLTFLoader: No DRACOLoader instance provided."
+      ],
+      "root_cause": "The ingestion runtime assumed plain glTF/GLB even though free asset ecosystems routinely distribute compressed files.",
+      "consequence": "A valid ready asset can appear unusable and block the proof even though the geometry itself is fine.",
+      "prevention_rule": "The shared ready-asset loader must support standard glTF compression extensions used by admitted packs, beginning with Draco. Compression support belongs to the ingestion layer, not individual scenes.",
+      "detection_method": "Ready asset smoke-load runs before frame capture; unsupported extension errors fail ingestion explicitly.",
+      "implementation_changes": [
+        "Added DRACOLoader to the story-specific loader.",
+        "Workflow stages the pinned Three.js Draco decoder from node_modules into public/draco."
+      ],
+      "validation": [
+        "Re-run must load the same pinned prop set without changing assets."
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
     }
   ]
 }
