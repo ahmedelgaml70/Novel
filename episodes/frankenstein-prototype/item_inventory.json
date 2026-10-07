@@ -256,7 +256,10 @@
         "SRC-FR-011"
       ],
       "decision_id": "DEC-ingolstadt_roofline",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "source_obligation_ids": [
+        "OBL-FR-014"
+      ]
     },
     {
       "id": "laboratory_exterior_building",
@@ -296,7 +299,10 @@
         "SRC-FR-011"
       ],
       "decision_id": "DEC-laboratory_exterior_building",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "source_obligation_ids": [
+        "OBL-FR-014"
+      ]
     },
     {
       "id": "gothic_laboratory_window",
@@ -338,7 +344,10 @@
         "SRC-FR-010"
       ],
       "decision_id": "DEC-gothic_laboratory_window",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "source_obligation_ids": [
+        "OBL-FR-003"
+      ]
     },
     {
       "id": "city_window_pattern",
@@ -414,7 +423,10 @@
         "SRC-FR-012"
       ],
       "decision_id": "DEC-storm_sky",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "source_obligation_ids": [
+        "OBL-FR-001"
+      ]
     },
     {
       "id": "rain_field",
@@ -453,7 +465,10 @@
         "SRC-FR-012"
       ],
       "decision_id": "DEC-rain_field",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "source_obligation_ids": [
+        "OBL-FR-003"
+      ]
     },
     {
       "id": "exterior_lightning",
@@ -1239,7 +1254,10 @@
         "SRC-FR-001"
       ],
       "decision_id": "DEC-victor_recoil_pose",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "source_obligation_ids": [
+        "OBL-FR-013"
+      ]
     },
     {
       "id": "creature_body_proportions",
@@ -1280,7 +1298,12 @@
         "SRC-FR-001"
       ],
       "decision_id": "DEC-creature_body_proportions",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "source_obligation_ids": [
+        "OBL-FR-008",
+        "OBL-FR-009",
+        "OBL-FR-010"
+      ]
     },
     {
       "id": "creature_head_shape",
@@ -1320,7 +1343,12 @@
         "SRC-FR-001"
       ],
       "decision_id": "DEC-creature_head_shape",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "source_obligation_ids": [
+        "OBL-FR-009",
+        "OBL-FR-010",
+        "OBL-FR-012"
+      ]
     },
     {
       "id": "creature_hair",
@@ -1361,7 +1389,10 @@
         "SRC-FR-001"
       ],
       "decision_id": "DEC-creature_hair",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "source_obligation_ids": [
+        "OBL-FR-011"
+      ]
     },
     {
       "id": "creature_eye",
@@ -1401,7 +1432,11 @@
         "SRC-FR-001"
       ],
       "decision_id": "DEC-creature_eye",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "source_obligation_ids": [
+        "OBL-FR-006",
+        "OBL-FR-012"
+      ]
     },
     {
       "id": "creature_rise_motion",
@@ -1440,7 +1475,10 @@
         "SRC-FR-012"
       ],
       "decision_id": "DEC-creature_rise_motion",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "source_obligation_ids": [
+        "OBL-FR-008"
+      ]
     },
     {
       "id": "voltaic_pile",
@@ -1481,7 +1519,10 @@
         "SRC-FR-006"
       ],
       "decision_id": "DEC-voltaic_pile",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "source_obligation_ids": [
+        "OBL-FR-005"
+      ]
     },
     {
       "id": "leyden_jar_primary",
@@ -1521,7 +1562,10 @@
         "SRC-FR-005"
       ],
       "decision_id": "DEC-leyden_jar_primary",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "source_obligation_ids": [
+        "OBL-FR-005"
+      ]
     },
     {
       "id": "leyden_jar_secondary",
@@ -1560,7 +1604,10 @@
         "SRC-FR-005"
       ],
       "decision_id": "DEC-leyden_jar_secondary",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "source_obligation_ids": [
+        "OBL-FR-005"
+      ]
     },
     {
       "id": "brass_contact",
@@ -1599,7 +1646,10 @@
         "SRC-FR-006"
       ],
       "decision_id": "DEC-brass_contact",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "source_obligation_ids": [
+        "OBL-FR-005"
+      ]
     },
     {
       "id": "copper_wire_network",
@@ -1640,7 +1690,10 @@
         "SRC-FR-006"
       ],
       "decision_id": "DEC-copper_wire_network",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "source_obligation_ids": [
+        "OBL-FR-005"
+      ]
     },
     {
       "id": "electric_arc",
@@ -1868,7 +1921,10 @@
       },
       "source_ids": [],
       "decision_id": "DEC-victor_door_shadow",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "source_obligation_ids": [
+        "OBL-FR-013"
+      ]
     },
     {
       "id": "first_eye_shadow_mask",
@@ -1904,7 +1960,10 @@
       },
       "source_ids": [],
       "decision_id": "DEC-first_eye_shadow_mask",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "source_obligation_ids": [
+        "OBL-FR-006"
+      ]
     },
     {
       "id": "linen_closeup_edge",
@@ -2426,7 +2485,10 @@
       },
       "source_ids": [],
       "decision_id": "DEC-creature_heartbeat",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "source_obligation_ids": [
+        "OBL-FR-007"
+      ]
     }
   ]
 }
