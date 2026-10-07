@@ -151,3 +151,11 @@ It should not enforce a particular edition, Living Engraving, a specific asset, 
 - `VERSION_HISTORY.md` — production-method experiments and evolution;
 - `episodes/<episode>/` — novel-specific records;
 - `production/<style>/` — renderer/style implementation.
+
+## Asset authoring is a per-Item optimization
+
+The universal system does not prescribe one visible-art medium.
+
+A HERO Item may be best served by a rights-cleared historical source, bespoke redraw, generated illustration, procedural vector, 3D asset or another method. The method is selected because it best satisfies the Item and shot, not because it is the current favorite technology.
+
+The renderer/director and the art-authoring method are separate decisions. A JavaScript film may therefore contain handpicked or bespoke assets while remaining fully deterministic in composition, camera, lighting, timing, atmosphere, editing and final rendering.
