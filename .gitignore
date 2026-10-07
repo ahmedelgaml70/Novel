@@ -10,3 +10,10 @@ __pycache__/
 .DS_Store
 .idea/
 .vscode/
+
+
+# Living Engraving runtime/output
+production/living_engraving/node_modules/
+production/living_engraving/frames/
+production/living_engraving/*.wav
+production/living_engraving/*.mp4
