@@ -147,7 +147,7 @@ See:
 
 ## Production / visual-governance status
 
-The JavaScript filmmaking research has now been formalized as the **Living Engraving** production method.
+The filmmaking research is now split into a **universal Novel production system** plus optional style/renderer modules. **Living Engraving** is the current experimental style module, not a requirement for every novel.
 
 Current production governance:
 - every visible/audible/editable element is an atomic Item;
@@ -158,11 +158,13 @@ Current production governance:
 - structural reproducibility and final asset approval are separate gates;
 - current instructions and historical version learning are stored separately.
 
-First worked audit: `episodes/frankenstein-prototype/` — 62 Items, 62 decision records, 11 current research sources, six benchmark shots.
+First worked audit: `episodes/frankenstein-prototype/` — 62 Items, 62 decision records, 13 research sources, 14 conditional source obligations, six benchmark shots. Frankenstein is a benchmark/example, not the shape of the universal system.
 
 The V5.1 film is a prototype benchmark, **not** final-approved. The V5.2 strict-final gate intentionally remains red until each important Item wins its own evidence/candidate/shot-fit process.
 
 See:
+- [docs/production/PRODUCTION_SYSTEM.md](docs/production/PRODUCTION_SYSTEM.md)
+- [docs/production/LEARNING_SYSTEM.md](docs/production/LEARNING_SYSTEM.md)
 - [docs/production/CURRENT_METHOD.md](docs/production/CURRENT_METHOD.md)
 - [docs/production/ITEM_GOVERNANCE.md](docs/production/ITEM_GOVERNANCE.md)
 - [docs/production/ITEM_CHECKLISTS.md](docs/production/ITEM_CHECKLISTS.md)
