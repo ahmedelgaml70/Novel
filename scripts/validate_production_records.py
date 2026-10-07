@@ -186,6 +186,12 @@ def main():
             for sid in c.get("source_ids",[]):
                 if sid not in source_map:
                     err("source",f"candidate {cid} unknown source {sid}")
+            scores=c.get("scores",{})
+            status=str(c.get("status",""))
+            if "NOT_SHOT_TESTED" in status or "NOT_MOTION_TESTED" in status:
+                premature={"shot_fit","style_fit","continuity_fit","animation_suitability","technical_quality"} & set(scores)
+                if premature:
+                    err("premature_scoring",f"candidate {cid} claims untested score(s): {sorted(premature)}")
         sel=d.get("selected_candidate_id")
         if sel is not None and sel not in candidate_ids:
             err("selection",f"decision {did} selected candidate {sel} is not listed")
