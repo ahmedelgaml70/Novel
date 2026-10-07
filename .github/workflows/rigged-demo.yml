@@ -4,7 +4,10 @@ on:
   push:
     branches: [main]
     paths:
-      - 'production/rigged3d/**'
+      - 'production/rigged3d/capture.html'
+      - 'production/rigged3d/src/capture.js'
+      - 'production/rigged3d/tools/capture_demo.mjs'
+      - 'production/rigged3d/package.json'
       - '.github/workflows/rigged-demo.yml'
   workflow_dispatch:
 
