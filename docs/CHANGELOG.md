@@ -116,3 +116,19 @@ This file records meaningful changes to the Novel machine. Design rationale belo
 ### Reproducibility
 - Added the canonical Living Engraving JavaScript renderer, manifest, method state, validator, render command and pinned `skia-canvas` dependency under `production/living_engraving/`.
 - Shot-local audio/light cues remain in the scene manifest rather than a hidden absolute timeline.
+
+### V5.2.1 source-obligation layer
+- Added conditional literary-source obligations linked to affected Items.
+- Added source-obligation schema and validator coverage.
+- Identified missing/weak literary details in the current Frankenstein benchmark, including the dying candle, hard breathing, eye/skin treatment and Ingolstadt steeple identity.
+
+### V5.2.2 generalization correction
+- Detected that a provisional 1818 Frankenstein preference had leaked into general method state.
+- Removed any predetermined Frankenstein edition from universal method state.
+- Source contracts are now episode-level, best-fit and revisable during development.
+- Separated the universal production system from the Living Engraving style module and Frankenstein episode.
+- Added `docs/production/PRODUCTION_SYSTEM.md`.
+- Added `docs/production/LEARNING_SYSTEM.md`.
+- Added `production/knowledge/lessons.json` with reusable lessons from prior experiments.
+- Added formal EPISODE / STYLE / CATEGORY / GLOBAL lesson scopes.
+- Updated validator logic so final quality requires an explicit source contract without enforcing a predetermined edition.
