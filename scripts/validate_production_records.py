@@ -67,6 +67,8 @@ def main():
     contract=load(ep/"source_contract.json")
     obl=load(ep/"source_obligations.json")
     dec=load(ep/"asset_decisions.json")
+    temporal_path=ep/"temporal_context.json"
+    temporal=load(temporal_path) if temporal_path.exists() else None
     lesson_file=root/"production"/"knowledge"/"lessons.json"
     lessons=load(lesson_file)["lessons"] if lesson_file.exists() else []
 
@@ -226,6 +228,14 @@ def main():
                     err("learning",f"lesson {lid} missing {field}")
             if lesson.get("scope") not in {"EPISODE","STYLE","CATEGORY","GLOBAL"}:
                 err("learning",f"lesson {lid} has invalid scope")
+
+    if temporal is not None:
+        layers=temporal.get("layers",{})
+        for key in ("diegetic_story_time","publication_and_edition_time","visual_reference_time"):
+            if key not in layers:
+                err("temporal_context",f"temporal context missing {key}")
+        if temporal.get("status") not in {"OPEN_REVISABLE","PROVISIONAL","LOCKED","REOPENED"}:
+            err("temporal_context","invalid temporal-context status")
 
     if args.strict_final:
         for it in items:
