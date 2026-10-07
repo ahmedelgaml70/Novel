@@ -92,17 +92,20 @@ jobs:
           DURATION: 10
         run: node tools/capture_demo.mjs
 
-      - name: Install FFmpeg
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Locate Playwright FFmpeg
+        run: |
+          FFMPEG_BIN="$(find "$HOME/.cache/ms-playwright" -type f -name ffmpeg-linux | head -n 1)"
+          test -x "$FFMPEG_BIN"
+          echo "FFMPEG_BIN=$FFMPEG_BIN" >> "$GITHUB_ENV"
 
       - name: Encode MP4 and contact sheet
         working-directory: production/rigged3d
         run: |
-          ffmpeg -y -framerate 24 -i frankenstein-output/frames/frame_%04d.png \
+          "$FFMPEG_BIN" -y -framerate 24 -i frankenstein-output/frames/frame_%04d.png \
             -c:v libx264 -pix_fmt yuv420p -crf 18 -movflags +faststart \
             frankenstein-output/frankenstein_fast_path_v5_4_3.mp4
 
-          ffmpeg -y -i frankenstein-output/frankenstein_fast_path_v5_4_3.mp4 \
+          "$FFMPEG_BIN" -y -i frankenstein-output/frankenstein_fast_path_v5_4_3.mp4 \
             -vf "fps=1,scale=320:-1,tile=5x2" -frames:v 1 \
             frankenstein-output/contact_sheet.jpg
 
