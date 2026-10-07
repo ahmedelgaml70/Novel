@@ -27,6 +27,7 @@ Use:
 
 - `item_inventory.json` to see what exists and what each Item must achieve;
 - `source_registry.json` to see the research/evidence trail;
+- `source_contract.json` to see the OPEN best-fit edition/source comparison and eventual episode-level choice;
 - `source_obligations.json` to see edition-bound literary constraints and the currently OPEN/revisable source contract;
 - `asset_decisions.json` to see candidate comparisons, rejections and unresolved choices;
 - `scene_manifest.json` to see the current 24-second shot/timing benchmark;
