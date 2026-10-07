@@ -1,20 +1,21 @@
 {
   "schema_version": "3.0",
   "film": {
-    "title": "Frankenstein — Living Engraving V5.1",
+    "title": "Frankenstein — Living Engraving V5.3-dev",
     "width": 1280,
     "height": 720,
     "fps": 24,
     "audio_sample_rate": 48000,
     "runtime_seconds": 24,
-    "status": "prototype_benchmark"
+    "status": "hero_lock_lookdev",
+    "visual_baseline": "V5.1 complete baseline; V5.3 hybrid lookdev active"
   },
   "shots": [
     {
       "id": "ingolstadt_storm",
       "renderer": "stormExterior",
       "duration": 3.4,
-      "purpose": "Locate the story in a hostile historical city and visually target Victor's laboratory.",
+      "purpose": "Locate the story in a recognisable historical Ingolstadt and direct attention toward Victor's fictional laboratory context. Exterior art remains unresolved until a high-information location-specific candidate passes.",
       "transition_out": "lightning_cut",
       "cues": {
         "lightning": [
@@ -37,7 +38,7 @@
       "id": "creation_chamber",
       "renderer": "creationChamber",
       "duration": 5,
-      "purpose": "Story-specific tableau: creature under drapery, Victor at doorway, book/skull foreground and period galvanic apparatus.",
+      "purpose": "Sparse creation chamber: creature under drapery, dying practical light, period-inspired apparatus, Gothic window, and Victor held at architectural distance. No generic shelf/book/skull filler.",
       "transition_out": "hard_cut",
       "cues": {
         "lightning": [
@@ -62,7 +63,7 @@
       "id": "victor_at_door",
       "renderer": "victorAtDoor",
       "duration": 3.5,
-      "purpose": "Hold on Victor's fear with the face partly obscured rather than a generic front-facing portrait.",
+      "purpose": "Medium/full-body recoil at an arched doorway. Use physical occlusion and local shadow; no forced portrait enlargement.",
       "transition_out": "shadow_cut",
       "cues": {
         "breath": true,
@@ -78,7 +79,7 @@
       "id": "galvanic_contact",
       "renderer": "galvanicContact",
       "duration": 4,
-      "purpose": "Macro shot of voltaic pile, Leyden jar, brass contact and copper wire.",
+      "purpose": "Macro apparatus shot: voltaic-pile interpretation, Leyden-jar context, copper wiring, and a controllable brass contact/lever. No weak hand insert.",
       "transition_out": "arc_match_cut",
       "cues": {
         "electrical_crackle": [
@@ -98,7 +99,7 @@
       "id": "first_eye",
       "renderer": "firstEye",
       "duration": 4,
-      "purpose": "Extreme close-up: only eye, cheek, nose edge and hair emerge from darkness.",
+      "purpose": "Extreme close-up: engraved face emerges from darkness; dull-yellow/watery eye is revealed with JavaScript occlusion rather than neon glow.",
       "transition_out": "hard_cut",
       "cues": {
         "heartbeat": true,
@@ -114,7 +115,7 @@
       "id": "recoil_tableau",
       "renderer": "recoilTableau",
       "duration": 4.1,
-      "purpose": "Return to the tableau as the creature rises and Victor recoils, then resolve into title.",
+      "purpose": "Return to the sparse chamber as the creature shows restrained first movement and Victor recoils; preserve unresolved articulation honestly rather than faking complex limb motion.",
       "transition_out": "none",
       "cues": {
         "thunder": [
