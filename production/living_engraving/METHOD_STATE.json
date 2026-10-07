@@ -16,5 +16,6 @@
   "atomic_item_governance": true,
   "strict_final_requires_item_revalidation": true,
   "source_obligation_governance": true,
-  "designated_frankenstein_text": "Project Gutenberg #41445 — 1818 edition"
+  "source_contract_policy": "best_fit_revisable_per_episode",
+  "episode_specific_source_choice_in_method_state": false
 }
