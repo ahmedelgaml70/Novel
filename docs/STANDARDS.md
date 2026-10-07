@@ -134,3 +134,25 @@ HERO Items should normally score >= 8 on every applicable critical dimension.
 A shot cannot be locked while any HERO Item is not `FINAL_APPROVED`, any PRIMARY Item lacks continuity approval, or a visible Item remains blocked, unknown-rights or `NEEDS_REVALIDATION`.
 
 See `docs/production/ITEM_GOVERNANCE.md`.
+
+
+### Atomic production quality
+- A shot, character, environment, or apparatus cannot hide weak sub-elements behind an average score.
+- Every independently judgeable visual, audible, camera, lighting, motion, typography, and transition element is an Item with its own requirements and QC state.
+- Requirements must be defined before final asset selection.
+- Finding an asset is evidence of availability, not evidence that the asset should be used.
+- HERO/PRIMARY Items require explicit comparison against alternatives or a bespoke solution compared against references.
+- Rejected candidates and rejection reasons are retained so research is cumulative.
+- Generic visual filler is a hard production defect even when technically polished.
+- A bespoke asset is not automatically acceptable; anatomy, period fit, shot fit and style can still fail.
+
+### Literary-source obligations
+- The exact edition/source used for adaptation is recorded.
+- Material source-text constraints are recorded independently of visual-reference sources.
+- An important source detail may be represented, adapted, or deliberately omitted, but never disappear accidentally because no renderer element implemented it.
+- Unresolved HERO source obligations and explicit source contradictions block final approval.
+
+### Prototype versus final gate
+- Structural reproducibility and final artistic approval are separate gates.
+- A prototype may render correctly and pass structural validation while remaining unfit for publication.
+- Final approval requires Item-level asset selection, shot-fit evidence, continuity, source fidelity and rights/provenance confidence.
