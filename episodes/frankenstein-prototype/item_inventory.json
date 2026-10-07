@@ -253,9 +253,10 @@
       "source_ids": [
         "SRC-FR-012",
         "SRC-FR-010",
-        "SRC-FR-011"
+        "SRC-FR-011",
+        "SRC-FR-017"
       ],
-      "decision_id": "DEC-ingolstadt_roofline",
+      "decision_id": "DEC-ingolstadt_roofline-v5_3",
       "status": "NEEDS_REVALIDATION",
       "source_obligation_ids": [
         "OBL-FR-014"
@@ -296,9 +297,10 @@
       "source_ids": [
         "SRC-FR-012",
         "SRC-FR-010",
-        "SRC-FR-011"
+        "SRC-FR-011",
+        "SRC-FR-017"
       ],
-      "decision_id": "DEC-laboratory_exterior_building",
+      "decision_id": "DEC-laboratory_exterior_building-v5_3",
       "status": "NEEDS_REVALIDATION",
       "source_obligation_ids": [
         "OBL-FR-014"
