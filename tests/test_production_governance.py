@@ -19,7 +19,7 @@ class ProductionGovernanceTests(unittest.TestCase):
         self.assertIn("7 inactive-history",p.stdout)
         self.assertIn("20 sources",p.stdout)
         self.assertIn("14 source obligations",p.stdout)
-        self.assertIn("20 reusable lessons",p.stdout)
+        self.assertIn("21 reusable lessons",p.stdout)
         self.assertIn("STRUCTURAL GATE: PASS",p.stdout)
 
     def test_source_contract_is_revisable_and_not_preselected(self):
