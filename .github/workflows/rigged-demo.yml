@@ -1,0 +1,71 @@
+name: Rigged animation demo
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'production/rigged3d/**'
+      - '.github/workflows/rigged-demo.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  render-demo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install app dependencies
+        working-directory: production/rigged3d
+        run: |
+          npm install --no-audit --no-fund
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Download ready CC0 animated human
+        run: |
+          mkdir -p production/rigged3d/public/assets
+          curl -L --fail --retry 3 \
+            https://raw.githubusercontent.com/NafisRayan/Animate-Rigged-Humanoid-No-Blender/main/test/human_male.glb \
+            -o production/rigged3d/public/assets/human_male.glb
+          sha256sum production/rigged3d/public/assets/human_male.glb
+
+      - name: Start Vite
+        working-directory: production/rigged3d
+        run: |
+          npx vite --host 127.0.0.1 --port 4173 > /tmp/rigged-vite.log 2>&1 &
+          echo $! > /tmp/rigged-vite.pid
+          for i in {1..30}; do curl -fsS http://127.0.0.1:4173/capture.html >/dev/null && exit 0; sleep 1; done
+          cat /tmp/rigged-vite.log
+          exit 1
+
+      - name: Capture deterministic skeletal frames
+        working-directory: production/rigged3d
+        run: node tools/capture_demo.mjs
+
+      - name: Encode MP4
+        working-directory: production/rigged3d
+        run: |
+          ffmpeg -y -framerate 24 -i render-output/frames/frame_%04d.png \
+            -c:v libx264 -pix_fmt yuv420p -crf 18 -movflags +faststart \
+            render-output/rigged_animation_demo_v5_4.mp4
+          ffmpeg -y -i render-output/rigged_animation_demo_v5_4.mp4 \
+            -vf "fps=1,scale=320:-1,tile=3x3" -frames:v 1 \
+            render-output/contact_sheet.jpg
+
+      - name: Upload proof
+        uses: actions/upload-artifact@v4
+        with:
+          name: rigged-animation-demo-v5-4
+          path: |
+            production/rigged3d/render-output/rigged_animation_demo_v5_4.mp4
+            production/rigged3d/render-output/contact_sheet.jpg
+            production/rigged3d/render-output/clip_inventory.json
+          retention-days: 7
