@@ -95,3 +95,32 @@ The first V5.2.1 implementation made the 1818 source choice too rigid and allowe
 
 ### Reusable lesson
 Do not confuse reproducibility with immutability. Final output needs a recorded source contract; development must remain free to adopt a demonstrably better source, style, asset or method.
+
+## V5.3 — asset-authoring lookdev (not full-film release)
+
+### Trigger
+V5.3 primitive lookdev improved research/source logic but still looked visibly coded and low-detail.
+
+### Tried
+- high-information engraved creature/Victor/apparatus/window candidates;
+- alpha isolation and JS compositing;
+- matched shot crops;
+- sparse-room remake that deletes weak filler;
+- 3.04-second recoil motion test.
+
+### What improved
+- creature anatomy/cloth reads substantially stronger;
+- Victor has a more credible period silhouette;
+- apparatus and window carry much more historical/visual detail;
+- the sparse composition feels cleaner and more authored than the primitive chamber.
+
+### New weaknesses exposed
+- crowded asset sheets contaminate HERO extraction;
+- premium focal assets reveal low-detail SUPPORT assets immediately;
+- static high-detail art has limited articulation;
+- exterior remains below target;
+- hand/contact interaction needs a dedicated asset;
+- no complete V5.3 film should be rendered yet.
+
+### Decision
+Promote the asset-authoring architecture, not the current salvaged source files. Produce clean individual HERO assets, preserve JS direction/compositing, and continue lookdev before full render.
