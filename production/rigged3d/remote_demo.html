@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Novel V5.4 — Ready Rigged Animation Proof</title>
+<style>
+html,body{margin:0;height:100%;overflow:hidden;background:#111;color:#eee;font-family:system-ui,sans-serif}
+#ui{position:fixed;left:14px;top:14px;width:300px;max-height:calc(100vh - 28px);overflow:auto;padding:12px;background:#111d;border:1px solid #ffffff22;border-radius:10px;z-index:10;backdrop-filter:blur(8px)}
+h1{font-size:14px;margin:0 0 8px} .small{font-size:11px;color:#bbb;line-height:1.35}
+button{background:#272727;color:#eee;border:1px solid #555;border-radius:6px;padding:6px 8px;margin:2px;cursor:pointer}
+button:hover{background:#3a3a3a}.active{background:#665b42}
+#clips{display:flex;flex-wrap:wrap;margin-top:8px}.status{font-size:11px;white-space:pre-wrap;color:#d9c79d}
+canvas{display:block;width:100vw;height:100vh}
+</style>
+<script type="importmap">
+{
+  "imports":{
+    "three":"https://unpkg.com/three@0.181.0/build/three.module.js",
+    "three/addons/":"https://unpkg.com/three@0.181.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<div id="ui">
+<h1>V5.4 Ready-Rigged Proof</h1>
+<div class="small">Real skinned 3D human + ready animation clips. No custom rigging, no custom walk cycle, no moving character PNG.</div>
+<div style="margin-top:8px">
+<button id="auto">Auto proof</button><button id="pause">Pause</button>
+</div>
+<div id="status" class="status">Loading ready animated human…</div>
+<div id="clips"></div>
+</div>
+<script type="module">
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import * as SkeletonUtils from 'three/addons/utils/SkeletonUtils.js';
+import { OutlineEffect } from 'three/addons/effects/OutlineEffect.js';
+
+const MODEL='https://raw.githubusercontent.com/NafisRayan/Animate-Rigged-Humanoid-No-Blender/main/test/human_male.glb';
+const status=document.querySelector('#status'), clipsEl=document.querySelector('#clips');
+const renderer=new THREE.WebGLRenderer({antialias:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.setSize(innerWidth,innerHeight);
+renderer.outputColorSpace=THREE.SRGBColorSpace;
+renderer.shadowMap.enabled=true;
+document.body.appendChild(renderer.domElement);
+const effect=new OutlineEffect(renderer,{defaultThickness:0.004,defaultColor:[0.035,0.03,0.02]});
+
+const scene=new THREE.Scene();
+scene.background=new THREE.Color(0x121313);
+scene.fog=new THREE.FogExp2(0x121313,0.022);
+const camera=new THREE.PerspectiveCamera(38,innerWidth/innerHeight,.05,100);
+camera.position.set(4.8,2.25,7.2);
+camera.lookAt(0,1.15,0);
+
+scene.add(new THREE.HemisphereLight(0xcfd6d8,0x23190f,1.25));
+const key=new THREE.DirectionalLight(0xffd69a,3.6); key.position.set(2.5,5,4); key.castShadow=true; scene.add(key);
+const rim=new THREE.DirectionalLight(0x9bb8c9,1.2); rim.position.set(-4,2,-3); scene.add(rim);
+
+const floor=new THREE.Mesh(new THREE.PlaneGeometry(18,12),new THREE.MeshToonMaterial({color:0x514a3d}));
+floor.rotation.x=-Math.PI/2; floor.receiveShadow=true; scene.add(floor);
+const back=new THREE.Mesh(new THREE.PlaneGeometry(18,7),new THREE.MeshToonMaterial({color:0x282724}));
+back.position.set(0,3,-3.3); scene.add(back);
+
+function toonify(root,tint=null){
+  root.traverse(o=>{
+    if(!o.isMesh) return;
+    o.castShadow=true; o.receiveShadow=true;
+    const old=Array.isArray(o.material)?o.material[0]:o.material;
+    const c=tint?new THREE.Color(tint):(old?.color?.clone?.()||new THREE.Color(0xbcae91));
+    o.material=new THREE.MeshToonMaterial({color:c,map:old?.map||null});
+  });
+}
+function findClip(clips,...needles){
+  const lower=clips.map(c=>[c,c.name.toLowerCase()]);
+  for(const n of needles){
+    const exact=lower.find(([,s])=>s===n.toLowerCase()); if(exact)return exact[0];
+    const part=lower.find(([,s])=>s.includes(n.toLowerCase())); if(part)return part[0];
+  }
+  return null;
+}
+function actor(root,animations,x,tint){
+  const r=SkeletonUtils.clone(root); toonify(r,tint); r.position.x=x; scene.add(r);
+  return {root:r,mixer:new THREE.AnimationMixer(r),animations,active:null};
+}
+function play(a,clip,fade=.18){
+  if(!clip)return;
+  const next=a.mixer.clipAction(clip);
+  if(a.active&&a.active!==next)a.active.fadeOut(fade);
+  next.reset().fadeIn(fade).play(); a.active=next;
+  status.textContent='Playing: '+clip.name;
+}
+
+const gltf=await new GLTFLoader().loadAsync(MODEL);
+status.textContent=`Loaded ${gltf.animations.length} ready clips.`;
+const A=actor(gltf.scene,gltf.animations,-1.8,null);
+const B=actor(gltf.scene,gltf.animations,1.4,0x9d9b91);
+B.root.rotation.y=-0.45;
+
+const known={
+ idle:findClip(gltf.animations,'idle'),
+ walk:findClip(gltf.animations,'walk'),
+ run:findClip(gltf.animations,'run'),
+ attack:findClip(gltf.animations,'attack'),
+ jump:findClip(gltf.animations,'jump'),
+ dance:findClip(gltf.animations,'dance')
+};
+for(const c of gltf.animations){
+ const b=document.createElement('button'); b.textContent=c.name;
+ b.onclick=()=>play(A,c); clipsEl.appendChild(b);
+}
+status.textContent+= '\nKnown: '+Object.entries(known).filter(([,v])=>v).map(([k,v])=>k+'='+v.name).join(', ');
+
+let auto=true,paused=false,epoch=performance.now()/1000,lastBeat='';
+document.querySelector('#auto').onclick=()=>{auto=true;epoch=performance.now()/1000;lastBeat='';};
+document.querySelector('#pause').onclick=()=>paused=!paused;
+
+function autoSequence(t){
+ const q=t%9;
+ let beat;
+ if(q<2.7) beat='walk';
+ else if(q<4.5) beat='attackB';
+ else if(q<6.7) beat='runA';
+ else beat='idle';
+ if(beat===lastBeat)return; lastBeat=beat;
+ if(beat==='walk'){play(A,known.walk||known.run);play(B,known.idle||known.dance);}
+ if(beat==='attackB'){play(A,known.idle||known.walk);play(B,known.attack||known.jump||known.dance);}
+ if(beat==='runA'){play(A,known.run||known.walk);play(B,known.idle||known.dance);}
+ if(beat==='idle'){play(A,known.idle||known.walk);play(B,known.idle||known.dance);}
+}
+const clock=new THREE.Clock();
+function frame(){
+ requestAnimationFrame(frame);
+ const dt=Math.min(clock.getDelta(),.05);
+ if(!paused){A.mixer.update(dt);B.mixer.update(dt);}
+ const t=performance.now()/1000-epoch;
+ if(auto&&!paused)autoSequence(t);
+ // Root travel only accompanies actual skeletal locomotion.
+ const q=t%9;
+ if(q<2.7) A.root.position.x=THREE.MathUtils.lerp(-2.7,-.7,q/2.7);
+ else if(q>=4.5&&q<6.7) A.root.position.x=THREE.MathUtils.lerp(-.7,-2.25,(q-4.5)/2.2);
+ camera.position.x=4.8+Math.sin(t*.35)*.18;
+ camera.lookAt(0,1.2,0);
+ effect.render(scene,camera);
+}
+frame();
+addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);});
+</script>
+</body></html>
