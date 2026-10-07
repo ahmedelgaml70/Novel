@@ -291,3 +291,34 @@ When a method is replaced, obsolete current instructions are removed rather than
 Assets/Items created before the current governance method do not automatically become approved because they already render.
 
 The Frankenstein V5.1 benchmark is explicitly subject to V5.2 atomic revalidation. Structural reproducibility and final asset approval are separate gates.
+
+
+## D-017 — Atomic Item governance
+
+**Status:** Accepted
+
+Production quality is governed at the smallest independently judgeable **Item** level rather than only at scene/shot level. Characters, environments, props, lighting, VFX, camera, transitions, typography and audio are decomposed whenever a sub-element can fail, be sourced, replaced, animated or validated independently.
+
+## D-018 — Requirements before candidate selection
+
+**Status:** Accepted
+
+For production Items, the need and evaluation criteria are written before final asset selection. The machine must not rationalize a found asset after the fact. HERO/PRIMARY Items require meaningful alternatives or bespoke work compared against documented references. Rejected candidates and their reasons are preserved.
+
+## D-019 — Source, candidate and selected asset are separate entities
+
+**Status:** Accepted
+
+A research source can inform a requirement without becoming a visible asset. A candidate may be authentic or attractive yet fail the actual shot. Selection occurs only after comparing candidates against the fixed Item requirements and testing the winner in context.
+
+## D-020 — Exact literary-source obligations
+
+**Status:** Accepted
+
+The exact edition/source used for adaptation is recorded as production evidence. Material source-text facts become explicit source-fidelity obligations linked to affected shots/Items. They may be represented, adapted or deliberately omitted, but unresolved HERO obligations and explicit contradictions block final approval.
+
+## D-021 — Prototype validation is not final approval
+
+**Status:** Accepted
+
+The production system has separate structural and strict-final gates. A working renderer or complete record set cannot promote a film to final status. Strict final approval requires Item decisions, candidate evidence, source obligations, continuity and rights/provenance gates to pass.
