@@ -63,3 +63,20 @@ Root/world translation needed for locomotion is allowed only while the skeleton 
 First test: Three.js toon material + outline only.
 
 Do not build a custom engraving shader until the skeletal-motion gate passes.
+
+## Fastest possible proof
+
+The zero-prep browser proof loads the already-merged ready animated human GLB remotely.
+
+From the repository root:
+
+```bash
+cd production/rigged3d
+sh run_remote_demo.sh
+```
+
+On macOS the script opens the browser automatically. No npm install, Blender, local asset merge, or manual retargeting is needed for this proof.
+
+The page displays the actual runtime clip list and automatically runs known ready clips. Use the clip buttons to inspect any additional reaction/interact actions exposed by the 86-clip GLB.
+
+This remote binary is for development proof only. Production provenance remains pinned/rebuilt from the official Quaternius CC0 packs.
