@@ -125,9 +125,10 @@
         }
       ],
       "selected_candidate_id": null,
-      "decision_status": "CANDIDATES_COMPARED",
-      "why_selected_or_pending": "Reject the current generic skyline. Rebuild from the 1800 Ingolstadt view, using Hohe Schule evidence to support architecture identity, then test the new silhouette at the actual camera crop.",
-      "remaining_risk": "Need final layered redraw and approval frame; the historical city view is evidence, not an automatic pan-and-scan asset."
+      "decision_status": "SUPERSEDED_BY_V5_3_REQUIREMENTS_FIRST_DECISION",
+      "why_selected_or_pending": "Historical V5.2 research record retained for learning. Its unrendered candidates were scored too broadly; V5.3 replaces it with research-qualified directions and no premature shot/style scores.",
+      "remaining_risk": "Need final layered redraw and approval frame; the historical city view is evidence, not an automatic pan-and-scan asset.",
+      "superseded_by": "DEC-ingolstadt_roofline-v5_3"
     },
     {
       "id": "DEC-laboratory_exterior_building",
@@ -1354,6 +1355,138 @@
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
       "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-ingolstadt_roofline-v5_3",
+      "item_id": "ingolstadt_roofline",
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "IROOF-A-1800-city-plus-site-plus-literary-cue",
+          "origin": "BESPOKE_MULTI_SOURCE_RECONSTRUCTION",
+          "source_ids": [
+            "SRC-FR-010",
+            "SRC-FR-011",
+            "SRC-FR-017",
+            "SRC-FR-012",
+            "SRC-FR-013"
+          ],
+          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
+          "scores": {
+            "story_specificity": 10,
+            "source_fidelity": 9,
+            "period_fit": 10,
+            "rights_confidence": 10
+          },
+          "reason": "Synthesize the 1800 city-view silhouette with university-site architecture evidence and the literary steeple cue. Strongest research direction because no single source has to do every job."
+        },
+        {
+          "candidate_id": "IROOF-B-1800-city-view-led",
+          "origin": "BESPOKE_SINGLE_PRIMARY_VIEW_RECONSTRUCTION",
+          "source_ids": [
+            "SRC-FR-010"
+          ],
+          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
+          "scores": {
+            "story_specificity": 10,
+            "period_fit": 10,
+            "rights_confidence": 10
+          },
+          "reason": "Stay very close to the 1800 copper engraving's city massing/roofline. Strong historical specificity but may be compositionally weak or too literal for the dramatic camera."
+        },
+        {
+          "candidate_id": "IROOF-C-university-quarter-led",
+          "origin": "BESPOKE_SITE_IDENTITY_RECONSTRUCTION",
+          "source_ids": [
+            "SRC-FR-011",
+            "SRC-FR-017"
+          ],
+          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
+          "scores": {
+            "story_specificity": 9,
+            "period_fit": 8,
+            "rights_confidence": 9
+          },
+          "reason": "Emphasize the university/Hohe Schule identity over the whole city. Could better connect Victor to place, but available visual evidence spans different dates and must not be treated as an exact 1800 snapshot."
+        },
+        {
+          "candidate_id": "IROOF-D-current-generic-gothic",
+          "origin": "CURRENT_V5_1_RENDER",
+          "source_ids": [],
+          "status": "REJECTED",
+          "scores": {
+            "story_specificity": 5,
+            "source_fidelity": 5,
+            "period_fit": 6,
+            "style_fit": 9,
+            "shot_fit": 8,
+            "rights_confidence": 10
+          },
+          "reason": "Rendered control candidate. It works compositionally but communicates generic old-European/Gothic city rather than Ingolstadt."
+        }
+      ],
+      "selected_candidate_id": null,
+      "decision_status": "CANDIDATES_COMPARED_REQUIRES_SHOT_TEST",
+      "why_selected_or_pending": "Render A, B and C as matched exterior approval frames using the same camera, storm and palette. Candidate A is the strongest research hypothesis, but it is not selected until the actual shot proves it.",
+      "remaining_risk": "Historic evidence must be synthesized without false precision; steeple/site identity must read at 720p without turning the shot into an architectural diagram."
+    },
+    {
+      "id": "DEC-laboratory_exterior_building-v5_3",
+      "item_id": "laboratory_exterior_building",
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "IEXT-A-university-context-fictional-lab",
+          "origin": "BESPOKE_EVIDENCE_BOUND_FICTIONALIZATION",
+          "source_ids": [
+            "SRC-FR-010",
+            "SRC-FR-011",
+            "SRC-FR-017",
+            "SRC-FR-012",
+            "SRC-FR-013"
+          ],
+          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
+          "scores": {
+            "story_specificity": 10,
+            "source_fidelity": 9,
+            "period_fit": 9,
+            "rights_confidence": 10
+          },
+          "reason": "Create a fictional laboratory building that belongs plausibly to the Ingolstadt/university urban fabric rather than falsely claiming Victor used a known exact building."
+        },
+        {
+          "candidate_id": "IEXT-B-direct-hohe-schule-likeness",
+          "origin": "REFERENCE_LED_RECONSTRUCTION",
+          "source_ids": [
+            "SRC-FR-011"
+          ],
+          "status": "RESEARCH_QUALIFIED_WITH_CAUTION_NOT_SHOT_TESTED",
+          "scores": {
+            "story_specificity": 8,
+            "source_fidelity": 6,
+            "period_fit": 8,
+            "rights_confidence": 9
+          },
+          "reason": "Using Hohe Schule geometry gives immediate university identity, but risks falsely implying that the novel specifies Victor's exact laboratory there."
+        },
+        {
+          "candidate_id": "IEXT-C-generic-gothic-laboratory",
+          "origin": "GENERIC_GOTHIC_DIRECTION",
+          "source_ids": [],
+          "status": "REJECTED",
+          "scores": {
+            "story_specificity": 3,
+            "source_fidelity": 4,
+            "period_fit": 5,
+            "rights_confidence": 10
+          },
+          "reason": "Rejected because atmosphere alone is not location/story specificity."
+        }
+      ],
+      "selected_candidate_id": null,
+      "decision_status": "CANDIDATES_COMPARED_REQUIRES_SHOT_TEST",
+      "why_selected_or_pending": "Candidate A currently best satisfies story/location plausibility without inventing a false exact-site claim. It still needs a matched shot test against B.",
+      "remaining_risk": "Need enough architectural specificity to feel Ingolstadt while preserving fictional latitude and cinematic silhouette."
     }
   ]
 }
