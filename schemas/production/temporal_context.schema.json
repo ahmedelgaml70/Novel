@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Episode Temporal Context",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "episode_id",
+    "status",
+    "rule",
+    "layers",
+    "item_guidance"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "episode_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "OPEN_REVISABLE",
+        "PROVISIONAL",
+        "LOCKED",
+        "REOPENED"
+      ]
+    },
+    "rule": {
+      "type": "string",
+      "minLength": 20
+    },
+    "layers": {
+      "type": "object",
+      "required": [
+        "diegetic_story_time",
+        "publication_and_edition_time",
+        "visual_reference_time"
+      ],
+      "additionalProperties": true
+    },
+    "item_guidance": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}
