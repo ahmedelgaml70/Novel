@@ -298,3 +298,30 @@ If a hand/contact/face insert is below the quality floor, compare:
 - cut/match/action in adjacent shot.
 
 Delete the weak Item from the active shot if another design expresses the narrative beat better.
+
+## Usage-envelope approval
+
+Approval is conditional on the actual shot scale and motion structure tested.
+
+Where relevant, record:
+- `WIDE / SILHOUETTE`;
+- `MEDIUM / FULL BODY`;
+- `CLOSE-UP`;
+- `MACRO`;
+- `RIGID/SUBTLE`, `DEFORMABLE`, or `ARTICULATED` motion.
+
+Passing one envelope does not authorize another. A medium/full-body asset that fails as a portrait should stay approved for medium/full-body use only, or the shot should be redesigned.
+
+## Physical-integration gate
+
+A high-quality cutout asset can still fail if it reads as pasted into the frame.
+
+Review:
+- architectural occlusion;
+- floor/contact relationship;
+- local shadow;
+- local light;
+- overlap with foreground/background planes;
+- whether the asset appears to occupy the same physical space as the set.
+
+Do not approve a character merely because the isolated source art is good.
