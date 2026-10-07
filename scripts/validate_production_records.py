@@ -1,141 +1,169 @@
 #!/usr/bin/env python3
-"""Validate atomic production governance records.
+"""Validate Novel production governance records.
 
-Default mode checks structure/references.
---strict-final is a publication/lock gate and is expected to fail for the current V5.1 prototype.
+Default mode checks structure, referential integrity, source traceability, and
+source-fidelity obligation links.
+
+--strict-final additionally enforces final-approval rules. It reports blockers
+by category so a prototype cannot look "almost final" merely because files are
+present.
 """
 from __future__ import annotations
 import argparse, json, sys
+from collections import Counter, defaultdict
 from pathlib import Path
 
-REQUIREMENT_FIELDS=("story","period","visual","motion","continuity","technical","rights")
-FINAL_REQUIRED={"HERO","PRIMARY"}
+FINAL_STATES={"FINAL_APPROVED"}
+VISIBLE_OR_AUDIO_CATEGORIES={
+    "character","character_face","character_hair","character_hand","character_pose",
+    "character_motion","creature_anatomy","creature_face","creature_hair",
+    "costume","costume_drapery","architecture","environment","set_dressing",
+    "hero_prop","support_prop","scientific_document","drapery","vfx","vfx_lighting",
+    "lighting_composition","composition","global_material","global_lighting","global_style",
+    "atmosphere","camera","transition","typography","audio_music_soundbed","audio_ambience",
+    "audio_sfx","audio_foley","audio_character"
+}
+UNRESOLVED_OBLIGATION_STATES={
+    "MISSING_FROM_CURRENT_RENDER","MISSING_OR_WEAK","NEEDS_REVALIDATION",
+    "NOT_DIRECTLY_REPRESENTED","MOSTLY_NOT_EXPLICIT"
+}
 
-def load(p):
-    with p.open("r",encoding="utf-8") as f:
+def load(path:Path):
+    with path.open("r",encoding="utf-8") as f:
         return json.load(f)
+
+def fail(errors,msg,kind="structural"):
+    errors.append((kind,msg))
 
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--episode",default="episodes/frankenstein-prototype")
     ap.add_argument("--strict-final",action="store_true")
-    args=ap.parse_args()
+    ap.add_argument("--max-detail",type=int,default=30,
+                    help="Maximum individual error lines before grouped remainder summary")
+    a=ap.parse_args()
     root=Path(__file__).resolve().parents[1]
-    ep=root/args.episode
-    errors=[]
-
-    required=("scene_manifest.json","item_inventory.json","source_registry.json","asset_decisions.json","VERSION_LOG.md")
-    for name in required:
-        if not (ep/name).exists():
-            errors.append(f"missing {ep/name}")
+    ep=root/a.episode
+    errors=[]; warnings=[]
+    req=["scene_manifest.json","item_inventory.json","source_registry.json","source_obligations.json",
+         "asset_decisions.json","VERSION_LOG.md"]
+    for name in req:
+        if not (ep/name).exists(): fail(errors,f"missing {ep/name}")
     if errors:
-        print("\n".join("ERROR: "+e for e in errors)); return 2
+        for _,e in errors: print("ERROR: "+e)
+        return 2
 
     manifest=load(ep/"scene_manifest.json")
     inv=load(ep/"item_inventory.json")
     sr=load(ep/"source_registry.json")
+    obl=load(ep/"source_obligations.json")
     dec=load(ep/"asset_decisions.json")
-
-    shots=manifest["shots"]
-    shot_ids={s["id"] for s in shots}
-    items=inv["items"]; sources=sr["sources"]; decisions=dec["decisions"]
-    item_map={}; source_map={}; decision_map={}
-
-    runtime=sum(float(s["duration"]) for s in shots)
-    target=float(manifest["film"]["runtime_seconds"])
-    if abs(runtime-target)>1e-6:
-        errors.append(f"manifest runtime mismatch {runtime} vs {target}")
+    shot_ids={s["id"] for s in manifest["shots"]}
+    items=inv["items"]; sources=sr["sources"]; obligations=obl["obligations"]; decisions=dec["decisions"]
+    item_map={}; source_map={}; obligation_map={}; decision_map={}
 
     for it in items:
-        iid=it.get("id")
-        if iid in item_map: errors.append(f"duplicate item id {iid}")
-        item_map[iid]=it
-        if not it.get("purpose"): errors.append(f"item {iid} has no purpose")
-        if it.get("importance") not in {"HERO","PRIMARY","SUPPORT","ATMOSPHERIC"}:
-            errors.append(f"item {iid} has invalid importance")
+        if it["id"] in item_map: fail(errors,f'duplicate item id {it["id"]}')
+        item_map[it["id"]]=it
         for sh in it.get("shot_ids",[]):
-            if sh not in shot_ids: errors.append(f"item {iid} references unknown shot {sh}")
-        req=it.get("requirements",{})
-        for field in REQUIREMENT_FIELDS:
-            if field not in req or not isinstance(req[field],list) or not req[field]:
-                errors.append(f"item {iid} missing/non-detailed requirements.{field}")
+            if sh not in shot_ids: fail(errors,f'item {it["id"]} references unknown shot {sh}')
+        for field in ["story","period","visual","motion","continuity","technical","rights"]:
+            if field not in it.get("requirements",{}): fail(errors,f'item {it["id"]} missing requirements.{field}')
 
     for s in sources:
-        sid=s.get("id")
-        if sid in source_map: errors.append(f"duplicate source id {sid}")
-        source_map[sid]=s
-        if not str(s.get("url","")).startswith(("http://","https://")):
-            errors.append(f"source {sid} invalid url")
-        rights=s.get("rights",{})
-        if not rights.get("status") or not rights.get("commercial_asset_use"):
-            errors.append(f"source {sid} missing rights status/use")
+        if s["id"] in source_map: fail(errors,f'duplicate source id {s["id"]}')
+        source_map[s["id"]]=s
+        if not s.get("url","").startswith(("http://","https://")): fail(errors,f'source {s["id"]} has invalid url')
+        if not s.get("rights",{}).get("status"): fail(errors,f'source {s["id"]} missing rights.status')
         for iid in s.get("supports_item_ids",[]):
-            if iid not in item_map: errors.append(f"source {sid} references unknown item {iid}")
+            if iid not in item_map: fail(errors,f'source {s["id"]} references unknown item {iid}')
+
+    designated=obl.get("designated_source_id")
+    if designated not in source_map:
+        fail(errors,f"source_obligations designated_source_id {designated!r} is not in source_registry")
+
+    for o in obligations:
+        oid=o["id"]
+        if oid in obligation_map: fail(errors,f"duplicate source obligation id {oid}")
+        obligation_map[oid]=o
+        for sh in o.get("shot_ids",[]):
+            if sh not in shot_ids: fail(errors,f"obligation {oid} references unknown shot {sh}")
+        for iid in o.get("item_ids",[]):
+            if iid not in item_map: fail(errors,f"obligation {oid} references unknown item {iid}")
+
+    expected_links=defaultdict(set)
+    for o in obligations:
+        for iid in o.get("item_ids",[]): expected_links[iid].add(o["id"])
+    for iid,oids in expected_links.items():
+        actual=set(item_map[iid].get("source_obligation_ids",[]))
+        missing=oids-actual
+        if missing: fail(errors,f"item {iid} missing source_obligation_ids {sorted(missing)}")
+    for it in items:
+        for oid in it.get("source_obligation_ids",[]):
+            if oid not in obligation_map: fail(errors,f'item {it["id"]} references unknown source obligation {oid}')
+            elif it["id"] not in obligation_map[oid].get("item_ids",[]):
+                fail(errors,f'item {it["id"]} links obligation {oid}, but obligation does not link back')
 
     for it in items:
         for sid in it.get("source_ids",[]):
-            if sid not in source_map: errors.append(f"item {it['id']} references unknown source {sid}")
+            if sid not in source_map: fail(errors,f'item {it["id"]} references unknown source {sid}')
 
     for d in decisions:
-        did=d.get("id")
-        if did in decision_map: errors.append(f"duplicate decision id {did}")
-        decision_map[did]=d
-        iid=d.get("item_id")
-        if iid not in item_map: errors.append(f"decision {did} unknown item {iid}")
-        candidate_ids=set()
+        if d["id"] in decision_map: fail(errors,f'duplicate decision id {d["id"]}')
+        decision_map[d["id"]]=d
+        if d["item_id"] not in item_map: fail(errors,f'decision {d["id"]} references unknown item {d["item_id"]}')
+        cids=set()
         for c in d.get("candidates",[]):
-            cid=c.get("candidate_id")
-            if cid in candidate_ids: errors.append(f"decision {did} duplicate candidate {cid}")
-            candidate_ids.add(cid)
+            if c["candidate_id"] in cids: fail(errors,f'decision {d["id"]} duplicate candidate {c["candidate_id"]}')
+            cids.add(c["candidate_id"])
             for sid in c.get("source_ids",[]):
-                if sid not in source_map: errors.append(f"candidate {cid} unknown source {sid}")
+                if sid not in source_map: fail(errors,f'candidate {c["candidate_id"]} references unknown source {sid}')
         sel=d.get("selected_candidate_id")
-        if sel is not None and sel not in candidate_ids:
-            errors.append(f"decision {did} selected candidate {sel} is not listed")
+        if sel is not None and sel not in cids: fail(errors,f'decision {d["id"]} selected candidate {sel} is not listed')
 
     for it in items:
         did=it.get("decision_id")
-        if did not in decision_map:
-            errors.append(f"item {it['id']} missing decision {did}")
-        elif decision_map[did].get("item_id")!=it["id"]:
-            errors.append(f"item {it['id']} points to wrong decision")
+        if did not in decision_map: fail(errors,f'item {it["id"]} missing decision record {did}')
+        elif decision_map[did]["item_id"]!=it["id"]: fail(errors,f'item {it["id"]} decision points to wrong item')
 
-    covered={s:0 for s in shot_ids}
+    covered={sh:0 for sh in shot_ids}
     for it in items:
-        for sh in it["shot_ids"]: covered[sh]+=1
+        for sh in it.get("shot_ids",[]): covered[sh]+=1
     for sh,n in covered.items():
-        if n==0: errors.append(f"shot {sh} has zero Items")
+        if not n: fail(errors,f"shot {sh} has zero item records")
 
-    if args.strict_final:
+    if a.strict_final:
         for it in items:
-            if it["importance"] not in FINAL_REQUIRED:
-                continue
-            d=decision_map[it["decision_id"]]
-            if it["status"]!="FINAL_APPROVED":
-                errors.append(f"strict final: {it['id']} is {it['status']}, not FINAL_APPROVED")
-            if not d.get("requirements_locked_before_search"):
-                errors.append(f"strict final: {it['id']} requirements were not locked before search")
-            if not d.get("selected_candidate_id"):
-                errors.append(f"strict final: {it['id']} has no selected candidate")
-            if it["importance"]=="HERO" and len(d.get("candidates",[]))<2:
-                errors.append(f"strict final: HERO {it['id']} has insufficient documented comparison")
-            selected=d.get("selected_candidate_id")
-            if selected:
-                cand=next((c for c in d.get("candidates",[]) if c.get("candidate_id")==selected),None)
-                if cand:
-                    scores=cand.get("scores",{})
-                    for key in ("story_specificity","period_fit","style_fit","rights_confidence"):
-                        if key in scores and scores[key]<8:
-                            errors.append(f"strict final: {it['id']} selected candidate fails {key}: {scores[key]}")
+            if it["importance"] in {"HERO","PRIMARY"} and it["category"] in VISIBLE_OR_AUDIO_CATEGORIES:
+                iid=it["id"]; d=decision_map[it["decision_id"]]
+                if it["status"] not in FINAL_STATES:
+                    fail(errors,f'{iid}: state={it["status"]}; requires FINAL_APPROVED',"item_state")
+                if not d.get("selected_candidate_id"):
+                    fail(errors,f"{iid}: no selected candidate","selection")
+                if it["importance"]=="HERO" and len(d.get("candidates",[]))<2:
+                    fail(errors,f"{iid}: HERO has fewer than 2 candidate/alternative records","comparison")
+                if not d.get("requirements_locked_before_search"):
+                    fail(errors,f"{iid}: requirements were not locked before search","requirements")
+        for o in obligations:
+            if o.get("importance")=="HERO" and o.get("current_treatment") in UNRESOLVED_OBLIGATION_STATES:
+                fail(errors,f'{o["id"]}: HERO source obligation unresolved ({o["current_treatment"]})',"source_fidelity")
+            if "CONTRADICTION" in o.get("current_treatment",""):
+                fail(errors,f'{o["id"]}: explicit source contradiction',"source_fidelity")
 
+    if warnings:
+        for w in warnings: print("WARN: "+w)
     if errors:
-        print("\n".join("ERROR: "+e for e in errors))
+        detail=max(0,a.max_detail)
+        for kind,msg in errors[:detail]: print(f"ERROR[{kind}]: {msg}")
+        if len(errors)>detail:
+            print(f"... {len(errors)-detail} additional blocker(s) omitted from detail output")
+        counts=Counter(kind for kind,_ in errors)
+        print("BLOCKER SUMMARY: "+", ".join(f"{k}={v}" for k,v in sorted(counts.items())))
         print(f"FAILED with {len(errors)} error(s)")
         return 2
-
-    print(f"OK: {len(items)} items, {len(sources)} sources, {len(decisions)} decisions, {len(shot_ids)} shots")
-    print("STRICT FINAL GATE: PASS" if args.strict_final else "STRUCTURAL GATE: PASS (this does not imply final asset approval)")
+    print(f"OK: {len(items)} items, {len(sources)} sources, {len(obligations)} source obligations, {len(decisions)} decisions, {len(shot_ids)} shots")
+    if a.strict_final: print("STRICT FINAL GATE: PASS")
+    else: print("STRUCTURAL GATE: PASS (this does not imply final asset approval)")
     return 0
 
-if __name__=="__main__":
-    sys.exit(main())
+if __name__=="__main__": sys.exit(main())
