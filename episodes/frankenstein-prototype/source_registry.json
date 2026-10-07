@@ -583,6 +583,92 @@
       "discovered_at": "2026-10-07",
       "status": "DEVELOPMENT_PROOF_CANDIDATE",
       "notes": "Prepared peasant-male.glb blob 7ffaac4ba99675fba741fcfee38a2164494cc62f; source file preserves Quaternius bone names and 65-joint skin. Provenance file records Universal Base Characters archive SHA-256 fdbf1804c90dfc1ea03e992bff7da2dfd1a79318e13270a660180f9308455f40 and Modular Character Outfits archive SHA-256 c3468b18871cc8c8f05ab14df7712baf22cb9f389cbd870babf130e595187f70. Good fast proof candidate; not evidence of Victor's final late-18th-century clothing."
+    },
+    {
+      "id": "SRC-FR-021",
+      "title": "Quaternius Lever ready 3D asset",
+      "creator": "Quaternius",
+      "date": null,
+      "provider": "Poly Pizza / GitHub mirror",
+      "url": "https://poly.pizza/m/guR2QhKFLT",
+      "roles": [
+        "READY_ASSET_SOURCE",
+        "PROP_REFERENCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "brass_contact"
+      ],
+      "rights": {
+        "status": "CC0_PUBLIC_DOMAIN",
+        "commercial_asset_use": "ELIGIBLE",
+        "evidence_url": "https://poly.pizza/m/guR2QhKFLT"
+      },
+      "quality": {
+        "authority": "ASSET_SOURCE",
+        "period_proximity": "GENERIC_MECHANISM_PROP_REQUIRES_STORY_FIT"
+      },
+      "discovered_at": "2026-10-08",
+      "status": "ACTIVE_CANDIDATE_SOURCE",
+      "notes": "Ready lever geometry used only as an interaction-prop candidate. Historical/canonical apparatus interpretation remains separately governed."
+    },
+    {
+      "id": "SRC-FR-022",
+      "title": "Quaternius ready table / Ultimate Furniture conversion",
+      "creator": "Quaternius",
+      "date": null,
+      "provider": "GitHub mirror",
+      "url": "https://github.com/Kauaji/It-Guardian/blob/main/client/public/assets/inventory-map-3d/models/quaternius/table.glb",
+      "roles": [
+        "READY_ASSET_SOURCE",
+        "FURNITURE_CANDIDATE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "creation_bed_slab"
+      ],
+      "rights": {
+        "status": "CC0_RECORDED_BY_SOURCE_REPOSITORY",
+        "commercial_asset_use": "ELIGIBLE_SUBJECT_TO_PROVENANCE_CHECK",
+        "evidence_url": "https://github.com/Kauaji/It-Guardian"
+      },
+      "quality": {
+        "authority": "ASSET_SOURCE",
+        "period_proximity": "GENERIC_FURNITURE_REQUIRES_SHOT_FIT"
+      },
+      "discovered_at": "2026-10-08",
+      "status": "ACTIVE_CANDIDATE_SOURCE",
+      "notes": "Used as a zero-build interaction surface in E-VID-007; not automatically approved as final Frankenstein furniture."
+    },
+    {
+      "id": "SRC-FR-023",
+      "title": "18th-century chemical laboratory engraving",
+      "creator": "William Lewis",
+      "date": "1763–1766",
+      "provider": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Lewis_William_lab.jpg",
+      "roles": [
+        "PRIMARY_HISTORICAL",
+        "ENVIRONMENT_REFERENCE",
+        "BACKGROUND_PLATE_CANDIDATE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "creation_chamber_architecture",
+        "laboratory_shelves_papers"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN_MARK",
+        "commercial_asset_use": "ELIGIBLE",
+        "evidence_url": "https://commons.wikimedia.org/wiki/File:Lewis_William_lab.jpg"
+      },
+      "quality": {
+        "authority": "HIGH",
+        "period_proximity": "18TH_CENTURY_LABORATORY"
+      },
+      "discovered_at": "2026-10-08",
+      "status": "ACTIVE_CANDIDATE_SOURCE",
+      "notes": "High-information far-background candidate only. It is an 18th-century chemical laboratory engraving, not Victor's canonical room."
     }
   ]
 }
