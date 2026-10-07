@@ -1,6 +1,6 @@
 # Living Engraving — Current Production Method
 
-**Method version:** 5.2  
+**Method version:** 5.2.1  
 **Status:** canonical / current  
 **Visual baseline:** Frankenstein V5.1. V5.2 is a governance/method update; it does not claim a new visual render.  
 **Goal:** produce an authored, cinematic, approximately three-minute novel adaptation in JavaScript without generic visible assets.
@@ -519,3 +519,37 @@ Every new visual version must answer:
 4. What new ceiling became visible after the improvement?
 
 A version number is earned by a meaningful visual, methodological or pipeline improvement—not by cosmetic code changes.
+
+
+## 7. Source-fidelity obligations
+
+The exact literary edition used for adaptation is itself a production Source. Material facts from that edition that constrain the film are recorded in `source_obligations.json`.
+
+Keep literary obligations separate from museum/art-history/technical references:
+
+- literary source -> what the novel establishes;
+- historical/museum source -> what a real object/place/garment looked like;
+- art-direction source -> visual/compositional language;
+- candidate source -> where a possible visible asset came from.
+
+An obligation may be **represented**, **deliberately adapted**, or **intentionally omitted**. It may not disappear merely because no renderer Item happened to implement it.
+
+Every obligation records:
+- source id(s);
+- the source fact/constraint;
+- affected shots;
+- affected Items;
+- importance;
+- current treatment;
+- explicit adaptation decision.
+
+The strict-final gate blocks unresolved HERO obligations and explicit source contradictions.
+
+### Frankenstein 1818 prototype contract
+
+For the current prototype, Project Gutenberg eBook #41445 (photo-reprint transcription of the 1818 edition) is the preferred literary text reference. The 1831 edition (#42324) remains an alternative-edition reference and must not be mixed silently into the source contract.
+
+Current obligations include the creation-night timing/weather, fading candle, unspecified “instruments of life,” dull yellow eye, hard breathing, convulsive limb motion, proportionate/once-beautiful intended features, yellow skin, flowing black hair, Victor's recoil, and Ingolstadt's distinctive steeple identity.
+
+The voltaic-pile/Leyden-jar apparatus is therefore documented as an **interpretive historical reconstruction**, not as a canonically named machine in the novel.
+
