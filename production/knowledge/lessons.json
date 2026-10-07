@@ -235,6 +235,32 @@
       "confidence": "HIGH",
       "status": "ENCODED",
       "superseded_by": null
+    },
+    {
+      "id": "LESSON-010",
+      "title": "Do not score unrendered visual concepts as if they were shot-tested assets",
+      "scope": "GLOBAL",
+      "source_context": [
+        "V5.3 creature redesign planning"
+      ],
+      "observed_weakness": "Research-qualified design directions can appear numerically 'good' before perspective, crop, motion, lighting and delivery-size behavior have been tested.",
+      "evidence": [
+        "Creature body/head/eye candidates can be ranked on source, period and rights evidence before render, but shot fit/style integration remain unknown until a representative test exists."
+      ],
+      "root_cause": "Evidence-backed dimensions and empirical shot-performance dimensions were conflated.",
+      "consequence": "The system could select a concept that looks strong on paper but fails in the actual film.",
+      "prevention_rule": "Before a representative still/motion test, score only dimensions supported by evidence. Leave shot/style/animation performance unapproved until tested in-context.",
+      "detection_method": "Candidate status must distinguish RESEARCH_QUALIFIED_NOT_SHOT_TESTED / NOT_MOTION_TESTED from shot-approved states; final selection requires approval-frame or motion-test evidence.",
+      "implementation_changes": [
+        "Creature V5.3 candidate records use research-qualified statuses",
+        "No selected candidate is assigned before matched shot tests"
+      ],
+      "validation": [
+        "Future decision reviews check that shot_fit/style_fit/animation suitability are not claimed as final before test evidence exists."
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
     }
   ]
 }
