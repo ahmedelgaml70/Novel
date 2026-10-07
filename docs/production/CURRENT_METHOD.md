@@ -604,3 +604,45 @@ A lesson is not complete until it produces at least one concrete prevention mech
 - explicit episode-only note if it should **not** generalize.
 
 Do not overfit Frankenstein. Episode facts stay in the episode. Only reusable lessons are promoted into the general method.
+
+## 28. Asset-authoring method is chosen per Item
+
+Do not force one art-authoring method across the entire film.
+
+For each visual Item, compare the method that best preserves the required information:
+- direct rights-cleared historical/public-domain asset;
+- bespoke redraw/trace/vectorization from one or more references;
+- bespoke generated illustration constrained by the locked Item requirements;
+- procedural JavaScript/vector geometry;
+- 3D/mesh or another method when spatial/motion requirements justify it.
+
+JavaScript remains the director/compositor/animator. It does not need to redraw every HERO object from primitives.
+
+### HERO source-file rule
+
+If clean isolation matters, HERO assets should normally exist as independent source files with generous transparent margins. A crowded multi-object sheet is not a final production source when overlap damages hair, hands, cloth, silhouette or alpha edges.
+
+Asset sheets remain useful for ideation and some SUPPORT assets, but they must pass an isolation test before promotion.
+
+## 29. Detail-hierarchy gate
+
+Upgrading the focal asset raises the minimum acceptable quality of nearby SUPPORT Items.
+
+When HERO art becomes more detailed:
+1. inspect the surrounding environment/props at the same frame;
+2. raise them to a compatible quality level or remove/simplify them;
+3. prefer negative space, shadow and atmosphere over weak filler;
+4. do not use texture/fog to hide a visible detail mismatch.
+
+A cleaner sparse shot is preferred to a busy shot containing visibly cheaper assets.
+
+## 30. Motion degrees of freedom before asset approval
+
+Before choosing the final asset structure, define what the shot actually needs to move.
+
+Use three practical motion classes:
+- `RIGID/SUBTLE` — translation, rotation, scale, breathing, tiny tremor, camera/parallax; a flat asset may be sufficient.
+- `DEFORMABLE` — cloth, hair, face planes, bending surfaces; use separated layers, masks, mesh/deformation or purpose-built animation.
+- `ARTICULATED` — independent limbs/fingers/joints; use separate parts, rig, mesh or dedicated animated asset.
+
+Do not approve a beautiful static HERO asset for an articulated action unless the required degrees of freedom are actually available.
