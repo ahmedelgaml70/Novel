@@ -130,3 +130,56 @@ Result: a flat high-detail asset can carry subtle rigid/deform-like motion in a 
 Do not render the complete film yet.
 
 The asset-authoring pivot is validated as a direction. Next work should produce clean individual HERO assets and solve the remaining exterior/contact/hand/articulation blockers before the full render.
+
+
+## Phase 3 — scale-aware hybrid motion gate
+
+### Intended-scale validation
+
+The higher-information assets were re-tested at the scale each shot actually needs.
+
+**Creature body**
+- clear improvement in the creation/recoil wide tableau;
+- anatomy, drapery and source-specific “proportionate / intended beauty” direction read much better than the primitive rig;
+- suitable for subtle rigid/whole-body breathing/lift only;
+- not final for clearly visible independent limb convulsion.
+
+**Creature head / first eye**
+- the engraved head materially outperforms the primitive close-up;
+- a real eye reveal is now created with a JavaScript occlusion mask rather than replacing the eye with a glowing effect;
+- closed -> partial -> open states pass the directional motion gate;
+- candidate remains provisional because the source asset came from a generated sheet rather than a purpose-built final file.
+
+**Victor**
+- the full-body engraved asset works at medium/full-body recoil scale;
+- portrait enlargement fails because the source detail and extraction quality do not support it;
+- the previous Victor close-up shot was therefore redesigned as a medium doorway recoil rather than forcing a weak portrait.
+
+**Galvanic macro**
+- apparatus detail is substantially stronger than the primitive reconstruction;
+- the isolated hand remained visually detached/contaminated;
+- the hand was removed from the current shot;
+- a JavaScript-controlled brass lever/contact now performs the action and drives the arc event.
+
+This is an example of redesigning the shot around validated assets rather than lowering the asset-quality gate.
+
+### Continuous motion test
+
+A continuous **11.5-second** test was rendered across:
+1. Victor doorway recoil;
+2. galvanic contact/lever;
+3. first-eye awakening.
+
+Result: the hybrid architecture survives continuous camera/timing/cue transitions and is clearly stronger than the primitive-only version.
+
+The test also exposed a renderer bug: the reusable ellipse primitive overwrote caller alpha, so the “closed” eye could retain visible iris color. The primitive contract was fixed to multiply inherited alpha and a regression test was added.
+
+### Current blockers before full V5.3
+
+- Ingolstadt exterior still requires a premium location-specific visual layer;
+- creation chamber architecture/supporting detail still trails the HERO asset quality floor;
+- clean individually authored final Creature/Victor/apparatus files are still preferable to salvaged sheet-derived candidates;
+- independent creature limb convulsion remains unresolved if shown clearly;
+- source/rights review for generated final production assets must be completed before FINAL_APPROVED status.
+
+The full V5.3 film remains blocked. The hybrid asset + JavaScript direction method is promoted; these exact salvaged source files are not.
