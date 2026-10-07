@@ -48,6 +48,7 @@ def main():
         "scene_manifest.json",
         "item_inventory.json",
         "source_registry.json",
+        "source_contract.json",
         "source_obligations.json",
         "asset_decisions.json",
         "VERSION_LOG.md",
@@ -63,8 +64,11 @@ def main():
     manifest=load(ep/"scene_manifest.json")
     inv=load(ep/"item_inventory.json")
     sr=load(ep/"source_registry.json")
+    contract=load(ep/"source_contract.json")
     obl=load(ep/"source_obligations.json")
     dec=load(ep/"asset_decisions.json")
+    lesson_file=root/"production"/"knowledge"/"lessons.json"
+    lessons=load(lesson_file)["lessons"] if lesson_file.exists() else []
 
     shots=manifest["shots"]
     shot_ids={s["id"] for s in shots}
@@ -114,16 +118,17 @@ def main():
             if iid not in item_map:
                 err("source",f"source {sid} references unknown item {iid}")
 
-    contract=obl.get("source_contract",{})
-    candidate_source_ids=contract.get("candidate_source_ids",[])
+    candidate_source_ids=[c.get("source_id") for c in contract.get("candidates",[])]
     for sid in candidate_source_ids:
         if sid not in source_map:
             err("source_contract",f"source contract references unknown candidate source {sid}")
     selected_source_id=contract.get("selected_source_id")
     if selected_source_id is not None and selected_source_id not in candidate_source_ids:
-        err("source_contract",f"selected source {selected_source_id} is not in candidate_source_ids")
+        err("source_contract",f"selected source {selected_source_id} is not a listed candidate")
     if contract.get("mode")!="BEST_FIT_REVISABLE":
         err("source_contract","source contract mode must be BEST_FIT_REVISABLE")
+    if contract.get("status") not in {"OPEN","PROVISIONAL","LOCKED","REOPENED"}:
+        err("source_contract","source contract has invalid status")
 
     for o in obligations:
         oid=o.get("id")
@@ -200,6 +205,22 @@ def main():
         if n==0:
             err("structural",f"shot {sh} has zero Items")
 
+    # Reusable learning registry: important lessons need root cause + prevention + detection.
+    if not lessons:
+        err("learning","production/knowledge/lessons.json missing or empty")
+    else:
+        lesson_ids=set()
+        for lesson in lessons:
+            lid=lesson.get("id")
+            if lid in lesson_ids:
+                err("learning",f"duplicate lesson id {lid}")
+            lesson_ids.add(lid)
+            for field in ("scope","observed_weakness","root_cause","prevention_rule","detection_method","status"):
+                if not lesson.get(field):
+                    err("learning",f"lesson {lid} missing {field}")
+            if lesson.get("scope") not in {"EPISODE","STYLE","CATEGORY","GLOBAL"}:
+                err("learning",f"lesson {lid} has invalid scope")
+
     if args.strict_final:
         for it in items:
             if it["importance"] not in FINAL_REQUIRED:
@@ -251,7 +272,8 @@ def main():
 
     print(
         f"OK: {len(items)} items, {len(sources)} sources, "
-        f"{len(obligations)} source obligations, {len(decisions)} decisions, {len(shot_ids)} shots"
+        f"{len(obligations)} source obligations, {len(decisions)} decisions, "
+        f"{len(lessons)} reusable lessons, {len(shot_ids)} shots"
     )
     print("STRICT FINAL GATE: PASS" if args.strict_final else
           "STRUCTURAL GATE: PASS (this does not imply final asset approval)")
