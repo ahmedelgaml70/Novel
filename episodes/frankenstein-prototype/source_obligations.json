@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "episode_id": "frankenstein-prototype",
   "scope": "1818-edition source obligations affecting the current Ingolstadt/creation prototype",
   "policy": "Source obligations are evidence-bound and revisable. Edition-specific obligations are conditional until that source is selected. Final lock requires a deliberate source contract, but development remains free to replace it when a better source is found.",
@@ -343,15 +343,5 @@
         "binding_state": "CONDITIONAL_UNTIL_SOURCE_SELECTED"
       }
     }
-  ],
-  "source_contract": {
-    "mode": "BEST_FIT_REVISABLE",
-    "status": "OPEN",
-    "candidate_source_ids": [
-      "SRC-FR-012",
-      "SRC-FR-013"
-    ],
-    "selected_source_id": null,
-    "rule": "Compare candidate editions/sources against the adaptation goal, completeness, wording, source fidelity, rights, and creative value. Do not lock an edition merely because it was researched first. If a better source is found later, replace the source contract deliberately and re-evaluate affected obligations."
-  }
+  ]
 }
