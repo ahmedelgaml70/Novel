@@ -56,6 +56,34 @@
     "decision": {
       "type": "string",
       "minLength": 8
+    },
+    "applicability": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "enum": [
+            "COMMON_ACROSS_CANDIDATES",
+            "SOURCE_SPECIFIC",
+            "INTERPRETIVE"
+          ]
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "binding_state": {
+          "enum": [
+            "CONDITIONAL_UNTIL_SOURCE_SELECTED",
+            "ACTIVE",
+            "INACTIVE",
+            "REVIEW"
+          ]
+        }
+      },
+      "additionalProperties": true
     }
   },
   "additionalProperties": true
