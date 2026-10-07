@@ -93,3 +93,51 @@ One-shot actions are clamped instead of modulo-looped.
 - automatic semantic action selection for an arbitrary novel.
 
 Those are the next layers. The skeletal-animation foundation itself is now working.
+
+
+## Proof v2 result
+
+**PASS for the real-animation architecture gate.**
+
+The corrected deterministic render completed successfully:
+
+- runtime: **9.000 s**;
+- resolution: **1280×720**;
+- frame rate: **24 fps**;
+- codec: **H.264**;
+- runtime clip inventory: **86 clips**;
+- exact selected clips:
+  - `Idle_Loop`;
+  - `Walk_Formal_Loop`;
+  - `Interact`;
+  - `Hit_Knockback`;
+  - `Jog_Fwd_Loop` is inventoried for later locomotion work.
+
+Observed sequence:
+
+1. actor A approaches with a real skeletal walk;
+2. actor A performs `Interact` with independent upper-body/joint motion;
+3. actor B performs an independent `Hit_Knockback` reaction;
+4. actor A performs its own `Hit_Knockback` recoil;
+5. actor A retreats using a real walk cycle plus world travel;
+6. both actors settle in `Idle_Loop`.
+
+The contact sheet no longer shows the accidental crouch-idle substitution from proof v1.
+
+### Architecture decision
+
+The core question is answered: **ready free rigged characters + ready free animation clips + Three.js can produce genuine character animation without custom rigging or custom core animation.**
+
+This replaces flat-image translation/zoom as the default architecture for character-performance shots.
+
+### What happens next
+
+Do not spend another iteration proving skeletal animation.
+
+The next proof should add only ready free:
+1. period-appropriate character/outfit candidates;
+2. a modular environment;
+3. relevant props;
+4. progressively stronger rendering style.
+
+Keep the exact skeletal-animation path underneath. If styling makes the motion harder to read, the styling loses.
