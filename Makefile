@@ -35,3 +35,10 @@ scout-benchmark-entity:
 
 scout-benchmark-entity-real:
 	python3 scripts/benchmark_entity_match_real.py
+
+
+production-validate:
+	python3 scripts/validate_production_records.py
+
+production-validate-final:
+	python3 scripts/validate_production_records.py --strict-final
