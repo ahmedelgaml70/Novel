@@ -12,17 +12,17 @@ renderer.setSize(W,H,false);
 renderer.outputColorSpace=THREE.SRGBColorSpace;
 renderer.shadowMap.enabled=true;
 document.body.appendChild(renderer.domElement);
-const effect=new OutlineEffect(renderer,{defaultThickness:0.0035,defaultColor:[0.02,0.015,0.01]});
+const effect=new OutlineEffect(renderer,{defaultThickness:0.003,defaultColor:[0.018,0.016,0.014]});
 
 const scene=new THREE.Scene();
 scene.background=new THREE.Color(0x0b0c0b);
-scene.fog=new THREE.FogExp2(0x15130f,0.022);
+scene.fog=new THREE.FogExp2(0x15130f,0.018);
 
-const camera=new THREE.PerspectiveCamera(37,W/H,0.05,100);
-const hemi=new THREE.HemisphereLight(0x9eabb0,0x21160d,0.72);scene.add(hemi);
-const key=new THREE.PointLight(0xf0be78,5.2,10,2);key.position.set(-0.35,1.55,1.0);scene.add(key);
-const cold=new THREE.DirectionalLight(0x8fa8b9,0.85);cold.position.set(-3,4,-4);scene.add(cold);
-const flash=new THREE.PointLight(0xd7efff,0,8,2);scene.add(flash);
+const camera=new THREE.PerspectiveCamera(38,W/H,0.05,100);
+const hemi=new THREE.HemisphereLight(0xa5afb0,0x211912,0.82);scene.add(hemi);
+const key=new THREE.PointLight(0xd8b27a,3.7,10,2);key.position.set(-0.25,1.65,1.1);scene.add(key);
+const cold=new THREE.DirectionalLight(0x8aa0ad,0.72);cold.position.set(-3,4,-4);scene.add(cold);
+const flash=new THREE.PointLight(0xd7efff,0,6,2);scene.add(flash);
 
 const draco=new DRACOLoader();
 draco.setDecoderPath('/draco/');
@@ -85,113 +85,168 @@ function findBone(root,regexes){
 }
 function pos(obj){const v=new THREE.Vector3();obj.getWorldPosition(v);return v;}
 function pulse(x,c,w){const d=(x-c)/w;return Math.exp(-d*d*4.5);}
+function upperBodyAdditive(clip,name){
+  const keep=/(spine|clavicle|upperarm|lowerarm|hand|neck|head)/i;
+  const tracks=clip.tracks.filter(t=>keep.test(t.name)).map(t=>t.clone());
+  const out=new THREE.AnimationClip(name,clip.duration,tracks,THREE.AdditiveAnimationBlendMode);
+  const reference=out.clone();
+  THREE.AnimationUtils.makeClipAdditive(out,0,reference,30);
+  out.blendMode=THREE.AdditiveAnimationBlendMode;
+  return out;
+}
 
-// High-information period plate behind only the real interaction zone.
+// Historical high-information far plate. Oversized so no rectangular edge appears in-frame.
 const bgTex=await new THREE.TextureLoader().loadAsync('/assets/lab_background.jpg');
 bgTex.colorSpace=THREE.SRGBColorSpace;
 const bg=new THREE.Mesh(
-  new THREE.PlaneGeometry(9.4,5.98),
-  new THREE.MeshBasicMaterial({map:bgTex,color:0x6e6557,fog:true})
+  new THREE.PlaneGeometry(15.5,9.9),
+  new THREE.MeshBasicMaterial({map:bgTex,color:0x6b6358,fog:true})
 );
-bg.position.set(0,2.72,-3.35);scene.add(bg);
+bg.position.set(0,3.4,-4.8);scene.add(bg);
 
 const floor=new THREE.Mesh(
-  new THREE.PlaneGeometry(11,8),
-  new THREE.MeshToonMaterial({color:0x332e27})
+  new THREE.PlaneGeometry(12,9),
+  new THREE.MeshToonMaterial({color:0x302d28})
 );
 floor.rotation.x=-Math.PI/2;floor.receiveShadow=true;scene.add(floor);
 
-// Same ready universal human/clip file for both roles.
 const human=await loader.loadAsync('/assets/human_male.glb');
 const clips=human.animations;
 const C={
   idle:exact(clips,'Idle_Loop'),
   walk:exact(clips,'Walk_Formal_Loop'),
   contact:exact(clips,'PickUp_Table'),
+  death:exact(clips,'Death01'),
   chest:exact(clips,'Hit_Chest'),
   scratch:exact(clips,'Zombie_Scratch'),
-  recoil:exact(clips,'Hit_Knockback')
+  knockback:exact(clips,'Hit_Knockback')
 };
 for(const [k,v] of Object.entries(C))if(!v)throw new Error('Missing ready clip '+k);
 
-const victor=actor(human.scene,clips,{x:-2.0,z:0.52,rot:-Math.PI/2,color:0x5a4938,scale:0.98});
-const creature=actor(human.scene,clips,{x:0,z:0,rot:0,color:0xb6a878,scale:1.10});
+const victor=actor(human.scene,clips,{x:-1.9,z:0.48,rot:-Math.PI/2,color:0x5b5147,scale:0.98});
+const creature=actor(human.scene,clips,{x:0,z:0,rot:-Math.PI/2,color:0xa0a38d,scale:1.08});
 
-// Ready slab/table and interaction props.
-const slabAsset=await readyAsset('/assets/table.glb',{width:3.25,color:0x5b4030});
-const slab=slabAsset.group;slab.position.set(0.45,0,-0.20);scene.add(slab);
-const slabTop=slabAsset.size.y;
+// Ready slab.
+const slabAsset=await readyAsset('/assets/table.glb',{width:3.15,color:0x58402e});
+const slab=slabAsset.group;slab.position.set(0.48,0,-0.18);scene.add(slab);
+const slabBox=new THREE.Box3().setFromObject(slab);
+const slabCenter=slabBox.getCenter(new THREE.Vector3());
+const slabTop=slabBox.max.y;
 
-const workAsset=await readyAsset('/assets/table.glb',{width:1.35,color:0x4a3427});
-const work=workAsset.group;scene.add(work);
-
-const leverAsset=await readyAsset('/assets/lever.glb',{height:0.38,color:0x927143});
-const leverPivot=new THREE.Group();leverPivot.add(leverAsset.group);scene.add(leverPivot);
-
-const candle=await readyAsset('/assets/graveyard/candle.glb',{height:0.28,color:0xdac99f});
-scene.add(candle.group);
-
-// Creature is genuinely rigged but remains physically horizontal for every clip.
-function orientCreature(){
-  creature.root.rotation.set(0,-0.12,-Math.PI/2);
+// Prepare Creature lying base from the ready Death01 end pose — no sideways upright idle.
+creature.root.position.set(0,0,0);creature.root.rotation.set(0,-Math.PI/2,0);
+applyAt(creature,C.death,C.death.duration-1/120,false);
+let bodyBox=new THREE.Box3().setFromObject(creature.root);
+let bodySize=bodyBox.getSize(new THREE.Vector3());
+if(bodySize.z>bodySize.x){
+  creature.root.rotation.y+=Math.PI/2;
+  creature.root.updateMatrixWorld(true);
+  bodyBox=new THREE.Box3().setFromObject(creature.root);
 }
-orientCreature();
-applyAt(creature,C.idle,0,true);
-creature.root.updateMatrixWorld(true);
-let cb=new THREE.Box3().setFromObject(creature.root);
-let cc=cb.getCenter(new THREE.Vector3());
-const slabBox=new THREE.Box3().setFromObject(slab),slabCenter=slabBox.getCenter(new THREE.Vector3());
+const bodyCenter=bodyBox.getCenter(new THREE.Vector3());
+const creatureYaw=creature.root.rotation.y;
 const creatureBase=new THREE.Vector3(
-  slabCenter.x-cc.x+0.10,
-  slabTop-cb.min.y+0.035,
-  slabCenter.z-cc.z
+  slabCenter.x-bodyCenter.x+0.08,
+  slabTop-bodyBox.min.y+0.025,
+  slabCenter.z-bodyCenter.z
 );
 creature.root.position.copy(creatureBase);creature.root.updateMatrixWorld(true);
 
-// Victor contact pose first; fit the prop to his ready hand rather than animating the hand.
-const victorContactRoot=new THREE.Vector3(-0.82,0,0.52);
+// Upper-body-only additive reactions over the frozen lying pose.
+const addChest=upperBodyAdditive(C.chest,'Creature_Chest_Additive');
+const addScratch=upperBodyAdditive(C.scratch,'Creature_Scratch_Additive');
+const deathAction=creature.mixer.clipAction(C.death);
+const chestAction=creature.mixer.clipAction(addChest);
+const scratchAction=creature.mixer.clipAction(addScratch);
+for(const a of [deathAction,chestAction,scratchAction]){a.enabled=true;a.play();a.paused=true;}
+deathAction.setLoop(THREE.LoopOnce,1);deathAction.clampWhenFinished=true;deathAction.setEffectiveWeight(1);
+chestAction.setLoop(THREE.LoopOnce,1);chestAction.clampWhenFinished=true;
+scratchAction.setLoop(THREE.LoopOnce,1);scratchAction.clampWhenFinished=true;
+
+function applyCreature(q,contactTime){
+  creature.root.rotation.set(0,creatureYaw,0);
+  creature.root.position.copy(creatureBase);
+  deathAction.time=C.death.duration-1/120;deathAction.setEffectiveWeight(1);
+
+  const hitStart=contactTime+0.10;
+  const hitU=(q-hitStart)/C.chest.duration;
+  chestAction.time=THREE.MathUtils.clamp(q-hitStart,0,C.chest.duration-1/120);
+  chestAction.setEffectiveWeight(hitU>=0&&hitU<=1 ? Math.sin(Math.PI*hitU) : 0);
+
+  const scratchStart=hitStart+C.chest.duration+0.18;
+  const scratchWindow=0.55;
+  const scratchU=(q-scratchStart)/scratchWindow;
+  scratchAction.time=THREE.MathUtils.clamp(scratchU,0,1)*Math.min(C.scratch.duration*0.45,C.scratch.duration-1/120);
+  scratchAction.setEffectiveWeight(scratchU>=0&&scratchU<=1 ? 0.45*Math.sin(Math.PI*scratchU) : 0);
+
+  creature.mixer.update(0);
+  creature.root.updateMatrixWorld(true);
+}
+
+// Contact fit: solve hand path AND support height.
+const victorContactRoot=new THREE.Vector3(-0.78,0,0.46);
 victor.root.position.copy(victorContactRoot);victor.root.rotation.y=-Math.PI/2;
 const hand=findBone(victor.root,[/right.*hand/i,/hand.*right/i,/hand[._-]?r$/i,/r[._-]?hand/i]);
 if(!hand)throw new Error('Ready rig has no right-hand bone');
 
 let best={score:-Infinity,time:0,pos:new THREE.Vector3()};
-for(let i=0;i<=50;i++){
-  const t=C.contact.duration*i/50;
+for(let i=0;i<=60;i++){
+  const t=C.contact.duration*i/60;
   applyAt(victor,C.contact,t,false);
   const hp=pos(hand);
-  // Prefer natural outward reach near table height, not the clip's terminal reset.
-  const score=(hp.x-victor.root.position.x)*0.35 + hp.y - Math.abs(t/C.contact.duration-0.58)*0.25;
+  const phase=t/C.contact.duration;
+  const reach=hp.x-victor.root.position.x;
+  const score=reach*0.35 + hp.y - Math.abs(phase-0.56)*0.28;
   if(score>best.score)best={score,time:t,pos:hp.clone()};
 }
-const workTop=workAsset.size.y;
-work.position.set(best.pos.x+0.10,0,best.pos.z+0.03);
+
+// Ready control table scaled to the expected ready-interaction height.
+const workAsset=await readyAsset('/assets/table.glb',{height:0.90,color:0x4a3528});
+const work=workAsset.group;scene.add(work);
+work.position.set(best.pos.x+0.14,0,best.pos.z+0.04);
+const workBox=new THREE.Box3().setFromObject(work);
+const workTop=workBox.max.y;
+
+// Small lever: its handle crosses the sampled hand height.
+const leverAsset=await readyAsset('/assets/lever.glb',{height:0.18,color:0x8f7043});
+const leverPivot=new THREE.Group();leverPivot.add(leverAsset.group);scene.add(leverPivot);
 leverPivot.position.set(best.pos.x,workTop,best.pos.z);
-candle.group.position.set(best.pos.x+0.36,workTop,best.pos.z-0.20);
-flash.position.copy(best.pos);
 
-victor.root.position.set(-2.0,0,0.52);applyAt(victor,C.idle,0,true);
+const candle=await readyAsset('/assets/graveyard/candle.glb',{height:0.25,color:0xd7c79e});
+scene.add(candle.group);
+candle.group.position.set(best.pos.x+0.34,workTop,best.pos.z-0.20);
 
-// Timeline: short, causal, no full standing Creature rise.
-const APPROACH_END=1.75;
-const CONTACT_END=3.05;
-const CONTACT=1.95+(best.time/C.contact.duration)*(CONTACT_END-1.95);
-const SPASM_START=CONTACT+0.12;
-const RECOIL_START=4.10;
-const RETREAT_START=4.85;
-const END=8.0;
+flash.position.set(best.pos.x,best.pos.y,best.pos.z);
+
+victor.root.position.set(-1.9,0,0.48);victor.root.rotation.y=-Math.PI/2;
+applyAt(victor,C.idle,0,true);
+
+// Compact story timing.
+const APPROACH_END=1.45;
+const CONTACT_START=1.45;
+const CONTACT_END=2.70;
+const CONTACT=CONTACT_START+(best.time/C.contact.duration)*(CONTACT_END-CONTACT_START);
+const CREATURE_END=3.55;
+const RECOIL_START=3.62;
+const RETREAT_START=4.02;
+const RETREAT_END=6.45;
+const END=7.5;
 
 const label=document.createElement('div');label.id='label';document.body.appendChild(label);
 const flashCss=document.createElement('div');flashCss.id='flash';document.body.appendChild(flashCss);
 
 function cameraFor(q){
-  if(q<3.15){
-    camera.position.set(3.2,1.62,4.25);camera.lookAt(-0.10,0.92,0);
-  }else if(q<4.05){
-    camera.position.set(2.15,1.30,2.85);camera.lookAt(slabCenter.x,0.88,slabCenter.z);
-  }else if(q<5.0){
-    camera.position.set(-2.45,1.48,3.05);camera.lookAt(-0.72,1.02,0.5);
+  if(q<CONTACT_START){
+    camera.position.set(3.25,1.70,4.35);camera.lookAt(-0.10,0.95,0);
+  }else if(q<CONTACT_END+0.12){
+    camera.position.set(best.pos.x+1.45,best.pos.y+0.62,best.pos.z+1.65);
+    camera.lookAt(best.pos.x,best.pos.y,best.pos.z);
+  }else if(q<CREATURE_END){
+    camera.position.set(2.25,1.45,2.85);camera.lookAt(slabCenter.x,slabTop+0.28,slabCenter.z);
+  }else if(q<RETREAT_START+0.30){
+    camera.position.set(-2.15,1.55,3.15);camera.lookAt(victorContactRoot.x,1.02,victorContactRoot.z);
   }else{
-    camera.position.set(3.15,1.65,4.28);camera.lookAt(-0.15,0.95,0);
+    camera.position.set(3.15,1.72,4.35);camera.lookAt(-0.10,0.95,0);
   }
 }
 
@@ -200,69 +255,74 @@ function setTime(t){
   flash.intensity=0;flashCss.style.opacity='0';
   leverPivot.rotation.z=0;
 
-  // Victor: real locomotion -> ready contact -> real recoil -> real locomotion.
   if(q<APPROACH_END){
     applyAt(victor,C.walk,q,true);
     victor.root.rotation.y=-Math.PI/2;
-    victor.root.position.set(THREE.MathUtils.lerp(-2.0,victorContactRoot.x,q/APPROACH_END),0,0.52);
-    label.dataset.beat='VICTOR APPROACHES — READY SKELETAL GAIT';
+    victor.root.position.set(THREE.MathUtils.lerp(-1.9,victorContactRoot.x,q/APPROACH_END),0,0.48);
+    label.dataset.beat='VICTOR APPROACHES — READY GAIT';
   }else if(q<RECOIL_START){
-    const u=THREE.MathUtils.clamp((q-APPROACH_END)/(CONTACT_END-APPROACH_END),0,1);
+    const u=THREE.MathUtils.clamp((q-CONTACT_START)/(CONTACT_END-CONTACT_START),0,1);
     applyAt(victor,C.contact,u*C.contact.duration,false);
     victor.root.position.copy(victorContactRoot);victor.root.rotation.y=-Math.PI/2;
-    label.dataset.beat='VICTOR OPERATES THE CONTACT — PROP FIT TO HAND PATH';
+    label.dataset.beat='CONTACT — PROP FIT TO REAL HAND PATH';
   }else if(q<RETREAT_START){
-    applyAt(victor,C.recoil,Math.min(0.43,q-RECOIL_START),false);
+    const rt=Math.min(0.18,(q-RECOIL_START)*0.48);
+    applyAt(victor,C.knockback,rt,false);
     victor.root.position.copy(victorContactRoot);victor.root.rotation.y=-Math.PI/2;
-    label.dataset.beat='VICTOR RECOILS';
-  }else if(q<7.15){
+    label.dataset.beat='VICTOR STARTLES';
+  }else if(q<RETREAT_END){
     applyAt(victor,C.walk,q-RETREAT_START,true);
     victor.root.rotation.y=Math.PI/2;
-    victor.root.position.set(THREE.MathUtils.lerp(victorContactRoot.x,-2.05,(q-RETREAT_START)/(7.15-RETREAT_START)),0,0.52);
-    label.dataset.beat='VICTOR RETREATS — REAL GAIT';
+    victor.root.position.set(
+      THREE.MathUtils.lerp(victorContactRoot.x,-1.95,(q-RETREAT_START)/(RETREAT_END-RETREAT_START)),
+      0,0.46
+    );
+    label.dataset.beat='VICTOR RETREATS — READY GAIT';
   }else{
-    applyAt(victor,C.idle,q-7.15,true);
-    victor.root.rotation.y=-Math.PI/2;victor.root.position.set(-2.05,0,0.52);
+    applyAt(victor,C.idle,q-RETREAT_END,true);
+    victor.root.rotation.y=-Math.PI/2;victor.root.position.set(-1.95,0,0.46);
     label.dataset.beat='AFTERMATH';
   }
 
-  // Creature never stands. Only articulated motion is changed.
-  orientCreature();
-  creature.root.position.copy(creatureBase);
-  if(q<SPASM_START){
-    applyAt(creature,C.idle,q,true);
-  }else if(q<SPASM_START+C.chest.duration){
-    applyAt(creature,C.chest,q-SPASM_START,false);
-    label.dataset.beat='CREATURE CONVULSES ON THE SLAB';
-  }else if(q<4.15){
-    // Short secondary movement, still horizontal.
-    applyAt(creature,C.scratch,Math.min(C.scratch.duration*0.42,q-(SPASM_START+C.chest.duration)),false);
-  }else{
-    applyAt(creature,C.idle,q-4.15,true);
-  }
-  orientCreature();creature.root.position.copy(creatureBase);creature.root.updateMatrixWorld(true);
+  applyCreature(q,CONTACT);
+  if(q>=CONTACT+0.08&&q<CREATURE_END) label.dataset.beat='CREATURE CONVULSES — ADDITIVE READY MOTION';
 
-  const press=THREE.MathUtils.smoothstep(q,CONTACT-0.10,CONTACT+0.13);
-  leverPivot.rotation.z=-0.52*press;
-  const f=pulse(q,CONTACT+0.04,0.13);
-  flash.intensity=14*f;flashCss.style.opacity=String(0.58*f);
-  key.intensity=4.6+3.1*f+0.18*Math.sin(q*14);
-  hemi.intensity=0.68+0.7*f;
+  const press=THREE.MathUtils.smoothstep(q,CONTACT-0.10,CONTACT+0.12);
+  leverPivot.rotation.z=-0.46*press;
+  const f=pulse(q,CONTACT+0.035,0.12);
+  flash.intensity=12*f;flashCss.style.opacity=String(0.50*f);
+  key.intensity=3.7+2.6*f+0.10*Math.sin(q*13);
+  hemi.intensity=0.82+0.55*f;
 
-  cameraFor(q);effect.render(scene,camera);return label.dataset.beat;
+  cameraFor(q);
+  effect.render(scene,camera);
+  return label.dataset.beat;
 }
 
 window.__clipInventory=clips.map(c=>({name:c.name,duration:c.duration}));
-window.__chosenClips=Object.fromEntries(Object.entries(C).map(([k,v])=>[k,v.name]));
+window.__chosenClips={
+  victorWalk:C.walk.name,
+  victorContact:C.contact.name,
+  victorStartle:C.knockback.name,
+  creatureBase:C.death.name,
+  creatureAdditiveChest:C.chest.name,
+  creatureAdditiveScratch:C.scratch.name
+};
 window.__contactAudit={
-  version:'5.4.4',
-  method:'ready contact clip + automatic prop-to-hand-path fitting; no IK; no custom character animation',
-  victorSource:'Quaternius Universal Base Character',
+  version:'5.4.5',
+  method:'ready clip + automatic 3D contact fit + additive upper-body clip surgery; no IK; no custom keyframed character animation',
   rightHandBone:hand.name,
   sampledClipTime:best.time,
+  sampledHand:[best.pos.x,best.pos.y,best.pos.z],
+  workTableTop:workTop,
+  verticalHandMinusTable:best.pos.y-workTop,
+  leverHeight:leverAsset.size.y,
   contactGlobalSeconds:CONTACT,
-  contact:[best.pos.x,best.pos.y,best.pos.z],
-  creaturePolicy:'horizontal root throughout; Hit_Chest + partial Zombie_Scratch only',
+  creatureBaseClip:C.death.name,
+  creatureRootPolicy:'natural Death01 lying pose; no sideways upright-idle rotation',
+  additiveTrackCounts:{chest:addChest.tracks.length,scratch:addScratch.tracks.length},
   background:'William Lewis laboratory engraving, 1763–1766, public domain'
 };
-window.__setTime=setTime;setTime(0);window.__ready=true;
+window.__setTime=setTime;
+setTime(0);
+window.__ready=true;
