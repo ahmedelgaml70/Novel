@@ -299,7 +299,8 @@
       "observed_weakness": "Source-informed exterior and character concepts still looked crude after being rebuilt as simplified Canvas/vector geometry.",
       "evidence": [
         "The 1800 Ingolstadt engraving contains dense irregular architecture, bridge, fortification and landmark information that the coded redraw reduced to generic blocks.",
-        "Creature and Victor requirements improved, but low-level geometric heads/hands remained visibly constructed in close-up."
+        "Creature and Victor requirements improved, but low-level geometric heads/hands remained visibly constructed in close-up.",
+        "A second fine-line Ingolstadt code reconstruction improved historical structure but still read as diagrammatic rather than like high-information engraved city art, reinforcing the same authoring-method limit."
       ],
       "root_cause": "Art authoring and film direction were coupled. The renderer was forced to recreate high-information illustration from low-level primitives even when a richer source or bespoke asset could carry that information better.",
       "consequence": "Historical specificity, anatomy and premium illustration quality were lost before cinematography even began.",
@@ -310,7 +311,8 @@
         "Next experiment adds a bespoke asset-authoring layer before JS compositing"
       ],
       "validation": [
-        "No full V5.3 sequence render until exterior, creature, Victor and apparatus approval stills pass."
+        "No full V5.3 sequence render until exterior, creature, Victor and apparatus approval stills pass.",
+        "Exterior primitive/outline reconstruction rejected after a second matched lookdev test; direct/high-information historical-art ingestion remains required."
       ],
       "confidence": "HIGH",
       "status": "ENCODED",
@@ -445,6 +447,33 @@
       ],
       "validation": [
         "Matched frame shows improved physical integration without changing the source figure."
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
+    },
+    {
+      "id": "LESSON-018",
+      "title": "Alpha isolation needs structural QC, not only visual cropping",
+      "scope": "CATEGORY",
+      "source_context": [
+        "V5.3 apparatus/window cleanup"
+      ],
+      "observed_weakness": "Small disconnected fragments from neighboring source-sheet art survived manual crop/erase cleanup and became visible only after the asset was enlarged in the actual shot.",
+      "evidence": [
+        "The apparatus source still contained several disconnected alpha components after rectangular cleanup.",
+        "Keeping the largest connected alpha component removed the floating cloth/source fragments without damaging the intended apparatus.",
+        "The same method removed residual top-strip contamination from the Gothic window."
+      ],
+      "root_cause": "Manual geometric erasing was approximate and judged at source scale rather than by object connectivity and final-shot enlargement.",
+      "consequence": "Tiny contamination can survive asset review, then become a conspicuous floating artifact in macro/close shots.",
+      "prevention_rule": "For an asset expected to be one connected silhouette, inspect alpha connected components. Keep/review the intended component(s) explicitly and reject unexplained disconnected remnants before shot approval.",
+      "detection_method": "Alpha QC reports connected-component count/bounds and the actual shot composite is inspected at delivery resolution.",
+      "implementation_changes": [
+        "V5.3 apparatus/window active assets cleaned with connected-component alpha filtering"
+      ],
+      "validation": [
+        "Macro apparatus frame rerendered without the floating fragments."
       ],
       "confidence": "HIGH",
       "status": "ENCODED",
