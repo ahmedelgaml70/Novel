@@ -5,7 +5,6 @@ on:
     branches: [main]
     paths:
       - 'production/rigged3d/frankenstein_fast.html'
-      - 'production/rigged3d/frankenstein_fast.html'
       - 'production/rigged3d/src/frankenstein_fast.js'
       - 'production/rigged3d/tools/capture_demo.mjs'
       - '.github/workflows/frankenstein-fastpath-demo.yml'
@@ -40,47 +39,25 @@ jobs:
           set -eux
           mkdir -p production/rigged3d/public/assets/graveyard/Textures
 
-          # Ready animated base human + 86 runtime clips.
-          curl -L --fail --retry 3 \
-            https://raw.githubusercontent.com/NafisRayan/Animate-Rigged-Humanoid-No-Blender/main/test/human_male.glb \
-            -o production/rigged3d/public/assets/human_male.glb
+          curl -L --fail --retry 3             https://raw.githubusercontent.com/NafisRayan/Animate-Rigged-Humanoid-No-Blender/main/test/human_male.glb             -o production/rigged3d/public/assets/human_male.glb
 
-          # Prepared Quaternius Peasant character on the compatible universal rig.
-          curl -L --fail --retry 3 \
-            https://raw.githubusercontent.com/Genesara/genesara-web/90c166baa14682eedf1358c6c0a6e40e91765495/public/models/characters/male_peasant.glb \
-            -o production/rigged3d/public/assets/victor_peasant.glb
+          curl -L --fail --retry 3             https://raw.githubusercontent.com/Genesara/genesara-web/90c166baa14682eedf1358c6c0a6e40e91765495/public/models/characters/male_peasant.glb             -o production/rigged3d/public/assets/victor_peasant.glb
 
-          # Ready table and lever.
-          curl -L --fail --retry 3 \
-            https://raw.githubusercontent.com/Kauaji/It-Guardian/224f38f970da01c8e978a313520ef3a9cad24b57/client/public/assets/inventory-map-3d/models/quaternius/table.glb \
-            -o production/rigged3d/public/assets/table.glb
+          curl -L --fail --retry 3             https://raw.githubusercontent.com/Kauaji/It-Guardian/224f38f970da01c8e978a313520ef3a9cad24b57/client/public/assets/inventory-map-3d/models/quaternius/table.glb             -o production/rigged3d/public/assets/table.glb
 
-          curl -L --fail --retry 3 \
-            https://raw.githubusercontent.com/evanly-gh/evanly.me/9fa3fdcf08165f0bb9130026dab94a2302a0b4bc/public/models/quaternius/Lever.glb \
-            -o production/rigged3d/public/assets/lever.glb
+          curl -L --fail --retry 3             https://raw.githubusercontent.com/evanly-gh/evanly.me/9fa3fdcf08165f0bb9130026dab94a2302a0b4bc/public/models/quaternius/Lever.glb             -o production/rigged3d/public/assets/lever.glb
 
-          # KayKit Halloween Bits (CC0): wall, candle and shared atlas.
-          curl -L --fail --retry 3 \
-            https://raw.githubusercontent.com/georg-doc/kayfabizarro/378b209355b13304e3cff656ec0806ca5b89df28/media/3D_Assets/GLB_graveyard/brick-wall.glb \
-            -o production/rigged3d/public/assets/graveyard/brick-wall.glb
+          curl -L --fail --retry 3             https://raw.githubusercontent.com/georg-doc/kayfabizarro/378b209355b13304e3cff656ec0806ca5b89df28/media/3D_Assets/GLB_graveyard/brick-wall.glb             -o production/rigged3d/public/assets/graveyard/brick-wall.glb
 
-          curl -L --fail --retry 3 \
-            https://raw.githubusercontent.com/georg-doc/kayfabizarro/378b209355b13304e3cff656ec0806ca5b89df28/media/3D_Assets/GLB_graveyard/candle.glb \
-            -o production/rigged3d/public/assets/graveyard/candle.glb
+          curl -L --fail --retry 3             https://raw.githubusercontent.com/georg-doc/kayfabizarro/378b209355b13304e3cff656ec0806ca5b89df28/media/3D_Assets/GLB_graveyard/candle.glb             -o production/rigged3d/public/assets/graveyard/candle.glb
 
-          curl -L --fail --retry 3 \
-            https://raw.githubusercontent.com/georg-doc/kayfabizarro/378b209355b13304e3cff656ec0806ca5b89df28/media/3D_Assets/GLB_graveyard/Textures/colormap.png \
-            -o production/rigged3d/public/assets/graveyard/Textures/colormap.png
+          curl -L --fail --retry 3             https://raw.githubusercontent.com/georg-doc/kayfabizarro/378b209355b13304e3cff656ec0806ca5b89df28/media/3D_Assets/GLB_graveyard/Textures/colormap.png             -o production/rigged3d/public/assets/graveyard/Textures/colormap.png
 
           echo "Ready asset inventory:"
           find production/rigged3d/public/assets -type f -maxdepth 4 -printf '%p %k KB\n' | sort
-
-          echo "Pinned integrity:"
-          echo "human sha256"
+          echo "Integrity:"
           sha256sum production/rigged3d/public/assets/human_male.glb
-          echo "peasant git-blob sha"
           git hash-object production/rigged3d/public/assets/victor_peasant.glb
-          echo "wall/candle git-blob shas"
           git hash-object production/rigged3d/public/assets/graveyard/brick-wall.glb
           git hash-object production/rigged3d/public/assets/graveyard/candle.glb
 
@@ -108,21 +85,11 @@ jobs:
       - name: Encode MP4 and review contact sheet
         working-directory: production/rigged3d
         run: |
-          ffmpeg -y -framerate 24 \
-            -i render-output-frankenstein/frames/frame_%04d.png \
-            -c:v libx264 -pix_fmt yuv420p -crf 18 -movflags +faststart \
-            render-output-frankenstein/frankenstein_fast_v5_4_3.mp4
+          ffmpeg -y -framerate 24             -i render-output-frankenstein/frames/frame_%04d.png             -c:v libx264 -pix_fmt yuv420p -crf 18 -movflags +faststart             render-output-frankenstein/frankenstein_fast_v5_4_3.mp4
 
-          ffmpeg -y -i render-output-frankenstein/frankenstein_fast_v5_4_3.mp4 \
-            -vf "fps=1,scale=320:-1,tile=4x3" -frames:v 1 \
-            render-output-frankenstein/contact_sheet.jpg
+          ffmpeg -y -i render-output-frankenstein/frankenstein_fast_v5_4_3.mp4             -vf "fps=1,scale=320:-1,tile=5x2" -frames:v 1             render-output-frankenstein/contact_sheet.jpg
 
-          ffprobe -v error \
-            -show_entries format=duration,size \
-            -show_entries stream=codec_name,width,height,r_frame_rate \
-            -of json \
-            render-output-frankenstein/frankenstein_fast_v5_4_3.mp4 \
-            > render-output-frankenstein/media_info.json
+          ffprobe -v error             -show_entries format=duration,size             -show_entries stream=codec_name,width,height,r_frame_rate             -of json             render-output-frankenstein/frankenstein_fast_v5_4_3.mp4             > render-output-frankenstein/media_info.json
 
       - name: Upload Frankenstein fast-path proof
         uses: actions/upload-artifact@v4
