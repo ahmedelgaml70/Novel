@@ -331,9 +331,9 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "decision_status": "INACTIVE_REMOVED_FROM_CURRENT_CUT",
+      "why_selected_or_pending": "Replaced by sparse stone/plaster chamber architecture in V5.3.",
+      "remaining_risk": "None for the current cut. Reopen requirements/candidate validation if this Item returns in a future shot."
     },
     {
       "id": "DEC-laboratory_floor",
@@ -361,9 +361,9 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "decision_status": "INACTIVE_REMOVED_FROM_CURRENT_CUT",
+      "why_selected_or_pending": "Removed from current chamber because it read as low-detail filler beside upgraded HERO assets.",
+      "remaining_risk": "None for the current cut. Reopen requirements/candidate validation if this Item returns in a future shot."
     },
     {
       "id": "DEC-creation_bed_slab",
@@ -391,9 +391,9 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "decision_status": "INACTIVE_REMOVED_FROM_CURRENT_CUT",
+      "why_selected_or_pending": "Removed from current creation tableau; no longer needed to carry the composition.",
+      "remaining_risk": "None for the current cut. Reopen requirements/candidate validation if this Item returns in a future shot."
     },
     {
       "id": "DEC-skull_foreground",
@@ -401,9 +401,9 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "decision_status": "INACTIVE_REMOVED_FROM_CURRENT_CUT",
+      "why_selected_or_pending": "Removed from current creation tableau because the generic foreground prop lowered the detail hierarchy.",
+      "remaining_risk": "None for the current cut. Reopen requirements/candidate validation if this Item returns in a future shot."
     },
     {
       "id": "DEC-foreground_copper_cable",
@@ -458,9 +458,9 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "decision_status": "INACTIVE_REMOVED_FROM_CURRENT_CUT",
+      "why_selected_or_pending": "Dedicated portrait/close-up use removed from current cut. Current Victor asset is approved only for medium/full-body recoil framing.",
+      "remaining_risk": "None for the current cut. Reopen requirements/candidate validation if this Item returns in a future shot."
     },
     {
       "id": "DEC-victor_hair",
@@ -581,9 +581,9 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "decision_status": "INACTIVE_REMOVED_FROM_CURRENT_CUT",
+      "why_selected_or_pending": "Standalone Victor/POV hand removed from current cut; apparatus interaction now uses a controllable brass contact/lever and the doorway pose does not require a separate hand Item.",
+      "remaining_risk": "None for the current cut. Reopen requirements/candidate validation if this Item returns in a future shot."
     },
     {
       "id": "DEC-victor_recoil_pose",
@@ -1344,9 +1344,9 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "decision_status": "INACTIVE_REMOVED_FROM_CURRENT_CUT",
+      "why_selected_or_pending": "Removed from current apparatus macro as low-value scientific filler; historical apparatus evidence remains in source records.",
+      "remaining_risk": "None for the current cut. Reopen requirements/candidate validation if this Item returns in a future shot."
     },
     {
       "id": "DEC-laboratory_fog",
@@ -1670,12 +1670,37 @@
             "rights_confidence": 10
           },
           "reason": "Rendered control candidate. It works compositionally but communicates generic old-European/Gothic city rather than Ingolstadt."
+        },
+        {
+          "candidate_id": "IROOF-E-v53-fine-line-js-reconstruction",
+          "origin": "REFERENCE_DRIVEN_JS_LINE_ART_RECONSTRUCTION",
+          "source_ids": [
+            "SRC-FR-010",
+            "SRC-FR-011",
+            "SRC-FR-017",
+            "SRC-FR-012",
+            "SRC-FR-013"
+          ],
+          "status": "SHOT_TESTED_REJECTED",
+          "scores": {
+            "story_specificity": 9,
+            "source_fidelity": 8,
+            "period_fit": 9,
+            "style_fit": 6,
+            "shot_fit": 6,
+            "continuity_fit": 9,
+            "animation_suitability": 10,
+            "technical_quality": 10,
+            "rights_confidence": 10,
+            "originality_non_genericity": 7
+          },
+          "reason": "The matched exterior test recovered river/bridge/steeple/fortified-city structure and improved on flat silhouettes, but still read as a diagrammatic code reconstruction rather than premium engraved city art. Reject JS primitive/line reconstruction as the final exterior authoring method."
         }
       ],
       "selected_candidate_id": null,
-      "decision_status": "CANDIDATES_COMPARED_REQUIRES_SHOT_TEST",
-      "why_selected_or_pending": "Render A, B and C as matched exterior approval frames using the same camera, storm and palette. Candidate A is the strongest research hypothesis, but it is not selected until the actual shot proves it.",
-      "remaining_risk": "Historic evidence must be synthesized without false precision; steeple/site identity must read at 720p without turning the shot into an architectural diagram."
+      "decision_status": "SHOT_TESTS_COMPLETE_NEEDS_HIGH_INFORMATION_ASSET",
+      "why_selected_or_pending": "Both the old generic skyline and the V5.3 fine-line JS reconstruction fail the premium exterior bar. Preserve the multi-source research requirements, but move the next candidate to high-information historical-art ingestion or an equally detailed bespoke asset.",
+      "remaining_risk": "Exterior remains the highest unresolved HERO cluster; no full V5.3 render should be promoted before it passes."
     },
     {
       "id": "DEC-laboratory_exterior_building-v5_3",
@@ -1728,12 +1753,35 @@
             "rights_confidence": 10
           },
           "reason": "Rejected because atmosphere alone is not location/story specificity."
+        },
+        {
+          "candidate_id": "IEXT-D-v53-code-reconstructed-focal-building",
+          "origin": "REFERENCE_DRIVEN_JS_ARCHITECTURAL_RECONSTRUCTION",
+          "source_ids": [
+            "SRC-FR-010",
+            "SRC-FR-011",
+            "SRC-FR-017"
+          ],
+          "status": "SHOT_TESTED_REJECTED",
+          "scores": {
+            "story_specificity": 8,
+            "source_fidelity": 7,
+            "period_fit": 8,
+            "style_fit": 6,
+            "shot_fit": 6,
+            "continuity_fit": 9,
+            "animation_suitability": 10,
+            "technical_quality": 10,
+            "rights_confidence": 10,
+            "originality_non_genericity": 7
+          },
+          "reason": "The focal building could be directed and animated reliably, but its primitive/line geometry remained visibly lower-information than the upgraded interior/character assets."
         }
       ],
       "selected_candidate_id": null,
-      "decision_status": "CANDIDATES_COMPARED_REQUIRES_SHOT_TEST",
-      "why_selected_or_pending": "Candidate A currently best satisfies story/location plausibility without inventing a false exact-site claim. It still needs a matched shot test against B.",
-      "remaining_risk": "Need enough architectural specificity to feel Ingolstadt while preserving fictional latitude and cinematic silhouette."
+      "decision_status": "SHOT_TESTS_COMPLETE_NEEDS_HIGH_INFORMATION_ASSET",
+      "why_selected_or_pending": "Do not promote another code-drawn Gothic building. Next exterior candidate must retain location-specific high-information art while avoiding a false claim of Victor's exact historical laboratory.",
+      "remaining_risk": "Need a high-information location-specific background/focal architecture candidate and actual storm/camera composite."
     }
   ]
 }
