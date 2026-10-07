@@ -94,3 +94,24 @@ Each visual version must answer four questions:
 4. What new defect or ceiling became visible after the change?
 
 A version number is not earned by cosmetic code changes. It must represent a meaningful visual, methodological or pipeline improvement that is documented and reproducible.
+
+
+## V5.2.1 — Literary-source obligations
+
+**Goal:** prevent source-fidelity constraints from vanishing merely because no renderer Item existed for them.
+
+**Added:**
+- exact designated literary-source contract for the Frankenstein prototype;
+- 14 source-fidelity obligations tied to shots and Items;
+- bidirectional Item <-> obligation links;
+- strict-final source-fidelity blockers;
+- grouped blocker reporting in the validator.
+
+**Immediate findings:**
+- the fading candle is missing from the current visual baseline;
+- hard breathing is underrepresented and heartbeat does not substitute for it;
+- the eye/skin treatment needs closer alignment with the 1818 description;
+- the generic Ingolstadt exterior also fails a literary location cue: a distinctive steeple should help identify the town;
+- galvanic apparatus remains a historical interpretation of the novel's unspecified “instruments of life.”
+
+**Visual render:** none claimed. V5.2.1 improves evidence and control for the next visual rebuild.
