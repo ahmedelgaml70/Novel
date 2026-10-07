@@ -50,6 +50,9 @@ jobs:
         working-directory: production/rigged3d
         run: node tools/capture_demo.mjs
 
+      - name: Install FFmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
       - name: Encode MP4
         working-directory: production/rigged3d
         run: |
