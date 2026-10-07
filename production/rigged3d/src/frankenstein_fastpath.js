@@ -9,6 +9,7 @@ const loader=new GLTFLoader();
 const draco=new DRACOLoader();
 draco.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
 loader.setDRACOLoader(draco);
+
 const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});
 renderer.setPixelRatio(1); renderer.setSize(W,H,false);
 renderer.outputColorSpace=THREE.SRGBColorSpace;
@@ -17,30 +18,30 @@ document.body.appendChild(renderer.domElement);
 const effect=new OutlineEffect(renderer,{defaultThickness:0.0035,defaultColor:[0.02,0.018,0.015]});
 
 const scene=new THREE.Scene();
-scene.fog=new THREE.FogExp2(0x151411,0.018);
+scene.fog=new THREE.FogExp2(0x151411,0.012);
 const camera=new THREE.PerspectiveCamera(35,W/H,0.05,100);
-camera.position.set(4.6,2.35,6.2);
-camera.lookAt(0,1.05,0);
 
-const hemi=new THREE.HemisphereLight(0xaab8bb,0x24170c,0.65); scene.add(hemi);
-const key=new THREE.DirectionalLight(0xffc982,2.4); key.position.set(-2,5,4); key.castShadow=true; scene.add(key);
-const cold=new THREE.DirectionalLight(0x8da6b6,0.75); cold.position.set(4,3,-3); scene.add(cold);
-const contactLight=new THREE.PointLight(0xd9eaff,0,4,2); scene.add(contactLight);
+const hemi=new THREE.HemisphereLight(0xaab8bb,0x24170c,0.68); scene.add(hemi);
+const key=new THREE.DirectionalLight(0xffc982,2.5); key.position.set(-2,5,4); key.castShadow=true; scene.add(key);
+const cold=new THREE.DirectionalLight(0x8da6b6,0.72); cold.position.set(4,3,-3); scene.add(cold);
+const contactLight=new THREE.PointLight(0xd9eaff,0,6,2); scene.add(contactLight);
 
-function toonify(root,color=null){
+function toonify(root,color=null,keepMap=false){
   root.traverse(o=>{
     if(!o.isMesh) return;
     o.castShadow=true; o.receiveShadow=true;
     const old=Array.isArray(o.material)?o.material[0]:o.material;
     const c=color?new THREE.Color(color):(old?.color?.clone?.()||new THREE.Color(0xb6a98c));
-    o.material=new THREE.MeshToonMaterial({color:c,map:old?.map||null});
+    o.material=new THREE.MeshToonMaterial({color:c,map:keepMap?(old?.map||null):null});
   });
 }
 function exact(clips,name){return clips.find(c=>c.name===name)||null;}
 function makeActor(source,animations,color){
-  const root=SkeletonUtils.clone(source); toonify(root,color);
-  scene.add(root);
-  return {root,mixer:new THREE.AnimationMixer(root),animations,current:null};
+  const rig=SkeletonUtils.clone(source);
+  toonify(rig,color,false);
+  const world=new THREE.Group();
+  world.add(rig); scene.add(world);
+  return {rig,world,mixer:new THREE.AnimationMixer(rig),animations,current:null};
 }
 function applyAt(actor,clip,time,loop=true){
   if(!clip) return;
@@ -51,43 +52,42 @@ function applyAt(actor,clip,time,loop=true){
   a.clampWhenFinished=!loop; a.play(); a.paused=true;
   a.time=loop?((time%clip.duration)+clip.duration)%clip.duration:Math.min(Math.max(time,0),Math.max(clip.duration-1/120,0));
   actor.mixer.update(0);
+  actor.world.updateMatrixWorld(true);
+}
+function groundActor(actor,y=0){
+  actor.world.updateMatrixWorld(true);
+  const b=new THREE.Box3().setFromObject(actor.world);
+  actor.world.position.y += y-b.min.y;
+  actor.world.updateMatrixWorld(true);
+  return new THREE.Box3().setFromObject(actor.world);
 }
 function boneLike(root,patterns){
   const bones=[]; root.traverse(o=>{if(o.isBone)bones.push(o)});
   for(const re of patterns){const hit=bones.find(b=>re.test(b.name)); if(hit)return hit;}
   return bones.find(b=>/hand/i.test(b.name))||null;
 }
-function fitHorizontal(obj,target){
-  obj.updateMatrixWorld(true);
-  let b=new THREE.Box3().setFromObject(obj),s=b.getSize(new THREE.Vector3());
-  const scale=target/Math.max(s.x,s.z);
-  obj.scale.multiplyScalar(scale); obj.updateMatrixWorld(true);
-  return new THREE.Box3().setFromObject(obj);
+function box(obj){obj.updateMatrixWorld(true);return new THREE.Box3().setFromObject(obj);}
+function sizeOf(obj){return box(obj).getSize(new THREE.Vector3());}
+function fitHeight(obj,targetHeight){
+  const s=sizeOf(obj); const scale=targetHeight/Math.max(s.y,1e-6);
+  obj.scale.multiplyScalar(scale); obj.updateMatrixWorld(true); return box(obj);
 }
-function groundAt(obj,y=0){
-  obj.updateMatrixWorld(true);
-  const b=new THREE.Box3().setFromObject(obj);
-  obj.position.y += y-b.min.y; obj.updateMatrixWorld(true);
-  return new THREE.Box3().setFromObject(obj);
+function groundObject(obj,y=0){
+  const b=box(obj); obj.position.y+=y-b.min.y; obj.updateMatrixWorld(true); return box(obj);
 }
 function centerXZ(obj,x,z){
-  obj.updateMatrixWorld(true);
-  const b=new THREE.Box3().setFromObject(obj),c=b.getCenter(new THREE.Vector3());
+  const b=box(obj),c=b.getCenter(new THREE.Vector3());
   obj.position.x+=x-c.x; obj.position.z+=z-c.z; obj.updateMatrixWorld(true);
 }
 function pulse(x,c,w){const d=(x-c)/w;return Math.exp(-d*d*4.5);}
 
-// Historical background plate.
+// Historical far plate: high information, no need to model the whole lab.
 const bg=await new THREE.TextureLoader().loadAsync('/assets/lab_background.jpg');
 bg.colorSpace=THREE.SRGBColorSpace;
 scene.background=bg;
-scene.backgroundIntensity=0.38;
+scene.backgroundIntensity=0.40;
 
-// Floor is interaction support only.
-const floor=new THREE.Mesh(new THREE.PlaneGeometry(14,10),new THREE.MeshToonMaterial({color:0x39342c}));
-floor.rotation.x=-Math.PI/2; floor.receiveShadow=true; scene.add(floor);
-
-// Ready actors.
+// Ready humanoid + exact runtime clips.
 const human=await loader.loadAsync('/assets/human_male.glb');
 const clips=human.animations;
 const C={
@@ -99,120 +99,155 @@ const C={
 };
 for(const [k,v] of Object.entries(C)) if(!v) throw new Error('Missing exact ready clip '+k);
 
-const victor=makeActor(human.scene,clips,0x3d3328);
-victor.root.position.set(-2.15,0,0.35); victor.root.rotation.y=-Math.PI/2;
+const victor=makeActor(human.scene,clips,0x44372b);
+applyAt(victor,C.idle,0,true);
+victor.world.position.set(0,0,0);
+let vb=groundActor(victor,0);
+const actorH=vb.getSize(new THREE.Vector3()).y;
+if(!Number.isFinite(actorH)||actorH<=0) throw new Error('Invalid actor height');
 
-const creature=makeActor(human.scene,clips,0xc4b99a);
-creature.root.scale.set(1.04,1.12,1.04);
+// Contact geometry is sized from actor height, not arbitrary asset units.
+const floor=new THREE.Mesh(new THREE.PlaneGeometry(actorH*7,actorH*5),new THREE.MeshToonMaterial({color:0x373129}));
+floor.rotation.x=-Math.PI/2; floor.receiveShadow=true; scene.add(floor);
 
-// Ready table/slab.
 const tableGltf=await loader.loadAsync('/assets/table.glb');
-const table=tableGltf.scene; toonify(table,0x4f3524); scene.add(table);
-fitHorizontal(table,3.35); groundAt(table,0); centerXZ(table,0.65,-0.05);
-const tableBox=new THREE.Box3().setFromObject(table);
+const table=tableGltf.scene; toonify(table,0x563923,true); scene.add(table);
+fitHeight(table,actorH*0.43); groundObject(table,0);
+centerXZ(table,actorH*0.42,0);
+const tableBox=box(table),tableSize=tableBox.getSize(new THREE.Vector3()),tableCenter=tableBox.getCenter(new THREE.Vector3());
 const tableTop=tableBox.max.y;
-const tableCenter=tableBox.getCenter(new THREE.Vector3());
 
-// Creature lies on the real table. Underlying actor remains fully rigged.
-creature.root.rotation.z=Math.PI/2;
-creature.root.rotation.y=0.12;
-creature.root.updateMatrixWorld(true);
-let cb=new THREE.Box3().setFromObject(creature.root),cc=cb.getCenter(new THREE.Vector3());
-creature.root.position.x+=tableCenter.x-cc.x+0.15;
-creature.root.position.z+=tableCenter.z-cc.z;
-creature.root.position.y+=tableTop+0.06-cb.min.y;
-creature.root.updateMatrixWorld(true);
+// Victor world transform sits outside the animated rig, so clips cannot move the actor's world frame.
+const victorContactRoot=new THREE.Vector3(tableBox.min.x-actorH*0.42,0,tableCenter.z+actorH*0.16);
+victor.world.position.copy(victorContactRoot);
+victor.world.rotation.y=-Math.PI/2;
+groundActor(victor,0);
 
-// Victor's final approach position.
-const victorContactRoot=new THREE.Vector3(-1.05,0,0.38);
-victor.root.position.copy(victorContactRoot);
-
-// Find actual right hand and sample the ready Interact clip to discover its natural reach.
-const rightHand=boneLike(victor.root,[
+const rightHand=boneLike(victor.rig,[
   /RightHand/i,/Hand[_\. -]?R/i,/R[_\. -]?Hand/i,/hand\.r/i,/mixamorig.*right.*hand/i
 ]);
 if(!rightHand) throw new Error('No hand bone found in ready rig');
 
-let best={dist:-1,time:0,pos:new THREE.Vector3()};
-const rootWorld=new THREE.Vector3();
-for(let i=0;i<=60;i++){
-  const t=C.interact.duration*i/60;
+// Sample grounded Interact poses and select maximum horizontal natural reach.
+let best={reach:-1,time:0,pos:new THREE.Vector3()};
+for(let i=0;i<=72;i++){
+  const t=C.interact.duration*i/72;
+  victor.world.position.copy(victorContactRoot); victor.world.position.y=0; victor.world.rotation.y=-Math.PI/2;
   applyAt(victor,C.interact,t,false);
-  victor.root.updateMatrixWorld(true);
+  groundActor(victor,0);
   const hp=new THREE.Vector3(); rightHand.getWorldPosition(hp);
-  victor.root.getWorldPosition(rootWorld);
-  const d=hp.distanceTo(rootWorld);
-  if(d>best.dist){best={dist:d,time:t,pos:hp.clone()};}
+  const wp=new THREE.Vector3(); victor.world.getWorldPosition(wp);
+  const reach=Math.hypot(hp.x-wp.x,hp.z-wp.z);
+  if(reach>best.reach) best={reach,time:t,pos:hp.clone()};
 }
 
-// Ready lever fitted to the real hand path rather than hand-keyframing.
+// Ready lever: scale vertically so its top is at the sampled hand contact height.
 const leverGltf=await loader.loadAsync('/assets/lever.glb');
-const lever=leverGltf.scene; toonify(lever,0x8b6b38);
-const leverPivot=new THREE.Group(); scene.add(leverPivot); leverPivot.add(lever);
-fitHorizontal(lever,0.52);
-groundAt(lever,0);
-lever.updateMatrixWorld(true);
-let lb=new THREE.Box3().setFromObject(lever),ls=lb.getSize(new THREE.Vector3()),lc=lb.getCenter(new THREE.Vector3());
+const lever=leverGltf.scene; toonify(lever,0x9a7440,true);
+const leverPivot=new THREE.Group(); leverPivot.add(lever); scene.add(leverPivot);
+const desiredLeverH=THREE.MathUtils.clamp(best.pos.y-tableTop,actorH*0.13,actorH*0.38);
+fitHeight(lever,desiredLeverH); groundObject(lever,0);
+let lb=box(lever),lc=lb.getCenter(new THREE.Vector3());
 lever.position.x-=lc.x; lever.position.z-=lc.z; lever.position.y-=lb.min.y;
 leverPivot.position.set(best.pos.x,tableTop,best.pos.z);
 leverPivot.rotation.y=-0.25;
 contactLight.position.set(best.pos.x,best.pos.y,best.pos.z);
 
-// Reset actors before render timeline.
+// Creature: same real skeleton, role-specific color/proportions, normalized to the ready table.
+const creature=makeActor(human.scene,clips,0xc9c0a2);
+applyAt(creature,C.idle,0,true);
+const longAxisX=tableSize.x>=tableSize.z;
+creature.world.rotation.z=longAxisX?Math.PI/2:0;
+creature.world.rotation.x=longAxisX?0:Math.PI/2;
+creature.world.scale.set(1,1.08,1);
+creature.world.updateMatrixWorld(true);
+let cb=box(creature.world),cs=cb.getSize(new THREE.Vector3());
+const bodyLong=Math.max(cs.x,cs.z);
+const tableLong=Math.max(tableSize.x,tableSize.z);
+const fit=THREE.MathUtils.clamp((tableLong*0.86)/Math.max(bodyLong,1e-6),0.55,1.15);
+creature.world.scale.multiplyScalar(fit);
+creature.world.updateMatrixWorld(true);
+cb=box(creature.world); let cc=cb.getCenter(new THREE.Vector3());
+creature.world.position.x+=tableCenter.x-cc.x;
+creature.world.position.z+=tableCenter.z-cc.z;
+creature.world.position.y+=tableTop+actorH*0.018-cb.min.y;
+creature.world.updateMatrixWorld(true);
+const creatureBaseY=creature.world.position.y;
+
+// Scene framing derived from measured human scale.
+const focus=new THREE.Vector3(
+  (victorContactRoot.x+tableCenter.x)*0.5,
+  actorH*0.62,
+  tableCenter.z
+);
+camera.position.set(focus.x+actorH*2.0,actorH*1.38,focus.z+actorH*2.75);
+camera.lookAt(focus);
+
+// Reset actions after setup sampling.
 victor.mixer.stopAllAction(); victor.current=null;
 creature.mixer.stopAllAction(); creature.current=null;
 
-const INTERACT_START=2.35, INTERACT_END=4.75;
+const INTERACT_START=2.25, INTERACT_END=4.65;
 const CONTACT=INTERACT_START+(best.time/C.interact.duration)*(INTERACT_END-INTERACT_START);
 const CREATURE_REACT_START=CONTACT+0.06;
-const VICTOR_RECOIL_START=Math.max(CONTACT+0.32,4.3);
-const RETREAT_START=6.25;
+const VICTOR_RECOIL_START=Math.max(CONTACT+0.33,4.25);
+const RETREAT_START=6.10;
+const victorStartX=victorContactRoot.x-actorH*0.95;
+const victorRetreatX=victorContactRoot.x-actorH*0.92;
+
+function placeVictorWorld(x,rotY){
+  victor.world.position.set(x,0,victorContactRoot.z);
+  victor.world.rotation.set(0,rotY,0);
+  groundActor(victor,0);
+}
+function lockCreatureToTable(){
+  // Preserve deliberate lying orientation/scale; only correct vertical penetration caused by the ready clip.
+  creature.world.position.y=creatureBaseY;
+  creature.world.updateMatrixWorld(true);
+  const b=box(creature.world);
+  creature.world.position.y+=tableTop+actorH*0.018-b.min.y;
+  creature.world.updateMatrixWorld(true);
+}
 
 function setTime(t){
   const q=Math.max(0,Math.min(10.999,t));
 
-  // Victor.
   if(q<INTERACT_START){
     applyAt(victor,C.walk,q,true);
-    victor.root.rotation.y=-Math.PI/2;
-    victor.root.position.copy(victorContactRoot).add(new THREE.Vector3(THREE.MathUtils.lerp(-1.4,0,q/INTERACT_START),0,0));
+    placeVictorWorld(THREE.MathUtils.lerp(victorStartX,victorContactRoot.x,q/INTERACT_START),-Math.PI/2);
   } else if(q<VICTOR_RECOIL_START){
     const u=(q-INTERACT_START)/(INTERACT_END-INTERACT_START);
     applyAt(victor,C.interact,THREE.MathUtils.clamp(u,0,1)*C.interact.duration,false);
-    victor.root.rotation.y=-Math.PI/2; victor.root.position.copy(victorContactRoot);
+    placeVictorWorld(victorContactRoot.x,-Math.PI/2);
   } else if(q<RETREAT_START){
-    applyAt(victor,C.recoil,(q-VICTOR_RECOIL_START),false);
-    victor.root.position.copy(victorContactRoot);
-  } else if(q<9.3){
+    applyAt(victor,C.recoil,q-VICTOR_RECOIL_START,false);
+    placeVictorWorld(victorContactRoot.x,-Math.PI/2);
+  } else if(q<9.25){
     applyAt(victor,C.walk,q-RETREAT_START,true);
-    victor.root.rotation.y=Math.PI/2;
-    victor.root.position.copy(victorContactRoot).add(new THREE.Vector3(THREE.MathUtils.lerp(0,-1.55,(q-RETREAT_START)/(9.3-RETREAT_START)),0,0));
+    placeVictorWorld(THREE.MathUtils.lerp(victorContactRoot.x,victorRetreatX,(q-RETREAT_START)/(9.25-RETREAT_START)),Math.PI/2);
   } else {
-    applyAt(victor,C.idle,q-9.3,true);
-    victor.root.rotation.y=-Math.PI/2;
-    victor.root.position.copy(victorContactRoot).add(new THREE.Vector3(-1.55,0,0));
+    applyAt(victor,C.idle,q-9.25,true);
+    placeVictorWorld(victorRetreatX,-Math.PI/2);
   }
 
-  // Creature.
   if(q<CREATURE_REACT_START){
     applyAt(creature,C.idle,q,true);
-  } else if(q<CREATURE_REACT_START+1.0){
+  } else if(q<CREATURE_REACT_START+C.creatureReact.duration){
     applyAt(creature,C.creatureReact,q-CREATURE_REACT_START,false);
   } else {
-    applyAt(creature,C.idle,q-CREATURE_REACT_START-1.0,true);
+    applyAt(creature,C.idle,q-CREATURE_REACT_START-C.creatureReact.duration,true);
   }
+  lockCreatureToTable();
 
-  // Lever/lighting response is synchronized to discovered hand-contact time.
-  const press=THREE.MathUtils.smoothstep(q,CONTACT-0.12,CONTACT+0.18);
+  const press=THREE.MathUtils.smoothstep(q,CONTACT-0.10,CONTACT+0.20);
   leverPivot.rotation.z=-0.42*press;
   const flash=pulse(q,CONTACT+0.04,0.17);
-  contactLight.intensity=14*flash;
-  key.intensity=2.25+4.5*flash;
-  hemi.intensity=0.62+1.2*flash;
+  contactLight.intensity=12*flash;
+  key.intensity=2.4+3.8*flash;
+  hemi.intensity=0.66+0.9*flash;
 
-  // Camera is restrained; action must read without it.
-  camera.position.set(4.55+0.05*Math.sin(q*.5),2.32,6.15);
-  camera.lookAt(-0.05,1.02,0);
+  camera.position.x=focus.x+actorH*2.0+actorH*0.025*Math.sin(q*.45);
+  camera.lookAt(focus);
   effect.render(scene,camera);
 }
 
@@ -226,14 +261,21 @@ window.__chosenClips={
 };
 window.__storyMeta={
   experiment:'E-VID-007',
+  actor_height:actorH,
   right_hand_bone:rightHand.name,
   interact_duration:C.interact.duration,
   sampled_contact_time_in_clip:best.time,
   contact_global_seconds:CONTACT,
   contact_world:[best.pos.x,best.pos.y,best.pos.z],
+  max_horizontal_hand_reach:best.reach,
+  table_size:[tableSize.x,tableSize.y,tableSize.z],
   table_top_y:tableTop,
-  method:'ready clip + automatic prop-to-hand-path fitting; no custom keyframed hand animation'
+  lever_height:desiredLeverH,
+  world_transform_policy:'animated rig inside unanimated actor wrapper',
+  grounding_policy:'Victor ground-lock after each ready pose; Creature table-surface lock',
+  method:'ready clips + automatic prop-to-hand-path fitting; no custom-keyframed hand animation'
 };
+window.__contactAudit=window.__storyMeta;
 window.__setTime=setTime;
 setTime(0);
 window.__ready=true;
