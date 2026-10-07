@@ -1,0 +1,1436 @@
+{
+  "version": "5.3",
+  "renderer_sha256": "597a4abb9465f058bc5fb23ced265ae6570596e03971bda7aad32f40b4cf52f9",
+  "manifest_sha256": "57ad87c6521970ac51413fbd7aa7b0ed148dcddb8ab4efa82a6199f45f9f3c07",
+  "items": [
+    {
+      "item_id": "paper_field",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "ingolstadt_storm",
+      "frame": 45,
+      "time_seconds": 1.875,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 720,
+        "pixels": 921600
+      },
+      "isolated_file": "paper_field-isolated.png",
+      "context_file": "paper_field-context.png",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "ink_speck_grain",
+      "importance": "SUPPORT",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "ingolstadt_storm",
+      "frame": 45,
+      "time_seconds": 1.875,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 720,
+        "pixels": 1190
+      },
+      "isolated_file": "ink_speck_grain-isolated.png",
+      "context_file": "ink_speck_grain-context.png",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "vignette_value_structure",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "ingolstadt_storm",
+      "frame": 45,
+      "time_seconds": 1.875,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 720,
+        "pixels": 730418
+      },
+      "isolated_file": "vignette_value_structure-isolated.png",
+      "context_file": "vignette_value_structure-context.png",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "engraving_hatching",
+      "importance": "HERO",
+      "status": "CANDIDATES_COMPARED",
+      "active": true,
+      "approval": false,
+      "review_mode": "STYLE_CONTEXT",
+      "shot_id": "victor_at_door",
+      "start_frame": 202,
+      "end_frame": 285,
+      "files": [
+        "engraving_hatching-start.png",
+        "engraving_hatching-end.png"
+      ],
+      "limit": "Context/attribute inspection, not a separated pixel layer.",
+      "source_ids": [
+        "SRC-FR-001",
+        "SRC-FR-002"
+      ],
+      "remaining_risk": "Line density and contour variation still lack the complexity of period engraving."
+    },
+    {
+      "item_id": "living_engraving_palette",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "STYLE_CONTEXT",
+      "shot_id": "ingolstadt_storm",
+      "start_frame": 0,
+      "end_frame": 81,
+      "files": [
+        "living_engraving_palette-start.png",
+        "living_engraving_palette-end.png"
+      ],
+      "limit": "Context/attribute inspection, not a separated pixel layer.",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "ingolstadt_roofline",
+      "importance": "HERO",
+      "status": "CANDIDATES_COMPARED",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "ingolstadt_storm",
+      "frame": 45,
+      "time_seconds": 1.875,
+      "bounds": {
+        "x": 0,
+        "y": 180,
+        "w": 1280,
+        "h": 293,
+        "pixels": 202055
+      },
+      "isolated_file": "ingolstadt_roofline-isolated.png",
+      "context_file": "ingolstadt_roofline-context.png",
+      "source_ids": [
+        "SRC-FR-012",
+        "SRC-FR-010",
+        "SRC-FR-011"
+      ],
+      "remaining_risk": "Backdrop loses independent building depth; lab position is invented; city scale/night grading require further approval."
+    },
+    {
+      "item_id": "laboratory_exterior_building",
+      "importance": "HERO",
+      "status": "CANDIDATES_COMPARED",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "ingolstadt_storm",
+      "frame": 45,
+      "time_seconds": 1.875,
+      "bounds": {
+        "x": 919,
+        "y": 298,
+        "w": 361,
+        "h": 422,
+        "pixels": 127855
+      },
+      "isolated_file": "laboratory_exterior_building-isolated.png",
+      "context_file": "laboratory_exterior_building-context.png",
+      "source_ids": [
+        "SRC-FR-012",
+        "SRC-FR-010",
+        "SRC-FR-011"
+      ],
+      "remaining_risk": "Exact exterior is not specified in the novel; must not be presented as a surveyed historical building."
+    },
+    {
+      "item_id": "gothic_laboratory_window",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "ingolstadt_storm",
+      "frame": 45,
+      "time_seconds": 1.875,
+      "bounds": {
+        "x": 1089,
+        "y": 407,
+        "w": 59,
+        "h": 98,
+        "pixels": 2345
+      },
+      "isolated_file": "gothic_laboratory_window-isolated.png",
+      "context_file": "gothic_laboratory_window-context.png",
+      "source_ids": [
+        "SRC-FR-012",
+        "SRC-FR-001",
+        "SRC-FR-010"
+      ],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "city_window_pattern",
+      "importance": "SUPPORT",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "INTEGRATED_SOURCE_DETAIL",
+      "shot_id": "ingolstadt_storm",
+      "start_frame": 0,
+      "end_frame": 81,
+      "files": [
+        "city_window_pattern-start.png",
+        "city_window_pattern-end.png"
+      ],
+      "limit": "Context/attribute inspection, not a separated pixel layer.",
+      "source_ids": [
+        "SRC-FR-010"
+      ],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "storm_sky",
+      "importance": "SUPPORT",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "ingolstadt_storm",
+      "frame": 45,
+      "time_seconds": 1.875,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 720,
+        "pixels": 921600
+      },
+      "isolated_file": "storm_sky-isolated.png",
+      "context_file": "storm_sky-context.png",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "rain_field",
+      "importance": "SUPPORT",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "ingolstadt_storm",
+      "frame": 45,
+      "time_seconds": 1.875,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 720,
+        "pixels": 6329
+      },
+      "isolated_file": "rain_field-isolated.png",
+      "context_file": "rain_field-context.png",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "exterior_lightning",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "ingolstadt_storm",
+      "frame": 25,
+      "time_seconds": 1.0416666666666667,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 720,
+        "pixels": 921600
+      },
+      "isolated_file": "exterior_lightning-isolated.png",
+      "context_file": "exterior_lightning-context.png",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "exterior_camera_push",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "MOTION_SEQUENCE",
+      "shot_id": "ingolstadt_storm",
+      "start_frame": 0,
+      "end_frame": 81,
+      "files": [
+        "exterior_camera_push-start.png",
+        "exterior_camera_push-end.png"
+      ],
+      "limit": "Context/attribute inspection, not a separated pixel layer.",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "creation_chamber_composition",
+      "importance": "HERO",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "COMPOSITION_CONTEXT",
+      "shot_id": "creation_chamber",
+      "start_frame": 82,
+      "end_frame": 201,
+      "files": [
+        "creation_chamber_composition-start.png",
+        "creation_chamber_composition-end.png"
+      ],
+      "limit": "Context/attribute inspection, not a separated pixel layer.",
+      "source_ids": [
+        "SRC-FR-012",
+        "SRC-FR-001",
+        "SRC-FR-002"
+      ],
+      "remaining_risk": "Parent composition cannot override failed child Items."
+    },
+    {
+      "item_id": "creation_chamber_architecture",
+      "importance": "HERO",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 502,
+        "pixels": 625268
+      },
+      "isolated_file": "creation_chamber_architecture-isolated.png",
+      "context_file": "creation_chamber_architecture-context.png",
+      "source_ids": [
+        "SRC-FR-001",
+        "SRC-FR-011"
+      ],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "timber_wall_beams",
+      "importance": "SUPPORT",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 503,
+        "pixels": 39145
+      },
+      "isolated_file": "timber_wall_beams-isolated.png",
+      "context_file": "timber_wall_beams-context.png",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "laboratory_floor",
+      "importance": "SUPPORT",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 0,
+        "y": 457,
+        "w": 1280,
+        "h": 263,
+        "pixels": 294499
+      },
+      "isolated_file": "laboratory_floor-isolated.png",
+      "context_file": "laboratory_floor-context.png",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "laboratory_door",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 962,
+        "y": 63,
+        "w": 270,
+        "h": 509,
+        "pixels": 97583
+      },
+      "isolated_file": "laboratory_door-isolated.png",
+      "context_file": "laboratory_door-context.png",
+      "source_ids": [
+        "SRC-FR-001"
+      ],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "laboratory_shelves_papers",
+      "importance": "SUPPORT",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 543,
+        "y": 43,
+        "w": 315,
+        "h": 85,
+        "pixels": 9403
+      },
+      "isolated_file": "laboratory_shelves_papers-isolated.png",
+      "context_file": "laboratory_shelves_papers-context.png",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "creation_bed_slab",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 85,
+        "y": 439,
+        "w": 715,
+        "h": 196,
+        "pixels": 79510
+      },
+      "isolated_file": "creation_bed_slab-isolated.png",
+      "context_file": "creation_bed_slab-context.png",
+      "source_ids": [
+        "SRC-FR-001"
+      ],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "creature_drapery",
+      "importance": "HERO",
+      "status": "CANDIDATES_COMPARED",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 225,
+        "y": 425,
+        "w": 342,
+        "h": 136,
+        "pixels": 23918
+      },
+      "isolated_file": "creature_drapery-isolated.png",
+      "context_file": "creature_drapery-context.png",
+      "source_ids": [
+        "SRC-FR-001",
+        "SRC-FR-002"
+      ],
+      "remaining_risk": "Fold mechanics and concealed body anatomy still unresolved."
+    },
+    {
+      "item_id": "open_folio",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 217,
+        "y": 600,
+        "w": 196,
+        "h": 93,
+        "pixels": 8673
+      },
+      "isolated_file": "open_folio-isolated.png",
+      "context_file": "open_folio-context.png",
+      "source_ids": [
+        "SRC-FR-001"
+      ],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "skull_foreground",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 426,
+        "y": 591,
+        "w": 70,
+        "h": 78,
+        "pixels": 1842
+      },
+      "isolated_file": "skull_foreground-isolated.png",
+      "context_file": "skull_foreground-context.png",
+      "source_ids": [
+        "SRC-FR-001"
+      ],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "foreground_copper_cable",
+      "importance": "SUPPORT",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 0,
+        "y": 633,
+        "w": 1280,
+        "h": 66,
+        "pixels": 3492
+      },
+      "isolated_file": "foreground_copper_cable-isolated.png",
+      "context_file": "foreground_copper_cable-context.png",
+      "source_ids": [
+        "SRC-FR-004",
+        "SRC-FR-006"
+      ],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "victor_silhouette",
+      "importance": "HERO",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "COMPOSITION_CONTEXT",
+      "shot_id": "creation_chamber",
+      "start_frame": 82,
+      "end_frame": 201,
+      "files": [
+        "victor_silhouette-start.png",
+        "victor_silhouette-end.png"
+      ],
+      "limit": "Context/attribute inspection, not a separated pixel layer.",
+      "source_ids": [
+        "SRC-FR-001",
+        "SRC-FR-007",
+        "SRC-FR-008",
+        "SRC-FR-009"
+      ],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "victor_head_profile",
+      "importance": "HERO",
+      "status": "CANDIDATES_COMPARED",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "victor_at_door",
+      "frame": 248,
+      "time_seconds": 10.333333333333334,
+      "bounds": {
+        "x": 570,
+        "y": 121,
+        "w": 357,
+        "h": 509,
+        "pixels": 112153
+      },
+      "isolated_file": "victor_head_profile-isolated.png",
+      "context_file": "victor_head_profile-context.png",
+      "source_ids": [
+        "SRC-FR-001"
+      ],
+      "remaining_risk": "Drawing remains simplified; requires a better anatomy reference and independent shot review."
+    },
+    {
+      "item_id": "victor_hair",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "victor_at_door",
+      "frame": 248,
+      "time_seconds": 10.333333333333334,
+      "bounds": {
+        "x": 542,
+        "y": 79,
+        "w": 348,
+        "h": 452,
+        "pixels": 67669
+      },
+      "isolated_file": "victor_hair-isolated.png",
+      "context_file": "victor_hair-context.png",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "victor_coat",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 1046,
+        "y": 253,
+        "w": 121,
+        "h": 239,
+        "pixels": 14331
+      },
+      "isolated_file": "victor_coat-isolated.png",
+      "context_file": "victor_coat-context.png",
+      "source_ids": [
+        "SRC-FR-007",
+        "SRC-FR-008",
+        "SRC-FR-009"
+      ],
+      "remaining_risk": "Costume date contract still unresolved."
+    },
+    {
+      "item_id": "victor_collar_cravat",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 1072,
+        "y": 247,
+        "w": 55,
+        "h": 61,
+        "pixels": 622
+      },
+      "isolated_file": "victor_collar_cravat-isolated.png",
+      "context_file": "victor_collar_cravat-context.png",
+      "source_ids": [
+        "SRC-FR-007",
+        "SRC-FR-008",
+        "SRC-FR-009"
+      ],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "victor_hand",
+      "importance": "HERO",
+      "status": "CANDIDATES_COMPARED",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "victor_at_door",
+      "frame": 248,
+      "time_seconds": 10.333333333333334,
+      "bounds": {
+        "x": 316,
+        "y": 442,
+        "w": 80,
+        "h": 99,
+        "pixels": 2579
+      },
+      "isolated_file": "victor_hand-isolated.png",
+      "context_file": "victor_hand-context.png",
+      "source_ids": [
+        "SRC-FR-001"
+      ],
+      "remaining_risk": "Contact grip and foreshortening still provisional; no certified anatomical fit."
+    },
+    {
+      "item_id": "victor_recoil_pose",
+      "importance": "HERO",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "MOTION_SEQUENCE",
+      "shot_id": "recoil_tableau",
+      "start_frame": 478,
+      "end_frame": 575,
+      "files": [
+        "victor_recoil_pose-start.png",
+        "victor_recoil_pose-end.png"
+      ],
+      "limit": "Context/attribute inspection, not a separated pixel layer.",
+      "source_ids": [
+        "SRC-FR-012",
+        "SRC-FR-001"
+      ],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "creature_body_proportions",
+      "importance": "HERO",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 177,
+        "y": 433,
+        "w": 540,
+        "h": 165,
+        "pixels": 22222
+      },
+      "isolated_file": "creature_body_proportions-isolated.png",
+      "context_file": "creature_body_proportions-context.png",
+      "source_ids": [
+        "SRC-FR-012",
+        "SRC-FR-001"
+      ],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "creature_head_shape",
+      "importance": "HERO",
+      "status": "CANDIDATES_COMPARED",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "first_eye",
+      "frame": 434,
+      "time_seconds": 18.083333333333332,
+      "bounds": {
+        "x": 529,
+        "y": 33,
+        "w": 507,
+        "h": 687,
+        "pixels": 231713
+      },
+      "isolated_file": "creature_head_shape-isolated.png",
+      "context_file": "creature_head_shape-context.png",
+      "source_ids": [
+        "SRC-FR-012",
+        "SRC-FR-001"
+      ],
+      "remaining_risk": "Hero illustration is still too schematic for final."
+    },
+    {
+      "item_id": "creature_hair",
+      "importance": "PRIMARY",
+      "status": "CANDIDATES_COMPARED",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "first_eye",
+      "frame": 434,
+      "time_seconds": 18.083333333333332,
+      "bounds": {
+        "x": 484,
+        "y": 0,
+        "w": 489,
+        "h": 720,
+        "pixels": 180567
+      },
+      "isolated_file": "creature_hair-isolated.png",
+      "context_file": "creature_hair-context.png",
+      "source_ids": [
+        "SRC-FR-012",
+        "SRC-FR-001"
+      ],
+      "remaining_risk": "Strands still read too regular; density and temporal consistency need higher-quality art."
+    },
+    {
+      "item_id": "creature_eye",
+      "importance": "HERO",
+      "status": "CANDIDATES_COMPARED",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "first_eye",
+      "frame": 434,
+      "time_seconds": 18.083333333333332,
+      "bounds": {
+        "x": 799,
+        "y": 232,
+        "w": 174,
+        "h": 107,
+        "pixels": 5550
+      },
+      "isolated_file": "creature_eye-isolated.png",
+      "context_file": "creature_eye-context.png",
+      "source_ids": [
+        "SRC-FR-012",
+        "SRC-FR-001"
+      ],
+      "remaining_risk": "No biological/anatomical reference yet; opening timing and wet highlight remain an artistic hypothesis."
+    },
+    {
+      "item_id": "creature_rise_motion",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "MOTION_SEQUENCE",
+      "shot_id": "recoil_tableau",
+      "start_frame": 478,
+      "end_frame": 575,
+      "files": [
+        "creature_rise_motion-start.png",
+        "creature_rise_motion-end.png"
+      ],
+      "limit": "Context/attribute inspection, not a separated pixel layer.",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "voltaic_pile",
+      "importance": "PRIMARY",
+      "status": "CANDIDATES_COMPARED",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 87,
+        "y": 322,
+        "w": 94,
+        "h": 199,
+        "pixels": 8171
+      },
+      "isolated_file": "voltaic_pile-isolated.png",
+      "context_file": "voltaic_pile-context.png",
+      "source_ids": [
+        "SRC-FR-004",
+        "SRC-FR-006"
+      ],
+      "remaining_risk": "1801–1805 reference is later than the novel’s implied eighteenth-century setting; explicitly interpretive, not exact apparatus."
+    },
+    {
+      "item_id": "leyden_jar_primary",
+      "importance": "PRIMARY",
+      "status": "CANDIDATES_COMPARED",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 552,
+        "y": 327,
+        "w": 82,
+        "h": 174,
+        "pixels": 6205
+      },
+      "isolated_file": "leyden_jar_primary-isolated.png",
+      "context_file": "leyden_jar_primary-context.png",
+      "source_ids": [
+        "SRC-FR-004",
+        "SRC-FR-005"
+      ],
+      "remaining_risk": "Inside foil/contact connection and the circuit need further engineering review."
+    },
+    {
+      "item_id": "leyden_jar_secondary",
+      "importance": "SUPPORT",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "galvanic_contact",
+      "frame": 338,
+      "time_seconds": 14.083333333333334,
+      "bounds": {
+        "x": 1067,
+        "y": 365,
+        "w": 86,
+        "h": 185,
+        "pixels": 7138
+      },
+      "isolated_file": "leyden_jar_secondary-isolated.png",
+      "context_file": "leyden_jar_secondary-context.png",
+      "source_ids": [
+        "SRC-FR-004",
+        "SRC-FR-005"
+      ],
+      "remaining_risk": "Final geometry and shot fit still unapproved."
+    },
+    {
+      "item_id": "brass_contact",
+      "importance": "HERO",
+      "status": "CANDIDATES_COMPARED",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "galvanic_contact",
+      "frame": 338,
+      "time_seconds": 14.083333333333334,
+      "bounds": {
+        "x": 491,
+        "y": 448,
+        "w": 296,
+        "h": 111,
+        "pixels": 10459
+      },
+      "isolated_file": "brass_contact-isolated.png",
+      "context_file": "brass_contact-context.png",
+      "source_ids": [
+        "SRC-FR-004",
+        "SRC-FR-006"
+      ],
+      "remaining_risk": "A pile does not justify a large free-air arc; spark is an explicit cinematic invention, not validated electrical behavior."
+    },
+    {
+      "item_id": "copper_wire_network",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 121,
+        "y": 325,
+        "w": 485,
+        "h": 194,
+        "pixels": 1582
+      },
+      "isolated_file": "copper_wire_network-isolated.png",
+      "context_file": "copper_wire_network-context.png",
+      "source_ids": [
+        "SRC-FR-004",
+        "SRC-FR-006"
+      ],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "electric_arc",
+      "importance": "PRIMARY",
+      "status": "CANDIDATES_COMPARED",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "galvanic_contact",
+      "frame": 318,
+      "time_seconds": 13.25,
+      "bounds": {
+        "x": 667,
+        "y": 442,
+        "w": 73,
+        "h": 75,
+        "pixels": 1856
+      },
+      "isolated_file": "electric_arc-isolated.png",
+      "context_file": "electric_arc-context.png",
+      "source_ids": [
+        "SRC-FR-004",
+        "SRC-FR-006"
+      ],
+      "remaining_risk": "Not historically or physically certified. Compare removing this effect altogether."
+    },
+    {
+      "item_id": "anatomy_pages",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 622,
+        "y": 137,
+        "w": 198,
+        "h": 132,
+        "pixels": 17774
+      },
+      "isolated_file": "anatomy_pages-isolated.png",
+      "context_file": "anatomy_pages-context.png",
+      "source_ids": [
+        "SRC-FR-004"
+      ],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "laboratory_fog",
+      "importance": "SUPPORT",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 0,
+        "y": 426,
+        "w": 1280,
+        "h": 210,
+        "pixels": 119106
+      },
+      "isolated_file": "laboratory_fog-isolated.png",
+      "context_file": "laboratory_fog-context.png",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "interior_lightning",
+      "importance": "PRIMARY",
+      "status": "REPLACED",
+      "active": false,
+      "approval": false,
+      "review_mode": "RETIRED",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "creation_camera_drift",
+      "importance": "SUPPORT",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "MOTION_SEQUENCE",
+      "shot_id": "creation_chamber",
+      "start_frame": 82,
+      "end_frame": 201,
+      "files": [
+        "creation_camera_drift-start.png",
+        "creation_camera_drift-end.png"
+      ],
+      "limit": "Context/attribute inspection, not a separated pixel layer.",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "victor_door_shadow",
+      "importance": "HERO",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "victor_at_door",
+      "frame": 248,
+      "time_seconds": 10.333333333333334,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 720,
+        "pixels": 921600
+      },
+      "isolated_file": "victor_door_shadow-isolated.png",
+      "context_file": "victor_door_shadow-context.png",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "first_eye_shadow_mask",
+      "importance": "HERO",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "COMPOSITION_CONTEXT",
+      "shot_id": "first_eye",
+      "start_frame": 382,
+      "end_frame": 477,
+      "files": [
+        "first_eye_shadow_mask-start.png",
+        "first_eye_shadow_mask-end.png"
+      ],
+      "limit": "Context/attribute inspection, not a separated pixel layer.",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "linen_closeup_edge",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "first_eye",
+      "frame": 434,
+      "time_seconds": 18.083333333333332,
+      "bounds": {
+        "x": 0,
+        "y": 598,
+        "w": 1280,
+        "h": 122,
+        "pixels": 97569
+      },
+      "isolated_file": "linen_closeup_edge-isolated.png",
+      "context_file": "linen_closeup_edge-context.png",
+      "source_ids": [
+        "SRC-FR-001"
+      ],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "lightning_cut",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "MOTION_SEQUENCE",
+      "shot_id": "ingolstadt_storm",
+      "start_frame": 0,
+      "end_frame": 81,
+      "files": [
+        "lightning_cut-start.png",
+        "lightning_cut-end.png"
+      ],
+      "limit": "Context/attribute inspection, not a separated pixel layer.",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "shadow_cut",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "MOTION_SEQUENCE",
+      "shot_id": "victor_at_door",
+      "start_frame": 202,
+      "end_frame": 285,
+      "files": [
+        "shadow_cut-start.png",
+        "shadow_cut-end.png"
+      ],
+      "limit": "Context/attribute inspection, not a separated pixel layer.",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "arc_match_cut",
+      "importance": "PRIMARY",
+      "status": "REPLACED",
+      "active": false,
+      "approval": false,
+      "review_mode": "RETIRED",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "title_frankenstein",
+      "importance": "PRIMARY",
+      "status": "CANDIDATES_COMPARED",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "recoil_tableau",
+      "frame": 561,
+      "time_seconds": 23.375,
+      "bounds": {
+        "x": 0,
+        "y": 519,
+        "w": 1280,
+        "h": 201,
+        "pixels": 241920
+      },
+      "isolated_file": "title_frankenstein-isolated.png",
+      "context_file": "title_frankenstein-context.png",
+      "source_ids": [
+        "SRC-FR-003",
+        "SRC-FR-014"
+      ],
+      "remaining_risk": "Modern revival; exact 1818 typography remains unresolved."
+    },
+    {
+      "item_id": "subtitle_modern_prometheus",
+      "importance": "SUPPORT",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "recoil_tableau",
+      "frame": 561,
+      "time_seconds": 23.375,
+      "bounds": {
+        "x": 496,
+        "y": 641,
+        "w": 288,
+        "h": 39,
+        "pixels": 1547
+      },
+      "isolated_file": "subtitle_modern_prometheus-isolated.png",
+      "context_file": "subtitle_modern_prometheus-context.png",
+      "source_ids": [
+        "SRC-FR-003"
+      ],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "audio_low_drone",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "AUDIO_STEM",
+      "file": "audio_low_drone.wav",
+      "listening_status": "NOT_FINAL_APPROVED",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "audio_noise_roomtone",
+      "importance": "SUPPORT",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "AUDIO_STEM",
+      "file": "audio_noise_roomtone.wav",
+      "listening_status": "NOT_FINAL_APPROVED",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "thunder_cues",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "AUDIO_STEM",
+      "file": "thunder_cues.wav",
+      "listening_status": "NOT_FINAL_APPROVED",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "footstep_cues",
+      "importance": "SUPPORT",
+      "status": "REPLACED",
+      "active": false,
+      "approval": false,
+      "review_mode": "RETIRED",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "electrical_crackle_audio",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "AUDIO_STEM",
+      "file": "electrical_crackle_audio.wav",
+      "listening_status": "NOT_FINAL_APPROVED",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "arc_hit_audio",
+      "importance": "PRIMARY",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "AUDIO_STEM",
+      "file": "arc_hit_audio.wav",
+      "listening_status": "NOT_FINAL_APPROVED",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "victor_breath",
+      "importance": "PRIMARY",
+      "status": "CANDIDATES_COMPARED",
+      "active": true,
+      "approval": false,
+      "review_mode": "AUDIO_STEM",
+      "file": "victor_breath.wav",
+      "listening_status": "NOT_FINAL_APPROVED",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "remaining_risk": "Synthetic stem requires listening and room/acoustic refinement."
+    },
+    {
+      "item_id": "creature_heartbeat",
+      "importance": "HERO",
+      "status": "NEEDS_REVALIDATION",
+      "active": true,
+      "approval": false,
+      "review_mode": "AUDIO_STEM",
+      "file": "creature_heartbeat.wav",
+      "listening_status": "NOT_FINAL_APPROVED",
+      "source_ids": [],
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "item_id": "candle_stub",
+      "importance": "PRIMARY",
+      "status": "CANDIDATES_COMPARED",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 781,
+        "y": 300,
+        "w": 96,
+        "h": 97,
+        "pixels": 1981
+      },
+      "isolated_file": "candle_stub-isolated.png",
+      "context_file": "candle_stub-context.png",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "remaining_risk": "Wax/holder geometry provisional."
+    },
+    {
+      "item_id": "candle_flame",
+      "importance": "PRIMARY",
+      "status": "CANDIDATES_COMPARED",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 810,
+        "y": 268,
+        "w": 37,
+        "h": 60,
+        "pixels": 303
+      },
+      "isolated_file": "candle_flame-isolated.png",
+      "context_file": "candle_flame-context.png",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "remaining_risk": "Need light/flame temporal coupling and extinction behavior."
+    },
+    {
+      "item_id": "candle_light_pool",
+      "importance": "PRIMARY",
+      "status": "CANDIDATES_COMPARED",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "w": 1280,
+        "h": 720,
+        "pixels": 910680
+      },
+      "isolated_file": "candle_light_pool-isolated.png",
+      "context_file": "candle_light_pool-context.png",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "remaining_risk": "Light projection and character shadow directions remain expressionistic."
+    },
+    {
+      "item_id": "creature_hand",
+      "importance": "HERO",
+      "status": "CANDIDATES_COMPARED",
+      "active": true,
+      "approval": false,
+      "review_mode": "ISOLATED_LAYER",
+      "shot_id": "creation_chamber",
+      "frame": 148,
+      "time_seconds": 6.166666666666667,
+      "bounds": {
+        "x": 163,
+        "y": 544,
+        "w": 60,
+        "h": 68,
+        "pixels": 975
+      },
+      "isolated_file": "creature_hand-isolated.png",
+      "context_file": "creature_hand-context.png",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "remaining_risk": "Proportions and gesture need anatomical reference beyond the prose."
+    },
+    {
+      "item_id": "rain_patter_audio",
+      "importance": "PRIMARY",
+      "status": "CANDIDATES_COMPARED",
+      "active": true,
+      "approval": false,
+      "review_mode": "AUDIO_STEM",
+      "file": "rain_patter_audio.wav",
+      "listening_status": "NOT_FINAL_APPROVED",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "remaining_risk": "Room filtering and exterior/interior perspective need further sound work."
+    }
+  ],
+  "final_approval": false,
+  "review_limit": "Generated diagnostics and implementation observations. No subjective final scores asserted."
+}

@@ -1,14 +1,13 @@
 {
   "schema_version": "1.0",
   "episode_id": "frankenstein-prototype",
-  "method_version": "5.3.0-dev",
-  "visual_baseline": "V5.1 complete; V5.3 active lookdev",
-  "generated_from": "V5.1 atomic audit",
-  "final_gate_note": "V5.1 is a prototype benchmark. Items are not grandfathered into final approval.",
+  "method_version": "5.4",
+  "visual_baseline": "V5.3 user-rejected; V5.4 repair experiment",
+  "generated_from": "User correction and renderer audit 2026-10-07",
+  "final_gate_note": "User-rejected art/style; mechanics diagnostics do not grant approval.",
   "counts": {
-    "items": 62,
-    "active_items": 55,
-    "inactive_historical_items": 7
+    "items": 67,
+    "active_items": 59
   },
   "items": [
     {
@@ -51,7 +50,7 @@
       "source_ids": [],
       "decision_id": "DEC-paper_field",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "ink_speck_grain",
@@ -93,7 +92,7 @@
       "source_ids": [],
       "decision_id": "DEC-ink_speck_grain",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "vignette_value_structure",
@@ -135,7 +134,7 @@
       "source_ids": [],
       "decision_id": "DEC-vignette_value_structure",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "engraving_hatching",
@@ -180,7 +179,7 @@
       ],
       "decision_id": "DEC-engraving_hatching",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "living_engraving_palette",
@@ -222,7 +221,7 @@
       "source_ids": [],
       "decision_id": "DEC-living_engraving_palette",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "ingolstadt_roofline",
@@ -260,15 +259,11 @@
       "source_ids": [
         "SRC-FR-012",
         "SRC-FR-010",
-        "SRC-FR-011",
-        "SRC-FR-017"
+        "SRC-FR-011"
       ],
-      "decision_id": "DEC-ingolstadt_roofline-v5_3",
+      "decision_id": "DEC-ingolstadt_roofline",
       "status": "NEEDS_REVALIDATION",
-      "source_obligation_ids": [
-        "OBL-FR-014"
-      ],
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "laboratory_exterior_building",
@@ -305,15 +300,11 @@
       "source_ids": [
         "SRC-FR-012",
         "SRC-FR-010",
-        "SRC-FR-011",
-        "SRC-FR-017"
+        "SRC-FR-011"
       ],
-      "decision_id": "DEC-laboratory_exterior_building-v5_3",
+      "decision_id": "DEC-laboratory_exterior_building",
       "status": "NEEDS_REVALIDATION",
-      "source_obligation_ids": [
-        "OBL-FR-014"
-      ],
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "gothic_laboratory_window",
@@ -356,10 +347,7 @@
       ],
       "decision_id": "DEC-gothic_laboratory_window",
       "status": "NEEDS_REVALIDATION",
-      "source_obligation_ids": [
-        "OBL-FR-003"
-      ],
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "city_window_pattern",
@@ -378,7 +366,7 @@
           "Architecture/materials/proportions must fit the story period and named location where applicable."
         ],
         "visual": [
-          "Strong readable silhouette; detail density matched to focal importance."
+          "Inspect the original city window detail in the selected 1800 plate; do not overlay cloned invented windows."
         ],
         "motion": [
           "Parallax/camera response must preserve architectural solidity."
@@ -398,7 +386,7 @@
       ],
       "decision_id": "DEC-city_window_pattern",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "storm_sky",
@@ -437,10 +425,7 @@
       ],
       "decision_id": "DEC-storm_sky",
       "status": "NEEDS_REVALIDATION",
-      "source_obligation_ids": [
-        "OBL-FR-001"
-      ],
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "rain_field",
@@ -480,10 +465,7 @@
       ],
       "decision_id": "DEC-rain_field",
       "status": "NEEDS_REVALIDATION",
-      "source_obligation_ids": [
-        "OBL-FR-003"
-      ],
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "exterior_lightning",
@@ -520,7 +502,7 @@
       "source_ids": [],
       "decision_id": "DEC-exterior_lightning",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "exterior_camera_push",
@@ -557,7 +539,7 @@
       "source_ids": [],
       "decision_id": "DEC-exterior_camera_push",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "creation_chamber_composition",
@@ -600,7 +582,7 @@
       ],
       "decision_id": "DEC-creation_chamber_composition",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "creation_chamber_architecture",
@@ -642,13 +624,17 @@
       ],
       "decision_id": "DEC-creation_chamber_architecture",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "timber_wall_beams",
       "category": "architecture_detail",
       "importance": "SUPPORT",
-      "shot_ids": [],
+      "shot_ids": [
+        "creation_chamber",
+        "victor_at_door",
+        "recoil_tableau"
+      ],
       "purpose": "Give the chamber construction weight and period texture without decorative patterning.",
       "checklist_profile": "architecture",
       "requirements": {
@@ -676,14 +662,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-timber_wall_beams",
-      "status": "INACTIVE_REPLACED_OR_REMOVED",
-      "active_in_current_cut": false,
-      "previous_shot_ids": [
-        "creation_chamber",
-        "victor_at_door",
-        "recoil_tableau"
-      ],
-      "inactive_reason": "Replaced by sparse stone/plaster chamber architecture in V5.3."
+      "status": "NEEDS_REVALIDATION",
+      "active": true
     },
     {
       "id": "laboratory_floor",
@@ -721,7 +701,7 @@
       "source_ids": [],
       "decision_id": "DEC-laboratory_floor",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "laboratory_door",
@@ -762,13 +742,17 @@
       ],
       "decision_id": "DEC-laboratory_door",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "laboratory_shelves_papers",
       "category": "support_prop_cluster",
       "importance": "SUPPORT",
-      "shot_ids": [],
+      "shot_ids": [
+        "creation_chamber",
+        "victor_at_door",
+        "recoil_tableau"
+      ],
       "purpose": "Suggest obsessive study without turning the room into generic clutter.",
       "checklist_profile": "prop",
       "requirements": {
@@ -796,13 +780,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-laboratory_shelves_papers",
-      "status": "INACTIVE_REPLACED_OR_REMOVED",
-      "active_in_current_cut": false,
-      "previous_shot_ids": [
-        "creation_chamber",
-        "victor_at_door"
-      ],
-      "inactive_reason": "Removed from current chamber because it read as low-detail filler beside upgraded HERO assets."
+      "status": "NEEDS_REVALIDATION",
+      "active": true
     },
     {
       "id": "creation_bed_slab",
@@ -810,6 +789,7 @@
       "importance": "PRIMARY",
       "shot_ids": [
         "creation_chamber",
+        "galvanic_contact",
         "recoil_tableau"
       ],
       "purpose": "Support the creature physically and compositionally with a plausible bespoke work surface/bed.",
@@ -842,7 +822,7 @@
       ],
       "decision_id": "DEC-creation_bed_slab",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "creature_drapery",
@@ -884,13 +864,16 @@
       ],
       "decision_id": "DEC-creature_drapery",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "open_folio",
       "category": "book_document",
       "importance": "PRIMARY",
-      "shot_ids": [],
+      "shot_ids": [
+        "creation_chamber",
+        "recoil_tableau"
+      ],
       "purpose": "Echo the canonical foreground book motif while remaining plausible in Victor's workspace.",
       "checklist_profile": "prop",
       "requirements": {
@@ -920,19 +903,17 @@
         "SRC-FR-001"
       ],
       "decision_id": "DEC-open_folio",
-      "status": "INACTIVE_REPLACED_OR_REMOVED",
-      "active_in_current_cut": false,
-      "previous_shot_ids": [
-        "creation_chamber",
-        "recoil_tableau"
-      ],
-      "inactive_reason": "Removed from current creation tableau; no longer needed to carry the composition."
+      "status": "NEEDS_REVALIDATION",
+      "active": true
     },
     {
       "id": "skull_foreground",
       "category": "anatomical_prop",
       "importance": "PRIMARY",
-      "shot_ids": [],
+      "shot_ids": [
+        "creation_chamber",
+        "recoil_tableau"
+      ],
       "purpose": "Provide a death/creation motif and depth cue without becoming Halloween iconography.",
       "checklist_profile": "prop",
       "requirements": {
@@ -962,13 +943,8 @@
         "SRC-FR-001"
       ],
       "decision_id": "DEC-skull_foreground",
-      "status": "INACTIVE_REPLACED_OR_REMOVED",
-      "active_in_current_cut": false,
-      "previous_shot_ids": [
-        "creation_chamber",
-        "recoil_tableau"
-      ],
-      "inactive_reason": "Removed from current creation tableau because the generic foreground prop lowered the detail hierarchy."
+      "status": "NEEDS_REVALIDATION",
+      "active": true
     },
     {
       "id": "foreground_copper_cable",
@@ -1009,8 +985,9 @@
         "SRC-FR-006"
       ],
       "decision_id": "DEC-foreground_copper_cable",
-      "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "status": "REPLACED",
+      "active": false,
+      "retirement_reason": "Disconnected decorative cable removed."
     },
     {
       "id": "victor_silhouette",
@@ -1054,13 +1031,17 @@
       ],
       "decision_id": "DEC-victor_silhouette",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "victor_head_profile",
       "category": "face_head",
       "importance": "HERO",
-      "shot_ids": [],
+      "shot_ids": [
+        "victor_at_door",
+        "recoil_tableau",
+        "creation_chamber"
+      ],
       "purpose": "Show fear/revulsion with a period-authored partial profile rather than avatar facial geometry.",
       "checklist_profile": "character",
       "requirements": {
@@ -1090,13 +1071,8 @@
         "SRC-FR-001"
       ],
       "decision_id": "DEC-victor_head_profile",
-      "status": "INACTIVE_REPLACED_OR_REMOVED",
-      "active_in_current_cut": false,
-      "previous_shot_ids": [
-        "victor_at_door",
-        "recoil_tableau"
-      ],
-      "inactive_reason": "Dedicated portrait/close-up use removed from current cut. Current Victor asset is approved only for medium/full-body recoil framing."
+      "status": "NEEDS_REVALIDATION",
+      "active": true
     },
     {
       "id": "victor_hair",
@@ -1104,7 +1080,8 @@
       "importance": "PRIMARY",
       "shot_ids": [
         "victor_at_door",
-        "recoil_tableau"
+        "recoil_tableau",
+        "creation_chamber"
       ],
       "purpose": "Support Victor's period silhouette and stressed state without modern grooming cues.",
       "checklist_profile": "character",
@@ -1134,7 +1111,7 @@
       "source_ids": [],
       "decision_id": "DEC-victor_hair",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "victor_coat",
@@ -1142,7 +1119,7 @@
       "importance": "PRIMARY",
       "shot_ids": [
         "creation_chamber",
-        "victor_at_door",
+        "galvanic_contact",
         "recoil_tableau"
       ],
       "purpose": "Give Victor a deliberate period/social silhouette that remains consistent across shots.",
@@ -1177,13 +1154,14 @@
       ],
       "decision_id": "DEC-victor_coat",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "victor_collar_cravat",
       "category": "costume_detail",
       "importance": "PRIMARY",
       "shot_ids": [
+        "creation_chamber",
         "victor_at_door",
         "recoil_tableau"
       ],
@@ -1219,13 +1197,18 @@
       ],
       "decision_id": "DEC-victor_collar_cravat",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "victor_hand",
       "category": "hand",
       "importance": "HERO",
-      "shot_ids": [],
+      "shot_ids": [
+        "victor_at_door",
+        "galvanic_contact",
+        "recoil_tableau",
+        "creation_chamber"
+      ],
       "purpose": "Carry fear/control through believable hand anatomy, grip and gesture.",
       "checklist_profile": "anatomy",
       "requirements": {
@@ -1251,16 +1234,12 @@
           "Source references and any visible source assets must have known provenance."
         ]
       },
-      "source_ids": [],
-      "decision_id": "DEC-victor_hand",
-      "status": "INACTIVE_REPLACED_OR_REMOVED",
-      "active_in_current_cut": false,
-      "previous_shot_ids": [
-        "victor_at_door",
-        "galvanic_contact",
-        "recoil_tableau"
+      "source_ids": [
+        "SRC-FR-001"
       ],
-      "inactive_reason": "Standalone Victor/POV hand removed from current cut; apparatus interaction now uses a controllable brass contact/lever and the doorway pose does not require a separate hand Item."
+      "decision_id": "DEC-victor_hand",
+      "status": "NEEDS_REVALIDATION",
+      "active": true
     },
     {
       "id": "victor_recoil_pose",
@@ -1268,7 +1247,8 @@
       "importance": "HERO",
       "shot_ids": [
         "victor_at_door",
-        "recoil_tableau"
+        "recoil_tableau",
+        "creation_chamber"
       ],
       "purpose": "Communicate the instant Victor rejects what he created through body weight and line of action.",
       "checklist_profile": "anatomy",
@@ -1301,10 +1281,7 @@
       ],
       "decision_id": "DEC-victor_recoil_pose",
       "status": "NEEDS_REVALIDATION",
-      "source_obligation_ids": [
-        "OBL-FR-013"
-      ],
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "creature_body_proportions",
@@ -1342,19 +1319,11 @@
       },
       "source_ids": [
         "SRC-FR-012",
-        "SRC-FR-001",
-        "SRC-FR-014",
-        "SRC-FR-015",
-        "SRC-FR-016"
+        "SRC-FR-001"
       ],
       "decision_id": "DEC-creature_body_proportions",
       "status": "NEEDS_REVALIDATION",
-      "source_obligation_ids": [
-        "OBL-FR-008",
-        "OBL-FR-009",
-        "OBL-FR-010"
-      ],
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "creature_head_shape",
@@ -1362,7 +1331,8 @@
       "importance": "HERO",
       "shot_ids": [
         "first_eye",
-        "recoil_tableau"
+        "recoil_tableau",
+        "creation_chamber"
       ],
       "purpose": "Define a distinctive gaunt head that survives extreme close-up without copying later movie monsters.",
       "checklist_profile": "anatomy",
@@ -1391,19 +1361,11 @@
       },
       "source_ids": [
         "SRC-FR-012",
-        "SRC-FR-001",
-        "SRC-FR-014",
-        "SRC-FR-015",
-        "SRC-FR-016"
+        "SRC-FR-001"
       ],
       "decision_id": "DEC-creature_head_shape",
       "status": "NEEDS_REVALIDATION",
-      "source_obligation_ids": [
-        "OBL-FR-009",
-        "OBL-FR-010",
-        "OBL-FR-012"
-      ],
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "creature_hair",
@@ -1411,7 +1373,8 @@
       "importance": "PRIMARY",
       "shot_ids": [
         "first_eye",
-        "recoil_tableau"
+        "recoil_tableau",
+        "creation_chamber"
       ],
       "purpose": "Use long dark hair as a source-aligned identity cue and framing device.",
       "checklist_profile": "anatomy",
@@ -1445,17 +1408,16 @@
       ],
       "decision_id": "DEC-creature_hair",
       "status": "NEEDS_REVALIDATION",
-      "source_obligation_ids": [
-        "OBL-FR-011"
-      ],
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "creature_eye",
       "category": "face_detail",
       "importance": "HERO",
       "shot_ids": [
-        "first_eye"
+        "first_eye",
+        "creation_chamber",
+        "recoil_tableau"
       ],
       "purpose": "Deliver the awakening beat through one believable, disturbing eye rather than an effect-first monster eye.",
       "checklist_profile": "anatomy",
@@ -1485,17 +1447,11 @@
       },
       "source_ids": [
         "SRC-FR-012",
-        "SRC-FR-001",
-        "SRC-FR-014",
-        "SRC-FR-015"
+        "SRC-FR-001"
       ],
       "decision_id": "DEC-creature_eye",
       "status": "NEEDS_REVALIDATION",
-      "source_obligation_ids": [
-        "OBL-FR-006",
-        "OBL-FR-012"
-      ],
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "creature_rise_motion",
@@ -1531,15 +1487,11 @@
         ]
       },
       "source_ids": [
-        "SRC-FR-012",
-        "SRC-FR-014"
+        "SRC-FR-012"
       ],
       "decision_id": "DEC-creature_rise_motion",
       "status": "NEEDS_REVALIDATION",
-      "source_obligation_ids": [
-        "OBL-FR-008"
-      ],
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "voltaic_pile",
@@ -1581,10 +1533,7 @@
       ],
       "decision_id": "DEC-voltaic_pile",
       "status": "NEEDS_REVALIDATION",
-      "source_obligation_ids": [
-        "OBL-FR-005"
-      ],
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "leyden_jar_primary",
@@ -1592,7 +1541,8 @@
       "importance": "PRIMARY",
       "shot_ids": [
         "creation_chamber",
-        "galvanic_contact"
+        "galvanic_contact",
+        "recoil_tableau"
       ],
       "purpose": "Provide a credible charge-storage form with period materials/construction.",
       "checklist_profile": "apparatus",
@@ -1625,10 +1575,7 @@
       ],
       "decision_id": "DEC-leyden_jar_primary",
       "status": "NEEDS_REVALIDATION",
-      "source_obligation_ids": [
-        "OBL-FR-005"
-      ],
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "leyden_jar_secondary",
@@ -1667,18 +1614,18 @@
         "SRC-FR-005"
       ],
       "decision_id": "DEC-leyden_jar_secondary",
-      "status": "NEEDS_REVALIDATION",
-      "source_obligation_ids": [
-        "OBL-FR-005"
-      ],
-      "active_in_current_cut": true
+      "status": "REPLACED",
+      "active": false,
+      "retirement_reason": "Unconnected duplicate vessel removed."
     },
     {
       "id": "brass_contact",
       "category": "apparatus_detail",
       "importance": "HERO",
       "shot_ids": [
-        "galvanic_contact"
+        "galvanic_contact",
+        "creation_chamber",
+        "recoil_tableau"
       ],
       "purpose": "Create the exact tactile contact point that Victor manipulates at the shot's dramatic peak.",
       "checklist_profile": "apparatus",
@@ -1711,10 +1658,7 @@
       ],
       "decision_id": "DEC-brass_contact",
       "status": "NEEDS_REVALIDATION",
-      "source_obligation_ids": [
-        "OBL-FR-005"
-      ],
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "copper_wire_network",
@@ -1756,10 +1700,7 @@
       ],
       "decision_id": "DEC-copper_wire_network",
       "status": "NEEDS_REVALIDATION",
-      "source_obligation_ids": [
-        "OBL-FR-005"
-      ],
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "electric_arc",
@@ -1795,17 +1736,22 @@
         ]
       },
       "source_ids": [
-        "SRC-FR-004"
+        "SRC-FR-004",
+        "SRC-FR-006"
       ],
       "decision_id": "DEC-electric_arc",
-      "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "status": "REPLACED",
+      "active": false,
+      "retirement_reason": "Unsupported discharge removed; no validated electrical model."
     },
     {
       "id": "anatomy_pages",
       "category": "scientific_document",
       "importance": "PRIMARY",
-      "shot_ids": [],
+      "shot_ids": [
+        "creation_chamber",
+        "recoil_tableau"
+      ],
       "purpose": "Ground Victor's work in period scientific visual culture without inventing modern diagrams.",
       "checklist_profile": "apparatus",
       "requirements": {
@@ -1835,12 +1781,8 @@
         "SRC-FR-004"
       ],
       "decision_id": "DEC-anatomy_pages",
-      "status": "INACTIVE_REPLACED_OR_REMOVED",
-      "active_in_current_cut": false,
-      "previous_shot_ids": [
-        "galvanic_contact"
-      ],
-      "inactive_reason": "Removed from current apparatus macro as low-value scientific filler; historical apparatus evidence remains in source records."
+      "status": "NEEDS_REVALIDATION",
+      "active": true
     },
     {
       "id": "laboratory_fog",
@@ -1879,7 +1821,7 @@
       "source_ids": [],
       "decision_id": "DEC-laboratory_fog",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "interior_lightning",
@@ -1920,8 +1862,9 @@
         "SRC-FR-012"
       ],
       "decision_id": "DEC-interior_lightning",
-      "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "status": "REPLACED",
+      "active": false,
+      "replacement_note": "Interior lightning is removed; the creation text motivates a failing candle."
     },
     {
       "id": "creation_camera_drift",
@@ -1958,7 +1901,7 @@
       "source_ids": [],
       "decision_id": "DEC-creation_camera_drift",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "victor_door_shadow",
@@ -1995,10 +1938,7 @@
       "source_ids": [],
       "decision_id": "DEC-victor_door_shadow",
       "status": "NEEDS_REVALIDATION",
-      "source_obligation_ids": [
-        "OBL-FR-013"
-      ],
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "first_eye_shadow_mask",
@@ -2035,10 +1975,7 @@
       "source_ids": [],
       "decision_id": "DEC-first_eye_shadow_mask",
       "status": "NEEDS_REVALIDATION",
-      "source_obligation_ids": [
-        "OBL-FR-006"
-      ],
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "linen_closeup_edge",
@@ -2077,7 +2014,7 @@
       ],
       "decision_id": "DEC-linen_closeup_edge",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "lightning_cut",
@@ -2114,7 +2051,7 @@
       "source_ids": [],
       "decision_id": "DEC-lightning_cut",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "shadow_cut",
@@ -2151,7 +2088,7 @@
       "source_ids": [],
       "decision_id": "DEC-shadow_cut",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "arc_match_cut",
@@ -2187,8 +2124,9 @@
       },
       "source_ids": [],
       "decision_id": "DEC-arc_match_cut",
-      "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "status": "REPLACED",
+      "active": false,
+      "replacement_note": "Removed whole-frame arc transition; the cut now uses the eye-opening beat."
     },
     {
       "id": "title_frankenstein",
@@ -2223,11 +2161,12 @@
         ]
       },
       "source_ids": [
-        "SRC-FR-003"
+        "SRC-FR-003",
+        "SRC-FR-014"
       ],
       "decision_id": "DEC-title_frankenstein",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "subtitle_modern_prometheus",
@@ -2266,7 +2205,7 @@
       ],
       "decision_id": "DEC-subtitle_modern_prometheus",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "audio_low_drone",
@@ -2308,7 +2247,7 @@
       "source_ids": [],
       "decision_id": "DEC-audio_low_drone",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "audio_noise_roomtone",
@@ -2350,7 +2289,7 @@
       "source_ids": [],
       "decision_id": "DEC-audio_noise_roomtone",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "thunder_cues",
@@ -2388,7 +2327,7 @@
       "source_ids": [],
       "decision_id": "DEC-thunder_cues",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "footstep_cues",
@@ -2424,8 +2363,9 @@
       },
       "source_ids": [],
       "decision_id": "DEC-footstep_cues",
-      "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "status": "REPLACED",
+      "active": false,
+      "replacement_note": "Removed because the tableau does not show steps that would justify Foley."
     },
     {
       "id": "electrical_crackle_audio",
@@ -2462,8 +2402,9 @@
       },
       "source_ids": [],
       "decision_id": "DEC-electrical_crackle_audio",
-      "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "status": "REPLACED",
+      "active": false,
+      "retirement_reason": "Unsupported discharge sound removed."
     },
     {
       "id": "arc_hit_audio",
@@ -2499,8 +2440,9 @@
       },
       "source_ids": [],
       "decision_id": "DEC-arc_hit_audio",
-      "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "status": "REPLACED",
+      "active": false,
+      "retirement_reason": "Unsupported discharge sound removed."
     },
     {
       "id": "victor_breath",
@@ -2534,10 +2476,12 @@
           "Procedural/original or exact audio licence/provenance required."
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "SRC-FR-012"
+      ],
       "decision_id": "DEC-victor_breath",
       "status": "NEEDS_REVALIDATION",
-      "active_in_current_cut": true
+      "active": true
     },
     {
       "id": "creature_heartbeat",
@@ -2574,10 +2518,215 @@
       "source_ids": [],
       "decision_id": "DEC-creature_heartbeat",
       "status": "NEEDS_REVALIDATION",
-      "source_obligation_ids": [
-        "OBL-FR-007"
+      "active": true
+    },
+    {
+      "id": "candle_stub",
+      "category": "lighting",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "creation_chamber",
+        "galvanic_contact",
+        "recoil_tableau"
       ],
-      "active_in_current_cut": true
+      "purpose": "Show the nearly exhausted candle as the motivated interior light source.",
+      "checklist_profile": "lighting",
+      "requirements": {
+        "story": [
+          "Show the nearly exhausted candle as the motivated interior light source.",
+          "Creation passage is 1818 volume I chapter IV; cinematic interpretation is documented separately."
+        ],
+        "period": [
+          "Plausible material and scale for the chosen early-19th-century illustration language."
+        ],
+        "visual": [
+          "Small, deliberate, readable element; inspect at 1280×720 in context."
+        ],
+        "motion": [
+          "Deterministic variation; avoid loop-like motion and independent drift."
+        ],
+        "continuity": [
+          "Remain spatially coherent with neighboring Items and recurring shots."
+        ],
+        "technical": [
+          "Must survive H.264/AAC encoding; isolated diagnostic is required."
+        ],
+        "rights": [
+          "Bespoke procedural geometry/audio; literary reference SRC-FR-012."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "decision_id": "DEC-candle_stub",
+      "status": "NEEDS_REVALIDATION",
+      "active": true
+    },
+    {
+      "id": "candle_flame",
+      "category": "lighting",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "creation_chamber",
+        "galvanic_contact",
+        "recoil_tableau"
+      ],
+      "purpose": "Let a small unstable flame carry the failing-light beat.",
+      "checklist_profile": "lighting",
+      "requirements": {
+        "story": [
+          "Let a small unstable flame carry the failing-light beat.",
+          "Creation passage is 1818 volume I chapter IV; cinematic interpretation is documented separately."
+        ],
+        "period": [
+          "Plausible material and scale for the chosen early-19th-century illustration language."
+        ],
+        "visual": [
+          "Small, deliberate, readable element; inspect at 1280×720 in context."
+        ],
+        "motion": [
+          "Deterministic variation; avoid loop-like motion and independent drift."
+        ],
+        "continuity": [
+          "Remain spatially coherent with neighboring Items and recurring shots."
+        ],
+        "technical": [
+          "Must survive H.264/AAC encoding; isolated diagnostic is required."
+        ],
+        "rights": [
+          "Bespoke procedural geometry/audio; literary reference SRC-FR-012."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "decision_id": "DEC-candle_flame",
+      "status": "NEEDS_REVALIDATION",
+      "active": true
+    },
+    {
+      "id": "candle_light_pool",
+      "category": "lighting",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "creation_chamber",
+        "recoil_tableau"
+      ],
+      "purpose": "Direct attention with motivated candle falloff rather than unmotivated whole-room light.",
+      "checklist_profile": "lighting",
+      "requirements": {
+        "story": [
+          "Direct attention with motivated candle falloff rather than unmotivated whole-room light.",
+          "Creation passage is 1818 volume I chapter IV; cinematic interpretation is documented separately."
+        ],
+        "period": [
+          "Plausible material and scale for the chosen early-19th-century illustration language."
+        ],
+        "visual": [
+          "Small, deliberate, readable element; inspect at 1280×720 in context."
+        ],
+        "motion": [
+          "Deterministic variation; avoid loop-like motion and independent drift."
+        ],
+        "continuity": [
+          "Remain spatially coherent with neighboring Items and recurring shots."
+        ],
+        "technical": [
+          "Must survive H.264/AAC encoding; isolated diagnostic is required."
+        ],
+        "rights": [
+          "Bespoke procedural geometry/audio; literary reference SRC-FR-012."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "decision_id": "DEC-candle_light_pool",
+      "status": "NEEDS_REVALIDATION",
+      "active": true
+    },
+    {
+      "id": "creature_hand",
+      "category": "character_hand",
+      "importance": "HERO",
+      "shot_ids": [
+        "creation_chamber",
+        "recoil_tableau"
+      ],
+      "purpose": "Validate the exposed human hand independently from drapery and body proportions.",
+      "checklist_profile": "character_hand",
+      "requirements": {
+        "story": [
+          "Validate the exposed human hand independently from drapery and body proportions.",
+          "Creation passage is 1818 volume I chapter IV; cinematic interpretation is documented separately."
+        ],
+        "period": [
+          "Plausible material and scale for the chosen early-19th-century illustration language."
+        ],
+        "visual": [
+          "Small, deliberate, readable element; inspect at 1280×720 in context."
+        ],
+        "motion": [
+          "Deterministic variation; avoid loop-like motion and independent drift."
+        ],
+        "continuity": [
+          "Remain spatially coherent with neighboring Items and recurring shots."
+        ],
+        "technical": [
+          "Must survive H.264/AAC encoding; isolated diagnostic is required."
+        ],
+        "rights": [
+          "Bespoke procedural geometry/audio; literary reference SRC-FR-012."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "decision_id": "DEC-creature_hand",
+      "status": "NEEDS_REVALIDATION",
+      "active": true
+    },
+    {
+      "id": "rain_patter_audio",
+      "category": "audio",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "ingolstadt_storm",
+        "creation_chamber",
+        "recoil_tableau"
+      ],
+      "purpose": "Bind rain ambience to exterior and window context with its own audition stem.",
+      "checklist_profile": "audio",
+      "requirements": {
+        "story": [
+          "Bind rain ambience to exterior and window context with its own audition stem.",
+          "Creation passage is 1818 volume I chapter IV; cinematic interpretation is documented separately."
+        ],
+        "period": [
+          "Plausible material and scale for the chosen early-19th-century illustration language."
+        ],
+        "visual": [
+          "Small, deliberate, readable element; inspect at 1280×720 in context."
+        ],
+        "motion": [
+          "Deterministic variation; avoid loop-like motion and independent drift."
+        ],
+        "continuity": [
+          "Remain spatially coherent with neighboring Items and recurring shots."
+        ],
+        "technical": [
+          "Must survive H.264/AAC encoding; isolated diagnostic is required."
+        ],
+        "rights": [
+          "Bespoke procedural geometry/audio; literary reference SRC-FR-012."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "decision_id": "DEC-rain_patter_audio",
+      "status": "NEEDS_REVALIDATION",
+      "active": true
     }
   ]
 }

@@ -1,8 +1,15 @@
 {
   "name": "living-engraving-current",
   "private": true,
-  "version": "5.2.0",
+  "version": "5.4.0",
   "dependencies": {
     "skia-canvas": "3.0.8"
+  },
+  "scripts": {
+    "validate": "node validate_method.js",
+    "render": "bash render.sh",
+    "review": "node review_current.js",
+    "test": "node --test mechanism.test.js",
+    "proof": "node proof_current.js"
   }
 }

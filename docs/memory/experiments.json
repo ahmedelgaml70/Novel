@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "experiments": [
+    {
+      "id": "E-V53-REJECTION",
+      "date": "2026-10-07",
+      "defect_ids": [
+        "Q001",
+        "Q002",
+        "Q003",
+        "Q004",
+        "Q005",
+        "Q006",
+        "Q007",
+        "Q008",
+        "Q009",
+        "Q010"
+      ],
+      "hypothesis": "More detailed procedural drawing and isolated diagnostics would improve V5.3 enough for review.",
+      "alternatives": [
+        "Reference-driven bespoke art",
+        "Rebuild articulated characters before rendering more shots"
+      ],
+      "change": "V5.3 renderer and isolated Item review.",
+      "checks": [
+        "Structural validator and existing code tests passed; user visual review failed."
+      ],
+      "result": "REJECTED_BY_USER",
+      "limitations": "Disconnected mechanics, weak anatomy, style, staging and meaningful motion.",
+      "next": "E-V54-MECHANICS"
+    },
+    {
+      "id": "E-V54-MECHANICS",
+      "date": "2026-10-07",
+      "defect_ids": [
+        "Q001",
+        "Q002",
+        "Q008",
+        "Q010"
+      ],
+      "hypothesis": "Shared named anchors and articulated attachment state prevent coordinate drift and independently moving hand/lever.",
+      "alternatives": [
+        "Patch each literal endpoint: rejected because recurring views would drift again",
+        "Adopt a full physical rig: deferred until shot and style redesign"
+      ],
+      "change": "Shared ports, rotating contact, coupled wrist/arm; unsupported cables, duplicate jar and discharge effects removed. Quality gate and project memory added.",
+      "checks": [
+        "32 Python repository tests passed.",
+        "4 Node constraint/integration tests passed, including terminal attachments, constant lever/arm lengths, real action and recurring-shot bindings.",
+        "Renderer and production record/memory validation passed.",
+        "96-frame, four-second macro proof rendered; start/intermediate/end frames inspected by Codex as diagnostics.",
+        "Strict-final gate rejects unapproved style, all ten unresolved defect groups and all six unapproved shots."
+      ],
+      "result": "GEOMETRY_TESTS_PASSED_VISUAL_REVIEW_PENDING",
+      "limitations": "Geometric constraint proof only. Grip anatomy, electrical/historical validity, style, other character motion and scene readability remain unapproved.",
+      "next": "Compare style and character/action candidates for one shot before expanding runtime.",
+      "implementation_evidence": [
+        {
+          "path": "production/living_engraving/render_current.js",
+          "sha256": "d07d86a6ed2851f4dd33c82b6a2a946a65699214a9c61493fcbef13c6560ba91"
+        },
+        {
+          "path": "production/living_engraving/mechanism.js",
+          "sha256": "98600c009b8f08cfd22c3b35c81d67f39ce6121c482a486440a8868f87edc2ee"
+        },
+        {
+          "path": "production/living_engraving/scene_manifest.json",
+          "sha256": "1e98ca259d11b5f28ca6f203a7240653be61e17035783ff48d71f5af7ced9cd8"
+        },
+        {
+          "path": "episodes/frankenstein-prototype/item_inventory.json",
+          "sha256": "7781bd719e49ef856d5889064f6ee743508757f07f593feb3189834127d24a22"
+        }
+      ],
+      "observations": [
+        "Lever reaches its fixed contact; wrist and sleeve move together.",
+        "Initial proof exposed an isolated shoulder cap. Shoulder moved beyond macro crop and a boundary regression assertion added.",
+        "Hand drawing remains schematic, fingers compressed; style and grip anatomy are not approved.",
+        "Recurring-shot census found missing original Item bindings; inventory corrected and integration test added."
+      ]
+    }
+  ],
+  "current_experiment_id": "E-V54-MECHANICS"
+}

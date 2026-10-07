@@ -1,7 +1,7 @@
 {
   "method_name": "Living Engraving",
-  "version": "5.3.0-dev",
-  "status": "active_lookdev_method",
+  "version": "5.4",
+  "status": "repair_experiment_visual_redesign_required",
   "canonical_renderer": "render_current.js",
   "canonical_manifest": "scene_manifest.json",
   "canonical_guide": "../../docs/production/CURRENT_METHOD.md",
@@ -11,19 +11,12 @@
     "period_fit": 8,
     "style_fit": 8
   },
-  "visible_third_party_assets_embedded": false,
-  "visual_baseline": "Frankenstein V5.1 complete baseline; V5.3 hybrid lookdev active",
+  "visible_third_party_assets_embedded": true,
+  "visual_baseline": "V5.3 USER_REJECTED; V5.4 mechanics diagnostic only",
   "atomic_item_governance": true,
   "strict_final_requires_item_revalidation": true,
-  "source_obligation_governance": true,
-  "source_contract_policy": "best_fit_revisable_per_episode",
-  "episode_specific_source_choice_in_method_state": false,
-  "framework_scope": "style_module_only",
-  "asset_authoring_policy": "per_item_best_fit_high_information_when_needed",
-  "hero_asset_source_file_policy": "independent_clean_source_preferred",
-  "hero_shot_lock_required_before_full_render": true,
-  "asset_approval_is_shot_scale_conditional": true,
-  "current_chamber_architecture": "sparse_stone_plaster_with_arches",
-  "current_doorway_integration": "arched_opening_with_character_clipping_occlusion",
-  "full_v5_3_render_promoted": false
+  "diagnostics_cover_all_items": true,
+  "project_memory": "../../docs/memory/STATE.md",
+  "quality_review": "../../episodes/frankenstein-prototype/quality_review.json",
+  "style_status": "UNAPPROVED_REDESIGN_REQUIRED"
 }

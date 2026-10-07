@@ -1,21 +1,23 @@
 {
   "schema_version": "3.0",
   "film": {
-    "title": "Frankenstein — Living Engraving V5.3-dev",
+    "title": "Frankenstein \u2014 mechanics repair experiment V5.4",
     "width": 1280,
     "height": 720,
     "fps": 24,
     "audio_sample_rate": 48000,
     "runtime_seconds": 24,
-    "status": "hero_lock_lookdev",
-    "visual_baseline": "V5.1 complete baseline; V5.3 hybrid lookdev active"
+    "status": "repair_experiment_not_approved",
+    "visual_version": "5.4",
+    "source_edition": "1818",
+    "adaptation_contract": "1818 creation-passage study using an 1831-inspired tableau and explicitly interpretive early-19th-century props; not an exact eighteenth-century reconstruction."
   },
   "shots": [
     {
       "id": "ingolstadt_storm",
       "renderer": "stormExterior",
       "duration": 3.4,
-      "purpose": "Locate the story in a recognisable historical Ingolstadt and direct attention toward Victor's fictional laboratory context. Exterior art remains unresolved until a high-information location-specific candidate passes.",
+      "purpose": "Locate the story in a hostile historical city and visually target Victor's laboratory.",
       "transition_out": "lightning_cut",
       "cues": {
         "lightning": [
@@ -31,107 +33,63 @@
         "thunder": [
           1.16,
           2.74
-        ]
-      }
+        ],
+        "rain": true
+      },
+      "quality_status": "REDESIGN_REQUIRED"
     },
     {
       "id": "creation_chamber",
       "renderer": "creationChamber",
       "duration": 5,
-      "purpose": "Sparse creation chamber: creature under drapery, dying practical light, period-inspired apparatus, Gothic window, and Victor held at architectural distance. No generic shelf/book/skull filler.",
+      "purpose": "Fading candle, proportionate draped body and Victor at doorway; tableau inspired by the 1831 frontispiece.",
       "transition_out": "hard_cut",
       "cues": {
-        "lightning": [
-          {
-            "time": 2.2,
-            "strength": 0.35
-          }
-        ],
-        "electrical_crackle": [
-          [
-            2,
-            3.8
-          ]
-        ],
-        "footsteps": [
-          0.72,
-          1.38
-        ]
-      }
+        "rain": true
+      },
+      "quality_status": "REDESIGN_REQUIRED"
     },
     {
       "id": "victor_at_door",
       "renderer": "victorAtDoor",
       "duration": 3.5,
-      "purpose": "Medium/full-body recoil at an arched doorway. Use physical occlusion and local shadow; no forced portrait enlargement.",
+      "purpose": "Hold on Victor's fear with the face partly obscured rather than a generic front-facing portrait.",
       "transition_out": "shadow_cut",
       "cues": {
-        "breath": true,
-        "lightning": [
-          {
-            "time": 2.65,
-            "strength": 0.16
-          }
-        ]
-      }
+        "breath": true
+      },
+      "quality_status": "REDESIGN_REQUIRED"
     },
     {
       "id": "galvanic_contact",
       "renderer": "galvanicContact",
       "duration": 4,
-      "purpose": "Macro apparatus shot: voltaic-pile interpretation, Leyden-jar context, copper wiring, and a controllable brass contact/lever. No weak hand insert.",
-      "transition_out": "arc_match_cut",
-      "cues": {
-        "electrical_crackle": [
-          [
-            0.8,
-            3.7
-          ]
-        ],
-        "arc_hits": [
-          1.34,
-          2.17,
-          3.13
-        ]
-      }
+      "purpose": "Diagnostic shared-anchor mechanism and coupled grip study; art, physics and historical circuit remain unapproved.",
+      "transition_out": "hard_cut",
+      "cues": {},
+      "quality_status": "REDESIGN_REQUIRED"
     },
     {
       "id": "first_eye",
       "renderer": "firstEye",
       "duration": 4,
-      "purpose": "Extreme close-up: engraved face emerges from darkness; dull-yellow/watery eye is revealed with JavaScript occlusion rather than neon glow.",
+      "purpose": "Dull yellow eye opens in candle shadow; restrained portrait crop.",
       "transition_out": "hard_cut",
       "cues": {
-        "heartbeat": true,
-        "lightning": [
-          {
-            "time": 2.86,
-            "strength": 0.24
-          }
-        ]
-      }
+        "heartbeat": true
+      },
+      "quality_status": "REDESIGN_REQUIRED"
     },
     {
       "id": "recoil_tableau",
       "renderer": "recoilTableau",
       "duration": 4.1,
-      "purpose": "Return to the sparse chamber as the creature shows restrained first movement and Victor recoils; preserve unresolved articulation honestly rather than faking complex limb motion.",
+      "purpose": "Return to the tableau as the creature rises and Victor recoils, then resolve into title.",
       "transition_out": "none",
       "cues": {
-        "thunder": [
-          0.7
-        ],
-        "lightning": [
-          {
-            "time": 0.58,
-            "strength": 0.56
-          },
-          {
-            "time": 2.42,
-            "strength": 0.19
-          }
-        ]
-      }
+        "rain": true
+      },
+      "quality_status": "REDESIGN_REQUIRED"
     }
   ]
 }

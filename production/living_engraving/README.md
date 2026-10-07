@@ -14,10 +14,11 @@ Do not add alternate active renderers beside `render_current.js`. Replace the ca
 
 Generated frames, WAV files and MP4 masters are runtime/output artifacts and are not the source of truth.
 
-## Scope boundary
+## Reproduce the V5.4 repair experiment
 
-Living Engraving is a **style/renderer module**, not the universal Novel production system.
+Use Node 22 LTS and FFmpeg, then `npm ci`, `npm run validate`, `npm run render`, `npm run review` from this directory. Open `review-output/index.html` for every-Item inspection. The movie is `living_engraving_current.mp4`. Both are runtime artifacts ignored by Git. `LICENSES.md` and `asset_manifest.json` record the bundled font and city plate. See the canonical guide for partial-frame rendering and the episode review for remaining art defects.
 
-Universal governance lives in `../../docs/production/PRODUCTION_SYSTEM.md`. An episode may use another style or renderer if comparison shows it better serves the novel and viewer experience.
-
-Frankenstein V5.1 is the current visual benchmark used to pressure-test this module; it does not define what future novels must look like.
+V5.3 was rejected by the user. Read `../../docs/memory/STATE.md` and the episode
+quality review before continuing. Run `npm test` for geometry constraints. The
+4-second macro is a diagnostic candidate; the full film remains blocked for
+visual redesign. Unsupported discharge cues are removed.

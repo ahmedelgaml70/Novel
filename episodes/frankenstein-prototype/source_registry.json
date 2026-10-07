@@ -39,7 +39,8 @@
       },
       "discovered_at": "2026-10-07",
       "status": "ACTIVE_REFERENCE",
-      "notes": "Canonical 1831 visual reference. Current use is reference-only; the renderer redraws layered elements rather than embedding the raster."
+      "notes": "Canonical 1831 visual reference. Current use is reference-only; the renderer redraws layered elements rather than embedding the raster.",
+      "last_verified_at": "2026-10-07"
     },
     {
       "id": "SRC-FR-002",
@@ -191,7 +192,8 @@
       },
       "discovered_at": "2026-10-07",
       "status": "ACTIVE_REFERENCE",
-      "notes": "Use object geometry/catalogue facts; image-specific reuse must be checked separately."
+      "notes": "Use object geometry/catalogue facts; image-specific reuse must be checked separately.",
+      "last_verified_at": "2026-10-07"
     },
     {
       "id": "SRC-FR-007",
@@ -315,8 +317,11 @@
         "period_proximity": "PRIMARY"
       },
       "discovered_at": "2026-10-07",
-      "status": "PREFERRED_LOCATION_REFERENCE",
-      "notes": "Preferred primary direction for rebuilding the exterior because it is location-specific and near the story period."
+      "status": "PROTOTYPE_ASSET_SELECTED",
+      "notes": "Preferred primary direction for rebuilding the exterior because it is location-specific and near the story period. V5.3 embeds the city strip; heraldry, captions and garden excluded. Candidate best for named-city background; crop/night grade remains prototype-only.",
+      "last_verified_at": "2026-10-07",
+      "local_asset": "production/living_engraving/assets/references/ingolstadt-1800.jpg",
+      "asset_sha256": "f30d435667449dc979dcfb9c1d1039e6c3ac421e7ee3dc597c9423317c8610c6"
     },
     {
       "id": "SRC-FR-011",
@@ -350,7 +355,7 @@
     },
     {
       "id": "SRC-FR-012",
-      "title": "Frankenstein; Or, The Modern Prometheus — 1818 edition, Project Gutenberg eBook #41445",
+      "title": "Frankenstein; Or, The Modern Prometheus \u2014 1818 edition, Project Gutenberg eBook #41445",
       "creator": "Mary Wollstonecraft Shelley",
       "date": "1818 edition; digital transcription updated 2026-10-06",
       "provider": "Project Gutenberg",
@@ -375,7 +380,11 @@
         "creature_rise_motion",
         "interior_lightning",
         "victor_recoil_pose",
-        "victor_door_shadow"
+        "candle_stub",
+        "candle_flame",
+        "candle_light_pool",
+        "creature_hand",
+        "rain_patter_audio"
       ],
       "rights": {
         "status": "PUBLIC_DOMAIN_IN_USA_PROJECT_GUTENBERG_TERMS_APPLY_TO_GUTENBERG_EDITION",
@@ -387,12 +396,13 @@
         "period_proximity": "PRIMARY_TEXT_PHOTOREPRINT_OF_1818_EDITION"
       },
       "discovered_at": "2026-10-07",
-      "status": "SOURCE_CONTRACT_CANDIDATE",
-      "notes": "Photo-reprint transcription of the 1818 edition. Creation passage: one in the morning, rain against panes, nearly burnt-out candle, dull yellow eye, hard breathing, convulsive limb motion; limbs proportionate, flowing lustrous black hair, watery pale eyes, shrivelled complexion, straight black lips. Ingolstadt arrival mentions a high white steeple. Do not infer a specific electrical apparatus from 'instruments of life'. No source contract is currently locked. Core creation-scene and Ingolstadt-steeple constraints were directly compared across the 1818 and 1831 Gutenberg texts on 2026-10-07 and are shared for the currently tracked obligations."
+      "status": "PREFERRED_1818_TEXT_REFERENCE",
+      "notes": "Photo-reprint transcription of the 1818 edition. Creation passage: one in the morning, rain against panes, nearly burnt-out candle, dull yellow eye, hard breathing, convulsive limb motion; limbs proportionate, flowing lustrous black hair, watery pale eyes, shrivelled complexion, straight black lips. Ingolstadt arrival mentions a high white steeple. Do not infer a specific electrical apparatus from 'instruments of life'.",
+      "last_verified_at": "2026-10-07"
     },
     {
       "id": "SRC-FR-013",
-      "title": "Frankenstein; Or, The Modern Prometheus — 1831 edition, Project Gutenberg eBook #42324",
+      "title": "Frankenstein; Or, The Modern Prometheus \u2014 1831 edition, Project Gutenberg eBook #42324",
       "creator": "Mary Wollstonecraft Shelley",
       "date": "1831 edition",
       "provider": "Project Gutenberg",
@@ -407,18 +417,7 @@
         "subtitle_modern_prometheus",
         "creation_chamber_composition",
         "victor_recoil_pose",
-        "creature_eye",
-        "ingolstadt_roofline",
-        "laboratory_exterior_building",
-        "gothic_laboratory_window",
-        "storm_sky",
-        "rain_field",
-        "creature_body_proportions",
-        "creature_head_shape",
-        "creature_hair",
-        "creature_rise_motion",
-        "interior_lightning",
-        "victor_door_shadow"
+        "creature_eye"
       ],
       "rights": {
         "status": "PUBLIC_DOMAIN_IN_USA_PROJECT_GUTENBERG_TERMS_APPLY_TO_GUTENBERG_EDITION",
@@ -430,228 +429,37 @@
         "period_proximity": "AUTHOR_REVISED_1831_EDITION"
       },
       "discovered_at": "2026-10-07",
-      "status": "SOURCE_CONTRACT_CANDIDATE",
-      "notes": "Use to compare edition-dependent wording/art-direction decisions. Do not mix 1818 and 1831 source contracts silently. No source contract is currently locked. Core creation-scene and Ingolstadt-steeple constraints were directly compared across the 1818 and 1831 Gutenberg texts on 2026-10-07 and are shared for the currently tracked obligations."
+      "status": "ALTERNATIVE_EDITION_REFERENCE",
+      "notes": "Use to compare edition-dependent wording/art-direction decisions. Do not mix 1818 and 1831 source contracts silently."
     },
     {
       "id": "SRC-FR-014",
-      "title": "Essays on the Anatomy of Expression in Painting",
-      "creator": "Charles Bell",
-      "date": "1806",
-      "provider": "Wellcome Collection",
-      "url": "https://wellcomecollection.org/works/stnqjkee",
+      "title": "EB Garamond variable Roman font and SIL Open Font License",
+      "creator": "Georg Duffner / Octavio Pardo; Google Fonts distribution",
+      "date": "modern digitization",
+      "provider": "Google Fonts / upstream EB Garamond",
+      "url": "https://github.com/google/fonts/tree/7085eb89a950e85db5b166b7a58d414544b4140c/ofl/ebgaramond",
       "roles": [
-        "PRIMARY_HISTORICAL",
-        "ANATOMY_REFERENCE",
-        "ART_DIRECTION_REFERENCE",
-        "TECHNIQUE_REFERENCE",
-        "RIGHTS_EVIDENCE"
-      ],
-      "supports_item_ids": [
-        "creature_body_proportions",
-        "creature_head_shape",
-        "creature_eye",
-        "creature_rise_motion",
-        "victor_recoil_pose",
-        "victor_hand"
-      ],
-      "rights": {
-        "status": "PUBLIC_DOMAIN_MARK",
-        "commercial_asset_use": "REFERENCE_AND_REUSE_ELIGIBLE_PER_PROVIDER_PUBLIC_DOMAIN_MARK",
-        "evidence_url": "https://wellcomecollection.org/works/stnqjkee"
-      },
-      "quality": {
-        "authority": "HIGH",
-        "period_proximity": "CONTEMPORARY_TO_STORY/CREATIVE_PERIOD"
-      },
-      "discovered_at": "2026-10-07",
-      "status": "ACTIVE_REFERENCE",
-      "notes": "Especially relevant because Bell addresses visible surface changes produced by muscle action and artistic representation of movement; use as anatomy/motion evidence, not as an automatic visible asset."
-    },
-    {
-      "id": "SRC-FR-015",
-      "title": "Traité complet de l'anatomie de l'homme — Atlas I/II",
-      "creator": "Jean-Baptiste Marc Bourgery; Nicolas-Henri Jacob",
-      "date": "1831-1854",
-      "provider": "Wikimedia Commons / Wellcome Collection",
-      "url": "https://commons.wikimedia.org/wiki/File:Bourgery_Atlas_I_1831.pdf",
-      "roles": [
-        "ANATOMY_REFERENCE",
-        "ART_DIRECTION_REFERENCE",
+        "TYPOGRAPHY_REFERENCE",
         "ASSET_CANDIDATE_SOURCE",
         "RIGHTS_EVIDENCE"
       ],
       "supports_item_ids": [
-        "creature_body_proportions",
-        "creature_head_shape",
-        "creature_eye",
-        "victor_hand"
+        "title_frankenstein",
+        "subtitle_modern_prometheus"
       ],
       "rights": {
-        "status": "PUBLIC_DOMAIN",
-        "commercial_asset_use": "ELIGIBLE_WITH_JURISDICTION_CHECK",
-        "evidence_url": "https://commons.wikimedia.org/wiki/File:Bourgery_Atlas_I_1831.pdf"
+        "status": "SIL_OPEN_FONT_LICENSE_1_1",
+        "commercial_asset_use": "ELIGIBLE_WITH_BUNDLED_OFL",
+        "evidence_url": "https://github.com/google/fonts/blob/7085eb89a950e85db5b166b7a58d414544b4140c/ofl/ebgaramond/OFL.txt"
       },
       "quality": {
-        "authority": "HIGH",
-        "period_proximity": "NEAR_PERIOD; FIRST_VOLUME_1831"
+        "authority": "PRIMARY_DISTRIBUTOR",
+        "period_proximity": "MODERN_REVIVAL_NOT_1818_TYPE_FACSIMILE"
       },
       "discovered_at": "2026-10-07",
-      "status": "ACTIVE_REFERENCE",
-      "notes": "High-detail anatomical plate source. Strong for anatomy and line language, but later/clinical detail must not override literary or shot-specific design needs."
-    },
-    {
-      "id": "SRC-FR-016",
-      "title": "Osteographia, or the Anatomy of the Bones",
-      "creator": "William Cheselden",
-      "date": "1733",
-      "provider": "Biodiversity Heritage Library",
-      "url": "https://www.biodiversitylibrary.org/item/266917",
-      "roles": [
-        "PRIMARY_HISTORICAL",
-        "ANATOMY_REFERENCE",
-        "ART_DIRECTION_REFERENCE",
-        "RIGHTS_EVIDENCE"
-      ],
-      "supports_item_ids": [
-        "creature_body_proportions",
-        "creature_head_shape",
-        "victor_hand"
-      ],
-      "rights": {
-        "status": "PUBLIC_DOMAIN",
-        "commercial_asset_use": "ELIGIBLE",
-        "evidence_url": "https://www.biodiversitylibrary.org/item/266917"
-      },
-      "quality": {
-        "authority": "HIGH",
-        "period_proximity": "EARLIER_PERIOD_REFERENCE"
-      },
-      "discovered_at": "2026-10-07",
-      "status": "ACTIVE_REFERENCE",
-      "notes": "Useful for skeletal proportion/engraving language. Earlier than the novel; anatomy function is stronger than period-style matching."
-    },
-    {
-      "id": "SRC-FR-017",
-      "title": "Bavarian city views including Ingolstadium — Braun & Hogenberg",
-      "creator": "Georg Braun; Frans Hogenberg",
-      "date": "1576",
-      "provider": "Wikimedia Commons",
-      "url": "https://commons.wikimedia.org/wiki/File:Kupferstich_-_Bayerische_St%C3%A4dte_-_Braun_%2B_Hogenberg_-_1576.png",
-      "roles": [
-        "PRIMARY_HISTORICAL",
-        "LOCATION_REFERENCE",
-        "ART_DIRECTION_REFERENCE",
-        "RIGHTS_EVIDENCE"
-      ],
-      "supports_item_ids": [
-        "ingolstadt_roofline",
-        "laboratory_exterior_building"
-      ],
-      "rights": {
-        "status": "PUBLIC_DOMAIN",
-        "commercial_asset_use": "ELIGIBLE_WITH_JURISDICTION_CHECK",
-        "evidence_url": "https://commons.wikimedia.org/wiki/File:Kupferstich_-_Bayerische_St%C3%A4dte_-_Braun_%2B_Hogenberg_-_1576.png"
-      },
-      "quality": {
-        "authority": "HIGH",
-        "period_proximity": "EARLIER_THAN_STORY; SECONDARY_GEOMETRY/LANDMARK_REFERENCE"
-      },
-      "discovered_at": "2026-10-07",
-      "status": "SUPPORTING_REFERENCE",
-      "notes": "Useful to compare long-lived city massing/landmarks; too early to define the final story-period skyline by itself."
-    },
-    {
-      "id": "SRC-FR-018",
-      "title": "Coat — European, ca. 1790",
-      "creator": null,
-      "date": "ca. 1790",
-      "provider": "The Metropolitan Museum of Art",
-      "url": "https://www.metmuseum.org/art/collection/search/172095",
-      "roles": [
-        "MUSEUM_OBJECT",
-        "COSTUME_REFERENCE",
-        "ASSET_CANDIDATE_SOURCE",
-        "RIGHTS_EVIDENCE"
-      ],
-      "supports_item_ids": [
-        "victor_coat",
-        "victor_silhouette",
-        "victor_collar_cravat"
-      ],
-      "rights": {
-        "status": "PUBLIC_DOMAIN_OPEN_ACCESS",
-        "commercial_asset_use": "ELIGIBLE",
-        "evidence_url": "https://www.metmuseum.org/art/collection/search/172095"
-      },
-      "quality": {
-        "authority": "HIGH",
-        "period_proximity": "DIEGETIC_LATE_18TH_CENTURY_CANDIDATE"
-      },
-      "discovered_at": "2026-10-07",
-      "status": "ACTIVE_REFERENCE",
-      "notes": "Useful if Victor's costume follows the late-18th-century diegetic frame rather than publication-era dress. Surviving object evidence; still requires character/social/shot fit."
-    },
-    {
-      "id": "SRC-FR-019",
-      "title": "Frock coat — French, ca. 1790",
-      "creator": null,
-      "date": "ca. 1790",
-      "provider": "The Metropolitan Museum of Art",
-      "url": "https://www.metmuseum.org/art/collection/search/91877",
-      "roles": [
-        "MUSEUM_OBJECT",
-        "COSTUME_REFERENCE",
-        "ASSET_CANDIDATE_SOURCE",
-        "RIGHTS_EVIDENCE"
-      ],
-      "supports_item_ids": [
-        "victor_coat",
-        "victor_silhouette"
-      ],
-      "rights": {
-        "status": "PUBLIC_DOMAIN_OPEN_ACCESS",
-        "commercial_asset_use": "ELIGIBLE",
-        "evidence_url": "https://www.metmuseum.org/art/collection/search/91877"
-      },
-      "quality": {
-        "authority": "HIGH",
-        "period_proximity": "DIEGETIC_LATE_18TH_CENTURY_CANDIDATE"
-      },
-      "discovered_at": "2026-10-07",
-      "status": "ACTIVE_REFERENCE",
-      "notes": "Alternative late-18th-century coat silhouette. Use as candidate/reference, not automatic Victor costume."
-    },
-    {
-      "id": "SRC-FR-020",
-      "title": "Waistcoat — European, 1785–1800",
-      "creator": null,
-      "date": "1785-1800",
-      "provider": "The Metropolitan Museum of Art",
-      "url": "https://www.metmuseum.org/art/collection/search/90784",
-      "roles": [
-        "MUSEUM_OBJECT",
-        "COSTUME_REFERENCE",
-        "ASSET_CANDIDATE_SOURCE",
-        "RIGHTS_EVIDENCE"
-      ],
-      "supports_item_ids": [
-        "victor_collar_cravat",
-        "victor_silhouette",
-        "victor_coat"
-      ],
-      "rights": {
-        "status": "PUBLIC_DOMAIN_OPEN_ACCESS",
-        "commercial_asset_use": "ELIGIBLE",
-        "evidence_url": "https://www.metmuseum.org/art/collection/search/90784"
-      },
-      "quality": {
-        "authority": "HIGH",
-        "period_proximity": "DIEGETIC_LATE_18TH_CENTURY_CANDIDATE"
-      },
-      "discovered_at": "2026-10-07",
-      "status": "ACTIVE_REFERENCE",
-      "notes": "Useful for waist/neck/chest layering and period silhouette; decorative details should not be copied blindly."
+      "status": "PROTOTYPE_FONT_SELECTED",
+      "notes": "Downloaded Roman variable TTF with OFL; edition-faithful typography remains pending. Compared portable bundled font against Linux-only dependency and system serif fallback. Upstream design reference https://github.com/georgd/EB-Garamond; modern revival does not prove the 1818 title font."
     }
   ]
 }

@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0",
   "episode_id": "frankenstein-prototype",
-  "method_version": "5.2",
+  "method_version": "5.4",
   "policy": "No candidate is selected because it was found first. Unresolved Items remain unresolved rather than receiving generic filler.",
   "counts": {
-    "decisions": 62
+    "decisions": 67
   },
   "decisions": [
     {
@@ -15,7 +15,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-ink_speck_grain",
@@ -25,7 +25,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-vignette_value_structure",
@@ -35,17 +35,38 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-engraving_hatching",
       "item_id": "engraving_hatching",
-      "requirements_locked_before_search": false,
-      "candidates": [],
-      "selected_candidate_id": null,
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "V53-engraving_hatching",
+          "origin": "BESPOKE_JS_RECONSTRUCTION",
+          "source_ids": [
+            "SRC-FR-001"
+          ],
+          "status": "PROTOTYPE_SELECTED",
+          "scores": {},
+          "reason": "Replaces the same diagonal mesh across skin, cloth, wood and metal.",
+          "description": "Deterministic segmented curved hatch"
+        },
+        {
+          "candidate_id": "V51-engraving_hatching",
+          "origin": "PREVIOUS_PROTOTYPE",
+          "source_ids": [],
+          "status": "REJECTED_FOR_CURRENT_TEST",
+          "scores": {},
+          "reason": "Baseline defect replaced by the V5.3 test; preserved in Git baseline frames, not active instructions."
+        }
+      ],
+      "selected_candidate_id": "V53-engraving_hatching",
       "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "why_selected_or_pending": "Replaces the same diagonal mesh across skin, cloth, wood and metal.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
+      "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
       "id": "DEC-living_engraving_palette",
@@ -55,12 +76,12 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-ingolstadt_roofline",
       "item_id": "ingolstadt_roofline",
-      "requirements_locked_before_search": false,
+      "requirements_locked_before_search": true,
       "candidates": [
         {
           "candidate_id": "current_generic_roofline_v5_1",
@@ -122,23 +143,74 @@
             "originality_non_genericity": 9
           },
           "reason": "Useful university-architecture identity, but weaker than the 1800 city view for the overall skyline."
+        },
+        {
+          "candidate_id": "V53-ingolstadt_roofline",
+          "origin": "HISTORICAL_PLATE",
+          "source_ids": [
+            "SRC-FR-010"
+          ],
+          "status": "PROTOTYPE_SELECTED",
+          "scores": {},
+          "reason": "Named-city evidence beats repeated generic roof blocks.",
+          "description": "1800 plate cropped to city band"
+        },
+        {
+          "candidate_id": "V51-ingolstadt_roofline",
+          "origin": "PREVIOUS_PROTOTYPE",
+          "source_ids": [],
+          "status": "REJECTED_FOR_CURRENT_TEST",
+          "scores": {},
+          "reason": "Baseline defect replaced by the V5.3 test; preserved in Git baseline frames, not active instructions."
+        },
+        {
+          "candidate_id": "BESPOKE-TWO-TOWERS",
+          "origin": "BESPOKE_JS_DIRECTION",
+          "source_ids": [
+            "SRC-FR-010",
+            "SRC-FR-012"
+          ],
+          "status": "REJECTED",
+          "scores": {},
+          "reason": "Recognizable tower motif alone is insufficient city specificity; choosing the actual near-period skyline beats an approximate reconstruction."
         }
       ],
-      "selected_candidate_id": null,
-      "decision_status": "SUPERSEDED_BY_V5_3_REQUIREMENTS_FIRST_DECISION",
-      "why_selected_or_pending": "Historical V5.2 research record retained for learning. Its unrendered candidates were scored too broadly; V5.3 replaces it with research-qualified directions and no premature shot/style scores.",
-      "remaining_risk": "Need final layered redraw and approval frame; the historical city view is evidence, not an automatic pan-and-scan asset.",
-      "superseded_by": "DEC-ingolstadt_roofline-v5_3"
+      "selected_candidate_id": "V53-ingolstadt_roofline",
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "Named-city evidence beats repeated generic roof blocks.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
+      "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
       "id": "DEC-laboratory_exterior_building",
       "item_id": "laboratory_exterior_building",
-      "requirements_locked_before_search": false,
-      "candidates": [],
-      "selected_candidate_id": null,
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "V53-laboratory_exterior_building",
+          "origin": "BESPOKE_JS_RECONSTRUCTION",
+          "source_ids": [
+            "SRC-FR-012"
+          ],
+          "status": "PROTOTYPE_SELECTED",
+          "scores": {},
+          "reason": "Separates factual city evidence from fictional laboratory location.",
+          "description": "Invented foreground laboratory against documented skyline"
+        },
+        {
+          "candidate_id": "V51-laboratory_exterior_building",
+          "origin": "PREVIOUS_PROTOTYPE",
+          "source_ids": [],
+          "status": "REJECTED_FOR_CURRENT_TEST",
+          "scores": {},
+          "reason": "Baseline defect replaced by the V5.3 test; preserved in Git baseline frames, not active instructions."
+        }
+      ],
+      "selected_candidate_id": "V53-laboratory_exterior_building",
       "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "why_selected_or_pending": "Separates factual city evidence from fictional laboratory location.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
+      "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
       "id": "DEC-gothic_laboratory_window",
@@ -148,7 +220,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-city_window_pattern",
@@ -158,7 +230,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-storm_sky",
@@ -168,7 +240,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-rain_field",
@@ -178,7 +250,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-exterior_lightning",
@@ -188,7 +260,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-exterior_camera_push",
@@ -198,7 +270,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-creation_chamber_composition",
@@ -269,61 +341,19 @@
         }
       ],
       "selected_candidate_id": "current_v5_1_tableau",
-      "decision_status": "SELECTED_WITH_BLOCKERS",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "Keep this composition direction, but final approval is blocked until character anatomy, period interior, apparatus, slab/drapery and foreground objects pass their atomic gates.",
-      "remaining_risk": "Parent composition cannot override failed child Items."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-creation_chamber_architecture",
       "item_id": "creation_chamber_architecture",
-      "requirements_locked_before_search": true,
-      "candidates": [
-        {
-          "candidate_id": "CHAMBER-A-v51-timber-grid",
-          "origin": "BESPOKE_JS_PRIMITIVE_SET",
-          "source_ids": [],
-          "status": "SHOT_TESTED_REJECTED",
-          "scores": {
-            "story_specificity": 5,
-            "period_fit": 5,
-            "style_fit": 6,
-            "shot_fit": 6,
-            "continuity_fit": 9,
-            "animation_suitability": 10,
-            "technical_quality": 10,
-            "rights_confidence": 10,
-            "originality_non_genericity": 5
-          },
-          "reason": "Technically clean and easy to animate, but the repeated timber grid and shelf read as a generic coded room and became visibly cheaper than the upgraded engraved HERO assets."
-        },
-        {
-          "candidate_id": "CHAMBER-B-v53-sparse-stone-arch",
-          "origin": "BESPOKE_JS_ARCHITECTURAL_SHELL_PLUS_HANDPICKED_ASSETS",
-          "source_ids": [
-            "SRC-FR-001",
-            "SRC-FR-011"
-          ],
-          "status": "MATCHED_FRAME_TESTED_PREFERRED_PROVISIONAL",
-          "scores": {
-            "story_specificity": 8,
-            "source_fidelity": 8,
-            "period_fit": 8,
-            "style_fit": 9,
-            "shot_fit": 9,
-            "continuity_fit": 9,
-            "animation_suitability": 10,
-            "technical_quality": 10,
-            "rights_confidence": 10,
-            "originality_non_genericity": 9
-          },
-          "reason": "Matched creation/recoil frames show better hierarchy and coherence: sparse stone/plaster mass, arch rhythm, handpicked Gothic window and fewer filler objects let the high-information characters/apparatus dominate."
-        }
-      ],
+      "requirements_locked_before_search": false,
+      "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "MATCHED_FRAME_PREFERRED_PROVISIONAL",
-      "why_selected_or_pending": "Prefer the sparse stone/arch chamber for current V5.3 lookdev. Final approval waits for remaining environment/location checks and full-sequence continuity.",
-      "remaining_risk": "Interior remains interpretive rather than a documented exact room; external location identity and final source contract remain open.",
-      "preferred_candidate_id": "CHAMBER-B-v53-sparse-stone-arch"
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-timber_wall_beams",
@@ -331,9 +361,9 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "INACTIVE_REMOVED_FROM_CURRENT_CUT",
-      "why_selected_or_pending": "Replaced by sparse stone/plaster chamber architecture in V5.3.",
-      "remaining_risk": "None for the current cut. Reopen requirements/candidate validation if this Item returns in a future shot."
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-laboratory_floor",
@@ -343,7 +373,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-laboratory_door",
@@ -353,7 +383,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-laboratory_shelves_papers",
@@ -361,9 +391,9 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "INACTIVE_REMOVED_FROM_CURRENT_CUT",
-      "why_selected_or_pending": "Removed from current chamber because it read as low-detail filler beside upgraded HERO assets.",
-      "remaining_risk": "None for the current cut. Reopen requirements/candidate validation if this Item returns in a future shot."
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-creation_bed_slab",
@@ -373,17 +403,38 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-creature_drapery",
       "item_id": "creature_drapery",
-      "requirements_locked_before_search": false,
-      "candidates": [],
-      "selected_candidate_id": null,
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "V53-creature_drapery",
+          "origin": "BESPOKE_JS_RECONSTRUCTION",
+          "source_ids": [
+            "SRC-FR-001"
+          ],
+          "status": "PROTOTYPE_SELECTED",
+          "scores": {},
+          "reason": "Breaks the flat blanket shape and separates surface folds from global cross-hatch.",
+          "description": "Form-following cloth folds"
+        },
+        {
+          "candidate_id": "V51-creature_drapery",
+          "origin": "PREVIOUS_PROTOTYPE",
+          "source_ids": [],
+          "status": "REJECTED_FOR_CURRENT_TEST",
+          "scores": {},
+          "reason": "Baseline defect replaced by the V5.3 test; preserved in Git baseline frames, not active instructions."
+        }
+      ],
+      "selected_candidate_id": "V53-creature_drapery",
       "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "why_selected_or_pending": "Breaks the flat blanket shape and separates surface folds from global cross-hatch.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
+      "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
       "id": "DEC-open_folio",
@@ -391,9 +442,9 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "INACTIVE_REMOVED_FROM_CURRENT_CUT",
-      "why_selected_or_pending": "Removed from current creation tableau; no longer needed to carry the composition.",
-      "remaining_risk": "None for the current cut. Reopen requirements/candidate validation if this Item returns in a future shot."
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-skull_foreground",
@@ -401,9 +452,9 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "INACTIVE_REMOVED_FROM_CURRENT_CUT",
-      "why_selected_or_pending": "Removed from current creation tableau because the generic foreground prop lowered the detail hierarchy.",
-      "remaining_risk": "None for the current cut. Reopen requirements/candidate validation if this Item returns in a future shot."
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-foreground_copper_cable",
@@ -411,56 +462,50 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "decision_status": "REPLACED",
+      "why_selected_or_pending": "Disconnected decorative cable removed.",
       "remaining_risk": "Prototype implementation must not be grandfathered into final production."
     },
     {
       "id": "DEC-victor_silhouette",
       "item_id": "victor_silhouette",
-      "requirements_locked_before_search": true,
-      "candidates": [
-        {
-          "candidate_id": "VICTOR-SIL-D-v53-full-body-engraved-recoil",
-          "origin": "BESPOKE_GENERATED_REFERENCE_SYNTHESIS",
-          "source_ids": [
-            "SRC-FR-001",
-            "SRC-FR-014",
-            "SRC-FR-018",
-            "SRC-FR-019",
-            "SRC-FR-020"
-          ],
-          "status": "MEDIUM_SCALE_SHOT_TESTED_PREFERRED_PROVISIONAL",
-          "scores": {
-            "story_specificity": 9,
-            "source_fidelity": 8,
-            "period_fit": 8,
-            "style_fit": 10,
-            "shot_fit": 9,
-            "continuity_fit": 8,
-            "animation_suitability": 7,
-            "technical_quality": 9,
-            "rights_confidence": 6,
-            "originality_non_genericity": 9
-          },
-          "reason": "Strong period recoil silhouette at medium/full-body scale. The same source fails portrait-scale enlargement; that use is explicitly rejected and the close-up shot was redesigned."
-        }
-      ],
+      "requirements_locked_before_search": false,
+      "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "MEDIUM_SCALE_PREFERRED_PROVISIONAL",
-      "why_selected_or_pending": "Prefer the full-body engraved Victor for medium/recoil shots only. Do not use it as a portrait source.",
-      "remaining_risk": "Final diegetic costume contract, clean source provenance and dedicated portrait solution if any future portrait shot is retained.",
-      "preferred_candidate_id": "VICTOR-SIL-D-v53-full-body-engraved-recoil"
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-victor_head_profile",
       "item_id": "victor_head_profile",
-      "requirements_locked_before_search": false,
-      "candidates": [],
-      "selected_candidate_id": null,
-      "decision_status": "INACTIVE_REMOVED_FROM_CURRENT_CUT",
-      "why_selected_or_pending": "Dedicated portrait/close-up use removed from current cut. Current Victor asset is approved only for medium/full-body recoil framing.",
-      "remaining_risk": "None for the current cut. Reopen requirements/candidate validation if this Item returns in a future shot."
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "V53-victor_head_profile",
+          "origin": "BESPOKE_JS_RECONSTRUCTION",
+          "source_ids": [
+            "SRC-FR-001"
+          ],
+          "status": "PROTOTYPE_SELECTED",
+          "scores": {},
+          "reason": "Facial proportions are closer to a human profile and remain readable in wide and close views.",
+          "description": "Separate brow, bridge, nostril, lips, chin and jaw planes"
+        },
+        {
+          "candidate_id": "V51-victor_head_profile",
+          "origin": "PREVIOUS_PROTOTYPE",
+          "source_ids": [],
+          "status": "REJECTED_FOR_CURRENT_TEST",
+          "scores": {},
+          "reason": "Baseline defect replaced by the V5.3 test; preserved in Git baseline frames, not active instructions."
+        }
+      ],
+      "selected_candidate_id": "V53-victor_head_profile",
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "Facial proportions are closer to a human profile and remain readable in wide and close views.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
+      "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
       "id": "DEC-victor_hair",
@@ -470,7 +515,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-victor_coat",
@@ -561,9 +606,9 @@
         }
       ],
       "selected_candidate_id": null,
-      "decision_status": "CANDIDATES_COMPARED",
+      "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "First lock whether costume art direction follows the story chronology or the 1831 visual-edition contract; then redraw Victor from the winning reference direction and compare in silhouette/close-up.",
-      "remaining_risk": "Costume date contract still unresolved."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-victor_collar_cravat",
@@ -573,146 +618,58 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-victor_hand",
       "item_id": "victor_hand",
-      "requirements_locked_before_search": false,
-      "candidates": [],
-      "selected_candidate_id": null,
-      "decision_status": "INACTIVE_REMOVED_FROM_CURRENT_CUT",
-      "why_selected_or_pending": "Standalone Victor/POV hand removed from current cut; apparatus interaction now uses a controllable brass contact/lever and the doorway pose does not require a separate hand Item.",
-      "remaining_risk": "None for the current cut. Reopen requirements/candidate validation if this Item returns in a future shot."
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "V53-victor_hand",
+          "origin": "BESPOKE_JS_RECONSTRUCTION",
+          "source_ids": [
+            "SRC-FR-001"
+          ],
+          "status": "PROTOTYPE_SELECTED",
+          "scores": {},
+          "reason": "Corrects the missing-digit mitten shape and reverses the macro hand toward the contact.",
+          "description": "Five distinct digits and wrist-led reach"
+        },
+        {
+          "candidate_id": "V51-victor_hand",
+          "origin": "PREVIOUS_PROTOTYPE",
+          "source_ids": [],
+          "status": "REJECTED_FOR_CURRENT_TEST",
+          "scores": {},
+          "reason": "Baseline defect replaced by the V5.3 test; preserved in Git baseline frames, not active instructions."
+        }
+      ],
+      "selected_candidate_id": "V53-victor_hand",
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "Corrects the missing-digit mitten shape and reverses the macro hand toward the contact.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
+      "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
       "id": "DEC-victor_recoil_pose",
       "item_id": "victor_recoil_pose",
-      "requirements_locked_before_search": true,
-      "candidates": [
-        {
-          "candidate_id": "VICTOR-POSE-D-v53-recoil-full-body",
-          "origin": "BESPOKE_GENERATED_REFERENCE_SYNTHESIS",
-          "source_ids": [
-            "SRC-FR-012",
-            "SRC-FR-013",
-            "SRC-FR-014",
-            "SRC-FR-018",
-            "SRC-FR-019"
-          ],
-          "status": "SHOT_TESTED_PREFERRED_PROVISIONAL",
-          "scores": {
-            "story_specificity": 10,
-            "source_fidelity": 9,
-            "period_fit": 8,
-            "style_fit": 10,
-            "shot_fit": 9,
-            "continuity_fit": 8,
-            "animation_suitability": 7,
-            "technical_quality": 9,
-            "rights_confidence": 6,
-            "originality_non_genericity": 9
-          },
-          "reason": "The actual medium doorway/recoil frame communicates withdrawal and fear far more convincingly than the primitive pose. Movement remains mainly rigid/whole-body rather than fully articulated."
-        }
-      ],
+      "requirements_locked_before_search": false,
+      "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "SHOT_TEST_PREFERRED_PROVISIONAL",
-      "why_selected_or_pending": "Prefer VICTOR-POSE-D for the medium recoil language; keep final approval blocked by source/costume/provenance requirements.",
-      "remaining_risk": "Need final costume-time decision and clean source file.",
-      "preferred_candidate_id": "VICTOR-POSE-D-v53-recoil-full-body"
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-creature_body_proportions",
       "item_id": "creature_body_proportions",
-      "requirements_locked_before_search": true,
-      "candidates": [
-        {
-          "candidate_id": "CBODY-A-text-anatomy-synthesis",
-          "origin": "BESPOKE_REFERENCE_DRIVEN",
-          "source_ids": [
-            "SRC-FR-012",
-            "SRC-FR-013",
-            "SRC-FR-014",
-            "SRC-FR-015",
-            "SRC-FR-016",
-            "SRC-FR-001"
-          ],
-          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
-          "scores": {
-            "story_specificity": 10,
-            "source_fidelity": 9,
-            "period_fit": 9,
-            "rights_confidence": 10
-          },
-          "reason": "Bespoke proportional human figure built from literary constraints, Bell surface/action anatomy, skeletal/anatomical references, and period engraving language. Best research direction so far because it preserves proportion/beauty while allowing uncanny surface treatment; must still survive the actual shot."
-        },
-        {
-          "candidate_id": "CBODY-B-vonholst-silhouette-led",
-          "origin": "BESPOKE_REDRAW_FROM_PERIOD_ART_DIRECTION_REFERENCE",
-          "source_ids": [
-            "SRC-FR-001",
-            "SRC-FR-002",
-            "SRC-FR-012",
-            "SRC-FR-013"
-          ],
-          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
-          "scores": {
-            "story_specificity": 9,
-            "source_fidelity": 7,
-            "period_fit": 10,
-            "rights_confidence": 10
-          },
-          "reason": "Uses von Holst's early Frankenstein silhouette/proportion language as the dominant visual reference. Strong period identity and story connection, but a single historical illustration may overconstrain anatomy and angles; needs comparison against a more anatomy-driven bespoke design."
-        },
-        {
-          "candidate_id": "CBODY-C-direct-anatomy-plate",
-          "origin": "PUBLIC_DOMAIN_ANATOMY_PLATE_AS_VISIBLE_ASSET",
-          "source_ids": [
-            "SRC-FR-015",
-            "SRC-FR-016"
-          ],
-          "status": "REJECTED_AS_FINAL_VISIBLE_DIRECTION",
-          "scores": {
-            "story_specificity": 3,
-            "source_fidelity": 4,
-            "period_fit": 8,
-            "rights_confidence": 10
-          },
-          "reason": "Excellent anatomy evidence but poor final creature asset: too clinical, not story-specific, and would make the film look like an imported anatomy plate. Retain only as design/reference evidence."
-        },
-        {
-          "candidate_id": "CBODY-D-v53-high-information-engraved-body",
-          "origin": "BESPOKE_GENERATED_REFERENCE_SYNTHESIS",
-          "source_ids": [
-            "SRC-FR-012",
-            "SRC-FR-013",
-            "SRC-FR-014",
-            "SRC-FR-015",
-            "SRC-FR-016",
-            "SRC-FR-001"
-          ],
-          "status": "SHOT_AND_MOTION_TESTED_PREFERRED_PROVISIONAL",
-          "scores": {
-            "story_specificity": 9,
-            "source_fidelity": 8,
-            "period_fit": 8,
-            "style_fit": 9,
-            "shot_fit": 9,
-            "continuity_fit": 8,
-            "animation_suitability": 6,
-            "technical_quality": 9,
-            "rights_confidence": 6,
-            "originality_non_genericity": 9
-          },
-          "reason": "Actual creation/recoil shot tests materially outperform the primitive body: proportionate human anatomy, flowing hair/drapery and engraved surface quality read correctly at wide/medium scale. Flat asset supports restrained breathing/lift only; independent limb convulsion remains unresolved. Generated-asset rights/provenance require final confirmation before approval."
-        }
-      ],
+      "requirements_locked_before_search": false,
+      "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "SHOT_TEST_PREFERRED_PROVISIONAL",
-      "why_selected_or_pending": "Prefer CBODY-D for the current visual direction at wide/medium scale. Do not mark final until a clean individual source and required articulation/rights gates pass.",
-      "remaining_risk": "Independent limb convulsion, clean final source file and final rights review remain open.",
-      "preferred_candidate_id": "CBODY-D-v53-high-information-engraved-body"
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-creature_head_shape",
@@ -720,84 +677,30 @@
       "requirements_locked_before_search": true,
       "candidates": [
         {
-          "candidate_id": "CHEAD-A-proportional-beauty-corrupted",
-          "origin": "BESPOKE_REFERENCE_DRIVEN",
+          "candidate_id": "V53-creature_head_shape",
+          "origin": "BESPOKE_JS_RECONSTRUCTION",
           "source_ids": [
-            "SRC-FR-012",
-            "SRC-FR-013",
-            "SRC-FR-014",
-            "SRC-FR-015",
-            "SRC-FR-001"
+            "SRC-FR-012"
           ],
-          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
-          "scores": {
-            "story_specificity": 10,
-            "source_fidelity": 9,
-            "period_fit": 9,
-            "rights_confidence": 10
-          },
-          "reason": "Start from a proportionate, potentially beautiful human head and create horror through pallor, sockets, lips, eye treatment, shadow and animation rather than arbitrary cranial deformation."
+          "status": "PROTOTYPE_SELECTED",
+          "scores": {},
+          "reason": "Brow, nose, lips and jaw replace the triangular face wedge.",
+          "description": "Human profile with irregular shadow planes"
         },
         {
-          "candidate_id": "CHEAD-B-vonholst-profile-led",
-          "origin": "BESPOKE_REDRAW_FROM_PERIOD_ART_DIRECTION_REFERENCE",
-          "source_ids": [
-            "SRC-FR-001",
-            "SRC-FR-002"
-          ],
-          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
-          "scores": {
-            "story_specificity": 9,
-            "source_fidelity": 7,
-            "period_fit": 10,
-            "rights_confidence": 10
-          },
-          "reason": "Builds the head/profile language from the 1831 frontispiece. Strong Frankenstein identity and engraving fit, but must be checked against source-contract choice and close-up anatomy."
-        },
-        {
-          "candidate_id": "CHEAD-C-generic-grotesque-monster",
-          "origin": "GENERIC_HORROR_DIRECTION",
+          "candidate_id": "V51-creature_head_shape",
+          "origin": "PREVIOUS_PROTOTYPE",
           "source_ids": [],
-          "status": "REJECTED",
-          "scores": {
-            "story_specificity": 2,
-            "source_fidelity": 2,
-            "period_fit": 4,
-            "rights_confidence": 10
-          },
-          "reason": "Blockheaded/scarred/deformed monster shorthand is rejected because it is generic, later-iconography driven, and conflicts with the source idea of proportionate limbs/features originally selected as beautiful."
-        },
-        {
-          "candidate_id": "CHEAD-D-v53-engraved-human-head",
-          "origin": "BESPOKE_GENERATED_REFERENCE_SYNTHESIS",
-          "source_ids": [
-            "SRC-FR-012",
-            "SRC-FR-013",
-            "SRC-FR-014",
-            "SRC-FR-015",
-            "SRC-FR-001"
-          ],
-          "status": "SHOT_AND_MOTION_TESTED_PREFERRED_PROVISIONAL",
-          "scores": {
-            "story_specificity": 9,
-            "source_fidelity": 9,
-            "period_fit": 8,
-            "style_fit": 10,
-            "shot_fit": 9,
-            "continuity_fit": 8,
-            "animation_suitability": 7,
-            "technical_quality": 9,
-            "rights_confidence": 6,
-            "originality_non_genericity": 9
-          },
-          "reason": "First-eye close-up reads as a proportionate human head made uncanny by complexion, socket, hair, shadow and animation rather than generic monster deformation. Passed close-up and eye-reveal motion tests."
+          "status": "REJECTED_FOR_CURRENT_TEST",
+          "scores": {},
+          "reason": "Baseline defect replaced by the V5.3 test; preserved in Git baseline frames, not active instructions."
         }
       ],
-      "selected_candidate_id": null,
-      "decision_status": "SHOT_TEST_PREFERRED_PROVISIONAL",
-      "why_selected_or_pending": "Prefer CHEAD-D for current lookdev. It is visually stronger than primitive and generic-grotesque directions, but remains provisional pending clean final source/provenance.",
-      "remaining_risk": "Final alpha/source cleanup and continuity with the final full-body asset remain open.",
-      "preferred_candidate_id": "CHEAD-D-v53-engraved-human-head"
+      "selected_candidate_id": "V53-creature_head_shape",
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "Brow, nose, lips and jaw replace the triangular face wedge.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
+      "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
       "id": "DEC-creature_hair",
@@ -805,61 +708,30 @@
       "requirements_locked_before_search": true,
       "candidates": [
         {
-          "candidate_id": "CHAIR-A-flowing-engraved-mass",
-          "origin": "BESPOKE_TEXT_AND_PERIOD_ART_DIRECTION",
+          "candidate_id": "V53-creature_hair",
+          "origin": "BESPOKE_JS_RECONSTRUCTION",
           "source_ids": [
-            "SRC-FR-012",
-            "SRC-FR-013",
-            "SRC-FR-001"
+            "SRC-FR-012"
           ],
-          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
-          "scores": {
-            "story_specificity": 10,
-            "source_fidelity": 10,
-            "period_fit": 9,
-            "rights_confidence": 10
-          },
-          "reason": "Long lustrous black hair treated as several flowing engraved masses that break the silhouette and partially obscure the face."
+          "status": "PROTOTYPE_SELECTED",
+          "scores": {},
+          "reason": "Replaces the rounded helmet mass with flowing black hair.",
+          "description": "Long curved black strands"
         },
         {
-          "candidate_id": "CHAIR-B-fine-locks-rimlit",
-          "origin": "BESPOKE_TEXT_DRIVEN",
-          "source_ids": [
-            "SRC-FR-012",
-            "SRC-FR-013"
-          ],
-          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
-          "scores": {
-            "story_specificity": 9,
-            "source_fidelity": 10,
-            "period_fit": 8,
-            "rights_confidence": 10
-          },
-          "reason": "More individual flowing locks with restrained rim light. Could read more human and beautiful before becoming uncanny, but may be expensive/noisy at video resolution."
-        },
-        {
-          "candidate_id": "CHAIR-C-heavy-shadow-curtain",
-          "origin": "BESPOKE_CHIAROSCURO_DIRECTION",
-          "source_ids": [
-            "SRC-FR-001",
-            "SRC-FR-002",
-            "SRC-FR-012",
-            "SRC-FR-013"
-          ],
-          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
-          "scores": {
-            "story_specificity": 8,
-            "source_fidelity": 9,
-            "period_fit": 10,
-            "rights_confidence": 10
-          },
-          "reason": "Hair acts as a nearly solid black curtain with a few flowing cuts, maximizing silhouette clarity and hiding facial information. Risk: may lose the 'lustrous' quality."
+          "candidate_id": "V51-creature_hair",
+          "origin": "PREVIOUS_PROTOTYPE",
+          "source_ids": [],
+          "status": "REJECTED_FOR_CURRENT_TEST",
+          "scores": {},
+          "reason": "Baseline defect replaced by the V5.3 test; preserved in Git baseline frames, not active instructions."
         }
       ],
-      "selected_candidate_id": null,
-      "decision_status": "CANDIDATES_COMPARED_REQUIRES_SHOT_TEST",
-      "why_selected_or_pending": "All three remain viable until tested at medium and close-up scales.",
-      "remaining_risk": "Need continuity across body shot and eye close-up without adding excessive line noise."
+      "selected_candidate_id": "V53-creature_hair",
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "Replaces the rounded helmet mass with flowing black hair.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
+      "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
       "id": "DEC-creature_eye",
@@ -867,141 +739,40 @@
       "requirements_locked_before_search": true,
       "candidates": [
         {
-          "candidate_id": "CEYE-A-dull-yellow-waterlogged",
-          "origin": "BESPOKE_TEXT_AND_ANATOMY_DRIVEN",
+          "candidate_id": "V53-creature_eye",
+          "origin": "BESPOKE_JS_RECONSTRUCTION",
           "source_ids": [
-            "SRC-FR-012",
-            "SRC-FR-013",
-            "SRC-FR-014",
-            "SRC-FR-015"
+            "SRC-FR-012"
           ],
-          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
-          "scores": {
-            "story_specificity": 10,
-            "source_fidelity": 10,
-            "period_fit": 9,
-            "rights_confidence": 10
-          },
-          "reason": "A dull yellow/watery eye with low luminance contrast, pale socket and subtle wet specular detail. Horror comes from life appearing in something almost dead, not from neon emission."
+          "status": "PROTOTYPE_SELECTED",
+          "scores": {},
+          "reason": "Novel calls for a dull yellow eye; a luminous cyan reveal or blank white dot loses fidelity.",
+          "description": "Dull yellow watery eye with limited highlight"
         },
         {
-          "candidate_id": "CEYE-B-engraving-shadow-eye",
-          "origin": "BESPOKE_PERIOD_ENGRAVING_DIRECTION",
-          "source_ids": [
-            "SRC-FR-001",
-            "SRC-FR-002",
-            "SRC-FR-014"
-          ],
-          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
-          "scores": {
-            "story_specificity": 9,
-            "source_fidelity": 8,
-            "period_fit": 10,
-            "rights_confidence": 10
-          },
-          "reason": "Keeps most of the eye in engraving shadow and reveals only a small dull-yellow iris/scleral plane. Strong style integration, but may become unreadable in the macro shot."
-        },
-        {
-          "candidate_id": "CEYE-C-electric-blue-glow",
-          "origin": "GENERIC_CINEMATIC_EFFECT",
+          "candidate_id": "V51-creature_eye",
+          "origin": "PREVIOUS_PROTOTYPE",
           "source_ids": [],
-          "status": "REJECTED",
-          "scores": {
-            "story_specificity": 3,
-            "source_fidelity": 1,
-            "period_fit": 2,
-            "rights_confidence": 10
-          },
-          "reason": "Rejected despite visual punch: it turns the eye into a modern sci-fi/electrical trope and directly weakens the dull-yellow/watery source description."
-        },
-        {
-          "candidate_id": "CEYE-D-v53-real-engraved-eye-reveal",
-          "origin": "BESPOKE_GENERATED_REFERENCE_SYNTHESIS_PLUS_JS_OCCLUSION",
-          "source_ids": [
-            "SRC-FR-012",
-            "SRC-FR-013",
-            "SRC-FR-014",
-            "SRC-FR-015"
-          ],
-          "status": "SHOT_AND_MOTION_TESTED_PREFERRED_PROVISIONAL",
-          "scores": {
-            "story_specificity": 10,
-            "source_fidelity": 9,
-            "period_fit": 9,
-            "style_fit": 10,
-            "shot_fit": 10,
-            "continuity_fit": 8,
-            "animation_suitability": 9,
-            "technical_quality": 9,
-            "rights_confidence": 6,
-            "originality_non_genericity": 10
-          },
-          "reason": "Uses the real engraved eye and a JavaScript occlusion mask for closed->partial->open states. Avoids the rejected electric-blue-glow trope and preserves a dull yellow/watery reading. Passed start/mid/end motion frames after alpha-compositing fix."
+          "status": "REJECTED_FOR_CURRENT_TEST",
+          "scores": {},
+          "reason": "Baseline defect replaced by the V5.3 test; preserved in Git baseline frames, not active instructions."
         }
       ],
-      "selected_candidate_id": null,
-      "decision_status": "SHOT_TEST_PREFERRED_PROVISIONAL",
-      "why_selected_or_pending": "Prefer CEYE-D. Final approval waits for clean individual source/provenance and continuity with the final Creature head.",
-      "remaining_risk": "Rights/provenance and final head continuity are unresolved.",
-      "preferred_candidate_id": "CEYE-D-v53-real-engraved-eye-reveal"
+      "selected_candidate_id": "V53-creature_eye",
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "Novel calls for a dull yellow eye; a luminous cyan reveal or blank white dot loses fidelity.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
+      "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
       "id": "DEC-creature_rise_motion",
       "item_id": "creature_rise_motion",
-      "requirements_locked_before_search": true,
-      "candidates": [
-        {
-          "candidate_id": "CMOTION-A-breath-spasm-rise",
-          "origin": "BESPOKE_SOURCE_AND_ANATOMY_DRIVEN_MOTION",
-          "source_ids": [
-            "SRC-FR-012",
-            "SRC-FR-013",
-            "SRC-FR-014"
-          ],
-          "status": "RESEARCH_QUALIFIED_NOT_MOTION_TESTED",
-          "scores": {
-            "story_specificity": 10,
-            "source_fidelity": 10,
-            "period_fit": 10,
-            "rights_confidence": 10
-          },
-          "reason": "Sequence: hard breath/chest expansion -> distal finger/hand spasm -> asymmetric convulsive limb motion -> incomplete head/torso rise. Closely maps source event order while remaining cinematic."
-        },
-        {
-          "candidate_id": "CMOTION-B-convulsion-stillness-headturn",
-          "origin": "BESPOKE_SOURCE_DRIVEN_MOTION",
-          "source_ids": [
-            "SRC-FR-012",
-            "SRC-FR-013",
-            "SRC-FR-014"
-          ],
-          "status": "RESEARCH_QUALIFIED_NOT_MOTION_TESTED",
-          "scores": {
-            "story_specificity": 9,
-            "source_fidelity": 9,
-            "period_fit": 10,
-            "rights_confidence": 10
-          },
-          "reason": "One stronger whole-body convulsion followed by unnerving stillness, then a small head/eye movement. Less literal breathing emphasis but potentially stronger horror rhythm."
-        },
-        {
-          "candidate_id": "CMOTION-C-slow-zombie-rise",
-          "origin": "GENERIC_HORROR_MOTION",
-          "source_ids": [],
-          "status": "REJECTED",
-          "scores": {
-            "story_specificity": 2,
-            "source_fidelity": 2,
-            "period_fit": 5,
-            "rights_confidence": 10
-          },
-          "reason": "Rejected because it imports a generic undead movement vocabulary and ignores the described hard breathing and convulsive first movement."
-        }
-      ],
+      "requirements_locked_before_search": false,
+      "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "CANDIDATES_COMPARED_REQUIRES_SHOT_TEST",
-      "why_selected_or_pending": "Create short motion tests for A and B with identical framing/audio before selection.",
-      "remaining_risk": "Movement can become melodramatic or mechanically rigged; Bell-informed muscle/joint behavior must survive stylization."
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-voltaic_pile",
@@ -1076,34 +847,30 @@
           "reason": "Best period experimental visual vocabulary; particularly useful for contextualizing the fictional laboratory."
         },
         {
-          "candidate_id": "PILE-D-v53-high-information-apparatus",
-          "origin": "BESPOKE_GENERATED_REFERENCE_SYNTHESIS",
+          "candidate_id": "V53-voltaic_pile",
+          "origin": "BESPOKE_JS_RECONSTRUCTION",
           "source_ids": [
-            "SRC-FR-004",
             "SRC-FR-006"
           ],
-          "status": "SHOT_AND_MOTION_TESTED_PREFERRED_PROVISIONAL",
-          "scores": {
-            "story_specificity": 9,
-            "source_fidelity": 8,
-            "period_fit": 9,
-            "functional_accuracy": 8,
-            "style_fit": 10,
-            "shot_fit": 10,
-            "continuity_fit": 8,
-            "animation_suitability": 9,
-            "technical_quality": 9,
-            "rights_confidence": 6,
-            "originality_non_genericity": 9
-          },
-          "reason": "Macro shot gains substantially more engraved material/construction detail than the primitive pile. Interaction is now handled by a separate JS contact lever rather than forcing a contaminated hand asset."
+          "status": "PROTOTYPE_SELECTED",
+          "scores": {},
+          "reason": "Separators, supports and terminals give construction logic to the prop.",
+          "description": "Alternating plates with intervening wet separator layer"
+        },
+        {
+          "candidate_id": "V51-voltaic_pile",
+          "origin": "PREVIOUS_PROTOTYPE",
+          "source_ids": [],
+          "status": "REJECTED_FOR_CURRENT_TEST",
+          "scores": {},
+          "reason": "Baseline defect replaced by the V5.3 test; preserved in Git baseline frames, not active instructions."
         }
       ],
-      "selected_candidate_id": null,
-      "decision_status": "SHOT_TEST_PREFERRED_PROVISIONAL",
-      "why_selected_or_pending": "Prefer PILE-D for the macro visual direction, pending final-source/provenance and historical construction review.",
-      "remaining_risk": "Generated source/provenance and exact functional reconstruction still need final validation.",
-      "preferred_candidate_id": "PILE-D-v53-high-information-apparatus"
+      "selected_candidate_id": "V53-voltaic_pile",
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "Separators, supports and terminals give construction logic to the prop.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
+      "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
       "id": "DEC-leyden_jar_primary",
@@ -1177,34 +944,30 @@
           "reason": "Strengthens period galvanism context and house-style integration."
         },
         {
-          "candidate_id": "JAR-D-v53-high-information-leyden-jar",
-          "origin": "BESPOKE_GENERATED_REFERENCE_SYNTHESIS",
+          "candidate_id": "V53-leyden_jar_primary",
+          "origin": "BESPOKE_JS_RECONSTRUCTION",
           "source_ids": [
-            "SRC-FR-004",
             "SRC-FR-005"
           ],
-          "status": "SHOT_AND_MOTION_TESTED_PREFERRED_PROVISIONAL",
-          "scores": {
-            "story_specificity": 8,
-            "source_fidelity": 8,
-            "period_fit": 9,
-            "functional_accuracy": 8,
-            "style_fit": 10,
-            "shot_fit": 9,
-            "continuity_fit": 8,
-            "animation_suitability": 9,
-            "technical_quality": 9,
-            "rights_confidence": 6,
-            "originality_non_genericity": 9
-          },
-          "reason": "The engraved jar integrates visually with the pile and passes the macro shot readability gate. Final historical construction details remain to be checked."
+          "status": "PROTOTYPE_SELECTED",
+          "scores": {},
+          "reason": "Material parts replace a generic glowing jar.",
+          "description": "Glass, foil band, stopper and terminal"
+        },
+        {
+          "candidate_id": "V51-leyden_jar_primary",
+          "origin": "PREVIOUS_PROTOTYPE",
+          "source_ids": [],
+          "status": "REJECTED_FOR_CURRENT_TEST",
+          "scores": {},
+          "reason": "Baseline defect replaced by the V5.3 test; preserved in Git baseline frames, not active instructions."
         }
       ],
-      "selected_candidate_id": null,
-      "decision_status": "SHOT_TEST_PREFERRED_PROVISIONAL",
-      "why_selected_or_pending": "Prefer JAR-D for current macro lookdev, but retain museum-based direction as the factual validation source.",
-      "remaining_risk": "Final functional/historical and generated-source rights review remain open.",
-      "preferred_candidate_id": "JAR-D-v53-high-information-leyden-jar"
+      "selected_candidate_id": "V53-leyden_jar_primary",
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "Material parts replace a generic glowing jar.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
+      "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
       "id": "DEC-leyden_jar_secondary",
@@ -1279,8 +1042,8 @@
         }
       ],
       "selected_candidate_id": null,
-      "decision_status": "CANDIDATES_COMPARED",
-      "why_selected_or_pending": "Redraw/adjust the jar after construction-detail comparison; do not use the museum raster image under its standard noncommercial image licence.",
+      "decision_status": "REPLACED",
+      "why_selected_or_pending": "Unconnected duplicate vessel removed.",
       "remaining_risk": "Final geometry and shot fit still unapproved."
     },
     {
@@ -1289,34 +1052,30 @@
       "requirements_locked_before_search": true,
       "candidates": [
         {
-          "candidate_id": "CONTACT-D-v53-js-brass-lever",
-          "origin": "BESPOKE_JS_GEOMETRY_FROM_PERIOD_APPARATUS_REQUIREMENTS",
+          "candidate_id": "V53-brass_contact",
+          "origin": "BESPOKE_JS_RECONSTRUCTION",
           "source_ids": [
-            "SRC-FR-004",
             "SRC-FR-006"
           ],
-          "status": "SHOT_AND_MOTION_TESTED_PREFERRED_PROVISIONAL",
-          "scores": {
-            "story_specificity": 9,
-            "source_fidelity": 8,
-            "period_fit": 9,
-            "functional_accuracy": 8,
-            "style_fit": 9,
-            "shot_fit": 10,
-            "continuity_fit": 10,
-            "animation_suitability": 10,
-            "technical_quality": 10,
-            "rights_confidence": 10,
-            "originality_non_genericity": 9
-          },
-          "reason": "The hand candidate was removed after failing isolation/shot fit. A simple brass lever/contact built in JS is more controllable, visually clean and functionally legible; it closes over time and directly anchors the electrical arc."
+          "status": "PROTOTYPE_SELECTED",
+          "scores": {},
+          "reason": "Hand orientation and terminal endpoints are inspectable.",
+          "description": "Contact with approaching wrist and small timed spark"
+        },
+        {
+          "candidate_id": "V51-brass_contact",
+          "origin": "PREVIOUS_PROTOTYPE",
+          "source_ids": [],
+          "status": "REJECTED_FOR_CURRENT_TEST",
+          "scores": {},
+          "reason": "Baseline defect replaced by the V5.3 test; preserved in Git baseline frames, not active instructions."
         }
       ],
-      "selected_candidate_id": null,
-      "decision_status": "SHOT_TEST_PREFERRED_PROVISIONAL",
-      "why_selected_or_pending": "Prefer CONTACT-D over the weak hand-driven interaction. Final historical geometry still needs factual review, but the shot mechanism itself passes.",
-      "remaining_risk": "Historical contact geometry is interpretive and should not be overclaimed as canonical apparatus.",
-      "preferred_candidate_id": "CONTACT-D-v53-js-brass-lever"
+      "selected_candidate_id": "V53-brass_contact",
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "Hand orientation and terminal endpoints are inspectable.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
+      "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
       "id": "DEC-copper_wire_network",
@@ -1326,17 +1085,39 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-electric_arc",
       "item_id": "electric_arc",
-      "requirements_locked_before_search": false,
-      "candidates": [],
-      "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "V53-electric_arc",
+          "origin": "BESPOKE_JS_RECONSTRUCTION",
+          "source_ids": [
+            "SRC-FR-006"
+          ],
+          "status": "REPLACED",
+          "scores": {},
+          "reason": "Removes continuous decorative electrical glow and confines effects to a contact.",
+          "description": "Small event-only contact spark",
+          "rejection_reason": "Unsupported discharge removed; no validated electrical model."
+        },
+        {
+          "candidate_id": "V51-electric_arc",
+          "origin": "PREVIOUS_PROTOTYPE",
+          "source_ids": [],
+          "status": "REJECTED_FOR_CURRENT_TEST",
+          "scores": {},
+          "reason": "Baseline defect replaced by the V5.3 test; preserved in Git baseline frames, not active instructions."
+        }
+      ],
+      "selected_candidate_id": "V53-electric_arc",
+      "decision_status": "REPLACED",
+      "why_selected_or_pending": "Unsupported discharge removed; no validated electrical model.",
+      "remaining_risk": "Not historically or physically certified. Compare removing this effect altogether.",
+      "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
       "id": "DEC-anatomy_pages",
@@ -1344,9 +1125,9 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "INACTIVE_REMOVED_FROM_CURRENT_CUT",
-      "why_selected_or_pending": "Removed from current apparatus macro as low-value scientific filler; historical apparatus evidence remains in source records.",
-      "remaining_risk": "None for the current cut. Reopen requirements/candidate validation if this Item returns in a future shot."
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-laboratory_fog",
@@ -1356,7 +1137,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-interior_lightning",
@@ -1365,8 +1146,8 @@
       "candidates": [],
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "why_selected_or_pending": "Interior lightning is removed; the creation text motivates a failing candle.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-creation_camera_drift",
@@ -1376,7 +1157,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-victor_door_shadow",
@@ -1386,7 +1167,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-first_eye_shadow_mask",
@@ -1396,7 +1177,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-linen_closeup_edge",
@@ -1406,7 +1187,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-lightning_cut",
@@ -1416,7 +1197,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-shadow_cut",
@@ -1426,7 +1207,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-arc_match_cut",
@@ -1435,13 +1216,13 @@
       "candidates": [],
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "why_selected_or_pending": "Removed whole-frame arc transition; the cut now uses the eye-opening beat.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-title_frankenstein",
       "item_id": "title_frankenstein",
-      "requirements_locked_before_search": false,
+      "requirements_locked_before_search": true,
       "candidates": [
         {
           "candidate_id": "current_eb_garamond_title",
@@ -1506,12 +1287,32 @@
             "originality_non_genericity": 10
           },
           "reason": "Could align with the 1831 visual art direction, but should be chosen deliberately against the 1818 source identity."
+        },
+        {
+          "candidate_id": "V53-title_frankenstein",
+          "origin": "BUNDLED_FONT",
+          "source_ids": [
+            "SRC-FR-014"
+          ],
+          "status": "PROTOTYPE_SELECTED",
+          "scores": {},
+          "reason": "Portable licensed font eliminates silent platform-dependent substitutions.",
+          "description": "Bundled EB Garamond Roman"
+        },
+        {
+          "candidate_id": "V51-title_frankenstein",
+          "origin": "PREVIOUS_PROTOTYPE",
+          "source_ids": [],
+          "status": "REJECTED_FOR_CURRENT_TEST",
+          "scores": {},
+          "reason": "Baseline defect replaced by the V5.3 test; preserved in Git baseline frames, not active instructions."
         }
       ],
-      "selected_candidate_id": null,
-      "decision_status": "CANDIDATES_COLLECTED",
-      "why_selected_or_pending": "Choose the typography contract deliberately—1818 source identity vs 1831 visual-edition direction—then design and compare final settings.",
-      "remaining_risk": "Modern font licensing and historical fit need exact final record."
+      "selected_candidate_id": "V53-title_frankenstein",
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "Portable licensed font eliminates silent platform-dependent substitutions.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
+      "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
       "id": "DEC-subtitle_modern_prometheus",
@@ -1521,7 +1322,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-audio_low_drone",
@@ -1531,7 +1332,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-audio_noise_roomtone",
@@ -1541,7 +1342,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-thunder_cues",
@@ -1551,7 +1352,7 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-footstep_cues",
@@ -1560,8 +1361,8 @@
       "candidates": [],
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "why_selected_or_pending": "Removed because the tableau does not show steps that would justify Foley.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
       "id": "DEC-electrical_crackle_audio",
@@ -1569,8 +1370,8 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "decision_status": "REPLACED",
+      "why_selected_or_pending": "Unsupported discharge sound removed.",
       "remaining_risk": "Prototype implementation must not be grandfathered into final production."
     },
     {
@@ -1579,19 +1380,40 @@
       "requirements_locked_before_search": false,
       "candidates": [],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "decision_status": "REPLACED",
+      "why_selected_or_pending": "Unsupported discharge sound removed.",
       "remaining_risk": "Prototype implementation must not be grandfathered into final production."
     },
     {
       "id": "DEC-victor_breath",
       "item_id": "victor_breath",
-      "requirements_locked_before_search": false,
-      "candidates": [],
-      "selected_candidate_id": null,
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "V53-victor_breath",
+          "origin": "BESPOKE_JS_RECONSTRUCTION",
+          "source_ids": [
+            "SRC-FR-012"
+          ],
+          "status": "PROTOTYPE_SELECTED",
+          "scores": {},
+          "reason": "Replaces the sub-audible sinusoid labeled breath with an audible noise envelope.",
+          "description": "Envelope-shaped noise breath"
+        },
+        {
+          "candidate_id": "V51-victor_breath",
+          "origin": "PREVIOUS_PROTOTYPE",
+          "source_ids": [],
+          "status": "REJECTED_FOR_CURRENT_TEST",
+          "scores": {},
+          "reason": "Baseline defect replaced by the V5.3 test; preserved in Git baseline frames, not active instructions."
+        }
+      ],
+      "selected_candidate_id": "V53-victor_breath",
       "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "why_selected_or_pending": "Replaces the sub-audible sinusoid labeled breath with an audible noise envelope.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
+      "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
       "id": "DEC-creature_heartbeat",
@@ -1601,187 +1423,162 @@
       "selected_candidate_id": null,
       "decision_status": "NEEDS_REVALIDATION",
       "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json."
     },
     {
-      "id": "DEC-ingolstadt_roofline-v5_3",
-      "item_id": "ingolstadt_roofline",
+      "id": "DEC-candle_stub",
+      "item_id": "candle_stub",
       "requirements_locked_before_search": true,
       "candidates": [
         {
-          "candidate_id": "IROOF-A-1800-city-plus-site-plus-literary-cue",
-          "origin": "BESPOKE_MULTI_SOURCE_RECONSTRUCTION",
+          "candidate_id": "V53-candle_stub",
+          "origin": "BESPOKE_JS_RECONSTRUCTION",
           "source_ids": [
-            "SRC-FR-010",
-            "SRC-FR-011",
-            "SRC-FR-017",
-            "SRC-FR-012",
-            "SRC-FR-013"
+            "SRC-FR-012"
           ],
-          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
-          "scores": {
-            "story_specificity": 10,
-            "source_fidelity": 9,
-            "period_fit": 10,
-            "rights_confidence": 10
-          },
-          "reason": "Synthesize the 1800 city-view silhouette with university-site architecture evidence and the literary steeple cue. Strongest research direction because no single source has to do every job."
+          "status": "PROTOTYPE_SELECTED",
+          "scores": {},
+          "reason": "Makes the text\u2019s failing candle visible.",
+          "description": "Short wax candle on brass holder"
         },
         {
-          "candidate_id": "IROOF-B-1800-city-view-led",
-          "origin": "BESPOKE_SINGLE_PRIMARY_VIEW_RECONSTRUCTION",
-          "source_ids": [
-            "SRC-FR-010"
-          ],
-          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
-          "scores": {
-            "story_specificity": 10,
-            "period_fit": 10,
-            "rights_confidence": 10
-          },
-          "reason": "Stay very close to the 1800 copper engraving's city massing/roofline. Strong historical specificity but may be compositionally weak or too literal for the dramatic camera."
-        },
-        {
-          "candidate_id": "IROOF-C-university-quarter-led",
-          "origin": "BESPOKE_SITE_IDENTITY_RECONSTRUCTION",
-          "source_ids": [
-            "SRC-FR-011",
-            "SRC-FR-017"
-          ],
-          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
-          "scores": {
-            "story_specificity": 9,
-            "period_fit": 8,
-            "rights_confidence": 9
-          },
-          "reason": "Emphasize the university/Hohe Schule identity over the whole city. Could better connect Victor to place, but available visual evidence spans different dates and must not be treated as an exact 1800 snapshot."
-        },
-        {
-          "candidate_id": "IROOF-D-current-generic-gothic",
-          "origin": "CURRENT_V5_1_RENDER",
+          "candidate_id": "V51-candle_stub",
+          "origin": "PREVIOUS_PROTOTYPE",
           "source_ids": [],
-          "status": "REJECTED",
-          "scores": {
-            "story_specificity": 5,
-            "source_fidelity": 5,
-            "period_fit": 6,
-            "style_fit": 9,
-            "shot_fit": 8,
-            "rights_confidence": 10
-          },
-          "reason": "Rendered control candidate. It works compositionally but communicates generic old-European/Gothic city rather than Ingolstadt."
-        },
-        {
-          "candidate_id": "IROOF-E-v53-fine-line-js-reconstruction",
-          "origin": "REFERENCE_DRIVEN_JS_LINE_ART_RECONSTRUCTION",
-          "source_ids": [
-            "SRC-FR-010",
-            "SRC-FR-011",
-            "SRC-FR-017",
-            "SRC-FR-012",
-            "SRC-FR-013"
-          ],
-          "status": "SHOT_TESTED_REJECTED",
-          "scores": {
-            "story_specificity": 9,
-            "source_fidelity": 8,
-            "period_fit": 9,
-            "style_fit": 6,
-            "shot_fit": 6,
-            "continuity_fit": 9,
-            "animation_suitability": 10,
-            "technical_quality": 10,
-            "rights_confidence": 10,
-            "originality_non_genericity": 7
-          },
-          "reason": "The matched exterior test recovered river/bridge/steeple/fortified-city structure and improved on flat silhouettes, but still read as a diagrammatic code reconstruction rather than premium engraved city art. Reject JS primitive/line reconstruction as the final exterior authoring method."
+          "status": "REJECTED_FOR_CURRENT_TEST",
+          "scores": {},
+          "reason": "Baseline defect replaced by the V5.3 test; preserved in Git baseline frames, not active instructions."
         }
       ],
-      "selected_candidate_id": null,
-      "decision_status": "SHOT_TESTS_COMPLETE_NEEDS_HIGH_INFORMATION_ASSET",
-      "why_selected_or_pending": "Both the old generic skyline and the V5.3 fine-line JS reconstruction fail the premium exterior bar. Preserve the multi-source research requirements, but move the next candidate to high-information historical-art ingestion or an equally detailed bespoke asset.",
-      "remaining_risk": "Exterior remains the highest unresolved HERO cluster; no full V5.3 render should be promoted before it passes."
+      "selected_candidate_id": "V53-candle_stub",
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "Makes the text\u2019s failing candle visible.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
+      "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     },
     {
-      "id": "DEC-laboratory_exterior_building-v5_3",
-      "item_id": "laboratory_exterior_building",
+      "id": "DEC-candle_flame",
+      "item_id": "candle_flame",
       "requirements_locked_before_search": true,
       "candidates": [
         {
-          "candidate_id": "IEXT-A-university-context-fictional-lab",
-          "origin": "BESPOKE_EVIDENCE_BOUND_FICTIONALIZATION",
+          "candidate_id": "V53-candle_flame",
+          "origin": "BESPOKE_JS_RECONSTRUCTION",
           "source_ids": [
-            "SRC-FR-010",
-            "SRC-FR-011",
-            "SRC-FR-017",
-            "SRC-FR-012",
-            "SRC-FR-013"
+            "SRC-FR-012"
           ],
-          "status": "RESEARCH_QUALIFIED_NOT_SHOT_TESTED",
-          "scores": {
-            "story_specificity": 10,
-            "source_fidelity": 9,
-            "period_fit": 9,
-            "rights_confidence": 10
-          },
-          "reason": "Create a fictional laboratory building that belongs plausibly to the Ingolstadt/university urban fabric rather than falsely claiming Victor used a known exact building."
+          "status": "PROTOTYPE_SELECTED",
+          "scores": {},
+          "reason": "Local motion supplies the nearly extinguished light beat.",
+          "description": "Small restrained warm flame"
         },
         {
-          "candidate_id": "IEXT-B-direct-hohe-schule-likeness",
-          "origin": "REFERENCE_LED_RECONSTRUCTION",
-          "source_ids": [
-            "SRC-FR-011"
-          ],
-          "status": "RESEARCH_QUALIFIED_WITH_CAUTION_NOT_SHOT_TESTED",
-          "scores": {
-            "story_specificity": 8,
-            "source_fidelity": 6,
-            "period_fit": 8,
-            "rights_confidence": 9
-          },
-          "reason": "Using Hohe Schule geometry gives immediate university identity, but risks falsely implying that the novel specifies Victor's exact laboratory there."
-        },
-        {
-          "candidate_id": "IEXT-C-generic-gothic-laboratory",
-          "origin": "GENERIC_GOTHIC_DIRECTION",
+          "candidate_id": "V51-candle_flame",
+          "origin": "PREVIOUS_PROTOTYPE",
           "source_ids": [],
-          "status": "REJECTED",
-          "scores": {
-            "story_specificity": 3,
-            "source_fidelity": 4,
-            "period_fit": 5,
-            "rights_confidence": 10
-          },
-          "reason": "Rejected because atmosphere alone is not location/story specificity."
-        },
-        {
-          "candidate_id": "IEXT-D-v53-code-reconstructed-focal-building",
-          "origin": "REFERENCE_DRIVEN_JS_ARCHITECTURAL_RECONSTRUCTION",
-          "source_ids": [
-            "SRC-FR-010",
-            "SRC-FR-011",
-            "SRC-FR-017"
-          ],
-          "status": "SHOT_TESTED_REJECTED",
-          "scores": {
-            "story_specificity": 8,
-            "source_fidelity": 7,
-            "period_fit": 8,
-            "style_fit": 6,
-            "shot_fit": 6,
-            "continuity_fit": 9,
-            "animation_suitability": 10,
-            "technical_quality": 10,
-            "rights_confidence": 10,
-            "originality_non_genericity": 7
-          },
-          "reason": "The focal building could be directed and animated reliably, but its primitive/line geometry remained visibly lower-information than the upgraded interior/character assets."
+          "status": "REJECTED_FOR_CURRENT_TEST",
+          "scores": {},
+          "reason": "Baseline defect replaced by the V5.3 test; preserved in Git baseline frames, not active instructions."
         }
       ],
-      "selected_candidate_id": null,
-      "decision_status": "SHOT_TESTS_COMPLETE_NEEDS_HIGH_INFORMATION_ASSET",
-      "why_selected_or_pending": "Do not promote another code-drawn Gothic building. Next exterior candidate must retain location-specific high-information art while avoiding a false claim of Victor's exact historical laboratory.",
-      "remaining_risk": "Need a high-information location-specific background/focal architecture candidate and actual storm/camera composite."
+      "selected_candidate_id": "V53-candle_flame",
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "Local motion supplies the nearly extinguished light beat.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
+      "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
+    },
+    {
+      "id": "DEC-candle_light_pool",
+      "item_id": "candle_light_pool",
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "V53-candle_light_pool",
+          "origin": "BESPOKE_JS_RECONSTRUCTION",
+          "source_ids": [
+            "SRC-FR-012"
+          ],
+          "status": "PROTOTYPE_SELECTED",
+          "scores": {},
+          "reason": "Restores the source\u2019s glimmer rather than room-filling electrical light.",
+          "description": "Warm local key with dark spatial falloff"
+        },
+        {
+          "candidate_id": "V51-candle_light_pool",
+          "origin": "PREVIOUS_PROTOTYPE",
+          "source_ids": [],
+          "status": "REJECTED_FOR_CURRENT_TEST",
+          "scores": {},
+          "reason": "Baseline defect replaced by the V5.3 test; preserved in Git baseline frames, not active instructions."
+        }
+      ],
+      "selected_candidate_id": "V53-candle_light_pool",
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "Restores the source\u2019s glimmer rather than room-filling electrical light.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
+      "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
+    },
+    {
+      "id": "DEC-creature_hand",
+      "item_id": "creature_hand",
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "V53-creature_hand",
+          "origin": "BESPOKE_JS_RECONSTRUCTION",
+          "source_ids": [
+            "SRC-FR-012"
+          ],
+          "status": "PROTOTYPE_SELECTED",
+          "scores": {},
+          "reason": "Separates creature hand from the body and gives it a dedicated diagnostic.",
+          "description": "Exposed five-digit hand with wrist"
+        },
+        {
+          "candidate_id": "V51-creature_hand",
+          "origin": "PREVIOUS_PROTOTYPE",
+          "source_ids": [],
+          "status": "REJECTED_FOR_CURRENT_TEST",
+          "scores": {},
+          "reason": "Baseline defect replaced by the V5.3 test; preserved in Git baseline frames, not active instructions."
+        }
+      ],
+      "selected_candidate_id": "V53-creature_hand",
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "Separates creature hand from the body and gives it a dedicated diagnostic.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
+      "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
+    },
+    {
+      "id": "DEC-rain_patter_audio",
+      "item_id": "rain_patter_audio",
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "V53-rain_patter_audio",
+          "origin": "BESPOKE_JS_RECONSTRUCTION",
+          "source_ids": [
+            "SRC-FR-012"
+          ],
+          "status": "PROTOTYPE_SELECTED",
+          "scores": {},
+          "reason": "Adds the explicitly described rain as an independently auditionable layer.",
+          "description": "Seeded band-limited rain bed"
+        },
+        {
+          "candidate_id": "V51-rain_patter_audio",
+          "origin": "PREVIOUS_PROTOTYPE",
+          "source_ids": [],
+          "status": "REJECTED_FOR_CURRENT_TEST",
+          "scores": {},
+          "reason": "Baseline defect replaced by the V5.3 test; preserved in Git baseline frames, not active instructions."
+        }
+      ],
+      "selected_candidate_id": "V53-rain_patter_audio",
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "Adds the explicitly described rain as an independently auditionable layer.",
+      "remaining_risk": "V5.3 rejected by user. V5.4 mechanics changes are unapproved; see quality_review.json.",
+      "comparison_limit": "Comparison does not yet satisfy final asset search/approval. No numeric quality scores asserted."
     }
   ]
 }
