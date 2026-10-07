@@ -58,12 +58,12 @@ Rebuild the highest-risk HERO Items first: Ingolstadt exterior, Victor profile/p
 ## V5.2.1 — source-fidelity obligation audit
 
 ### Intent
-Bind the existing Item audit to the exact 1818 production text rather than relying only on visual/historical references.
+Test explicit edition-level source obligations alongside the existing Item audit rather than relying only on visual/historical references.
 
 ### Added
 - 14 literary-source obligations;
 - Item cross-links for 19 affected Items;
-- explicit designated source: Project Gutenberg #41445 (1818);
+- 1818 and 1831 Project Gutenberg editions retained as candidate/comparative sources; no edition is globally enforced;
 - 1831 edition retained as alternative/comparative evidence;
 - source-obligation schema and validation.
 
@@ -79,3 +79,19 @@ The current voltaic pile, Leyden jars and electrical contact are interpretive hi
 
 ### Next visual priority
 Use the combined literary + historical constraints to rebuild the exterior, creature eye/skin/motion, dying practical light, Victor/creature reaction, and apparatus macro before any global polish pass.
+
+
+## V5.2.2 — source-contract flexibility correction
+
+### Problem found
+The first V5.2.1 implementation made the 1818 source choice too rigid and allowed an episode-specific decision to leak into method state.
+
+### Correction
+- source contract is OPEN and best-fit/revisable during development;
+- 1818 and 1831 are candidates/references rather than universal requirements;
+- edition-specific obligations remain conditional;
+- a future better source may replace the current direction through explicit dependency revalidation;
+- Frankenstein remains only a worked example of the general system.
+
+### Reusable lesson
+Do not confuse reproducibility with immutability. Final output needs a recorded source contract; development must remain free to adopt a demonstrably better source, style, asset or method.
