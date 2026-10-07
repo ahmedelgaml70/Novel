@@ -142,4 +142,13 @@ A literary obligation is different from a visual reference:
 
 Each obligation may be represented, adapted, or intentionally omitted, but the decision must be explicit. HERO obligations that remain unresolved block strict final approval.
 
-When multiple editions are researched, designate one production text and mark the others as comparative/alternative. Never silently blend 1818 and 1831 choices.
+When multiple editions/translations are researched, keep them as source candidates until a best-fit source contract is deliberately chosen. The choice remains revisable during development. If a better source is found, replace the contract explicitly, invalidate affected obligations/decisions, and re-evaluate them. Never silently blend edition-specific facts.
+
+
+## Source-contract flexibility
+
+The production framework does not prescribe first edition, latest author revision, original-language edition, or any named source as a universal default.
+
+Source selection is an episode-level best-fit decision. It should optimize for the adaptation goal while respecting completeness, provenance, wording consequences, translation quality, rights and creative value.
+
+A final master needs a clearly recorded source contract for reproducibility. That contract is not irreversible: if later evidence demonstrates a materially better source, reopen the contract, record the reason, and revalidate dependent work.
