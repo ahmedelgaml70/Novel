@@ -562,6 +562,33 @@
       "confidence": "HIGH",
       "status": "ENCODED",
       "superseded_by": null
+    },
+    {
+      "id": "LESSON-022",
+      "title": "Fuzzy semantic clip matching is for discovery, not final choreography",
+      "scope": "GLOBAL",
+      "source_context": [
+        "E-VID-006 ready rigged animation proof v1"
+      ],
+      "observed_weakness": "A fuzzy keyword resolver selected Crouch_Idle_Loop for 'idle' and failed to find a 'run' clip because the runtime inventory used Jog_Fwd_Loop/Sprint_Loop instead.",
+      "evidence": [
+        "The first MP4 rendered real skeletal motion successfully but the semantic substitutions made the choreography misleading.",
+        "The runtime inventory exposed the exact 86 clip names needed for correct binding."
+      ],
+      "root_cause": "The planner treated semantic keyword similarity as equivalent to an approved action mapping.",
+      "consequence": "Technically correct animation can still communicate the wrong posture/action and make the whole system look worse than the available asset actually is.",
+      "prevention_rule": "Use fuzzy search only to discover candidate clips. After ingestion, bind final choreography to explicit runtime clip IDs/names or an approved semantic map. Never silently substitute a merely keyword-related clip in a locked shot.",
+      "detection_method": "The capture manifest and clip inventory record the exact selected names. Missing semantic actions fail explicitly or remain SEARCH_REQUIRED.",
+      "implementation_changes": [
+        "E-VID-006 proof v2 uses exact Idle_Loop, Walk_Formal_Loop, Interact and Hit_Knockback bindings.",
+        "One-shot actions are clamped instead of modulo-looped."
+      ],
+      "validation": [
+        "The next proof contact sheet/video must show upright idle, intended interaction, independent reaction and recoil without crouch/weapon-action substitutions."
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
     }
   ]
 }
