@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Novel Episode Source Contract",
+  "type": "object",
+  "required": [
+    "mode",
+    "status",
+    "candidate_source_ids",
+    "selected_source_id",
+    "rule"
+  ],
+  "properties": {
+    "mode": {
+      "enum": [
+        "BEST_FIT_REVISABLE"
+      ]
+    },
+    "status": {
+      "enum": [
+        "OPEN",
+        "PROVISIONAL",
+        "LOCKED",
+        "REOPENED"
+      ]
+    },
+    "candidate_source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "selected_source_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "rule": {
+      "type": "string",
+      "minLength": 20
+    }
+  },
+  "additionalProperties": true
+}
