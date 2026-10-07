@@ -245,3 +245,49 @@ The following are intentionally **not yet locked**:
 - benchmark novel set,
 - exact human-review gates,
 - implementation stack.
+
+## D-017 — Atomic Item production governance
+
+**Status:** Accepted
+
+Every independently judgeable production element—visible, audible, camera, lighting, effect, transition, or typography—is represented as an atomic **Item** with its own purpose, requirements, sources, candidate/selection record, continuity obligations and QC state.
+
+A scene-level or character-level score cannot substitute for sub-Item validation.
+
+## D-018 — Requirements before candidate selection
+
+**Status:** Accepted
+
+For final production, Item requirements are defined before final candidate selection. Candidate search must compare solutions against the same pre-declared requirements.
+
+The machine must not find an asset first and then redefine the need to justify using it.
+
+For HERO/PRIMARY visible Items, first-found acceptance is prohibited. Candidate search stops only after meaningful comparison or an explicit `BLOCKED_NO_SUITABLE_ASSET` decision.
+
+## D-019 — Production source registry
+
+**Status:** Accepted
+
+Every material source discovered during art, historical, technical, anatomical, typography, location, rights or technique research is stored in the episode source registry, including sources attached to rejected candidates.
+
+Source authority, factual/reference role, and visible-asset reuse rights are separate fields. A good factual source is not automatically a reusable asset.
+
+## D-020 — Current method versus improvement history
+
+**Status:** Accepted
+
+Current operating instructions and historical learning are separate.
+
+- `docs/production/CURRENT_METHOD.md` contains only the active method.
+- `docs/production/VERSION_HISTORY.md` records what each iteration tried, what failed, what was learned, and what changed next.
+- episode `VERSION_LOG.md` records episode-specific defects/improvements.
+
+When a method is replaced, obsolete current instructions are removed rather than left beside the replacement.
+
+## D-021 — Prototype assets are not grandfathered
+
+**Status:** Accepted
+
+Assets/Items created before the current governance method do not automatically become approved because they already render.
+
+The Frankenstein V5.1 benchmark is explicitly subject to V5.2 atomic revalidation. Structural reproducibility and final asset approval are separate gates.
