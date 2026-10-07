@@ -23,7 +23,7 @@ class ProductionGovernanceTests(unittest.TestCase):
         p=self.run_validator("--strict-final","--max-detail","5")
         self.assertNotEqual(p.returncode,0)
         self.assertIn("BLOCKER SUMMARY",p.stdout)
-        self.assertIn("source_fidelity",p.stdout)
+        self.assertIn("source_contract",p.stdout)
 
 if __name__=="__main__":
     unittest.main()
