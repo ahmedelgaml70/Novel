@@ -1,5 +1,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+import { MeshoptDecoder } from 'three/addons/libs/meshopt_decoder.module.js';
 import * as SkeletonUtils from 'three/addons/utils/SkeletonUtils.js';
 import { OutlineEffect } from 'three/addons/effects/OutlineEffect.js';
 
@@ -22,7 +24,11 @@ const key=new THREE.PointLight(0xf0be78,5.2,10,2);key.position.set(-0.35,1.55,1.
 const cold=new THREE.DirectionalLight(0x8fa8b9,0.85);cold.position.set(-3,4,-4);scene.add(cold);
 const flash=new THREE.PointLight(0xd7efff,0,8,2);scene.add(flash);
 
+const draco=new DRACOLoader();
+draco.setDecoderPath('/draco/');
 const loader=new GLTFLoader();
+loader.setDRACOLoader(draco);
+loader.setMeshoptDecoder(MeshoptDecoder);
 
 function toonify(root,color=null){
   root.traverse(o=>{
