@@ -37,5 +37,99 @@
     "victor_gripping_hand",
     "ingolstadt_exterior_or_architectural_layer",
     "galvanic_apparatus_contact_macro"
-  ]
+  ],
+  "experiment_status": "PARTIAL_PASS_DIRECTION_NOT_FINAL",
+  "derived_assets": [
+    {
+      "id": "ASSET-CREATURE-BODY-001",
+      "item_ids": [
+        "creature_body_proportions",
+        "creature_drapery",
+        "creature_rise_motion"
+      ],
+      "origin": "DERIVED_FROM_ASSET-SHEET-001",
+      "authoring_method": "manual crop + alpha isolation + JavaScript lighting/compositing",
+      "status": "SHOT_TESTED_PREFERRED_DIRECTION_NOT_FINAL",
+      "shot_tests": [
+        "creation chamber still",
+        "recoil still",
+        "3.04-second recoil motion test"
+      ],
+      "findings": "Major visual improvement versus primitive body. Suitable for wide-shot subtle motion. Not sufficient for independent limb convulsion."
+    },
+    {
+      "id": "ASSET-VICTOR-001",
+      "item_ids": [
+        "victor_silhouette",
+        "victor_recoil_pose",
+        "victor_coat",
+        "victor_collar_cravat"
+      ],
+      "origin": "DERIVED_FROM_ASSET-SHEET-001",
+      "authoring_method": "manual isolated full-body figure + JavaScript crop/lighting",
+      "status": "SHOT_TESTED_PROMISING_NOT_FINAL",
+      "shot_tests": [
+        "creation/recoil tableau",
+        "doorway close-up crop"
+      ],
+      "findings": "Substantially improves period silhouette/anatomy. Needs a purpose-built hand/door interaction asset for the close-up."
+    },
+    {
+      "id": "ASSET-CREATURE-HEAD-001",
+      "item_ids": [
+        "creature_head_shape",
+        "creature_eye",
+        "creature_hair"
+      ],
+      "origin": "DERIVED_FROM_ASSET-SHEET-001",
+      "authoring_method": "manual isolated head/profile + JavaScript shadow mask",
+      "status": "SHOT_TESTED_PROMISING_NOT_FINAL",
+      "shot_tests": [
+        "first-eye close-up"
+      ],
+      "findings": "Much stronger anatomical/engraving quality than primitive head. Still needs a purpose-built eye crop and cleaner alpha edges for final."
+    },
+    {
+      "id": "ASSET-APPARATUS-001",
+      "item_ids": [
+        "voltaic_pile",
+        "leyden_jar_primary",
+        "brass_contact"
+      ],
+      "origin": "DERIVED_FROM_ASSET-SHEET-001",
+      "authoring_method": "manual isolated apparatus + JavaScript compositing",
+      "status": "SHOT_TESTED_PROMISING_NOT_FINAL",
+      "shot_tests": [
+        "galvanic-contact macro"
+      ],
+      "findings": "Raises historical/detail quality, but interaction/contact hand remains the weak link."
+    },
+    {
+      "id": "ASSET-WINDOW-001",
+      "item_ids": [
+        "gothic_laboratory_window",
+        "creation_chamber_architecture"
+      ],
+      "origin": "DERIVED_FROM_ASSET-SHEET-001",
+      "authoring_method": "manual isolated architectural fragment + JavaScript glow/parallax",
+      "status": "SHOT_TESTED_PROMISING_NOT_FINAL",
+      "shot_tests": [
+        "clean creation/recoil tableau"
+      ],
+      "findings": "Strong focal architecture. Source-sheet edge contamination still needs a cleaner individually authored final asset."
+    }
+  ],
+  "lookdev_outputs": {
+    "clean_creation_still": "PASSED_DIRECTIONAL_GATE",
+    "clean_recoil_still": "PASSED_DIRECTIONAL_GATE",
+    "recoil_motion_test_seconds": 3.041667,
+    "full_v5_3_render": "NOT_AUTHORIZED_YET",
+    "blockers": [
+      "clean individual HERO source assets rather than sheet-derived contamination",
+      "purpose-built Victor hand/contact interaction",
+      "creature articulated limb solution if convulsion is shown clearly",
+      "exterior still below target",
+      "apparatus contact composition needs another pass"
+    ]
+  }
 }
