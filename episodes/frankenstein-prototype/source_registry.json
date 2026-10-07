@@ -551,6 +551,38 @@
       "discovered_at": "2026-10-07",
       "status": "DEVELOPMENT_PROOF_CANDIDATE",
       "notes": "Pinned individual GLBs used in proof: altar-stone 5d1d43c077a9b124644a5d8e12a7c23f796f7828; brick-wall af0c35f012d69d321a526d769e18f92f663f7246; candle 5f6351805ca6df386828bcd1acb0d6eed4300fb2. They are support geometry, not claims about Victor's exact historical laboratory."
+    },
+    {
+      "id": "SRC-FR-018",
+      "title": "Quaternius Male Peasant prepared character — universal 65-joint skin",
+      "creator": "Quaternius; prepared by BibliothecaDAO/eternum",
+      "date": "source packs downloaded 2026-08-21",
+      "provider": "BibliothecaDAO/eternum pinned mirror",
+      "url": "https://github.com/BibliothecaDAO/eternum/blob/ab239125af10c3001518a7c1ee27152c5c5100ab/apps/game/public/models/characters/quaternius/LICENSE.asset.txt",
+      "roles": [
+        "READY_RIGGED_CHARACTER",
+        "COSTUME_CANDIDATE",
+        "RIGHTS_EVIDENCE",
+        "RIG_COMPATIBILITY_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "victor_silhouette",
+        "victor_coat",
+        "victor_collar_cravat",
+        "victor_recoil_pose"
+      ],
+      "rights": {
+        "status": "CC0_1_0_UNIVERSAL",
+        "commercial_asset_use": "ELIGIBLE",
+        "evidence_url": "https://github.com/BibliothecaDAO/eternum/blob/ab239125af10c3001518a7c1ee27152c5c5100ab/apps/game/public/models/characters/quaternius/LICENSE.asset.txt"
+      },
+      "quality": {
+        "authority": "PINNED_PREPARED_DERIVATIVE_WITH_ORIGINAL_ARCHIVE_HASHES",
+        "period_proximity": "FANTASY_PEASANT_APPROXIMATION_NOT_FINAL_PERIOD_COSTUME"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "DEVELOPMENT_PROOF_CANDIDATE",
+      "notes": "Prepared peasant-male.glb blob 7ffaac4ba99675fba741fcfee38a2164494cc62f; source file preserves Quaternius bone names and 65-joint skin. Provenance file records Universal Base Characters archive SHA-256 fdbf1804c90dfc1ea03e992bff7da2dfd1a79318e13270a660180f9308455f40 and Modular Character Outfits archive SHA-256 c3468b18871cc8c8f05ab14df7712baf22cb9f389cbd870babf130e595187f70. Good fast proof candidate; not evidence of Victor's final late-18th-century clothing."
     }
   ]
 }
