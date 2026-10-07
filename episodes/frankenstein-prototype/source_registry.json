@@ -432,6 +432,104 @@
       "discovered_at": "2026-10-07",
       "status": "SOURCE_CONTRACT_CANDIDATE",
       "notes": "Use to compare edition-dependent wording/art-direction decisions. Do not mix 1818 and 1831 source contracts silently. No source contract is currently locked. Core creation-scene and Ingolstadt-steeple constraints were directly compared across the 1818 and 1831 Gutenberg texts on 2026-10-07 and are shared for the currently tracked obligations."
+    },
+    {
+      "id": "SRC-FR-014",
+      "title": "Essays on the Anatomy of Expression in Painting",
+      "creator": "Charles Bell",
+      "date": "1806",
+      "provider": "Wellcome Collection",
+      "url": "https://wellcomecollection.org/works/stnqjkee",
+      "roles": [
+        "PRIMARY_HISTORICAL",
+        "ANATOMY_REFERENCE",
+        "ART_DIRECTION_REFERENCE",
+        "TECHNIQUE_REFERENCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "creature_body_proportions",
+        "creature_head_shape",
+        "creature_eye",
+        "creature_rise_motion",
+        "victor_recoil_pose",
+        "victor_hand"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN_MARK",
+        "commercial_asset_use": "REFERENCE_AND_REUSE_ELIGIBLE_PER_PROVIDER_PUBLIC_DOMAIN_MARK",
+        "evidence_url": "https://wellcomecollection.org/works/stnqjkee"
+      },
+      "quality": {
+        "authority": "HIGH",
+        "period_proximity": "CONTEMPORARY_TO_STORY/CREATIVE_PERIOD"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "ACTIVE_REFERENCE",
+      "notes": "Especially relevant because Bell addresses visible surface changes produced by muscle action and artistic representation of movement; use as anatomy/motion evidence, not as an automatic visible asset."
+    },
+    {
+      "id": "SRC-FR-015",
+      "title": "Traité complet de l'anatomie de l'homme — Atlas I/II",
+      "creator": "Jean-Baptiste Marc Bourgery; Nicolas-Henri Jacob",
+      "date": "1831-1854",
+      "provider": "Wikimedia Commons / Wellcome Collection",
+      "url": "https://commons.wikimedia.org/wiki/File:Bourgery_Atlas_I_1831.pdf",
+      "roles": [
+        "ANATOMY_REFERENCE",
+        "ART_DIRECTION_REFERENCE",
+        "ASSET_CANDIDATE_SOURCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "creature_body_proportions",
+        "creature_head_shape",
+        "creature_eye",
+        "victor_hand"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN",
+        "commercial_asset_use": "ELIGIBLE_WITH_JURISDICTION_CHECK",
+        "evidence_url": "https://commons.wikimedia.org/wiki/File:Bourgery_Atlas_I_1831.pdf"
+      },
+      "quality": {
+        "authority": "HIGH",
+        "period_proximity": "NEAR_PERIOD; FIRST_VOLUME_1831"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "ACTIVE_REFERENCE",
+      "notes": "High-detail anatomical plate source. Strong for anatomy and line language, but later/clinical detail must not override literary or shot-specific design needs."
+    },
+    {
+      "id": "SRC-FR-016",
+      "title": "Osteographia, or the Anatomy of the Bones",
+      "creator": "William Cheselden",
+      "date": "1733",
+      "provider": "Biodiversity Heritage Library",
+      "url": "https://www.biodiversitylibrary.org/item/266917",
+      "roles": [
+        "PRIMARY_HISTORICAL",
+        "ANATOMY_REFERENCE",
+        "ART_DIRECTION_REFERENCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "creature_body_proportions",
+        "creature_head_shape",
+        "victor_hand"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN",
+        "commercial_asset_use": "ELIGIBLE",
+        "evidence_url": "https://www.biodiversitylibrary.org/item/266917"
+      },
+      "quality": {
+        "authority": "HIGH",
+        "period_proximity": "EARLIER_PERIOD_REFERENCE"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "ACTIVE_REFERENCE",
+      "notes": "Useful for skeletal proportion/engraving language. Earlier than the novel; anatomy function is stronger than period-style matching."
     }
   ]
 }
