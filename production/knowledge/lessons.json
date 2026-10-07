@@ -641,6 +641,31 @@
       "confidence": "HIGH",
       "status": "ENCODED",
       "superseded_by": null
+    },
+    {
+      "id": "LESSON-025",
+      "title": "Use the useful segment of a ready clip instead of accepting its unwanted ending",
+      "scope": "GLOBAL",
+      "source_context": [
+        "V5.4.2 Frankenstein fast-path review"
+      ],
+      "observed_weakness": "Hit_Knockback supplied a useful initial startle/recoil but the complete clip threw Victor to the floor, changing the story beat into a physical-impact fall.",
+      "evidence": [
+        "Large-frame review at 6.6 s showed Victor on the floor even though the intended beat was recoil and escape."
+      ],
+      "root_cause": "Ready animation clips were treated as indivisible actions rather than motion sources that can be trimmed/sampled.",
+      "consequence": "The closest ready clip can overshoot the acting intent and make the scene look wrong even when the underlying motion quality is good.",
+      "prevention_rule": "Before custom animation or accepting a poor full clip, inspect the clip temporally and use only the segment that performs the desired action, then cut/crossfade into the next ready clip.",
+      "detection_method": "Shot review checks start/mid/end behavior of every one-shot clip; unwanted terminal poses are explicitly rejected.",
+      "implementation_changes": [
+        "V5.4.3 clamps Victor's Hit_Knockback sampling to the first 0.27 seconds before cutting to the ready walk retreat."
+      ],
+      "validation": [
+        "V5.4.3 must show a visible startle without Victor reaching the floor."
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
     }
   ]
 }
