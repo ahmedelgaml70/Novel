@@ -17,8 +17,8 @@ scene.background=new THREE.Color(0x111312);
 scene.fog=new THREE.FogExp2(0x111312,0.028);
 
 const camera=new THREE.PerspectiveCamera(36,W/H,0.05,100);
-camera.position.set(5.2,2.7,7.4);
-camera.lookAt(0,1.15,0);
+camera.position.set(3.9,2.15,5.6);
+camera.lookAt(-0.15,1.15,0);
 
 scene.add(new THREE.HemisphereLight(0xcfd5d4,0x24190e,1.55));
 const key=new THREE.DirectionalLight(0xffd6a0,4.0); key.position.set(-1.5,5.5,4); key.castShadow=true; scene.add(key);
@@ -58,7 +58,7 @@ function makeActor(source,animations,x,rot,tint){
   return {root,mixer:new THREE.AnimationMixer(root),animations,current:null};
 }
 
-function applyAt(actor,clip,time){
+function applyAt(actor,clip,time,loop=true){
   if(!clip) return;
   if(actor.current!==clip){
     actor.mixer.stopAllAction();
@@ -68,26 +68,32 @@ function applyAt(actor,clip,time){
   action.enabled=true;
   action.setEffectiveWeight(1);
   action.setEffectiveTimeScale(1);
+  action.setLoop(loop?THREE.LoopRepeat:THREE.LoopOnce,loop?Infinity:1);
+  action.clampWhenFinished=!loop;
   action.play();
   action.paused=true;
-  action.time=((time%clip.duration)+clip.duration)%clip.duration;
+  action.time=loop
+    ? ((time%clip.duration)+clip.duration)%clip.duration
+    : Math.min(Math.max(time,0),Math.max(clip.duration-1/120,0));
   actor.mixer.update(0);
 }
 
 const gltf=await new GLTFLoader().loadAsync('/assets/human_male.glb');
 const clips=gltf.animations;
+function exactClip(name){ return clips.find(c=>c.name===name)||null; }
 const chosen={
-  idle:findClip(clips,'idle','standing idle'),
-  walk:findClip(clips,'walk','walking'),
-  run:findClip(clips,'run','running'),
-  attack:findClip(clips,'attack','punch','strike','hit'),
-  jump:findClip(clips,'jump'),
-  dance:findClip(clips,'dance')
+  idle:exactClip('Idle_Loop'),
+  walk:exactClip('Walk_Formal_Loop')||exactClip('Walk_Loop'),
+  interact:exactClip('Interact'),
+  reaction:exactClip('Hit_Knockback')||exactClip('Hit_Chest'),
+  jog:exactClip('Jog_Fwd_Loop')||exactClip('Sprint_Loop')
 };
-if(!chosen.walk || !chosen.idle) throw new Error('Ready GLB lacks required Walk/Idle clips');
+if(!chosen.walk || !chosen.idle || !chosen.interact || !chosen.reaction){
+  throw new Error('Ready GLB is missing one of the exact proof clips');
+}
 
-const A=makeActor(gltf.scene,clips,-2.6,-Math.PI/2,null);
-const B=makeActor(gltf.scene,clips,1.1,Math.PI/2,0x99978e);
+const A=makeActor(gltf.scene,clips,-2.2,-Math.PI/2,null);
+const B=makeActor(gltf.scene,clips,0.9,Math.PI/2,0x99978e);
 
 const label=document.createElement('div');
 label.id='label';
@@ -99,32 +105,43 @@ function setTime(t){
   A.root.rotation.y=-Math.PI/2;
   B.root.rotation.y=Math.PI/2;
 
-  if(q<2.7){
-    applyAt(A,chosen.walk,q);
-    applyAt(B,chosen.idle,q);
-    A.root.position.x=THREE.MathUtils.lerp(-2.7,-0.8,q/2.7);
-    label.dataset.beat='WALK';
+  if(q<2.5){
+    applyAt(A,chosen.walk,q,true);
+    applyAt(B,chosen.idle,q,true);
+    A.root.position.x=THREE.MathUtils.lerp(-2.2,-0.55,q/2.5);
+    label.dataset.beat='WALK — real lower-body gait';
   } else if(q<4.5){
-    applyAt(A,chosen.idle,q-2.7);
-    applyAt(B,chosen.attack||chosen.jump||chosen.dance||chosen.idle,q-2.7);
-    A.root.position.x=-0.8;
-    label.dataset.beat='INDEPENDENT ACTION';
-  } else if(q<6.8){
+    applyAt(A,chosen.interact,q-2.5,false);
+    applyAt(B,chosen.idle,q-2.5,true);
+    A.root.position.x=-0.55;
+    label.dataset.beat='INTERACT — arm/spine action';
+  } else if(q<5.45){
+    applyAt(A,chosen.idle,q-4.5,true);
+    applyAt(B,chosen.reaction,q-4.5,false);
+    A.root.position.x=-0.55;
+    label.dataset.beat='ACTOR B REACTS INDEPENDENTLY';
+  } else if(q<6.4){
+    applyAt(A,chosen.reaction,q-5.45,false);
+    applyAt(B,chosen.idle,q-5.45,true);
+    A.root.position.x=-0.55;
+    label.dataset.beat='ACTOR A RECOILS — joint-level reaction';
+  } else if(q<8.35){
     A.root.rotation.y=Math.PI/2;
-    applyAt(A,chosen.run||chosen.walk,q-4.5);
-    applyAt(B,chosen.idle,q-4.5);
-    A.root.position.x=THREE.MathUtils.lerp(-0.8,-2.45,(q-4.5)/2.3);
-    label.dataset.beat='RUN / RECOIL';
+    applyAt(A,chosen.walk,q-6.4,true);
+    applyAt(B,chosen.idle,q-6.4,true);
+    A.root.position.x=THREE.MathUtils.lerp(-0.55,-1.75,(q-6.4)/1.95);
+    label.dataset.beat='RETREAT — gait + world travel';
   } else {
-    applyAt(A,chosen.idle,q-6.8);
-    applyAt(B,chosen.idle,q-6.8);
-    A.root.position.x=-2.45;
+    A.root.rotation.y=-Math.PI/2;
+    applyAt(A,chosen.idle,q-8.35,true);
+    applyAt(B,chosen.idle,q-8.35,true);
+    A.root.position.x=-1.75;
     label.dataset.beat='SETTLE';
   }
 
-  const bob=Math.sin(q*0.45)*0.06;
-  camera.position.set(5.2+bob,2.7,7.4);
-  camera.lookAt(-0.2,1.15,0);
+  const bob=Math.sin(q*0.45)*0.035;
+  camera.position.set(3.9+bob,2.15,5.6);
+  camera.lookAt(-0.15,1.15,0);
   effect.render(scene,camera);
   return label.dataset.beat;
 }
