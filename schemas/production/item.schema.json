@@ -135,6 +135,14 @@
         "BLOCKED_NO_SUITABLE_ASSET",
         "REFERENCE_ONLY"
       ]
+    },
+    "source_obligation_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true,
+      "description": "Source-fidelity obligation IDs that currently constrain this Item."
     }
   },
   "additionalProperties": true
