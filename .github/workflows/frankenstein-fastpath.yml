@@ -1,0 +1,110 @@
+name: Frankenstein fast-path demo
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'production/rigged3d/frankenstein_fastpath.html'
+      - 'production/rigged3d/src/frankenstein_fastpath.js'
+      - 'production/rigged3d/frankenstein_fastpath_manifest.json'
+      - 'production/rigged3d/tools/capture_demo.mjs'
+      - '.github/workflows/frankenstein-fastpath.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install browser dependencies
+        working-directory: production/rigged3d
+        run: |
+          npm install --no-audit --no-fund
+          npm install --no-save playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Download pinned ready assets
+        run: |
+          set -eux
+          mkdir -p production/rigged3d/public/assets
+
+          curl -L --fail --retry 3 \
+            https://raw.githubusercontent.com/NafisRayan/Animate-Rigged-Humanoid-No-Blender/main/test/human_male.glb \
+            -o production/rigged3d/public/assets/human_male.glb
+
+          curl -L --fail --retry 3 \
+            https://raw.githubusercontent.com/Kauaji/It-Guardian/224f38f970da01c8e978a313520ef3a9cad24b57/client/public/assets/inventory-map-3d/models/quaternius/table.glb \
+            -o production/rigged3d/public/assets/table.glb
+
+          curl -L --fail --retry 3 \
+            https://raw.githubusercontent.com/evanly-gh/evanly.me/9fa3fdcf08165f0bb9130026dab94a2302a0b4bc/public/models/quaternius/Lever.glb \
+            -o production/rigged3d/public/assets/lever.glb
+
+          curl -L --fail --retry 3 \
+            'https://commons.wikimedia.org/wiki/Special:Redirect/file/Lewis_William_lab.jpg' \
+            -o production/rigged3d/public/assets/lab_background.jpg
+
+          sha256sum \
+            production/rigged3d/public/assets/human_male.glb \
+            production/rigged3d/public/assets/table.glb \
+            production/rigged3d/public/assets/lever.glb \
+            production/rigged3d/public/assets/lab_background.jpg \
+            | tee production/rigged3d/fastpath_asset_checksums.txt
+
+      - name: Start Vite
+        working-directory: production/rigged3d
+        run: |
+          npx vite --host 127.0.0.1 --port 4173 > /tmp/frankenstein-vite.log 2>&1 &
+          echo $! > /tmp/frankenstein-vite.pid
+          for i in {1..30}; do
+            curl -fsS http://127.0.0.1:4173/frankenstein_fastpath.html >/dev/null && exit 0
+            sleep 1
+          done
+          cat /tmp/frankenstein-vite.log
+          exit 1
+
+      - name: Capture deterministic story frames
+        working-directory: production/rigged3d
+        env:
+          DEMO_URL: http://127.0.0.1:4173/frankenstein_fastpath.html
+          OUT_DIR: render-frankenstein-fastpath
+          DURATION: '11'
+          FPS: '24'
+        run: node tools/capture_demo.mjs
+
+      - name: Install FFmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Encode video and contact sheet
+        working-directory: production/rigged3d
+        run: |
+          ffmpeg -y -framerate 24 \
+            -i render-frankenstein-fastpath/frames/frame_%04d.png \
+            -c:v libx264 -pix_fmt yuv420p -crf 18 -movflags +faststart \
+            render-frankenstein-fastpath/frankenstein_fastpath_v5_5.mp4
+
+          ffmpeg -y -i render-frankenstein-fastpath/frankenstein_fastpath_v5_5.mp4 \
+            -vf "fps=1,scale=320:-1,tile=4x3" -frames:v 1 \
+            render-frankenstein-fastpath/contact_sheet.jpg
+
+          cp fastpath_asset_checksums.txt render-frankenstein-fastpath/asset_checksums.txt
+
+      - name: Upload proof artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: frankenstein-fastpath-v5-5
+          path: |
+            production/rigged3d/render-frankenstein-fastpath/frankenstein_fastpath_v5_5.mp4
+            production/rigged3d/render-frankenstein-fastpath/contact_sheet.jpg
+            production/rigged3d/render-frankenstein-fastpath/clip_inventory.json
+            production/rigged3d/render-frankenstein-fastpath/asset_checksums.txt
+          retention-days: 7
