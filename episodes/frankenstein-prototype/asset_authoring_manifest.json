@@ -31,12 +31,12 @@
     }
   ],
   "next_required_individual_assets": [
-    "creature_full_body_reclining",
-    "creature_head_closeup",
-    "victor_recoil_full_body",
-    "victor_gripping_hand",
+    "creature_full_body_reclining_final",
+    "creature_head_closeup_final",
+    "victor_recoil_full_body_final",
     "ingolstadt_exterior_or_architectural_layer",
-    "galvanic_apparatus_contact_macro"
+    "galvanic_apparatus_contact_macro_final",
+    "articulated_creature_parts_or_motion_asset_if_visible_convulsion_is_retained"
   ],
   "experiment_status": "PARTIAL_PASS_DIRECTION_NOT_FINAL",
   "derived_assets": [
@@ -49,13 +49,13 @@
       ],
       "origin": "DERIVED_FROM_ASSET-SHEET-001",
       "authoring_method": "manual crop + alpha isolation + JavaScript lighting/compositing",
-      "status": "SHOT_TESTED_PREFERRED_DIRECTION_NOT_FINAL",
+      "status": "SHOT_AND_MOTION_TESTED_PREFERRED_PROVISIONAL",
       "shot_tests": [
         "creation chamber still",
         "recoil still",
         "3.04-second recoil motion test"
       ],
-      "findings": "Major visual improvement versus primitive body. Suitable for wide-shot subtle motion. Not sufficient for independent limb convulsion."
+      "findings": "Major visual improvement at wide/medium scale. Supports breathing/tremor/slight lift; does not supply independent limb articulation. Still sheet-derived, so not final-approved."
     },
     {
       "id": "ASSET-VICTOR-001",
@@ -67,12 +67,13 @@
       ],
       "origin": "DERIVED_FROM_ASSET-SHEET-001",
       "authoring_method": "manual isolated full-body figure + JavaScript crop/lighting",
-      "status": "SHOT_TESTED_PROMISING_NOT_FINAL",
+      "status": "MEDIUM_SCALE_PREFERRED_PROVISIONAL_PORTRAIT_SCALE_REJECTED",
       "shot_tests": [
         "creation/recoil tableau",
-        "doorway close-up crop"
+        "medium doorway recoil",
+        "portrait-scale crop rejected"
       ],
-      "findings": "Substantially improves period silhouette/anatomy. Needs a purpose-built hand/door interaction asset for the close-up."
+      "findings": "Strong period silhouette/anatomy at medium/full-body scale. Portrait enlargement fails the quality floor, so the shot was redesigned rather than forcing the asset into a close-up."
     },
     {
       "id": "ASSET-CREATURE-HEAD-001",
@@ -83,11 +84,12 @@
       ],
       "origin": "DERIVED_FROM_ASSET-SHEET-001",
       "authoring_method": "manual isolated head/profile + JavaScript shadow mask",
-      "status": "SHOT_TESTED_PROMISING_NOT_FINAL",
+      "status": "SHOT_AND_MOTION_TESTED_PREFERRED_PROVISIONAL",
       "shot_tests": [
-        "first-eye close-up"
+        "first-eye close-up",
+        "closed/partial/open eye motion states"
       ],
-      "findings": "Much stronger anatomical/engraving quality than primitive head. Still needs a purpose-built eye crop and cleaner alpha edges for final."
+      "findings": "Substantially stronger than primitive head. Real engraved eye retained; JavaScript occlusion creates awakening. Final still requires cleaner purpose-built source and rights review."
     },
     {
       "id": "ASSET-APPARATUS-001",
@@ -98,11 +100,12 @@
       ],
       "origin": "DERIVED_FROM_ASSET-SHEET-001",
       "authoring_method": "manual isolated apparatus + JavaScript compositing",
-      "status": "SHOT_TESTED_PROMISING_NOT_FINAL",
+      "status": "SHOT_AND_MOTION_TESTED_PREFERRED_PROVISIONAL",
       "shot_tests": [
-        "galvanic-contact macro"
+        "galvanic-contact macro",
+        "moving brass-lever contact test"
       ],
-      "findings": "Raises historical/detail quality, but interaction/contact hand remains the weak link."
+      "findings": "Apparatus detail passes directional macro gate. Weak hand candidate was removed; JS brass contact/lever now performs the interaction."
     },
     {
       "id": "ASSET-WINDOW-001",
@@ -112,11 +115,11 @@
       ],
       "origin": "DERIVED_FROM_ASSET-SHEET-001",
       "authoring_method": "manual isolated architectural fragment + JavaScript glow/parallax",
-      "status": "SHOT_TESTED_PROMISING_NOT_FINAL",
+      "status": "SHOT_TESTED_SUPPORT_PROVISIONAL",
       "shot_tests": [
         "clean creation/recoil tableau"
       ],
-      "findings": "Strong focal architecture. Source-sheet edge contamination still needs a cleaner individually authored final asset."
+      "findings": "Useful architecture anchor after edge cleanup, but the overall chamber/support layer still needs a matching premium-quality environment solution."
     }
   ],
   "lookdev_outputs": {
@@ -130,6 +133,12 @@
       "creature articulated limb solution if convulsion is shown clearly",
       "exterior still below target",
       "apparatus contact composition needs another pass"
-    ]
+    ],
+    "hybrid_continuous_motion_test_seconds": 11.5,
+    "victor_portrait_scale": "REJECTED",
+    "victor_medium_scale": "PASSED_DIRECTIONAL_GATE",
+    "creature_eye_opening": "PASSED_DIRECTIONAL_GATE",
+    "galvanic_hand_candidate": "REMOVED_FROM_CURRENT_SHOT",
+    "galvanic_brass_lever": "PASSED_DIRECTIONAL_GATE"
   }
 }
