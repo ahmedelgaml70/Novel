@@ -288,6 +288,33 @@
       "confidence": "HIGH",
       "status": "ENCODED",
       "superseded_by": null
+    },
+    {
+      "id": "LESSON-012",
+      "title": "Do not discard high-value source detail merely to keep every visible asset primitive-generated",
+      "scope": "GLOBAL",
+      "source_context": [
+        "V5.3 matched-frame lookdev"
+      ],
+      "observed_weakness": "Source-informed exterior and character concepts still looked crude after being rebuilt as simplified Canvas/vector geometry.",
+      "evidence": [
+        "The 1800 Ingolstadt engraving contains dense irregular architecture, bridge, fortification and landmark information that the coded redraw reduced to generic blocks.",
+        "Creature and Victor requirements improved, but low-level geometric heads/hands remained visibly constructed in close-up."
+      ],
+      "root_cause": "Art authoring and film direction were coupled. The renderer was forced to recreate high-information illustration from low-level primitives even when a richer source or bespoke asset could carry that information better.",
+      "consequence": "Historical specificity, anatomy and premium illustration quality were lost before cinematography even began.",
+      "prevention_rule": "Choose the asset-authoring method per Item. JavaScript may direct and animate a handpicked/reconstructed/bespoke asset instead of redrawing it from primitives. Primitive generation is a candidate method, not a doctrine.",
+      "detection_method": "Approval still must be compared against its best reference/candidate. If simplification visibly loses important identity/anatomy/detail, reject the primitive reconstruction and test a higher-information asset method.",
+      "implementation_changes": [
+        "V5.3 primitive exterior/character lookdev rejected",
+        "Next experiment adds a bespoke asset-authoring layer before JS compositing"
+      ],
+      "validation": [
+        "No full V5.3 sequence render until exterior, creature, Victor and apparatus approval stills pass."
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
     }
   ]
 }
