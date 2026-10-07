@@ -221,5 +221,46 @@
         }
       ]
     }
+  ],
+  "experiment_assets": [
+    {
+      "id": "EVID007_FRANKENSTEIN_FASTPATH",
+      "experiment_id": "E-VID-007",
+      "purpose": "story-specific fast-path proof",
+      "assets": [
+        {
+          "role": "interaction_table_slab",
+          "provider": "Kauaji/It-Guardian mirror of Quaternius Ultimate Furniture Pack",
+          "upstream_creator": "Quaternius",
+          "upstream_pack": "Ultimate Furniture Pack",
+          "license": "CC0",
+          "repository": "Kauaji/It-Guardian",
+          "pinned_commit": "224f38f970da01c8e978a313520ef3a9cad24b57",
+          "path": "client/public/assets/inventory-map-3d/models/quaternius/table.glb",
+          "rights_evidence": "client/public/assets/inventory-map-3d/models/ASSET-LICENSES.md"
+        },
+        {
+          "role": "interaction_lever",
+          "provider": "evanly-gh/evanly.me mirror",
+          "upstream_creator": "Quaternius",
+          "license": "CC0",
+          "repository": "evanly-gh/evanly.me",
+          "pinned_commit": "9fa3fdcf08165f0bb9130026dab94a2302a0b4bc",
+          "path": "public/models/quaternius/Lever.glb",
+          "rights_evidence": "https://poly.pizza/m/guR2QhKFLT",
+          "note": "Poly Pizza identifies the Quaternius Lever as Public Domain (CC0)."
+        },
+        {
+          "role": "far_environment_plate",
+          "provider": "Wikimedia Commons",
+          "creator": "William Lewis",
+          "title": "Lewis William lab.jpg",
+          "date": "1763–1766",
+          "license": "Public domain",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Lewis_William_lab.jpg",
+          "note": "Used as high-information far background only; live 3D actors/props remain in foreground."
+        }
+      ]
+    }
   ]
 }
