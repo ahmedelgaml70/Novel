@@ -1,6 +1,6 @@
 # E-VID-005 — Bespoke Asset Authoring + JavaScript Direction
 
-**Status:** ACTIVE EXPERIMENT
+**Status:** PARTIAL PASS — direction validated, final assets not approved
 
 ## Question
 
@@ -48,3 +48,17 @@ The new asset must clearly beat the V5.3 primitive lookdev in the actual shot, w
 ## Failure criterion
 
 If premium static assets cannot be animated coherently enough, redesign the style/shot rather than adding more filters.
+
+## Results so far
+
+- A crowded multi-asset sheet failed as a reliable HERO source format because overlaps damaged clean extraction.
+- Independently isolated/salvaged high-information assets materially improved creature, Victor, apparatus and window quality in the actual JavaScript shot.
+- Keeping old low-detail filler around upgraded HERO assets produced a visible collage/detail mismatch.
+- A sparse clean composition using only strong assets passed the directional lookdev gate.
+- A 3.04-second recoil motion test showed that static high-detail art can support subtle whole-body motion, but true limb convulsion requires separated/rigged/deformable parts.
+
+### Current conclusion
+
+The hypothesis is supported: JavaScript is more valuable as director/compositor/animator than as the sole low-level illustrator for every HERO object.
+
+The experiment is not complete until clean individual source assets replace the sheet-derived test assets and the exterior/contact-hand/articulation blockers pass.
