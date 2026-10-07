@@ -12,7 +12,13 @@
     "style_fit": 8
   },
   "visible_third_party_assets_embedded": false,
-  "visual_baseline": "Frankenstein V5.1 (24 s)",
+  "visual_baseline": "V5.1",
   "atomic_item_governance": true,
-  "strict_final_requires_item_revalidation": true
+  "strict_final_requires_item_revalidation": true,
+  "method_version": "5.2.1",
+  "governance_version": "atomic-item-plus-source-obligations",
+  "notes": [
+    "V5.2.1 is a governance/source-fidelity update and does not claim a new visual render.",
+    "Current Frankenstein prototype must pass strict Item and source-obligation gates before any final-production claim."
+  ]
 }
