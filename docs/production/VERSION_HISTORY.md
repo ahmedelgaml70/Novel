@@ -101,7 +101,7 @@ A version number is not earned by cosmetic code changes. It must represent a mea
 **Goal:** prevent source-fidelity constraints from vanishing merely because no renderer Item existed for them.
 
 **Added:**
-- exact designated literary-source contract for the Frankenstein prototype;
+- source-fidelity obligation layer tested against explicit edition-level evidence;
 - 14 source-fidelity obligations tied to shots and Items;
 - bidirectional Item <-> obligation links;
 - strict-final source-fidelity blockers;
@@ -110,8 +110,28 @@ A version number is not earned by cosmetic code changes. It must represent a mea
 **Immediate findings:**
 - the fading candle is missing from the current visual baseline;
 - hard breathing is underrepresented and heartbeat does not substitute for it;
-- the eye/skin treatment needs closer alignment with the 1818 description;
+- the eye/skin treatment needs closer alignment with the literary source evidence currently under review;
 - the generic Ingolstadt exterior also fails a literary location cue: a distinctive steeple should help identify the town;
 - galvanic apparatus remains a historical interpretation of the novel's unspecified “instruments of life.”
 
 **Visual render:** none claimed. V5.2.1 improves evidence and control for the next visual rebuild.
+
+
+## V5.2.2 — Generalized best-fit system + formal learning loop
+
+**Trigger:** review of V5.2.1 exposed an overconstraint: a provisional Frankenstein 1818 source preference had leaked into general method/state.
+
+**Lesson:** reproducibility requires an explicit source decision for a final master, but quality improvement requires source/style choices to remain revisable when better evidence or a better creative solution appears.
+
+**Changed:**
+- removed any episode-specific edition from universal method state;
+- source contracts are now episode-level, best-fit and revisable;
+- 1818 and 1831 remain candidates/references for Frankenstein rather than framework requirements;
+- edition-specific obligations remain conditional until the relevant source contract is selected;
+- separated universal production governance from the Living Engraving style module and Frankenstein episode;
+- added a formal learning system with EPISODE / STYLE / CATEGORY / GLOBAL scopes;
+- added a reusable lesson registry so important weaknesses produce prevention rules, tests/checklists or explicit non-generalization decisions.
+
+**New standard:** a weakness is not considered learned merely because it appears in a changelog. Learning is complete only when root cause, scope, prevention and detection are captured and encoded where appropriate.
+
+**Visual render:** none claimed. V5.2.2 improves the machine that will produce the next render.
