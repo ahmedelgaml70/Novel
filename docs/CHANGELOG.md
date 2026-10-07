@@ -83,3 +83,36 @@ This file records meaningful changes to the Novel machine. Design rationale belo
 - Complete-source availability checks.
 - Exact edition/source integrity checks.
 - Rights precheck and rights evidence records.
+
+## 2026-10-07 — Production / Living Engraving governance
+
+### Visual method learning
+- Preserved the progression from JavaScript feasibility test -> full 3-minute feasibility -> layered cinematic prototype -> asset-driven renderer -> V4 Living Engraving -> V5.1 clean bespoke remake.
+- Recorded what each version attempted, what failed, and which improvement it unlocked in `docs/production/VERSION_HISTORY.md`.
+- V5.2 is a governance/method update, not a falsely claimed new visual render.
+
+### Atomic Item governance
+- Added `docs/production/ITEM_GOVERNANCE.md`.
+- Added category-specific `ITEM_CHECKLISTS.md`.
+- Added mandatory production `SOURCE_POLICY.md`.
+- Added one canonical `CURRENT_METHOD.md` with obsolete V5.1 asset-selection instructions removed.
+- Defined requirements-before-search, source-before-assumption, candidate comparison, hard asset gates, shot-fit testing and continuity approval.
+
+### Frankenstein worked audit
+- Decomposed the 24-second V5.1 benchmark into **62 atomic Items** across global material, exterior, chamber, Victor, creature, apparatus, atmosphere/edit, typography and audio.
+- Added **62 per-Item decision records**.
+- Added **11 material research sources** with provenance/rights roles.
+- Rejected the current generic Ingolstadt skyline for final use; 1800 location-specific Ingolstadt evidence is the preferred research direction.
+- Kept the 1831-informed creation tableau as a direction but blocked final approval until child Items pass.
+- Marked Victor costume, apparatus and title treatment as provisional where the evidence/decision contract is not yet complete.
+- No unresolved Item was silently upgraded to final approval.
+
+### Validation
+- Added JSON schemas for Items, sources and decisions.
+- Added `scripts/validate_production_records.py`.
+- Added structural and anti-false-final tests.
+- Structural PASS is explicitly not final approval; strict-final is expected to fail while V5.1 Items remain unresolved.
+
+### Reproducibility
+- Added the canonical Living Engraving JavaScript renderer, manifest, method state, validator, render command and pinned `skia-canvas` dependency under `production/living_engraving/`.
+- Shot-local audio/light cues remain in the scene manifest rather than a hidden absolute timeline.

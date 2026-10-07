@@ -1,0 +1,8 @@
+{
+  "name": "living-engraving-current",
+  "private": true,
+  "version": "5.2.0",
+  "dependencies": {
+    "skia-canvas": "3.0.8"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Novel Production Source",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "provider",
+    "url",
+    "roles",
+    "supports_item_ids",
+    "rights",
+    "discovered_at",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "creator": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "date": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "provider": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "roles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "supports_item_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rights": {
+      "type": "object",
+      "required": [
+        "status",
+        "commercial_asset_use"
+      ]
+    },
+    "quality": {
+      "type": "object"
+    },
+    "discovered_at": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

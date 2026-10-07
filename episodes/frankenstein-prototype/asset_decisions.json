@@ -1,0 +1,1106 @@
+{
+  "schema_version": "1.0",
+  "episode_id": "frankenstein-prototype",
+  "method_version": "5.2",
+  "policy": "No candidate is selected because it was found first. Unresolved Items remain unresolved rather than receiving generic filler.",
+  "counts": {
+    "decisions": 62
+  },
+  "decisions": [
+    {
+      "id": "DEC-paper_field",
+      "item_id": "paper_field",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-ink_speck_grain",
+      "item_id": "ink_speck_grain",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-vignette_value_structure",
+      "item_id": "vignette_value_structure",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-engraving_hatching",
+      "item_id": "engraving_hatching",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-living_engraving_palette",
+      "item_id": "living_engraving_palette",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-ingolstadt_roofline",
+      "item_id": "ingolstadt_roofline",
+      "requirements_locked_before_search": false,
+      "candidates": [
+        {
+          "candidate_id": "current_generic_roofline_v5_1",
+          "origin": "bespoke_but_generic",
+          "source_ids": [],
+          "status": "REJECT_FINAL",
+          "scores": {
+            "story_specificity": 5,
+            "source_fidelity": 5,
+            "period_fit": 6,
+            "style_fit": 9,
+            "shot_fit": 8,
+            "continuity_fit": 8,
+            "animation_suitability": 9,
+            "technical_quality": 9,
+            "rights_confidence": 10,
+            "originality_non_genericity": 5
+          },
+          "reason": "Stylistically coherent, but it only communicates 'old European/Gothic city'; it does not identify Ingolstadt strongly enough."
+        },
+        {
+          "candidate_id": "eckarth_1800_ingolstadt_reconstruction",
+          "origin": "reference_reconstruction",
+          "source_ids": [
+            "SRC-FR-010"
+          ],
+          "status": "PREFERRED_RESEARCH_DIRECTION",
+          "scores": {
+            "story_specificity": 10,
+            "source_fidelity": 9,
+            "period_fit": 10,
+            "style_fit": 9,
+            "shot_fit": 8,
+            "continuity_fit": 9,
+            "animation_suitability": 9,
+            "technical_quality": 9,
+            "rights_confidence": 9,
+            "originality_non_genericity": 10
+          },
+          "reason": "Location-specific 1800 city view is near-period and gives real roofline/urban evidence while still allowing a bespoke layered redraw."
+        },
+        {
+          "candidate_id": "hohe_schule_architecture_direction",
+          "origin": "reference_reconstruction",
+          "source_ids": [
+            "SRC-FR-011"
+          ],
+          "status": "SUPPORTING_DIRECTION",
+          "scores": {
+            "story_specificity": 9,
+            "source_fidelity": 8,
+            "period_fit": 8,
+            "style_fit": 9,
+            "shot_fit": 7,
+            "continuity_fit": 9,
+            "animation_suitability": 9,
+            "technical_quality": 9,
+            "rights_confidence": 9,
+            "originality_non_genericity": 9
+          },
+          "reason": "Useful university-architecture identity, but weaker than the 1800 city view for the overall skyline."
+        }
+      ],
+      "selected_candidate_id": null,
+      "decision_status": "CANDIDATES_COMPARED",
+      "why_selected_or_pending": "Reject the current generic skyline. Rebuild from the 1800 Ingolstadt view, using Hohe Schule evidence to support architecture identity, then test the new silhouette at the actual camera crop.",
+      "remaining_risk": "Need final layered redraw and approval frame; the historical city view is evidence, not an automatic pan-and-scan asset."
+    },
+    {
+      "id": "DEC-laboratory_exterior_building",
+      "item_id": "laboratory_exterior_building",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-gothic_laboratory_window",
+      "item_id": "gothic_laboratory_window",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-city_window_pattern",
+      "item_id": "city_window_pattern",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-storm_sky",
+      "item_id": "storm_sky",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-rain_field",
+      "item_id": "rain_field",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-exterior_lightning",
+      "item_id": "exterior_lightning",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-exterior_camera_push",
+      "item_id": "exterior_camera_push",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-creation_chamber_composition",
+      "item_id": "creation_chamber_composition",
+      "requirements_locked_before_search": false,
+      "candidates": [
+        {
+          "candidate_id": "current_v5_1_tableau",
+          "origin": "bespoke_composition",
+          "source_ids": [
+            "SRC-FR-001",
+            "SRC-FR-002"
+          ],
+          "status": "SELECTED_DIRECTION_WITH_BLOCKERS",
+          "scores": {
+            "story_specificity": 10,
+            "source_fidelity": 9,
+            "period_fit": 8,
+            "style_fit": 10,
+            "shot_fit": 9,
+            "continuity_fit": 9,
+            "animation_suitability": 9,
+            "technical_quality": 9,
+            "rights_confidence": 10,
+            "originality_non_genericity": 10
+          },
+          "reason": "Strongly Frankenstein-specific and intentionally uses the 1831 spatial grammar, but child Items are not yet all strong enough."
+        },
+        {
+          "candidate_id": "direct_frontispiece_crop",
+          "origin": "historical_image",
+          "source_ids": [
+            "SRC-FR-001"
+          ],
+          "status": "REJECT_AS_PRIMARY_RENDER",
+          "scores": {
+            "story_specificity": 10,
+            "source_fidelity": 10,
+            "period_fit": 10,
+            "style_fit": 10,
+            "shot_fit": 7,
+            "continuity_fit": 4,
+            "animation_suitability": 3,
+            "technical_quality": 8,
+            "rights_confidence": 9,
+            "originality_non_genericity": 5
+          },
+          "reason": "Authentic but would reduce depth, editability and authorship; use as evidence/reference rather than making the film a pan-and-scan."
+        },
+        {
+          "candidate_id": "generic_gothic_lab_layout",
+          "origin": "generic_design",
+          "source_ids": [],
+          "status": "REJECT",
+          "scores": {
+            "story_specificity": 4,
+            "source_fidelity": 5,
+            "period_fit": 5,
+            "style_fit": 7,
+            "shot_fit": 7,
+            "continuity_fit": 6,
+            "animation_suitability": 8,
+            "technical_quality": 8,
+            "rights_confidence": 10,
+            "originality_non_genericity": 3
+          },
+          "reason": "Could belong to any Frankenstein-like story and repeats the generic-laboratory failure."
+        }
+      ],
+      "selected_candidate_id": "current_v5_1_tableau",
+      "decision_status": "SELECTED_WITH_BLOCKERS",
+      "why_selected_or_pending": "Keep this composition direction, but final approval is blocked until character anatomy, period interior, apparatus, slab/drapery and foreground objects pass their atomic gates.",
+      "remaining_risk": "Parent composition cannot override failed child Items."
+    },
+    {
+      "id": "DEC-creation_chamber_architecture",
+      "item_id": "creation_chamber_architecture",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-timber_wall_beams",
+      "item_id": "timber_wall_beams",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-laboratory_floor",
+      "item_id": "laboratory_floor",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-laboratory_door",
+      "item_id": "laboratory_door",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-laboratory_shelves_papers",
+      "item_id": "laboratory_shelves_papers",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-creation_bed_slab",
+      "item_id": "creation_bed_slab",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-creature_drapery",
+      "item_id": "creature_drapery",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-open_folio",
+      "item_id": "open_folio",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-skull_foreground",
+      "item_id": "skull_foreground",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-foreground_copper_cable",
+      "item_id": "foreground_copper_cable",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-victor_silhouette",
+      "item_id": "victor_silhouette",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-victor_head_profile",
+      "item_id": "victor_head_profile",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-victor_hair",
+      "item_id": "victor_hair",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-victor_coat",
+      "item_id": "victor_coat",
+      "requirements_locked_before_search": false,
+      "candidates": [
+        {
+          "candidate_id": "current_bespoke_coat_v5_1",
+          "origin": "bespoke_vector",
+          "source_ids": [],
+          "status": "REJECT_AS_FINAL_UNTIL_REDESIGNED",
+          "scores": {
+            "story_specificity": 8,
+            "source_fidelity": 7,
+            "period_fit": 7,
+            "style_fit": 9,
+            "shot_fit": 9,
+            "continuity_fit": 9,
+            "animation_suitability": 9,
+            "technical_quality": 9,
+            "rights_confidence": 10,
+            "originality_non_genericity": 8
+          },
+          "reason": "Good silhouette treatment but created before a deliberate costume-year/social-status contract."
+        },
+        {
+          "candidate_id": "met_european_coat_ca_1820_direction",
+          "origin": "reference_reconstruction",
+          "source_ids": [
+            "SRC-FR-007"
+          ],
+          "status": "VIABLE_DIRECTION",
+          "scores": {
+            "story_specificity": 9,
+            "source_fidelity": 8,
+            "period_fit": 10,
+            "style_fit": 9,
+            "shot_fit": 8,
+            "continuity_fit": 9,
+            "animation_suitability": 8,
+            "technical_quality": 10,
+            "rights_confidence": 10,
+            "originality_non_genericity": 9
+          },
+          "reason": "Strong surviving European period object and closer to an earlier chronology interpretation."
+        },
+        {
+          "candidate_id": "met_british_coat_ca_1833_direction",
+          "origin": "reference_reconstruction",
+          "source_ids": [
+            "SRC-FR-008"
+          ],
+          "status": "VIABLE_DIRECTION",
+          "scores": {
+            "story_specificity": 8,
+            "source_fidelity": 8,
+            "period_fit": 10,
+            "style_fit": 9,
+            "shot_fit": 8,
+            "continuity_fit": 9,
+            "animation_suitability": 8,
+            "technical_quality": 10,
+            "rights_confidence": 10,
+            "originality_non_genericity": 9
+          },
+          "reason": "Excellent evidence if the film deliberately follows the 1831 visual-edition era, but should not be mixed casually with an earlier chronology."
+        },
+        {
+          "candidate_id": "met_american_suit_1830_40",
+          "origin": "reference_reconstruction",
+          "source_ids": [
+            "SRC-FR-009"
+          ],
+          "status": "REJECT_AS_PRIMARY_DIRECTION",
+          "scores": {
+            "story_specificity": 6,
+            "source_fidelity": 7,
+            "period_fit": 9,
+            "style_fit": 9,
+            "shot_fit": 8,
+            "continuity_fit": 9,
+            "animation_suitability": 8,
+            "technical_quality": 10,
+            "rights_confidence": 10,
+            "originality_non_genericity": 8
+          },
+          "reason": "Useful comparison, but weaker geographic/social fit than European/British references."
+        }
+      ],
+      "selected_candidate_id": null,
+      "decision_status": "CANDIDATES_COMPARED",
+      "why_selected_or_pending": "First lock whether costume art direction follows the story chronology or the 1831 visual-edition contract; then redraw Victor from the winning reference direction and compare in silhouette/close-up.",
+      "remaining_risk": "Costume date contract still unresolved."
+    },
+    {
+      "id": "DEC-victor_collar_cravat",
+      "item_id": "victor_collar_cravat",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-victor_hand",
+      "item_id": "victor_hand",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-victor_recoil_pose",
+      "item_id": "victor_recoil_pose",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-creature_body_proportions",
+      "item_id": "creature_body_proportions",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-creature_head_shape",
+      "item_id": "creature_head_shape",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-creature_hair",
+      "item_id": "creature_hair",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-creature_eye",
+      "item_id": "creature_eye",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-creature_rise_motion",
+      "item_id": "creature_rise_motion",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-voltaic_pile",
+      "item_id": "voltaic_pile",
+      "requirements_locked_before_search": false,
+      "candidates": [
+        {
+          "candidate_id": "current_bespoke_pile_v5_1",
+          "origin": "bespoke_vector",
+          "source_ids": [
+            "SRC-FR-004",
+            "SRC-FR-006"
+          ],
+          "status": "VIABLE_BUT_REVALIDATE",
+          "scores": {
+            "story_specificity": 9,
+            "source_fidelity": 8,
+            "period_fit": 9,
+            "functional_accuracy": 8,
+            "style_fit": 9,
+            "shot_fit": 9,
+            "continuity_fit": 9,
+            "animation_suitability": 9,
+            "technical_quality": 9,
+            "rights_confidence": 10,
+            "originality_non_genericity": 9
+          },
+          "reason": "Reads clearly and is bespoke, but geometry/context should be refined against the museum record and contemporary galvanism source."
+        },
+        {
+          "candidate_id": "science_museum_1965_479_geometry",
+          "origin": "reference_reconstruction",
+          "source_ids": [
+            "SRC-FR-006"
+          ],
+          "status": "VIABLE_DIRECTION",
+          "scores": {
+            "story_specificity": 9,
+            "source_fidelity": 8,
+            "period_fit": 10,
+            "functional_accuracy": 9,
+            "style_fit": 8,
+            "shot_fit": 8,
+            "continuity_fit": 9,
+            "animation_suitability": 9,
+            "technical_quality": 10,
+            "rights_confidence": 9,
+            "originality_non_genericity": 9
+          },
+          "reason": "Authoritative object record and period-form reconstruction; geometry can inform our own asset without pasting museum imagery."
+        },
+        {
+          "candidate_id": "aldini_1803_experimental_direction",
+          "origin": "reference_reconstruction",
+          "source_ids": [
+            "SRC-FR-004"
+          ],
+          "status": "VIABLE_DIRECTION",
+          "scores": {
+            "story_specificity": 10,
+            "source_fidelity": 8,
+            "period_fit": 10,
+            "functional_accuracy": 9,
+            "style_fit": 10,
+            "shot_fit": 8,
+            "continuity_fit": 8,
+            "animation_suitability": 8,
+            "technical_quality": 9,
+            "rights_confidence": 10,
+            "originality_non_genericity": 10
+          },
+          "reason": "Best period experimental visual vocabulary; particularly useful for contextualizing the fictional laboratory."
+        }
+      ],
+      "selected_candidate_id": null,
+      "decision_status": "CANDIDATES_COMPARED",
+      "why_selected_or_pending": "Refine the bespoke pile by synthesizing museum geometry and Aldini-era experimental visual language; then compare approval frames.",
+      "remaining_risk": "The novel does not specify one exact real apparatus; historical plausibility must not be misrepresented as canonical source detail."
+    },
+    {
+      "id": "DEC-leyden_jar_primary",
+      "item_id": "leyden_jar_primary",
+      "requirements_locked_before_search": false,
+      "candidates": [
+        {
+          "candidate_id": "current_bespoke_jar_v5_1",
+          "origin": "bespoke_vector_from_period_reference",
+          "source_ids": [
+            "SRC-FR-005"
+          ],
+          "status": "VIABLE_BUT_REVALIDATE",
+          "scores": {
+            "story_specificity": 8,
+            "source_fidelity": 8,
+            "period_fit": 9,
+            "functional_accuracy": 8,
+            "style_fit": 9,
+            "shot_fit": 9,
+            "continuity_fit": 9,
+            "animation_suitability": 9,
+            "technical_quality": 9,
+            "rights_confidence": 10,
+            "originality_non_genericity": 9
+          },
+          "reason": "Recognisable period form, but construction details should be refined before final approval."
+        },
+        {
+          "candidate_id": "science_museum_co1580_reconstruction",
+          "origin": "reference_reconstruction",
+          "source_ids": [
+            "SRC-FR-005"
+          ],
+          "status": "PREFERRED_RESEARCH_DIRECTION",
+          "scores": {
+            "story_specificity": 8,
+            "source_fidelity": 8,
+            "period_fit": 10,
+            "functional_accuracy": 10,
+            "style_fit": 8,
+            "shot_fit": 8,
+            "continuity_fit": 9,
+            "animation_suitability": 9,
+            "technical_quality": 10,
+            "rights_confidence": 9,
+            "originality_non_genericity": 9
+          },
+          "reason": "Surviving early-19th-century object gives precise materials/construction; standard museum raster remains reference-only for commercial output."
+        },
+        {
+          "candidate_id": "aldini_contextual_apparatus",
+          "origin": "reference_reconstruction",
+          "source_ids": [
+            "SRC-FR-004"
+          ],
+          "status": "SUPPORTING_DIRECTION",
+          "scores": {
+            "story_specificity": 9,
+            "source_fidelity": 8,
+            "period_fit": 10,
+            "functional_accuracy": 8,
+            "style_fit": 10,
+            "shot_fit": 7,
+            "continuity_fit": 8,
+            "animation_suitability": 8,
+            "technical_quality": 9,
+            "rights_confidence": 10,
+            "originality_non_genericity": 10
+          },
+          "reason": "Strengthens period galvanism context and house-style integration."
+        }
+      ],
+      "selected_candidate_id": null,
+      "decision_status": "CANDIDATES_COMPARED",
+      "why_selected_or_pending": "Redraw/adjust the jar after construction-detail comparison; do not use the museum raster image under its standard noncommercial image licence.",
+      "remaining_risk": "Final geometry and shot fit still unapproved."
+    },
+    {
+      "id": "DEC-leyden_jar_secondary",
+      "item_id": "leyden_jar_secondary",
+      "requirements_locked_before_search": false,
+      "candidates": [
+        {
+          "candidate_id": "current_bespoke_jar_v5_1",
+          "origin": "bespoke_vector_from_period_reference",
+          "source_ids": [
+            "SRC-FR-005"
+          ],
+          "status": "VIABLE_BUT_REVALIDATE",
+          "scores": {
+            "story_specificity": 8,
+            "source_fidelity": 8,
+            "period_fit": 9,
+            "functional_accuracy": 8,
+            "style_fit": 9,
+            "shot_fit": 9,
+            "continuity_fit": 9,
+            "animation_suitability": 9,
+            "technical_quality": 9,
+            "rights_confidence": 10,
+            "originality_non_genericity": 9
+          },
+          "reason": "Recognisable period form, but construction details should be refined before final approval."
+        },
+        {
+          "candidate_id": "science_museum_co1580_reconstruction",
+          "origin": "reference_reconstruction",
+          "source_ids": [
+            "SRC-FR-005"
+          ],
+          "status": "PREFERRED_RESEARCH_DIRECTION",
+          "scores": {
+            "story_specificity": 8,
+            "source_fidelity": 8,
+            "period_fit": 10,
+            "functional_accuracy": 10,
+            "style_fit": 8,
+            "shot_fit": 8,
+            "continuity_fit": 9,
+            "animation_suitability": 9,
+            "technical_quality": 10,
+            "rights_confidence": 9,
+            "originality_non_genericity": 9
+          },
+          "reason": "Surviving early-19th-century object gives precise materials/construction; standard museum raster remains reference-only for commercial output."
+        },
+        {
+          "candidate_id": "aldini_contextual_apparatus",
+          "origin": "reference_reconstruction",
+          "source_ids": [
+            "SRC-FR-004"
+          ],
+          "status": "SUPPORTING_DIRECTION",
+          "scores": {
+            "story_specificity": 9,
+            "source_fidelity": 8,
+            "period_fit": 10,
+            "functional_accuracy": 8,
+            "style_fit": 10,
+            "shot_fit": 7,
+            "continuity_fit": 8,
+            "animation_suitability": 8,
+            "technical_quality": 9,
+            "rights_confidence": 10,
+            "originality_non_genericity": 10
+          },
+          "reason": "Strengthens period galvanism context and house-style integration."
+        }
+      ],
+      "selected_candidate_id": null,
+      "decision_status": "CANDIDATES_COMPARED",
+      "why_selected_or_pending": "Redraw/adjust the jar after construction-detail comparison; do not use the museum raster image under its standard noncommercial image licence.",
+      "remaining_risk": "Final geometry and shot fit still unapproved."
+    },
+    {
+      "id": "DEC-brass_contact",
+      "item_id": "brass_contact",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-copper_wire_network",
+      "item_id": "copper_wire_network",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-electric_arc",
+      "item_id": "electric_arc",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-anatomy_pages",
+      "item_id": "anatomy_pages",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-laboratory_fog",
+      "item_id": "laboratory_fog",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-interior_lightning",
+      "item_id": "interior_lightning",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-creation_camera_drift",
+      "item_id": "creation_camera_drift",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-victor_door_shadow",
+      "item_id": "victor_door_shadow",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-first_eye_shadow_mask",
+      "item_id": "first_eye_shadow_mask",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-linen_closeup_edge",
+      "item_id": "linen_closeup_edge",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-lightning_cut",
+      "item_id": "lightning_cut",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-shadow_cut",
+      "item_id": "shadow_cut",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-arc_match_cut",
+      "item_id": "arc_match_cut",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-title_frankenstein",
+      "item_id": "title_frankenstein",
+      "requirements_locked_before_search": false,
+      "candidates": [
+        {
+          "candidate_id": "current_eb_garamond_title",
+          "origin": "licensed_font_render",
+          "source_ids": [
+            "SRC-FR-003"
+          ],
+          "status": "CURRENT_PROTOTYPE_NOT_FINAL",
+          "scores": {
+            "story_specificity": 7,
+            "source_fidelity": 8,
+            "period_fit": 7,
+            "style_fit": 9,
+            "shot_fit": 9,
+            "continuity_fit": 10,
+            "animation_suitability": 10,
+            "technical_quality": 10,
+            "rights_confidence": 8,
+            "originality_non_genericity": 6
+          },
+          "reason": "Visually coherent but chosen as a convenient serif rather than through a deliberate historical title-direction comparison."
+        },
+        {
+          "candidate_id": "1818_title_page_informed_custom_setting",
+          "origin": "custom_typography_direction",
+          "source_ids": [
+            "SRC-FR-003"
+          ],
+          "status": "PREFERRED_RESEARCH_DIRECTION",
+          "scores": {
+            "story_specificity": 10,
+            "source_fidelity": 10,
+            "period_fit": 10,
+            "style_fit": 10,
+            "shot_fit": 8,
+            "continuity_fit": 10,
+            "animation_suitability": 10,
+            "technical_quality": 10,
+            "rights_confidence": 10,
+            "originality_non_genericity": 10
+          },
+          "reason": "Uses first-edition hierarchy/proportion as evidence while allowing film-specific typesetting."
+        },
+        {
+          "candidate_id": "1831_visual_edition_direction",
+          "origin": "custom_typography_direction",
+          "source_ids": [
+            "SRC-FR-001",
+            "SRC-FR-002"
+          ],
+          "status": "ALTERNATIVE_DIRECTION",
+          "scores": {
+            "story_specificity": 9,
+            "source_fidelity": 9,
+            "period_fit": 10,
+            "style_fit": 10,
+            "shot_fit": 8,
+            "continuity_fit": 10,
+            "animation_suitability": 10,
+            "technical_quality": 10,
+            "rights_confidence": 10,
+            "originality_non_genericity": 10
+          },
+          "reason": "Could align with the 1831 visual art direction, but should be chosen deliberately against the 1818 source identity."
+        }
+      ],
+      "selected_candidate_id": null,
+      "decision_status": "CANDIDATES_COLLECTED",
+      "why_selected_or_pending": "Choose the typography contract deliberately—1818 source identity vs 1831 visual-edition direction—then design and compare final settings.",
+      "remaining_risk": "Modern font licensing and historical fit need exact final record."
+    },
+    {
+      "id": "DEC-subtitle_modern_prometheus",
+      "item_id": "subtitle_modern_prometheus",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-audio_low_drone",
+      "item_id": "audio_low_drone",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-audio_noise_roomtone",
+      "item_id": "audio_noise_roomtone",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-thunder_cues",
+      "item_id": "thunder_cues",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-footstep_cues",
+      "item_id": "footstep_cues",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-electrical_crackle_audio",
+      "item_id": "electrical_crackle_audio",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-arc_hit_audio",
+      "item_id": "arc_hit_audio",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-victor_breath",
+      "item_id": "victor_breath",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    },
+    {
+      "id": "DEC-creature_heartbeat",
+      "item_id": "creature_heartbeat",
+      "requirements_locked_before_search": false,
+      "candidates": [],
+      "selected_candidate_id": null,
+      "decision_status": "NEEDS_REVALIDATION",
+      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
+      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+    }
+  ]
+}

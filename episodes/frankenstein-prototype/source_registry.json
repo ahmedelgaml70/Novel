@@ -1,0 +1,352 @@
+{
+  "schema_version": "1.0",
+  "episode_id": "frankenstein-prototype",
+  "policy": "Log every material source even if its candidate is rejected; source quality and visible-asset rights are separate questions.",
+  "sources": [
+    {
+      "id": "SRC-FR-001",
+      "title": "Frontispiece to Frankenstein, 1831",
+      "creator": "Theodor von Holst",
+      "date": "1831",
+      "provider": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Frontispiece_to_Frankenstein_1831.jpg",
+      "roles": [
+        "ART_DIRECTION_REFERENCE",
+        "ASSET_CANDIDATE_SOURCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "creation_chamber_composition",
+        "creature_drapery",
+        "victor_recoil_pose",
+        "open_folio",
+        "skull_foreground",
+        "gothic_laboratory_window",
+        "victor_head_profile",
+        "creature_body_proportions",
+        "creature_head_shape",
+        "creature_hair",
+        "creature_eye"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN_MARK",
+        "commercial_asset_use": "ELIGIBLE_WITH_JURISDICTION_CHECK",
+        "evidence_url": "https://commons.wikimedia.org/wiki/File:Frontispiece_to_Frankenstein_1831.jpg"
+      },
+      "quality": {
+        "authority": "HIGH",
+        "period_proximity": "PRIMARY_OR_NEAR_PRIMARY"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "ACTIVE_REFERENCE",
+      "notes": "Canonical 1831 visual reference. Current use is reference-only; the renderer redraws layered elements rather than embedding the raster."
+    },
+    {
+      "id": "SRC-FR-002",
+      "title": "Frankenstein.1831 inside cover",
+      "creator": "Theodor von Holst",
+      "date": "1831",
+      "provider": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Frankenstein.1831.inside-cover.jpg",
+      "roles": [
+        "ART_DIRECTION_REFERENCE",
+        "ASSET_CANDIDATE_SOURCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "creation_chamber_composition",
+        "engraving_hatching",
+        "creature_drapery"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN",
+        "commercial_asset_use": "ELIGIBLE_WITH_JURISDICTION_CHECK",
+        "evidence_url": "https://commons.wikimedia.org/wiki/File:Frankenstein.1831.inside-cover.jpg"
+      },
+      "quality": {
+        "authority": "HIGH",
+        "period_proximity": "PRIMARY_OR_NEAR_PRIMARY"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "ACTIVE_REFERENCE",
+      "notes": "Additional 1831 visual-language evidence; do not count duplicated imagery as an independent historical claim."
+    },
+    {
+      "id": "SRC-FR-003",
+      "title": "Frankenstein 1818 edition title page",
+      "creator": "Mary Shelley / Lackington, Hughes, Harding, Mavor & Jones",
+      "date": "1818",
+      "provider": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Frankenstein_1818_edition_title_page.jpg",
+      "roles": [
+        "TYPOGRAPHY_REFERENCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "title_frankenstein",
+        "subtitle_modern_prometheus"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN",
+        "commercial_asset_use": "ELIGIBLE_WITH_JURISDICTION_CHECK",
+        "evidence_url": "https://commons.wikimedia.org/wiki/File:Frankenstein_1818_edition_title_page.jpg"
+      },
+      "quality": {
+        "authority": "HIGH",
+        "period_proximity": "PRIMARY"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "ACTIVE_REFERENCE",
+      "notes": "Use for hierarchy/proportion research; not automatic justification for a modern font."
+    },
+    {
+      "id": "SRC-FR-004",
+      "title": "An account of the late improvements in galvanism",
+      "creator": "Giovanni Aldini",
+      "date": "1803",
+      "provider": "Wellcome Collection",
+      "url": "https://wellcomecollection.org/works/fw2z22vq",
+      "roles": [
+        "PRIMARY_HISTORICAL",
+        "TECHNICAL_REFERENCE",
+        "ART_DIRECTION_REFERENCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "voltaic_pile",
+        "leyden_jar_primary",
+        "leyden_jar_secondary",
+        "brass_contact",
+        "copper_wire_network",
+        "electric_arc",
+        "anatomy_pages"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN_MARK",
+        "commercial_asset_use": "ELIGIBLE_WITH_JURISDICTION_CHECK",
+        "evidence_url": "https://wellcomecollection.org/works/fw2z22vq"
+      },
+      "quality": {
+        "authority": "HIGH",
+        "period_proximity": "PRIMARY"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "ACTIVE_REFERENCE",
+      "notes": "Contemporary galvanism source; useful for apparatus/experimental visual vocabulary. Historical plausibility must not be presented as the novel's exact fictional apparatus."
+    },
+    {
+      "id": "SRC-FR-005",
+      "title": "Leyden jar, early 19th century, object 1927-1271",
+      "creator": null,
+      "date": "1800-1850",
+      "provider": "Science Museum Group Collection",
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co1580/leyden-jar-early-19th-century",
+      "roles": [
+        "MUSEUM_OBJECT",
+        "TECHNICAL_REFERENCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "leyden_jar_primary",
+        "leyden_jar_secondary"
+      ],
+      "rights": {
+        "status": "CATALOGUE_DATA_CC0_DESCRIPTION_CC_BY4_IMAGE_CC_BY_NC_SA4",
+        "commercial_asset_use": "REFERENCE_ONLY_UNLESS_SEPARATELY_LICENSED",
+        "evidence_url": "https://collection.sciencemuseumgroup.org.uk/objects/co1580/leyden-jar-early-19th-century"
+      },
+      "quality": {
+        "authority": "HIGH",
+        "period_proximity": "SURVIVING_PERIOD_OBJECT"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "ACTIVE_REFERENCE",
+      "notes": "Excellent material/construction reference. Do not import the standard museum raster into commercial output under the noncommercial image licence."
+    },
+    {
+      "id": "SRC-FR-006",
+      "title": "Voltaic pile, early 19th century, reproduction, object 1965-479",
+      "creator": null,
+      "date": "1801-1805 design reference",
+      "provider": "Science Museum Group Collection",
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co13429/voltaic-pile-early-19th-century-reproduction",
+      "roles": [
+        "MUSEUM_OBJECT",
+        "TECHNICAL_REFERENCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "voltaic_pile",
+        "copper_wire_network",
+        "brass_contact"
+      ],
+      "rights": {
+        "status": "CATALOGUE_DATA_CC0_DESCRIPTION_CC_BY4",
+        "commercial_asset_use": "REFERENCE_ONLY_UNLESS_IMAGE_RIGHTS_CONFIRMED",
+        "evidence_url": "https://collection.sciencemuseumgroup.org.uk/objects/co13429/voltaic-pile-early-19th-century-reproduction"
+      },
+      "quality": {
+        "authority": "HIGH",
+        "period_proximity": "REPRODUCTION_OF_PERIOD_FORM"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "ACTIVE_REFERENCE",
+      "notes": "Use object geometry/catalogue facts; image-specific reuse must be checked separately."
+    },
+    {
+      "id": "SRC-FR-007",
+      "title": "Coat, European, ca. 1820, C.I.38.23.24",
+      "creator": null,
+      "date": "ca. 1820",
+      "provider": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/103921",
+      "roles": [
+        "MUSEUM_OBJECT",
+        "COSTUME_REFERENCE",
+        "ASSET_CANDIDATE_SOURCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "victor_coat",
+        "victor_silhouette",
+        "victor_collar_cravat"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN",
+        "commercial_asset_use": "ELIGIBLE",
+        "evidence_url": "https://www.metmuseum.org/art/collection/search/103921"
+      },
+      "quality": {
+        "authority": "HIGH",
+        "period_proximity": "SURVIVING_PERIOD_OBJECT"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "ACTIVE_REFERENCE",
+      "notes": "Strong period evidence; exact Victor/social/story fit still requires comparison."
+    },
+    {
+      "id": "SRC-FR-008",
+      "title": "Coat, British, ca. 1833, 1981.210.4",
+      "creator": null,
+      "date": "ca. 1833",
+      "provider": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/81107",
+      "roles": [
+        "MUSEUM_OBJECT",
+        "COSTUME_REFERENCE",
+        "ASSET_CANDIDATE_SOURCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "victor_coat",
+        "victor_silhouette",
+        "victor_collar_cravat"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN",
+        "commercial_asset_use": "ELIGIBLE",
+        "evidence_url": "https://www.metmuseum.org/art/collection/search/81107"
+      },
+      "quality": {
+        "authority": "HIGH",
+        "period_proximity": "SURVIVING_PERIOD_OBJECT"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "ACTIVE_REFERENCE",
+      "notes": "Useful comparison if the visual contract follows the 1831 edition era; must not be mixed accidentally with an earlier costume decision."
+    },
+    {
+      "id": "SRC-FR-009",
+      "title": "Suit, American, 1830-40",
+      "creator": null,
+      "date": "1830-1840",
+      "provider": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/156987",
+      "roles": [
+        "MUSEUM_OBJECT",
+        "COSTUME_REFERENCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "victor_coat",
+        "victor_silhouette",
+        "victor_collar_cravat"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN",
+        "commercial_asset_use": "ELIGIBLE",
+        "evidence_url": "https://www.metmuseum.org/art/collection/search/156987"
+      },
+      "quality": {
+        "authority": "HIGH",
+        "period_proximity": "SURVIVING_PERIOD_OBJECT"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "SUPPORTING_REFERENCE",
+      "notes": "Useful silhouette/material comparison, but geography is weaker than European/British references for Victor."
+    },
+    {
+      "id": "SRC-FR-010",
+      "title": "Ingolstadt city view from Eckarth diary",
+      "creator": "Eckarth / historical copper engraving",
+      "date": "1800",
+      "provider": "Wikimedia Commons / SLUB Dresden source",
+      "url": "https://commons.wikimedia.org/wiki/File:Eckarth_1800_05_Ingolstadt.jpg",
+      "roles": [
+        "PRIMARY_HISTORICAL",
+        "LOCATION_REFERENCE",
+        "ART_DIRECTION_REFERENCE",
+        "ASSET_CANDIDATE_SOURCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "ingolstadt_roofline",
+        "laboratory_exterior_building",
+        "gothic_laboratory_window",
+        "city_window_pattern"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN",
+        "commercial_asset_use": "ELIGIBLE_WITH_JURISDICTION_CHECK",
+        "evidence_url": "https://commons.wikimedia.org/wiki/File:Eckarth_1800_05_Ingolstadt.jpg"
+      },
+      "quality": {
+        "authority": "HIGH",
+        "period_proximity": "PRIMARY"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "PREFERRED_LOCATION_REFERENCE",
+      "notes": "Preferred primary direction for rebuilding the exterior because it is location-specific and near the story period."
+    },
+    {
+      "id": "SRC-FR-011",
+      "title": "Hohe Schule und Collegium Georgianum / Ingolstadt university buildings",
+      "creator": null,
+      "date": "historical depiction",
+      "provider": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Hohe_Schule_und_Collegium_Georgianum_1571.jpg",
+      "roles": [
+        "LOCATION_REFERENCE",
+        "ARCHITECTURE_REFERENCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "ingolstadt_roofline",
+        "laboratory_exterior_building",
+        "creation_chamber_architecture"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN",
+        "commercial_asset_use": "ELIGIBLE_WITH_JURISDICTION_CHECK",
+        "evidence_url": "https://commons.wikimedia.org/wiki/File:Hohe_Schule_und_Collegium_Georgianum_1571.jpg"
+      },
+      "quality": {
+        "authority": "MEDIUM_HIGH",
+        "period_proximity": "HISTORIC_SITE_REFERENCE"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "SUPPORTING_REFERENCE",
+      "notes": "Supports identity of historic university architecture; not sufficient alone for the 1800 city roofline."
+    }
+  ]
+}

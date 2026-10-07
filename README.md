@@ -144,3 +144,28 @@ See:
 - [docs/LIBRARY_MINER_PROPOSAL.md](docs/LIBRARY_MINER_PROPOSAL.md)
 - [docs/RUN_LIBRARY_MINER.md](docs/RUN_LIBRARY_MINER.md)
 - [docs/CHANGELOG.md](docs/CHANGELOG.md)
+
+## Production / visual-governance status
+
+The JavaScript filmmaking research has now been formalized as the **Living Engraving** production method.
+
+Current production governance:
+- every visible/audible/editable element is an atomic Item;
+- requirements are locked before final candidate selection;
+- sources are logged even when their candidates are rejected;
+- HERO/PRIMARY Items require explicit alternatives/comparison;
+- generic visible asset packs are not accepted as final art;
+- structural reproducibility and final asset approval are separate gates;
+- current instructions and historical version learning are stored separately.
+
+First worked audit: `episodes/frankenstein-prototype/` — 62 Items, 62 decision records, 11 current research sources, six benchmark shots.
+
+The V5.1 film is a prototype benchmark, **not** final-approved. The V5.2 strict-final gate intentionally remains red until each important Item wins its own evidence/candidate/shot-fit process.
+
+See:
+- [docs/production/CURRENT_METHOD.md](docs/production/CURRENT_METHOD.md)
+- [docs/production/ITEM_GOVERNANCE.md](docs/production/ITEM_GOVERNANCE.md)
+- [docs/production/ITEM_CHECKLISTS.md](docs/production/ITEM_CHECKLISTS.md)
+- [docs/production/SOURCE_POLICY.md](docs/production/SOURCE_POLICY.md)
+- [docs/production/VERSION_HISTORY.md](docs/production/VERSION_HISTORY.md)
+- [episodes/frankenstein-prototype/README.md](episodes/frankenstein-prototype/README.md)

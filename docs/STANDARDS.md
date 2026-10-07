@@ -104,3 +104,33 @@ Every design discussion should distinguish:
 - **HYPOTHESIS** — intentionally testable prediction.
 - **DESIGN CHOICE** — a chosen trade-off.
 - **EXPERIMENT NEEDED** — insufficient evidence; test instead of debating indefinitely.
+
+## Atomic Item and asset-selection standard
+
+### Item decomposition
+Every independently judgeable visible, audible, camera, lighting, effect, transition or typography element is an **Item**. Scene-level quality scores must not hide a weak subpart. Characters, environments and apparatus are decomposed until each independently fail-able component can be researched, replaced and approved separately.
+
+### Requirements before search
+For final production, the Item's narrative, source-fidelity, period/location, visual, motion, continuity, technical and rights requirements are written before final candidate selection.
+
+### Best-fit selection
+Assets are selected because they best satisfy the defined use case—not because they were found first, already exist in code, are public domain, or are easy to animate.
+
+For HERO/PRIMARY visible Items, use explicit alternatives. Normally compare at least three materially different viable candidates from at least two independent sources, or compare a bespoke design against at least two external references/alternative directions. If nothing is good enough, record `BLOCKED_NO_SUITABLE_ASSET` and redesign rather than using generic filler.
+
+### Source registry
+Every material research source is logged when discovered, even if the candidate it informs is rejected. Rights to use facts/reference material and rights to embed an image/audio asset are recorded separately.
+
+### Hard asset gates
+A weighted average cannot rescue a hard failure. At minimum, final visible assets require:
+- story specificity >= 8/10;
+- period fit >= 8/10;
+- style fit >= 8/10;
+- known provenance/rights.
+
+HERO Items should normally score >= 8 on every applicable critical dimension.
+
+### Shot lock
+A shot cannot be locked while any HERO Item is not `FINAL_APPROVED`, any PRIMARY Item lacks continuity approval, or a visible Item remains blocked, unknown-rights or `NEEDS_REVALIDATION`.
+
+See `docs/production/ITEM_GOVERNANCE.md`.

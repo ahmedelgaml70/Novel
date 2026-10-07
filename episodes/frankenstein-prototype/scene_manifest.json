@@ -1,0 +1,136 @@
+{
+  "schema_version": "3.0",
+  "film": {
+    "title": "Frankenstein — Living Engraving V5.1",
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "audio_sample_rate": 48000,
+    "runtime_seconds": 24,
+    "status": "prototype_benchmark"
+  },
+  "shots": [
+    {
+      "id": "ingolstadt_storm",
+      "renderer": "stormExterior",
+      "duration": 3.4,
+      "purpose": "Locate the story in a hostile historical city and visually target Victor's laboratory.",
+      "transition_out": "lightning_cut",
+      "cues": {
+        "lightning": [
+          {
+            "time": 1.05,
+            "strength": 0.78
+          },
+          {
+            "time": 2.62,
+            "strength": 0.34
+          }
+        ],
+        "thunder": [
+          1.16,
+          2.74
+        ]
+      }
+    },
+    {
+      "id": "creation_chamber",
+      "renderer": "creationChamber",
+      "duration": 5,
+      "purpose": "Story-specific tableau: creature under drapery, Victor at doorway, book/skull foreground and period galvanic apparatus.",
+      "transition_out": "hard_cut",
+      "cues": {
+        "lightning": [
+          {
+            "time": 2.2,
+            "strength": 0.35
+          }
+        ],
+        "electrical_crackle": [
+          [
+            2,
+            3.8
+          ]
+        ],
+        "footsteps": [
+          0.72,
+          1.38
+        ]
+      }
+    },
+    {
+      "id": "victor_at_door",
+      "renderer": "victorAtDoor",
+      "duration": 3.5,
+      "purpose": "Hold on Victor's fear with the face partly obscured rather than a generic front-facing portrait.",
+      "transition_out": "shadow_cut",
+      "cues": {
+        "breath": true,
+        "lightning": [
+          {
+            "time": 2.65,
+            "strength": 0.16
+          }
+        ]
+      }
+    },
+    {
+      "id": "galvanic_contact",
+      "renderer": "galvanicContact",
+      "duration": 4,
+      "purpose": "Macro shot of voltaic pile, Leyden jar, brass contact and copper wire.",
+      "transition_out": "arc_match_cut",
+      "cues": {
+        "electrical_crackle": [
+          [
+            0.8,
+            3.7
+          ]
+        ],
+        "arc_hits": [
+          1.34,
+          2.17,
+          3.13
+        ]
+      }
+    },
+    {
+      "id": "first_eye",
+      "renderer": "firstEye",
+      "duration": 4,
+      "purpose": "Extreme close-up: only eye, cheek, nose edge and hair emerge from darkness.",
+      "transition_out": "hard_cut",
+      "cues": {
+        "heartbeat": true,
+        "lightning": [
+          {
+            "time": 2.86,
+            "strength": 0.24
+          }
+        ]
+      }
+    },
+    {
+      "id": "recoil_tableau",
+      "renderer": "recoilTableau",
+      "duration": 4.1,
+      "purpose": "Return to the tableau as the creature rises and Victor recoils, then resolve into title.",
+      "transition_out": "none",
+      "cues": {
+        "thunder": [
+          0.7
+        ],
+        "lightning": [
+          {
+            "time": 0.58,
+            "strength": 0.56
+          },
+          {
+            "time": 2.42,
+            "strength": 0.19
+          }
+        ]
+      }
+    }
+  ]
+}

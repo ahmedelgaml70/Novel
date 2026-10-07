@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Novel Production Item",
+  "type": "object",
+  "required": [
+    "id",
+    "category",
+    "importance",
+    "shot_ids",
+    "purpose",
+    "requirements",
+    "source_ids",
+    "decision_id",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_\\-]+$"
+    },
+    "category": {
+      "type": "string"
+    },
+    "importance": {
+      "enum": [
+        "HERO",
+        "PRIMARY",
+        "SUPPORT",
+        "ATMOSPHERIC"
+      ]
+    },
+    "shot_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 8
+    },
+    "checklist_profile": {
+      "type": "string"
+    },
+    "requirements": {
+      "type": "object",
+      "required": [
+        "story",
+        "period",
+        "visual",
+        "motion",
+        "continuity",
+        "technical",
+        "rights"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "story": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "period": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "visual": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "motion": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "continuity": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "technical": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "rights": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "decision_id": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "DEFINED",
+        "REQUIREMENTS_LOCKED",
+        "SOURCES_COLLECTED",
+        "CANDIDATES_COLLECTED",
+        "CANDIDATES_COMPARED",
+        "SELECTED",
+        "SHOT_FIT_APPROVED",
+        "CONTINUITY_APPROVED",
+        "FINAL_APPROVED",
+        "REJECTED",
+        "REPLACED",
+        "NEEDS_REVALIDATION",
+        "BLOCKED_NO_SUITABLE_ASSET",
+        "REFERENCE_ONLY"
+      ]
+    }
+  },
+  "additionalProperties": true
+}
