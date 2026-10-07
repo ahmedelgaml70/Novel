@@ -276,12 +276,54 @@
     {
       "id": "DEC-creation_chamber_architecture",
       "item_id": "creation_chamber_architecture",
-      "requirements_locked_before_search": false,
-      "candidates": [],
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "CHAMBER-A-v51-timber-grid",
+          "origin": "BESPOKE_JS_PRIMITIVE_SET",
+          "source_ids": [],
+          "status": "SHOT_TESTED_REJECTED",
+          "scores": {
+            "story_specificity": 5,
+            "period_fit": 5,
+            "style_fit": 6,
+            "shot_fit": 6,
+            "continuity_fit": 9,
+            "animation_suitability": 10,
+            "technical_quality": 10,
+            "rights_confidence": 10,
+            "originality_non_genericity": 5
+          },
+          "reason": "Technically clean and easy to animate, but the repeated timber grid and shelf read as a generic coded room and became visibly cheaper than the upgraded engraved HERO assets."
+        },
+        {
+          "candidate_id": "CHAMBER-B-v53-sparse-stone-arch",
+          "origin": "BESPOKE_JS_ARCHITECTURAL_SHELL_PLUS_HANDPICKED_ASSETS",
+          "source_ids": [
+            "SRC-FR-001",
+            "SRC-FR-011"
+          ],
+          "status": "MATCHED_FRAME_TESTED_PREFERRED_PROVISIONAL",
+          "scores": {
+            "story_specificity": 8,
+            "source_fidelity": 8,
+            "period_fit": 8,
+            "style_fit": 9,
+            "shot_fit": 9,
+            "continuity_fit": 9,
+            "animation_suitability": 10,
+            "technical_quality": 10,
+            "rights_confidence": 10,
+            "originality_non_genericity": 9
+          },
+          "reason": "Matched creation/recoil frames show better hierarchy and coherence: sparse stone/plaster mass, arch rhythm, handpicked Gothic window and fewer filler objects let the high-information characters/apparatus dominate."
+        }
+      ],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "decision_status": "MATCHED_FRAME_PREFERRED_PROVISIONAL",
+      "why_selected_or_pending": "Prefer the sparse stone/arch chamber for current V5.3 lookdev. Final approval waits for remaining environment/location checks and full-sequence continuity.",
+      "remaining_risk": "Interior remains interpretive rather than a documented exact room; external location identity and final source contract remain open.",
+      "preferred_candidate_id": "CHAMBER-B-v53-sparse-stone-arch"
     },
     {
       "id": "DEC-timber_wall_beams",
