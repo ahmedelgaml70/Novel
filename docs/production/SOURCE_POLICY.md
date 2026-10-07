@@ -126,3 +126,20 @@ To promote a source image into the final film:
 ## Source maintenance
 
 If a URL disappears, keep the original record and add a replacement/mirror. Do not silently rewrite history. If rights information changes, record the new evidence and invalidate affected approvals until reviewed.
+
+
+## Literary source obligations
+
+The exact novel edition used for adaptation is a Source and must be logged with a stable provider record. Do not cite the Work generically when edition-dependent wording or visual implications matter.
+
+For each scene/sequence, material literary facts that constrain adaptation are captured in `source_obligations.json`.
+
+A literary obligation is different from a visual reference:
+- it establishes what the chosen edition says;
+- it does not prove the historical geometry of an interpretive prop;
+- it does not grant rights to a modern illustration;
+- it does not force every described detail to appear on screen.
+
+Each obligation may be represented, adapted, or intentionally omitted, but the decision must be explicit. HERO obligations that remain unresolved block strict final approval.
+
+When multiple editions are researched, designate one production text and mark the others as comparative/alternative. Never silently blend 1818 and 1831 choices.
