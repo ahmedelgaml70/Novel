@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Novel Source-Fidelity Obligation",
+  "type": "object",
+  "required": ["id","fact","shot_ids","item_ids","importance","current_treatment","decision"],
+  "properties": {
+    "id": {"type":"string","pattern":"^[A-Z0-9_\\-]+$"},
+    "fact": {"type":"string","minLength":8},
+    "shot_ids": {"type":"array","items":{"type":"string"},"uniqueItems":true},
+    "item_ids": {"type":"array","items":{"type":"string"},"uniqueItems":true},
+    "importance": {"enum":["HERO","PRIMARY","SUPPORT"]},
+    "current_treatment": {"type":"string"},
+    "decision": {"type":"string","minLength":8}
+  },
+  "additionalProperties": true
+}
