@@ -92,3 +92,41 @@ Do not render the full V5.3 film until at least these approval stills pass:
 5. apparatus contact macro.
 
 Only then animate and render the sequence.
+
+## Phase 2 — high-information asset integration
+
+The next test used high-detail engraved candidate assets for the creature, Victor, apparatus and Gothic window while JavaScript retained composition, camera, lighting, atmosphere and timing.
+
+### Mixed-detail test
+
+Result: clear improvement in HERO Items, but the old primitive room/foreground became visibly cheaper than the focal art. The shot looked like a collage of quality levels.
+
+Decision: do not keep low-value filler merely because it already exists in the renderer.
+
+### Clean sparse-room test
+
+The chamber was rebuilt around only:
+- detailed Gothic window;
+- creature;
+- Victor;
+- apparatus;
+- slab;
+- dying candle;
+- cable;
+- shadow, fog and light.
+
+This passed the **directional lookdev gate** and clearly outperformed the previous primitive/mixed-detail frame.
+
+It is not FINAL_APPROVED because several source assets were salvaged from a crowded generated sheet and retain edge contamination. They need individually authored/researched final files.
+
+### Motion test
+
+A 3.041667-second recoil test added restrained whole-body breath/tremor/lift, lightning, fog and Victor withdrawal.
+
+Result: a flat high-detail asset can carry subtle rigid/deform-like motion in a wide shot. It cannot honestly satisfy independent limb convulsion without a higher-articulation asset structure.
+
+### Current V5.3 decision
+
+Do not render the complete film yet.
+
+The asset-authoring pivot is validated as a direction. Next work should produce clean individual HERO assets and solve the remaining exterior/contact/hand/articulation blockers before the full render.
