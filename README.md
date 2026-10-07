@@ -181,3 +181,8 @@ The current motion architecture is moving to ready rigged 3D assets rather than 
 - `production/knowledge/ready_free_asset_sources.json` — vetted free asset ecosystems.
 
 Current primary candidate: Quaternius universal humanoid ecosystem; KayKit is the fallback. No custom rigging/locomotion is allowed in the first proof.
+
+
+### Real skeletal animation proof
+
+The ready-rigged Three.js path has now produced a deterministic 9-second H.264 proof from a real skinned humanoid and ready CC0 animation clips. Exact runtime findings, the 86-clip inventory, and the semantic-binding correction are documented in `docs/experiments/E-VID-006_FINDINGS.md`.
