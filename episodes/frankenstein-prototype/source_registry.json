@@ -355,7 +355,7 @@
     },
     {
       "id": "SRC-FR-012",
-      "title": "Frankenstein; Or, The Modern Prometheus \u2014 1818 edition, Project Gutenberg eBook #41445",
+      "title": "Frankenstein; Or, The Modern Prometheus — 1818 edition, Project Gutenberg eBook #41445",
       "creator": "Mary Wollstonecraft Shelley",
       "date": "1818 edition; digital transcription updated 2026-10-06",
       "provider": "Project Gutenberg",
@@ -402,7 +402,7 @@
     },
     {
       "id": "SRC-FR-013",
-      "title": "Frankenstein; Or, The Modern Prometheus \u2014 1831 edition, Project Gutenberg eBook #42324",
+      "title": "Frankenstein; Or, The Modern Prometheus — 1831 edition, Project Gutenberg eBook #42324",
       "creator": "Mary Wollstonecraft Shelley",
       "date": "1831 edition",
       "provider": "Project Gutenberg",
@@ -460,6 +460,97 @@
       "discovered_at": "2026-10-07",
       "status": "PROTOTYPE_FONT_SELECTED",
       "notes": "Downloaded Roman variable TTF with OFL; edition-faithful typography remains pending. Compared portable bundled font against Linux-only dependency and system serif fallback. Upstream design reference https://github.com/georgd/EB-Garamond; modern revival does not prove the 1818 title font."
+    },
+    {
+      "id": "SRC-FR-015",
+      "title": "Quaternius CC0 table — pinned GLB mirror",
+      "creator": "Quaternius",
+      "date": "modern asset",
+      "provider": "georg-doc/kayfabizarro mirror",
+      "url": "https://raw.githubusercontent.com/georg-doc/kayfabizarro/2215b8895588b1dcf787cd55c08fe76371895f59/media/3D_Assets/quaternius_cc0-table-1411.glb",
+      "roles": [
+        "READY_3D_ASSET",
+        "PROP_CANDIDATE",
+        "RIGHTS_PROVENANCE_REFERENCE"
+      ],
+      "supports_item_ids": [
+        "laboratory_table",
+        "bed_slab",
+        "creation_chamber_composition"
+      ],
+      "rights": {
+        "status": "CC0_REPORTED_BY_SOURCE_NAMING_AND_QUATERNIUS_PACK_PROVENANCE",
+        "commercial_asset_use": "DEVELOPMENT_PROOF_ELIGIBLE_FINAL_SOURCE_CHECK_REQUIRED",
+        "evidence_url": "https://github.com/georg-doc/kayfabizarro/blob/2215b8895588b1dcf787cd55c08fe76371895f59/media/3D_Assets/ASSETS.md"
+      },
+      "quality": {
+        "authority": "MIRROR_WITH_PINNED_BLOB",
+        "period_proximity": "GENERIC_PROP_ONLY"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "DEVELOPMENT_PROOF_CANDIDATE",
+      "notes": "Pinned blob sha 88bc47fc5fdae74c08f3910ce506602441e83b4a. Ready-free proof asset; not historically specific enough by itself for final production."
+    },
+    {
+      "id": "SRC-FR-016",
+      "title": "Quaternius Lever — pinned GLB mirror",
+      "creator": "Quaternius",
+      "date": "modern asset",
+      "provider": "evanly-gh/evanly.me mirror",
+      "url": "https://raw.githubusercontent.com/evanly-gh/evanly.me/9fa3fdcf08165f0bb9130026dab94a2302a0b4bc/public/models/quaternius/Lever.glb",
+      "roles": [
+        "READY_3D_ASSET",
+        "INTERACTION_PROP_CANDIDATE",
+        "RIGHTS_PROVENANCE_REFERENCE"
+      ],
+      "supports_item_ids": [
+        "brass_contact",
+        "galvanic_contact_composition"
+      ],
+      "rights": {
+        "status": "QUATERNIUS_CC0_SOURCE_CLAIM_REQUIRES_FINAL_ORIGINAL_PACK_CHECK",
+        "commercial_asset_use": "DEVELOPMENT_PROOF_ELIGIBLE_FINAL_SOURCE_CHECK_REQUIRED",
+        "evidence_url": "https://github.com/evanly-gh/evanly.me/blob/9fa3fdcf08165f0bb9130026dab94a2302a0b4bc/public/models/quaternius/manifest.json"
+      },
+      "quality": {
+        "authority": "PINNED_MIRROR",
+        "period_proximity": "GENERIC_MECHANICAL_PROP"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "DEVELOPMENT_PROOF_CANDIDATE",
+      "notes": "Pinned blob sha 522f6cadcc59cc6bcc193d749dbc207e43eb236d. Used only to prove story-specific contact from ready motion; historical apparatus geometry remains a separate final-quality gate."
+    },
+    {
+      "id": "SRC-FR-017",
+      "title": "Kenney Graveyard ready 3D subset — altar, brick wall, candle",
+      "creator": "Kenney",
+      "date": "modern asset pack",
+      "provider": "georg-doc/kayfabizarro pinned mirror",
+      "url": "https://github.com/georg-doc/kayfabizarro/tree/2215b8895588b1dcf787cd55c08fe76371895f59/media/3D_Assets/GLB_graveyard",
+      "roles": [
+        "READY_3D_ENVIRONMENT",
+        "READY_3D_ASSET",
+        "SET_DRESSING_CANDIDATE",
+        "RIGHTS_PROVENANCE_REFERENCE"
+      ],
+      "supports_item_ids": [
+        "creation_chamber_architecture",
+        "bed_slab",
+        "candle_stub",
+        "creation_chamber_composition"
+      ],
+      "rights": {
+        "status": "KENNEY_GRAVEYARD_CC0_REPORTED_IN_MIRROR_DOCUMENTATION",
+        "commercial_asset_use": "DEVELOPMENT_PROOF_ELIGIBLE_FINAL_PACK_LICENSE_CHECK_REQUIRED",
+        "evidence_url": "https://github.com/georg-doc/kayfabizarro/blob/2215b8895588b1dcf787cd55c08fe76371895f59/media/3D_Assets/KayKit_Skeletons/BRIEF_Graveyard_Denizens_Modul.md"
+      },
+      "quality": {
+        "authority": "PINNED_MIRROR",
+        "period_proximity": "ATMOSPHERIC_SUPPORT_NOT_EXACT_PERIOD_EVIDENCE"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "DEVELOPMENT_PROOF_CANDIDATE",
+      "notes": "Pinned individual GLBs used in proof: altar-stone 5d1d43c077a9b124644a5d8e12a7c23f796f7828; brick-wall af0c35f012d69d321a526d769e18f92f663f7246; candle 5f6351805ca6df386828bcd1acb0d6eed4300fb2. They are support geometry, not claims about Victor's exact historical laboratory."
     }
   ]
 }
