@@ -214,3 +214,30 @@ A version number is not earned by cosmetic code changes. It must represent a mea
 **Style policy:** prove real skeletal motion first with simple toon/outline rendering. Do not spend time on a custom engraving shader until the animation gate passes.
 
 **Visual render:** not yet claimed. V5.4-dev is an architectural pivot and test definition.
+
+
+## V5.4.1 — Ready-rigged skeletal animation proof passes
+
+**Goal:** answer the specific failure behind V5.3: can we get real articulated character animation without building rigs or animation cycles ourselves?
+
+**Result:** yes.
+
+A ready Quaternius humanoid GLB with 86 runtime clips was loaded in Three.js and rendered deterministically to a 9-second 1280×720 / 24 fps H.264 proof.
+
+The corrected proof binds exact runtime clips:
+- Idle_Loop;
+- Walk_Formal_Loop;
+- Interact;
+- Hit_Knockback.
+
+It demonstrates:
+- planted/gait-driven locomotion;
+- joint-level upper-body interaction;
+- independent second-actor reaction;
+- first-actor recoil;
+- two independent skeletons;
+- camera motion independent of character animation.
+
+**Important failure learned:** fuzzy semantic matching originally mapped “idle” to Crouch_Idle_Loop and could not find “run” because the library names it Jog/Sprint. Final choreography now uses explicit runtime clip bindings after ingestion inventory.
+
+**Decision:** the real-animation gate passes. Flat still-image movement is no longer the default for performance shots. The next visual work should add ready free outfits/environments/props and styling on top of this skeletal foundation rather than revisiting the moving-still architecture.
