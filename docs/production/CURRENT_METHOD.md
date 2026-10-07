@@ -521,35 +521,86 @@ Every new visual version must answer:
 A version number is earned by a meaningful visual, methodological or pipeline improvement—not by cosmetic code changes.
 
 
-## 7. Source-fidelity obligations
+## 26. Source contracts and source-fidelity obligations
 
-The exact literary edition used for adaptation is itself a production Source. Material facts from that edition that constrain the film are recorded in `source_obligations.json`.
+The framework does **not** prescribe one edition, translation, visual style, or source strategy for every novel.
 
-Keep literary obligations separate from museum/art-history/technical references:
+Each episode has a **source contract** that is selected for that episode and remains revisable when better evidence appears.
 
-- literary source -> what the novel establishes;
-- historical/museum source -> what a real object/place/garment looked like;
-- art-direction source -> visual/compositional language;
-- candidate source -> where a possible visible asset came from.
+### Source-contract lifecycle
 
-An obligation may be **represented**, **deliberately adapted**, or **intentionally omitted**. It may not disappear merely because no renderer Item happened to implement it.
+```text
+SOURCE CANDIDATES
+→ COMPARE AGAINST ADAPTATION GOAL
+→ PROVISIONAL CHOICE
+→ BUILD / TEST
+→ RECONSIDER IF BETTER EVIDENCE APPEARS
+→ LOCK FOR FINAL MASTER
+```
 
-Every obligation records:
-- source id(s);
-- the source fact/constraint;
-- affected shots;
-- affected Items;
-- importance;
-- current treatment;
-- explicit adaptation decision.
+The source contract should consider:
+- completeness and integrity;
+- source/edition significance;
+- wording and narrative consequences;
+- language/translation quality;
+- rights/provenance;
+- suitability for the intended adaptation;
+- whether another source would materially improve fidelity or the viewer experience.
 
-The strict-final gate blocks unresolved HERO obligations and explicit source contradictions.
+Do **not** lock a source because it was researched first.
 
-### Frankenstein 1818 prototype contract
+A source may be replaced later. When that happens:
+1. record why the replacement is better;
+2. identify which obligations/Items depend on the old source;
+3. regenerate or re-evaluate those obligations;
+4. rerun affected shot/continuity checks;
+5. retain the old decision in history, not in the current instructions.
 
-For the current prototype, Project Gutenberg eBook #41445 (photo-reprint transcription of the 1818 edition) is the preferred literary text reference. The 1831 edition (#42324) remains an alternative-edition reference and must not be mixed silently into the source contract.
+### Source obligations
 
-Current obligations include the creation-night timing/weather, fading candle, unspecified “instruments of life,” dull yellow eye, hard breathing, convulsive limb motion, proportionate/once-beautiful intended features, yellow skin, flowing black hair, Victor's recoil, and Ingolstadt's distinctive steeple identity.
+Material facts from candidate/selected literary sources are stored in `source_obligations.json`.
 
-The voltaic-pile/Leyden-jar apparatus is therefore documented as an **interpretive historical reconstruction**, not as a canonically named machine in the novel.
+Obligations are evidence-bound:
+- common facts may apply across several source candidates;
+- edition/translation-specific facts remain conditional until that source is selected;
+- interpretive choices must be identified as interpretations rather than canon.
 
+An obligation may be represented, deliberately adapted, or intentionally omitted. It may not disappear accidentally because no renderer Item implemented it.
+
+The strict-final gate requires a deliberate source contract for the final master, but **development remains flexible** and can switch to a better source at any time through the replacement process.
+
+## 27. Learning system
+
+Every meaningful weakness should improve future production, not only the current shot.
+
+Use:
+
+```text
+OBSERVE
+→ DEFINE THE DEFECT
+→ IDENTIFY ROOT CAUSE
+→ DETERMINE SCOPE
+→ PROPOSE PREVENTION
+→ TEST THE FIX
+→ PROMOTE THE LESSON
+→ ENCODE THE PREVENTION
+→ VERIFY ON FUTURE WORK
+```
+
+Possible scopes:
+- `EPISODE` — specific to one novel/scene;
+- `STYLE` — specific to Living Engraving or another visual language;
+- `CATEGORY` — e.g. hands, historical props, typography, audio;
+- `GLOBAL` — should apply to any Novel production.
+
+A lesson is not complete until it produces at least one concrete prevention mechanism where appropriate:
+- current-method rule;
+- Item checklist;
+- validator/test;
+- source/candidate requirement;
+- renderer primitive change;
+- QC check;
+- benchmark/experiment;
+- explicit episode-only note if it should **not** generalize.
+
+Do not overfit Frankenstein. Episode facts stay in the episode. Only reusable lessons are promoted into the general method.
