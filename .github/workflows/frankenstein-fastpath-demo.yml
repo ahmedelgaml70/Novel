@@ -34,32 +34,37 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg
 
-      - name: Download canonical ready assets
+      - name: Download V5.4.4 ready assets
         run: |
           set -eux
           mkdir -p production/rigged3d/public/assets/graveyard/Textures
 
-          curl -L --fail --retry 3             https://raw.githubusercontent.com/NafisRayan/Animate-Rigged-Humanoid-No-Blender/main/test/human_male.glb             -o production/rigged3d/public/assets/human_male.glb
+          curl -L --fail --retry 3 \
+            https://raw.githubusercontent.com/NafisRayan/Animate-Rigged-Humanoid-No-Blender/main/test/human_male.glb \
+            -o production/rigged3d/public/assets/human_male.glb
 
-          curl -L --fail --retry 3             https://raw.githubusercontent.com/Genesara/genesara-web/90c166baa14682eedf1358c6c0a6e40e91765495/public/models/characters/male_peasant.glb             -o production/rigged3d/public/assets/victor_peasant.glb
+          curl -L --fail --retry 3 \
+            https://raw.githubusercontent.com/Kauaji/It-Guardian/224f38f970da01c8e978a313520ef3a9cad24b57/client/public/assets/inventory-map-3d/models/quaternius/table.glb \
+            -o production/rigged3d/public/assets/table.glb
 
-          curl -L --fail --retry 3             https://raw.githubusercontent.com/Kauaji/It-Guardian/224f38f970da01c8e978a313520ef3a9cad24b57/client/public/assets/inventory-map-3d/models/quaternius/table.glb             -o production/rigged3d/public/assets/table.glb
+          curl -L --fail --retry 3 \
+            https://raw.githubusercontent.com/evanly-gh/evanly.me/9fa3fdcf08165f0bb9130026dab94a2302a0b4bc/public/models/quaternius/Lever.glb \
+            -o production/rigged3d/public/assets/lever.glb
 
-          curl -L --fail --retry 3             https://raw.githubusercontent.com/evanly-gh/evanly.me/9fa3fdcf08165f0bb9130026dab94a2302a0b4bc/public/models/quaternius/Lever.glb             -o production/rigged3d/public/assets/lever.glb
+          curl -L --fail --retry 3 \
+            https://raw.githubusercontent.com/georg-doc/kayfabizarro/378b209355b13304e3cff656ec0806ca5b89df28/media/3D_Assets/GLB_graveyard/candle.glb \
+            -o production/rigged3d/public/assets/graveyard/candle.glb
 
-          curl -L --fail --retry 3             https://raw.githubusercontent.com/georg-doc/kayfabizarro/378b209355b13304e3cff656ec0806ca5b89df28/media/3D_Assets/GLB_graveyard/brick-wall.glb             -o production/rigged3d/public/assets/graveyard/brick-wall.glb
+          curl -L --fail --retry 3 \
+            https://raw.githubusercontent.com/georg-doc/kayfabizarro/378b209355b13304e3cff656ec0806ca5b89df28/media/3D_Assets/GLB_graveyard/Textures/colormap.png \
+            -o production/rigged3d/public/assets/graveyard/Textures/colormap.png
 
-          curl -L --fail --retry 3             https://raw.githubusercontent.com/georg-doc/kayfabizarro/378b209355b13304e3cff656ec0806ca5b89df28/media/3D_Assets/GLB_graveyard/candle.glb             -o production/rigged3d/public/assets/graveyard/candle.glb
+          curl -L --fail --retry 3 \
+            'https://commons.wikimedia.org/wiki/Special:Redirect/file/Lewis_William_lab.jpg' \
+            -o production/rigged3d/public/assets/lab_background.jpg
 
-          curl -L --fail --retry 3             https://raw.githubusercontent.com/georg-doc/kayfabizarro/378b209355b13304e3cff656ec0806ca5b89df28/media/3D_Assets/GLB_graveyard/Textures/colormap.png             -o production/rigged3d/public/assets/graveyard/Textures/colormap.png
-
-          echo "Ready asset inventory:"
           find production/rigged3d/public/assets -type f -maxdepth 4 -printf '%p %k KB\n' | sort
-          echo "Integrity:"
           sha256sum production/rigged3d/public/assets/human_male.glb
-          git hash-object production/rigged3d/public/assets/victor_peasant.glb
-          git hash-object production/rigged3d/public/assets/graveyard/brick-wall.glb
-          git hash-object production/rigged3d/public/assets/graveyard/candle.glb
 
       - name: Start Vite
         working-directory: production/rigged3d
@@ -78,25 +83,25 @@ jobs:
         env:
           DEMO_URL: http://127.0.0.1:4173/frankenstein_fast.html
           OUT_DIR: render-output-frankenstein
-          DURATION: '10'
+          DURATION: '8'
           FPS: '24'
         run: node tools/capture_demo.mjs
 
       - name: Encode MP4 and review contact sheet
         working-directory: production/rigged3d
         run: |
-          ffmpeg -y -framerate 24             -i render-output-frankenstein/frames/frame_%04d.png             -c:v libx264 -pix_fmt yuv420p -crf 18 -movflags +faststart             render-output-frankenstein/frankenstein_fast_v5_4_3.mp4
+          ffmpeg -y -framerate 24             -i render-output-frankenstein/frames/frame_%04d.png             -c:v libx264 -pix_fmt yuv420p -crf 18 -movflags +faststart             render-output-frankenstein/frankenstein_fast_v5_4_4.mp4
 
-          ffmpeg -y -i render-output-frankenstein/frankenstein_fast_v5_4_3.mp4             -vf "fps=1,scale=320:-1,tile=5x2" -frames:v 1             render-output-frankenstein/contact_sheet.jpg
+          ffmpeg -y -i render-output-frankenstein/frankenstein_fast_v5_4_4.mp4             -vf "fps=1,scale=320:-1,tile=5x2" -frames:v 1             render-output-frankenstein/contact_sheet.jpg
 
-          ffprobe -v error             -show_entries format=duration,size             -show_entries stream=codec_name,width,height,r_frame_rate             -of json             render-output-frankenstein/frankenstein_fast_v5_4_3.mp4             > render-output-frankenstein/media_info.json
+          ffprobe -v error             -show_entries format=duration,size             -show_entries stream=codec_name,width,height,r_frame_rate             -of json             render-output-frankenstein/frankenstein_fast_v5_4_4.mp4             > render-output-frankenstein/media_info.json
 
       - name: Upload Frankenstein fast-path proof
         uses: actions/upload-artifact@v4
         with:
-          name: frankenstein-fast-v5-4-3
+          name: frankenstein-fast-v5-4-4
           path: |
-            production/rigged3d/render-output-frankenstein/frankenstein_fast_v5_4_3.mp4
+            production/rigged3d/render-output-frankenstein/frankenstein_fast_v5_4_4.mp4
             production/rigged3d/render-output-frankenstein/contact_sheet.jpg
             production/rigged3d/render-output-frankenstein/clip_inventory.json
             production/rigged3d/render-output-frankenstein/media_info.json
