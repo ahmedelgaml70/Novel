@@ -1295,7 +1295,10 @@
       },
       "source_ids": [
         "SRC-FR-012",
-        "SRC-FR-001"
+        "SRC-FR-001",
+        "SRC-FR-014",
+        "SRC-FR-015",
+        "SRC-FR-016"
       ],
       "decision_id": "DEC-creature_body_proportions",
       "status": "NEEDS_REVALIDATION",
@@ -1340,7 +1343,10 @@
       },
       "source_ids": [
         "SRC-FR-012",
-        "SRC-FR-001"
+        "SRC-FR-001",
+        "SRC-FR-014",
+        "SRC-FR-015",
+        "SRC-FR-016"
       ],
       "decision_id": "DEC-creature_head_shape",
       "status": "NEEDS_REVALIDATION",
@@ -1429,7 +1435,9 @@
       },
       "source_ids": [
         "SRC-FR-012",
-        "SRC-FR-001"
+        "SRC-FR-001",
+        "SRC-FR-014",
+        "SRC-FR-015"
       ],
       "decision_id": "DEC-creature_eye",
       "status": "NEEDS_REVALIDATION",
@@ -1472,7 +1480,8 @@
         ]
       },
       "source_ids": [
-        "SRC-FR-012"
+        "SRC-FR-012",
+        "SRC-FR-014"
       ],
       "decision_id": "DEC-creature_rise_motion",
       "status": "NEEDS_REVALIDATION",
