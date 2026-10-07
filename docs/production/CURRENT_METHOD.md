@@ -807,3 +807,19 @@ For assets expected to be one connected object:
 Manual rectangular erasing is only a first cleanup pass. Macro/close-up Items require structural alpha QC because tiny source-sheet fragments can become conspicuous after scaling.
 
 For intentionally disconnected objects (for example separate wires/parts), define the expected component set instead of blindly keeping only the largest component.
+
+## 37. Current-cut inventory hygiene
+
+The current Item inventory must describe the **actual current cut**.
+
+When an Item is removed or replaced:
+1. remove it from the active shot membership;
+2. set `active_in_current_cut: false`;
+3. retain prior shot membership/reason as history;
+4. mark its decision inactive/replaced;
+5. ensure strict-final validation ignores it unless it returns;
+6. keep the historical learning in version/decision history.
+
+Do not leave an obsolete Item active merely because it once existed in the renderer. This creates false blockers and makes the documentation contradict the current film.
+
+If an inactive Item returns later, reopen its requirements and validation rather than silently reactivating its old approval.
