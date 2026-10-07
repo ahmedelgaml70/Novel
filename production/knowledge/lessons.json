@@ -534,6 +534,34 @@
       "confidence": "HIGH",
       "status": "ENCODED",
       "superseded_by": null
+    },
+    {
+      "id": "LESSON-021",
+      "title": "Ready-pack marketing counts are not runtime capability inventories",
+      "scope": "GLOBAL",
+      "source_context": [
+        "E-VID-006 Quaternius ingestion review"
+      ],
+      "observed_weakness": "Pack descriptions advertise 120+ and 130+ animations, while the tested Standard no-root-motion merge reference reports 43 clips from each library, 86 named runtime clips total.",
+      "evidence": [
+        "The no-Blender merge reference reports 43 UAL1 Standard clips + 43 UAL2 Standard clips.",
+        "Official pack summaries use larger headline animation counts, likely reflecting variants/export groupings or broader pack contents."
+      ],
+      "root_cause": "Pack-level marketing/catalog counts and the exact clips present in a chosen runtime export are different quantities.",
+      "consequence": "A planner could assume an action exists because of a headline count without verifying the imported file actually contains that clip.",
+      "prevention_rule": "Every ready asset pack must pass an ingestion inventory before production dependency: enumerate actual clip names/durations, skeleton compatibility, meshes/materials, file sizes and variants in the exact runtime files used.",
+      "detection_method": "The asset-ingestion record is generated from the imported GLB/GLTF itself. Story/action planning may depend only on inventory-confirmed capabilities or explicitly unresolved searches.",
+      "implementation_changes": [
+        "Added animation clip inventory tooling to production/rigged3d.",
+        "Semantic clip resolver fails explicitly instead of silently faking missing animation.",
+        "Zero-prep demo displays the actual loaded clip list."
+      ],
+      "validation": [
+        "E-VID-006 must capture the exact runtime clip inventory before selecting Frankenstein-specific actions."
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
     }
   ]
 }
