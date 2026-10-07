@@ -530,6 +530,36 @@
       "discovered_at": "2026-10-07",
       "status": "ACTIVE_REFERENCE",
       "notes": "Useful for skeletal proportion/engraving language. Earlier than the novel; anatomy function is stronger than period-style matching."
+    },
+    {
+      "id": "SRC-FR-017",
+      "title": "Bavarian city views including Ingolstadium — Braun & Hogenberg",
+      "creator": "Georg Braun; Frans Hogenberg",
+      "date": "1576",
+      "provider": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Kupferstich_-_Bayerische_St%C3%A4dte_-_Braun_%2B_Hogenberg_-_1576.png",
+      "roles": [
+        "PRIMARY_HISTORICAL",
+        "LOCATION_REFERENCE",
+        "ART_DIRECTION_REFERENCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "ingolstadt_roofline",
+        "laboratory_exterior_building"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN",
+        "commercial_asset_use": "ELIGIBLE_WITH_JURISDICTION_CHECK",
+        "evidence_url": "https://commons.wikimedia.org/wiki/File:Kupferstich_-_Bayerische_St%C3%A4dte_-_Braun_%2B_Hogenberg_-_1576.png"
+      },
+      "quality": {
+        "authority": "HIGH",
+        "period_proximity": "EARLIER_THAN_STORY; SECONDARY_GEOMETRY/LANDMARK_REFERENCE"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "SUPPORTING_REFERENCE",
+      "notes": "Useful to compare long-lived city massing/landmarks; too early to define the final story-period skyline by itself."
     }
   ]
 }
