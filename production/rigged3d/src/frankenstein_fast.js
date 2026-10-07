@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import * as SkeletonUtils from 'three/addons/utils/SkeletonUtils.js';
 import { OutlineEffect } from 'three/addons/effects/OutlineEffect.js';
 
@@ -22,7 +23,10 @@ const flash=new THREE.PointLight(0xbfdcff,0,12,2); flash.position.set(0.5,2.4,0)
 const floor=new THREE.Mesh(new THREE.PlaneGeometry(12,10),new THREE.MeshToonMaterial({color:0x3d3931}));
 floor.rotation.x=-Math.PI/2; floor.receiveShadow=true; scene.add(floor);
 
+const draco=new DRACOLoader();
+draco.setDecoderPath('/draco/');
 const loader=new GLTFLoader();
+loader.setDRACOLoader(draco);
 
 function toonify(root,color=null){
   root.traverse(o=>{
