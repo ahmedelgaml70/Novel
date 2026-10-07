@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "episode_id": "frankenstein-prototype",
+  "mode": "BEST_FIT_REVISABLE",
+  "status": "OPEN",
+  "adaptation_goal": "Choose the source/edition that best supports the intended three-minute cinematic adaptation after comparing textual, creative, provenance and rights implications.",
+  "evaluation_dimensions": [
+    "source completeness and integrity",
+    "edition significance",
+    "wording/narrative consequences",
+    "adaptation usefulness",
+    "translation quality where applicable",
+    "rights/provenance",
+    "creative opportunity"
+  ],
+  "candidates": [
+    {
+      "source_id": "SRC-FR-012",
+      "label": "1818 edition",
+      "current_role": "CANDIDATE",
+      "strengths": [
+        "original 1818 publication text represented by the Project Gutenberg transcription",
+        "useful for first-edition wording and early conception"
+      ],
+      "risks_or_questions": [
+        "must be compared deliberately against later author-revised text",
+        "visual references from 1831 must not be mistaken for proof of 1818 textual choices"
+      ],
+      "decision_status": "UNDER_REVIEW"
+    },
+    {
+      "source_id": "SRC-FR-013",
+      "label": "1831 edition",
+      "current_role": "CANDIDATE",
+      "strengths": [
+        "author-revised later edition",
+        "naturally aligns with some surviving 1831 visual references used in look development"
+      ],
+      "risks_or_questions": [
+        "revision changes may alter adaptation emphasis",
+        "visual-reference alignment alone is not a reason to choose the text"
+      ],
+      "decision_status": "UNDER_REVIEW"
+    }
+  ],
+  "selected_source_id": null,
+  "selection_reason": null,
+  "replacement_rule": "If a new or existing candidate proves materially better for the adaptation goal, update the contract, record why, and re-evaluate every dependent source obligation and Item. Final lock is for reproducibility, not immutability."
+}
