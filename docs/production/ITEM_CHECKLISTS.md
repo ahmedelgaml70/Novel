@@ -109,3 +109,21 @@ Define narrative arc, harmonic/timbral language, instrumentation constraints, hi
 ## Silence
 
 Silence is an intentional audio Item. Record where layers are removed, what remains (room tone, breath, heartbeat), and why. It is not simply the absence of an audio file.
+
+## Asset source / isolation quality
+
+Check whether the source file supports the way the Item will actually be used. For HERO assets inspect alpha edges, hair, fingers, cloth, negative spaces, transparent margins, contamination from neighboring objects, crop latitude and available resolution. A visually attractive multi-object sheet may fail production if clean extraction damages the silhouette.
+
+## Motion structure
+
+State the motion class before final asset selection:
+
+- `RIGID/SUBTLE`: flat asset acceptable when only transforms, breathing/tremor, parallax or small deformation are needed.
+- `DEFORMABLE`: identify required flexible regions and deformation method.
+- `ARTICULATED`: identify independent joints/limbs/fingers and the rig/layer structure required.
+
+Test the motion at actual shot scale. Do not infer articulation from static visual quality.
+
+## Detail hierarchy / neighboring Items
+
+Review each HERO Item together with the SUPPORT Items around it. If the focal asset is visibly more authored/detailed than the room, props, foreground or effects, either upgrade those Items or simplify/remove them. Negative space is preferable to generic filler.
