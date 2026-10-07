@@ -1,0 +1,82 @@
+{
+  "version": "0.1.0",
+  "runtime_seconds": 9,
+  "policy": {
+    "custom_rig": false,
+    "custom_core_animation": false,
+    "flat_character_images": false,
+    "ready_asset_first": true
+  },
+  "assets": {
+    "actor_a": "/assets/human_a.glb",
+    "actor_b": "/assets/human_b.glb",
+    "environment": "/assets/environment.glb"
+  },
+  "beats": [
+    {
+      "id": "walk_in",
+      "start": 0,
+      "end": 2.7,
+      "actor": "a",
+      "semantic_action": "walk",
+      "clip_keywords": [
+        "walk",
+        "forward",
+        "locomotion"
+      ]
+    },
+    {
+      "id": "interact",
+      "start": 2.7,
+      "end": 4.4,
+      "actor": "a",
+      "semantic_action": "interact",
+      "clip_keywords": [
+        "interact",
+        "reach",
+        "push",
+        "pick",
+        "use"
+      ]
+    },
+    {
+      "id": "actor_b_reacts",
+      "start": 4.1,
+      "end": 6.1,
+      "actor": "b",
+      "semantic_action": "body_reaction",
+      "clip_keywords": [
+        "hit",
+        "reaction",
+        "spawn",
+        "hurt",
+        "death"
+      ]
+    },
+    {
+      "id": "actor_a_recoils",
+      "start": 5.7,
+      "end": 8.1,
+      "actor": "a",
+      "semantic_action": "recoil",
+      "clip_keywords": [
+        "dodge",
+        "back",
+        "hit",
+        "reaction",
+        "hurt"
+      ]
+    },
+    {
+      "id": "settle",
+      "start": 8.1,
+      "end": 9,
+      "actor": "a",
+      "semantic_action": "idle",
+      "clip_keywords": [
+        "idle",
+        "stand"
+      ]
+    }
+  ]
+}
