@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0",
+  "policy": "Promote only reusable learning. Episode facts remain episode-scoped; rules may be superseded when better evidence appears.",
+  "lessons": [
+    {
+      "id": "LESSON-001",
+      "title": "First-found assets are not best-fit evidence",
+      "scope": "GLOBAL",
+      "source_context": [
+        "Frankenstein V4->V5.2"
+      ],
+      "observed_weakness": "Available/open assets were initially treated as attractive production choices before exact use-case requirements were fully defined.",
+      "evidence": [
+        "Generic asset-pack feel persisted after normalization.",
+        "Later bespoke/reference-driven passes improved story specificity."
+      ],
+      "root_cause": "Selection began from available assets rather than from a locked need and comparison set.",
+      "consequence": "The renderer optimized around mediocre assets and the visual identity became generic.",
+      "prevention_rule": "Define Item requirements before final candidate selection and compare meaningful alternatives.",
+      "detection_method": "Decision record must show requirements_locked_before_search and alternatives for important Items.",
+      "implementation_changes": [
+        "Atomic Item governance",
+        "asset_decisions.json",
+        "strict-final candidate gates"
+      ],
+      "validation": [
+        "Future HERO/PRIMARY Item audits"
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
+    },
+    {
+      "id": "LESSON-002",
+      "title": "Normalization cannot fully rescue a generic source asset",
+      "scope": "CATEGORY",
+      "source_context": [
+        "Asset-driven V3/V4"
+      ],
+      "observed_weakness": "Palette, hatching, grain and lighting improved coherence but not source-asset specificity.",
+      "evidence": [
+        "V4 remained visibly asset-pack-like despite unified treatment."
+      ],
+      "root_cause": "Identity and silhouette still came from generic source art.",
+      "consequence": "Shots looked templated.",
+      "prevention_rule": "For HERO/PRIMARY visible Items, prioritize bespoke or highly specific source geometry before post-processing.",
+      "detection_method": "Ask whether the Item could plausibly belong to many unrelated projects.",
+      "implementation_changes": [
+        "Generic visible asset packs removed from current Living Engraving method"
+      ],
+      "validation": [
+        "Compare silhouette before/after treatment"
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
+    },
+    {
+      "id": "LESSON-003",
+      "title": "Close-ups require dedicated design quality",
+      "scope": "CATEGORY",
+      "source_context": [
+        "V2/V3 character close-up tests"
+      ],
+      "observed_weakness": "Zooming a full-body/simple rig into a portrait exposed weak anatomy and facial design.",
+      "evidence": [
+        "Dedicated portrait treatment read stronger than enlarged rig art."
+      ],
+      "root_cause": "Asset detail level did not match shot scale.",
+      "consequence": "Hero close-ups reduced perceived film quality.",
+      "prevention_rule": "Treat close-up faces, hands and hero props as their own Items with dedicated references and shot-scale design.",
+      "detection_method": "Inspect approval frames at final crop and full delivery resolution before animation.",
+      "implementation_changes": [
+        "Look-development gate",
+        "atomic face/hand/prop Items"
+      ],
+      "validation": [
+        "Close-up approval frame must pass independently"
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
+    },
+    {
+      "id": "LESSON-004",
+      "title": "Move expensive texture work to post-processing when possible",
+      "scope": "STYLE",
+      "source_context": [
+        "V2 SVG turbulence/displacement experiment"
+      ],
+      "observed_weakness": "Complex SVG filters recalculated per object/per frame were unnecessarily expensive.",
+      "evidence": [
+        "Global post-processing preserved the aesthetic idea with lower complexity."
+      ],
+      "root_cause": "Texture generation was coupled to scene-object rendering.",
+      "consequence": "Poor scalability to longer runtimes.",
+      "prevention_rule": "Render clean geometry first, then apply shared texture/film treatment globally where equivalent.",
+      "detection_method": "Benchmark per-frame cost before accepting a per-object procedural effect.",
+      "implementation_changes": [
+        "Living Engraving post-process architecture"
+      ],
+      "validation": [
+        "Representative frame-range render benchmark"
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
+    },
+    {
+      "id": "LESSON-005",
+      "title": "Repeated universal transitions create template feel",
+      "scope": "CATEGORY",
+      "source_context": [
+        "V3/V4 transition experiments"
+      ],
+      "observed_weakness": "One signature transition reused repeatedly became predictable and decorative.",
+      "evidence": [
+        "Shot-specific hard/light/shadow/match cuts felt more motivated."
+      ],
+      "root_cause": "Transition choice was treated as global branding rather than edit grammar.",
+      "consequence": "Film felt templated.",
+      "prevention_rule": "Transitions need a shot-specific narrative/editing reason; hard cuts are allowed and often preferable.",
+      "detection_method": "Transition review asks why this exact cut exists here.",
+      "implementation_changes": [
+        "Removed universal transition rule"
+      ],
+      "validation": [
+        "Edit review across sequence"
+      ],
+      "confidence": "MEDIUM",
+      "status": "ENCODED",
+      "superseded_by": null
+    },
+    {
+      "id": "LESSON-006",
+      "title": "Scene-level scores hide weak sub-elements",
+      "scope": "GLOBAL",
+      "source_context": [
+        "V5.1 audit"
+      ],
+      "observed_weakness": "Calling Victor, laboratory or apparatus one asset hid weak hands, pose, costume, prop geometry and lighting.",
+      "evidence": [
+        "62-Item decomposition exposed defects scene-level judgement concealed."
+      ],
+      "root_cause": "Evaluation unit was too coarse.",
+      "consequence": "Average quality could mask a conspicuous HERO defect.",
+      "prevention_rule": "Decompose until independently fail-able/researchable/replaceable elements are separate Items.",
+      "detection_method": "Ask whether a subpart could fail while the parent appears acceptable.",
+      "implementation_changes": [
+        "ITEM_GOVERNANCE.md",
+        "item_inventory.json"
+      ],
+      "validation": [
+        "Strict final gate operates at Item level"
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
+    },
+    {
+      "id": "LESSON-007",
+      "title": "Evidence roles must remain separate",
+      "scope": "GLOBAL",
+      "source_context": [
+        "V5 historical/asset research"
+      ],
+      "observed_weakness": "A source useful for factual accuracy can have unsuitable image rights or be poor final art.",
+      "evidence": [
+        "Museum/catalog references were strong factual evidence but not always reusable visible assets."
+      ],
+      "root_cause": "Research source and asset candidate were conflated.",
+      "consequence": "Risk of weak selection or rights mistakes.",
+      "prevention_rule": "Separate literary, historical, technical, art-direction, rights and asset-candidate roles.",
+      "detection_method": "Source registry records roles and visible-asset rights separately.",
+      "implementation_changes": [
+        "SOURCE_POLICY.md",
+        "source_registry.json"
+      ],
+      "validation": [
+        "Source records contain rights/use status"
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
+    },
+    {
+      "id": "LESSON-008",
+      "title": "Source and edition selection must be best-fit and revisable",
+      "scope": "GLOBAL",
+      "source_context": [
+        "Frankenstein 1818 vs 1831 review"
+      ],
+      "observed_weakness": "A provisional edition choice risked becoming an unnecessary framework constraint.",
+      "evidence": [
+        "Multiple legitimate editions can have different wording and art-direction implications."
+      ],
+      "root_cause": "Episode-specific source decision leaked into universal method state.",
+      "consequence": "The system could optimize for consistency with an early choice instead of adopting a better later source.",
+      "prevention_rule": "Treat source contract as an episode-level best-fit decision; keep it open during development and revalidate dependencies when changed.",
+      "detection_method": "Universal method/state must not name a required episode edition; source contract lists candidates and selection status.",
+      "implementation_changes": [
+        "PRODUCTION_SYSTEM.md",
+        "revisable source contract",
+        "removed designated Frankenstein edition from method state"
+      ],
+      "validation": [
+        "Strict final may require an explicit contract but never a predetermined edition"
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
+    },
+    {
+      "id": "LESSON-009",
+      "title": "A working render is not final artistic approval",
+      "scope": "GLOBAL",
+      "source_context": [
+        "V4/V5 reproducibility work"
+      ],
+      "observed_weakness": "Reproducible code and successful rendering can create false confidence in unresolved art.",
+      "evidence": [
+        "V5.1 renders correctly while multiple HERO Items remain provisional."
+      ],
+      "root_cause": "Technical completion and artistic approval were treated as the same milestone.",
+      "consequence": "Prototype quality could be mislabeled final.",
+      "prevention_rule": "Keep structural and strict-final gates separate.",
+      "detection_method": "Structural validator may pass while strict-final remains red until Item/source/continuity gates pass.",
+      "implementation_changes": [
+        "validate_production_records.py",
+        "anti-false-final test"
+      ],
+      "validation": [
+        "Test asserts current prototype cannot pass strict final"
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
+    }
+  ]
+}
