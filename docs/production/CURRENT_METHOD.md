@@ -1,8 +1,8 @@
 # Living Engraving — Current Production Method
 
-**Method version:** 5.2.2  
+**Method version:** 5.3.0-dev  
 **Status:** canonical / current  
-**Visual baseline:** Frankenstein V5.1. V5.2 is a governance/method update; it does not claim a new visual render.  
+**Visual baseline:** Frankenstein V5.1 remains the last complete baseline. V5.3 is active look-development: hybrid high-information assets + JavaScript direction. No full V5.3 film is promoted until HERO-shot locks pass.  
 **Goal:** produce an authored, cinematic, approximately three-minute novel adaptation in JavaScript without generic visible assets.
 
 This document contains **only the active method**. Historical approaches and failed experiments belong in `VERSION_HISTORY.md`. When a method changes, remove the obsolete instruction here, replace it with the new one, update the version history, validate, and rerender. Never keep competing current instructions.
@@ -681,3 +681,113 @@ Example pattern:
 - the human presence can remain in the adjacent shot rather than forcing a bad hand close-up.
 
 This is not “working around quality.” It is choosing the strongest visual grammar for the beat.
+
+## 31. HERO-shot lock before full render
+
+Do **not** render the full film merely because the renderer works.
+
+Before a full-quality sequence render, lock representative approval frames/motion tests for the highest-risk HERO clusters. For the current benchmark these are:
+
+1. story/location-defining exterior;
+2. main character at the shot scale actually used;
+3. opposing/creature character body and hero close-up;
+4. hero prop/mechanism macro;
+5. primary environment/set composition.
+
+A HERO lock requires:
+- actual shot crop, not isolated asset only;
+- delivery-size inspection;
+- lighting/mask integration;
+- alpha/edge cleanliness;
+- continuity with adjacent shots;
+- required motion test when movement matters;
+- provenance/rights status known enough for the current development stage;
+- explicit remaining risks.
+
+If one HERO cluster fails, redesign that Item/shot before rendering the whole film.
+
+## 32. Shot-scale approval is conditional
+
+Asset approval is tied to the scale/use that was tested.
+
+An asset that passes as a medium/full-body silhouette is **not** automatically approved for portrait or macro use. Likewise, a detailed close-up asset is not automatically suitable for wide-shot animation.
+
+Record an approved usage envelope where it matters:
+
+```text
+WIDE / SILHOUETTE
+MEDIUM / FULL BODY
+CLOSE-UP
+MACRO
+STATIC / RIGID-SUBTLE / DEFORMABLE / ARTICULATED
+```
+
+If the story does not require the failing scale, redesign the shot around the asset's proven strength instead of forcing an inferior enlargement.
+
+Current example: the V5.3 Victor asset is preferred for medium/full-body recoil. Portrait-scale use is rejected until a dedicated portrait asset exists.
+
+## 33. Current environment rule: sparse architecture beats low-quality filler
+
+The current Living Engraving chamber uses a sparse stone/plaster architectural shell rather than the old timber-grid room.
+
+Current set hierarchy:
+
+```text
+stone/plaster shadow mass
+architectural arch/pier rhythm
+handpicked Gothic window
+arched doorway
+slab/table
+apparatus
+dying candle
+character assets
+wire/fog/light
+```
+
+The old generic shelf/books/anatomy-page/skull filler is **not part of the current chamber method**.
+
+A supporting set element is added only when it improves story, space, period identity or composition enough to justify its visual cost.
+
+## 34. Doorway/character integration rule
+
+Do not place a character inside a rectangular decorative frame that reads as a pasted picture.
+
+For doorway shots:
+- build the architectural opening first;
+- clip/occlude the character into the opening;
+- preserve jamb/arch overlap and floor relationship;
+- use local shadow/light to anchor the body;
+- test at the intended shot scale.
+
+The current Victor doorway uses an arched opening and medium/full-body recoil asset. The previous rectangular framed presentation is obsolete.
+
+## 35. Hybrid asset architecture — current V5.3 direction
+
+For high-information HERO art, the current preferred architecture is:
+
+```text
+requirements
+→ source/reference research
+→ candidate authoring method
+→ clean independent asset
+→ alpha/edge QC
+→ actual-shot composite
+→ shot-scale + motion validation
+→ JavaScript direction/compositing
+→ final frame sequence
+```
+
+JavaScript currently owns:
+- deterministic composition;
+- camera/parallax;
+- masks/occlusion;
+- lighting and color normalization;
+- fog/rain/particles;
+- rigid/subtle motion;
+- procedural mechanisms such as the brass contact;
+- transitions and timing;
+- typography;
+- audio synchronization;
+- final rendering.
+
+The visible art-authoring method remains per-Item. Primitive geometry is retained where it is genuinely best (for example a controllable contact lever), not as a requirement for every visible object.
