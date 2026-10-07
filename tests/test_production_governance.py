@@ -15,6 +15,8 @@ class ProductionGovernanceTests(unittest.TestCase):
         p=self.run_validator()
         self.assertEqual(p.returncode,0,p.stdout+"\n"+p.stderr)
         self.assertIn("62 items",p.stdout)
+        self.assertIn("55 active",p.stdout)
+        self.assertIn("7 inactive-history",p.stdout)
         self.assertIn("20 sources",p.stdout)
         self.assertIn("14 source obligations",p.stdout)
         self.assertIn("16 reusable lessons",p.stdout)
