@@ -261,6 +261,33 @@
       "confidence": "HIGH",
       "status": "ENCODED",
       "superseded_by": null
+    },
+    {
+      "id": "LESSON-011",
+      "title": "Publication date is not automatically diegetic design date",
+      "scope": "GLOBAL",
+      "source_context": [
+        "Frankenstein Victor costume research"
+      ],
+      "observed_weakness": "Costume research began drifting toward 1818/1831 garments because those are the publication editions, even though the frame narrative is dated 17— and the story's world precedes publication.",
+      "evidence": [
+        "Project Gutenberg 1818/1831 texts use 17— dates in Walton's frame.",
+        "Surviving 1780s–1790s costume evidence materially changes Victor's plausible silhouette."
+      ],
+      "root_cause": "Edition time, story time and visual-reference time were conflated.",
+      "consequence": "A film can be source-faithful in words while visually placing characters in the wrong era without realizing it.",
+      "prevention_rule": "Track diegetic time, publication/edition time and visual-reference time separately. Each Item must state which temporal layer controls its period requirement.",
+      "detection_method": "Episode temporal context exists; costume/architecture/technology decisions identify the controlling time layer instead of inheriting publication date.",
+      "implementation_changes": [
+        "Added temporal_context.json to Frankenstein benchmark",
+        "Victor costume search expanded to late-18th-century sources"
+      ],
+      "validation": [
+        "Future historical Item reviews check controlling temporal layer before period scoring"
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
     }
   ]
 }
