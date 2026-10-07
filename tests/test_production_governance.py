@@ -15,7 +15,7 @@ class ProductionGovernanceTests(unittest.TestCase):
         p=self.run_validator()
         self.assertEqual(p.returncode,0,p.stdout+"\n"+p.stderr)
         self.assertIn("62 items",p.stdout)
-        self.assertIn("13 sources",p.stdout)
+        self.assertIn("17 sources",p.stdout)
         self.assertIn("14 source obligations",p.stdout)
         self.assertIn("10 reusable lessons",p.stdout)
         self.assertIn("STRUCTURAL GATE: PASS",p.stdout)
