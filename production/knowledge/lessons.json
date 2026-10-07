@@ -478,6 +478,33 @@
       "confidence": "HIGH",
       "status": "ENCODED",
       "superseded_by": null
+    },
+    {
+      "id": "LESSON-019",
+      "title": "Removing an element from the film must also remove it from the active governance state",
+      "scope": "GLOBAL",
+      "source_context": [
+        "V5.3 current-cut audit"
+      ],
+      "observed_weakness": "Several V5.1 Items remained active in the inventory after the V5.3 shot design had removed them, so they would continue to fail the strict-final gate even though they no longer existed in the current cut.",
+      "evidence": [
+        "Victor portrait/head-profile and standalone hand were no longer used after shot redesign.",
+        "Timber beams, shelf/papers, folio, skull and anatomy pages were removed from the active chamber/macro but remained active Items."
+      ],
+      "root_cause": "Visual replacement/removal and governance-state replacement/removal were not treated as one atomic operation.",
+      "consequence": "Documentation diverges from the film, obsolete Items create false blockers, and later contributors may mistakenly reintroduce removed elements.",
+      "prevention_rule": "Every accepted removal/replacement must update active Item membership and decision state in the same change. Preserve history separately rather than keeping obsolete Items active.",
+      "detection_method": "Validator distinguishes active current-cut Items from inactive historical Items; strict-final evaluates only active Items.",
+      "implementation_changes": [
+        "Seven obsolete V5.1 Items marked inactive for V5.3 while preserving prior shot membership/reasons.",
+        "Validator now reports active/inactive counts and excludes inactive Items from strict-final blocking."
+      ],
+      "validation": [
+        "Current episode inventory reports 55 active Items and 7 inactive historical Items."
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
     }
   ]
 }
