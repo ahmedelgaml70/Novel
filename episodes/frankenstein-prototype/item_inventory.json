@@ -228,7 +228,8 @@
       "checklist_profile": "architecture",
       "requirements": {
         "story": [
-          "Must identify the intended place/room rather than only signal 'Gothic'."
+          "Must identify the intended place/room rather than only signal 'Gothic'.",
+          "1818 text gives a high white steeple as Victor's first visual marker of Ingolstadt; the establishing silhouette should exploit this specific cue."
         ],
         "period": [
           "Architecture/materials/proportions must fit the story period and named location where applicable."
@@ -250,6 +251,7 @@
         ]
       },
       "source_ids": [
+        "SRC-FR-012",
         "SRC-FR-010",
         "SRC-FR-011"
       ],
@@ -289,6 +291,7 @@
         ]
       },
       "source_ids": [
+        "SRC-FR-012",
         "SRC-FR-010",
         "SRC-FR-011"
       ],
@@ -330,6 +333,7 @@
         ]
       },
       "source_ids": [
+        "SRC-FR-012",
         "SRC-FR-001",
         "SRC-FR-010"
       ],
@@ -406,7 +410,9 @@
           "Procedural by default; external texture/footage requires provenance."
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "SRC-FR-012"
+      ],
       "decision_id": "DEC-storm_sky",
       "status": "NEEDS_REVALIDATION"
     },
@@ -421,7 +427,8 @@
       "checklist_profile": "atmosphere",
       "requirements": {
         "story": [
-          "Must intensify the current beat and depth, not function as a universal overlay."
+          "Must intensify the current beat and depth, not function as a universal overlay.",
+          "Creation night is explicitly rainy; rain must connect exterior and interior window beats."
         ],
         "period": [
           "Weather/environment must be compatible with scene and setting."
@@ -442,7 +449,9 @@
           "Procedural by default; external texture/footage requires provenance."
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "SRC-FR-012"
+      ],
       "decision_id": "DEC-rain_field",
       "status": "NEEDS_REVALIDATION"
     },
@@ -530,7 +539,8 @@
       "checklist_profile": "architecture",
       "requirements": {
         "story": [
-          "Must identify the intended place/room rather than only signal 'Gothic'."
+          "Must identify the intended place/room rather than only signal 'Gothic'.",
+          "Creation occurs around one in the morning with rain at the panes and a nearly spent candle; these are primary-text anchors."
         ],
         "period": [
           "Architecture/materials/proportions must fit the story period and named location where applicable."
@@ -552,6 +562,7 @@
         ]
       },
       "source_ids": [
+        "SRC-FR-012",
         "SRC-FR-001",
         "SRC-FR-002"
       ],
@@ -1224,6 +1235,7 @@
         ]
       },
       "source_ids": [
+        "SRC-FR-012",
         "SRC-FR-001"
       ],
       "decision_id": "DEC-victor_recoil_pose",
@@ -1241,7 +1253,8 @@
       "checklist_profile": "anatomy",
       "requirements": {
         "story": [
-          "Anatomy/gesture must communicate the intended action or unease."
+          "Anatomy/gesture must communicate the intended action or unease.",
+          "1818 text explicitly says the creature's limbs were in proportion and his selected features were intended as beautiful."
         ],
         "period": [
           "No period-specific constraint unless clothing/grooming overlaps."
@@ -1263,6 +1276,7 @@
         ]
       },
       "source_ids": [
+        "SRC-FR-012",
         "SRC-FR-001"
       ],
       "decision_id": "DEC-creature_body_proportions",
@@ -1302,6 +1316,7 @@
         ]
       },
       "source_ids": [
+        "SRC-FR-012",
         "SRC-FR-001"
       ],
       "decision_id": "DEC-creature_head_shape",
@@ -1319,7 +1334,8 @@
       "checklist_profile": "anatomy",
       "requirements": {
         "story": [
-          "Anatomy/gesture must communicate the intended action or unease."
+          "Anatomy/gesture must communicate the intended action or unease.",
+          "Hair is explicitly lustrous black and flowing."
         ],
         "period": [
           "No period-specific constraint unless clothing/grooming overlaps."
@@ -1341,6 +1357,7 @@
         ]
       },
       "source_ids": [
+        "SRC-FR-012",
         "SRC-FR-001"
       ],
       "decision_id": "DEC-creature_hair",
@@ -1357,7 +1374,8 @@
       "checklist_profile": "anatomy",
       "requirements": {
         "story": [
-          "Anatomy/gesture must communicate the intended action or unease."
+          "Anatomy/gesture must communicate the intended action or unease.",
+          "Eye should read dull yellow/watery and close in value to the dun-white socket rather than as a glowing neon monster eye."
         ],
         "period": [
           "No period-specific constraint unless clothing/grooming overlaps."
@@ -1379,6 +1397,7 @@
         ]
       },
       "source_ids": [
+        "SRC-FR-012",
         "SRC-FR-001"
       ],
       "decision_id": "DEC-creature_eye",
@@ -1395,7 +1414,8 @@
       "checklist_profile": "anatomy",
       "requirements": {
         "story": [
-          "Anatomy/gesture must communicate the intended action or unease."
+          "Anatomy/gesture must communicate the intended action or unease.",
+          "First life signs include hard breathing and convulsive limb motion; avoid a generic zombie rise."
         ],
         "period": [
           "No period-specific constraint unless clothing/grooming overlaps."
@@ -1416,7 +1436,9 @@
           "Source references and any visible source assets must have known provenance."
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "SRC-FR-012"
+      ],
       "decision_id": "DEC-creature_rise_motion",
       "status": "NEEDS_REVALIDATION"
     },
@@ -1770,7 +1792,9 @@
           "Procedural by default; external texture/footage requires provenance."
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "SRC-FR-012"
+      ],
       "decision_id": "DEC-interior_lightning",
       "status": "NEEDS_REVALIDATION"
     },
