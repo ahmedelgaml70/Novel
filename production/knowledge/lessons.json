@@ -396,6 +396,33 @@
       "confidence": "HIGH",
       "status": "ENCODED",
       "superseded_by": null
+    },
+    {
+      "id": "LESSON-016",
+      "title": "Rendering primitives must preserve caller compositing state unless replacement is explicit",
+      "scope": "STYLE",
+      "source_context": [
+        "V5.3 first-eye opening motion test"
+      ],
+      "observed_weakness": "The eye remained visibly open even when the shot logic set eyelid opacity to zero/closed.",
+      "evidence": [
+        "The ellipse helper assigned ctx.globalAlpha=a internally, overriding the caller's fade alpha.",
+        "Passing explicit alpha fixed the shot; changing the helper to multiply parent alpha prevents the same class of bug elsewhere."
+      ],
+      "root_cause": "A low-level drawing primitive silently replaced caller compositing state instead of composing with it.",
+      "consequence": "Animation logic can appear artistically wrong even when timing/state variables are correct.",
+      "prevention_rule": "Reusable rendering primitives should multiply/compose with inherited opacity by default. Any primitive that intentionally resets alpha/composite state must document that contract.",
+      "detection_method": "Renderer contract test asserts the ellipse primitive multiplies parent globalAlpha; motion lookdev includes start/mid/end state frames for opacity-driven reveals.",
+      "implementation_changes": [
+        "Changed canonical ell() helper from ctx.globalAlpha=a to ctx.globalAlpha*=a",
+        "Added tests/test_renderer_contracts.py"
+      ],
+      "validation": [
+        "First-eye matched frames now show closed -> partial -> open without a false yellow iris in the closed state."
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
     }
   ]
 }
