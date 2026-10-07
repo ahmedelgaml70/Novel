@@ -666,6 +666,60 @@
       "confidence": "HIGH",
       "status": "ENCODED",
       "superseded_by": null
+    },
+    {
+      "id": "LESSON-026",
+      "title": "Rig compatibility does not prove that a ready character asset is visually complete",
+      "scope": "GLOBAL",
+      "source_context": [
+        "V5.4.3 Frankenstein fast-path visual audit"
+      ],
+      "observed_weakness": "The prepared Male_Peasant GLB accepted the compatible animation skeleton but rendered as a headless character because the file represented outfit/body parts rather than a complete actor.",
+      "evidence": [
+        "The V5.4.3 contact sheet visibly showed Victor without a complete head.",
+        "Independent Quaternius ecosystem documentation confirms peasant outfit files can be clothing/body-part assets that must be combined with a base head/body."
+      ],
+      "root_cause": "The ingestion gate checked rig/clip compatibility but not semantic completeness of the visible character.",
+      "consequence": "A technically valid asset can create obviously broken characters and contaminate later art-direction decisions.",
+      "prevention_rule": "Character ingestion must inventory visible anatomical coverage—head, face/eyes, torso, arms/hands, legs/feet, hair/outfit—and classify each GLB as COMPLETE_ACTOR, OUTFIT_PART, BODY_PART, HAIR_PART, or ACCESSORY before shot use.",
+      "detection_method": "Generate a neutral rest-pose completeness frame and node/mesh inventory before approving any ready character candidate.",
+      "implementation_changes": [
+        "V5.4.4 stops using the Peasant outfit GLB as a complete actor.",
+        "Universal complete base human is used until a correctly assembled period character is validated."
+      ],
+      "validation": [
+        "Future character candidates may not enter shot lookdev until completeness classification and neutral-frame review pass."
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
+    },
+    {
+      "id": "LESSON-027",
+      "title": "Ready GLB ingestion must include codec and decoder dependencies",
+      "scope": "GLOBAL",
+      "source_context": [
+        "V5.4.4 first render attempt"
+      ],
+      "observed_weakness": "The simplified story scene failed at runtime with 'No DRACOLoader instance provided' after all ready assets downloaded correctly.",
+      "evidence": [
+        "At least one selected ready GLB uses KHR_draco_mesh_compression.",
+        "The renderer had been simplified to plain GLTFLoader and therefore could not parse the asset."
+      ],
+      "root_cause": "Asset ingestion tracked file/provenance but not required glTF extensions and decoder/runtime dependencies.",
+      "consequence": "A ready asset can pass source/rights checks yet fail only at render time, slowing automated production.",
+      "prevention_rule": "Runtime asset ingestion must enumerate glTF extensions/compression requirements (Draco, Meshopt, KTX2, etc.) and ensure the renderer vendors/pins the corresponding decoder before the asset is accepted.",
+      "detection_method": "The ingestion report records extensionsUsed/extensionsRequired and performs an actual loader smoke test in the production runtime.",
+      "implementation_changes": [
+        "V5.4.4 canonical workflow vendors the exact Draco decoder from the pinned Three.js npm package.",
+        "Canonical scene restores DRACOLoader and MeshoptDecoder support."
+      ],
+      "validation": [
+        "E-VID-007/V5.4.4 must load all selected ready assets headlessly before deterministic capture begins."
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
     }
   ]
 }
