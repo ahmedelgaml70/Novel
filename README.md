@@ -169,3 +169,25 @@ See:
 - [docs/production/SOURCE_POLICY.md](docs/production/SOURCE_POLICY.md)
 - [docs/production/VERSION_HISTORY.md](docs/production/VERSION_HISTORY.md)
 - [episodes/frankenstein-prototype/README.md](episodes/frankenstein-prototype/README.md)
+
+
+## Production governance track
+
+The repository now also contains the current JavaScript cinematic-production method and its first worked audit:
+
+- [docs/production/CURRENT_METHOD.md](docs/production/CURRENT_METHOD.md) — current method only;
+- [docs/production/ITEM_GOVERNANCE.md](docs/production/ITEM_GOVERNANCE.md) — atomic Item lifecycle and asset-selection rules;
+- [docs/production/ITEM_CHECKLISTS.md](docs/production/ITEM_CHECKLISTS.md) — per-Item considerations;
+- [docs/production/SOURCE_POLICY.md](docs/production/SOURCE_POLICY.md) — source/provenance roles;
+- [docs/production/VERSION_HISTORY.md](docs/production/VERSION_HISTORY.md) — what each visual iteration tried, found and changed;
+- [episodes/frankenstein-prototype/](episodes/frankenstein-prototype/) — 62-Item worked audit, source registry, candidate decisions, literary-source obligations and shot manifest;
+- [production/living_engraving/](production/living_engraving/) — canonical current renderer package.
+
+A structurally reproducible prototype is **not** treated as final-quality production. The strict-final validator intentionally fails while HERO/PRIMARY Items remain unapproved or source obligations remain unresolved.
+
+Run:
+
+```bash
+make production-validate
+make production-strict   # expected to fail until every final gate is satisfied
+```
