@@ -1,0 +1,250 @@
+{
+  "schema_version": "1.0",
+  "episode_id": "frankenstein-prototype",
+  "designated_source_id": "SRC-FR-012",
+  "scope": "1818-edition source obligations affecting the current Ingolstadt/creation prototype",
+  "policy": "A source obligation may be represented, deliberately adapted, or intentionally omitted. It may not disappear accidentally because the renderer never implemented it.",
+  "obligations": [
+    {
+      "id": "OBL-FR-001",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "fact": "The creation occurs on a bleak November night.",
+      "shot_ids": [
+        "ingolstadt_storm",
+        "creation_chamber"
+      ],
+      "item_ids": [
+        "storm_sky"
+      ],
+      "importance": "PRIMARY",
+      "current_treatment": "REPRESENTED",
+      "decision": "Retain a hostile night atmosphere. The month need not be literal on screen unless useful."
+    },
+    {
+      "id": "OBL-FR-002",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "fact": "The creation scene is around one in the morning.",
+      "shot_ids": [
+        "creation_chamber"
+      ],
+      "item_ids": [],
+      "importance": "SUPPORT",
+      "current_treatment": "NOT_EXPLICIT",
+      "decision": "Optional unless a clock/time insert improves suspense or orientation."
+    },
+    {
+      "id": "OBL-FR-003",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "fact": "Rain is audible/visible against the laboratory panes.",
+      "shot_ids": [
+        "ingolstadt_storm",
+        "creation_chamber"
+      ],
+      "item_ids": [
+        "rain_field",
+        "gothic_laboratory_window"
+      ],
+      "importance": "PRIMARY",
+      "current_treatment": "REPRESENTED",
+      "decision": "Retain the relationship between rain and the window rather than using rain as a generic overlay."
+    },
+    {
+      "id": "OBL-FR-004",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "fact": "Victor's candle is nearly exhausted and the practical light is fading.",
+      "shot_ids": [
+        "creation_chamber"
+      ],
+      "item_ids": [],
+      "importance": "PRIMARY",
+      "current_treatment": "MISSING_FROM_CURRENT_RENDER",
+      "decision": "Next rebuild must compare a dying-candle practical against a justified omission. Electrical light must not silently replace the source-era light logic."
+    },
+    {
+      "id": "OBL-FR-005",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "fact": "Victor has the unspecified 'instruments of life' around the body.",
+      "shot_ids": [
+        "creation_chamber",
+        "galvanic_contact"
+      ],
+      "item_ids": [
+        "voltaic_pile",
+        "leyden_jar_primary",
+        "leyden_jar_secondary",
+        "brass_contact",
+        "copper_wire_network"
+      ],
+      "importance": "PRIMARY",
+      "current_treatment": "ADAPTED",
+      "decision": "The galvanic setup is an interpretive historical reconstruction, not a claim that the novel names these exact devices."
+    },
+    {
+      "id": "OBL-FR-006",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "fact": "The creature's first visible eye is dull yellow.",
+      "shot_ids": [
+        "first_eye"
+      ],
+      "item_ids": [
+        "creature_eye",
+        "first_eye_shadow_mask"
+      ],
+      "importance": "HERO",
+      "current_treatment": "PARTIALLY_REPRESENTED",
+      "decision": "The eye must read as dull/yellow rather than as a modern luminous blue sci-fi eye."
+    },
+    {
+      "id": "OBL-FR-007",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "fact": "The creature breathes hard immediately after awakening.",
+      "shot_ids": [
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "creature_heartbeat"
+      ],
+      "importance": "PRIMARY",
+      "current_treatment": "NOT_DIRECTLY_REPRESENTED",
+      "decision": "Heartbeat does not substitute for breathing. Compare breath/airway Foley and/or visible thoracic motion in the next audio/motion pass."
+    },
+    {
+      "id": "OBL-FR-008",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "fact": "The creature's limbs undergo an involuntary convulsive motion.",
+      "shot_ids": [
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "creature_rise_motion",
+        "creature_body_proportions"
+      ],
+      "importance": "PRIMARY",
+      "current_treatment": "PARTIALLY_REPRESENTED",
+      "decision": "Motion should begin as involuntary/convulsive before any deliberate rise."
+    },
+    {
+      "id": "OBL-FR-009",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "fact": "Victor describes the limbs as proportionate and the selected features as intended to be beautiful.",
+      "shot_ids": [
+        "creation_chamber",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "creature_body_proportions",
+        "creature_head_shape"
+      ],
+      "importance": "HERO",
+      "current_treatment": "NEEDS_REVALIDATION",
+      "decision": "Reject the generic blockheaded-monster default. Horror should come from the described contrast and animation, not arbitrary deformity."
+    },
+    {
+      "id": "OBL-FR-010",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "fact": "The creature's yellow skin suggests the muscles and arteries beneath.",
+      "shot_ids": [
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "creature_body_proportions",
+        "creature_head_shape"
+      ],
+      "importance": "HERO",
+      "current_treatment": "MISSING_OR_WEAK",
+      "decision": "Develop an engraving-compatible sallow/translucent treatment without zombie/gore shorthand."
+    },
+    {
+      "id": "OBL-FR-011",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "fact": "The creature has lustrous black flowing hair.",
+      "shot_ids": [
+        "creation_chamber",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "creature_hair"
+      ],
+      "importance": "PRIMARY",
+      "current_treatment": "PARTIALLY_REPRESENTED",
+      "decision": "Retain long dark hair but refine mass, strand direction and movement from the literary description plus period engraving references."
+    },
+    {
+      "id": "OBL-FR-012",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "fact": "The face is defined by a disturbing contrast among pale teeth, watery eyes/sockets, shrivelled complexion and straight dark lips.",
+      "shot_ids": [
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "creature_eye",
+        "creature_head_shape"
+      ],
+      "importance": "PRIMARY",
+      "current_treatment": "MOSTLY_NOT_EXPLICIT",
+      "decision": "Do not overload one close-up with every descriptor; preserve the contrast through selected details across shots."
+    },
+    {
+      "id": "OBL-FR-013",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "fact": "Victor recoils from the awakened creature and flees the room.",
+      "shot_ids": [
+        "victor_at_door",
+        "recoil_tableau"
+      ],
+      "item_ids": [
+        "victor_recoil_pose",
+        "victor_door_shadow"
+      ],
+      "importance": "HERO",
+      "current_treatment": "REPRESENTED",
+      "decision": "Retain recoil/spatial separation as the scene's emotional payoff."
+    },
+    {
+      "id": "OBL-FR-014",
+      "source_ids": [
+        "SRC-FR-012"
+      ],
+      "fact": "Ingolstadt is given a distinctive high white steeple/church-steeple landmark in Victor's experience of the town.",
+      "shot_ids": [
+        "ingolstadt_storm"
+      ],
+      "item_ids": [
+        "ingolstadt_roofline",
+        "laboratory_exterior_building"
+      ],
+      "importance": "PRIMARY",
+      "current_treatment": "MISSING_OR_WEAK",
+      "decision": "The exterior rebuild should incorporate location-specific Ingolstadt evidence and a steeple identity rather than an interchangeable Gothic skyline."
+    }
+  ]
+}
