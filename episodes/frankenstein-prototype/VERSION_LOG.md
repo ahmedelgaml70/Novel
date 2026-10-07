@@ -144,3 +144,31 @@ Promote the asset-authoring architecture, not the current salvaged source files.
 
 ### Decision
 Continue V5.3 lookdev. Do not promote a complete film until the exterior/environment gate and remaining source/articulation issues pass.
+
+## V5.3.0-dev — hybrid asset + sparse chamber lookdev
+
+### Promoted provisional directions
+- Creature high-information full body for wide/medium creation and recoil framing.
+- Creature engraved head/eye for the first-eye close-up.
+- Victor full-body recoil only for medium/full-body use.
+- High-information voltaic-pile/apparatus asset for the macro shot.
+- JavaScript brass contact lever instead of the failed hand interaction.
+- Sparse stone/plaster chamber architecture instead of the generic timber-grid room.
+- Arched doorway + clipping/occlusion instead of a rectangular framed Victor presentation.
+
+### Rejected/removed
+- primitive V5.3 creature/head redraws as final art;
+- crowded asset sheet as a HERO production source;
+- portrait-scale use of the full-body Victor asset;
+- contaminated hand asset in the apparatus macro;
+- generic timber-grid chamber;
+- weak shelf/anatomy/skull filler from the active creation tableau.
+
+### Still unresolved
+- final Ingolstadt exterior using location-specific high-information art;
+- clean individual-source/provenance path for the preferred Creature/Victor/apparatus assets;
+- true articulated convulsive Creature limb motion;
+- final source contract and diegetic costume lock;
+- final environment continuity across the full sequence.
+
+No full V5.3 render is approved yet.
