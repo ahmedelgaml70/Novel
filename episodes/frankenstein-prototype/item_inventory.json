@@ -1,12 +1,14 @@
 {
   "schema_version": "1.0",
   "episode_id": "frankenstein-prototype",
-  "method_version": "5.2",
-  "visual_baseline": "5.1",
+  "method_version": "5.3.0-dev",
+  "visual_baseline": "V5.1 complete; V5.3 active lookdev",
   "generated_from": "V5.1 atomic audit",
   "final_gate_note": "V5.1 is a prototype benchmark. Items are not grandfathered into final approval.",
   "counts": {
-    "items": 62
+    "items": 62,
+    "active_items": 55,
+    "inactive_historical_items": 7
   },
   "items": [
     {
@@ -48,7 +50,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-paper_field",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "ink_speck_grain",
@@ -89,7 +92,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-ink_speck_grain",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "vignette_value_structure",
@@ -130,7 +134,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-vignette_value_structure",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "engraving_hatching",
@@ -174,7 +179,8 @@
         "SRC-FR-002"
       ],
       "decision_id": "DEC-engraving_hatching",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "living_engraving_palette",
@@ -215,7 +221,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-living_engraving_palette",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "ingolstadt_roofline",
@@ -260,7 +267,8 @@
       "status": "NEEDS_REVALIDATION",
       "source_obligation_ids": [
         "OBL-FR-014"
-      ]
+      ],
+      "active_in_current_cut": true
     },
     {
       "id": "laboratory_exterior_building",
@@ -304,7 +312,8 @@
       "status": "NEEDS_REVALIDATION",
       "source_obligation_ids": [
         "OBL-FR-014"
-      ]
+      ],
+      "active_in_current_cut": true
     },
     {
       "id": "gothic_laboratory_window",
@@ -349,7 +358,8 @@
       "status": "NEEDS_REVALIDATION",
       "source_obligation_ids": [
         "OBL-FR-003"
-      ]
+      ],
+      "active_in_current_cut": true
     },
     {
       "id": "city_window_pattern",
@@ -387,7 +397,8 @@
         "SRC-FR-010"
       ],
       "decision_id": "DEC-city_window_pattern",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "storm_sky",
@@ -428,7 +439,8 @@
       "status": "NEEDS_REVALIDATION",
       "source_obligation_ids": [
         "OBL-FR-001"
-      ]
+      ],
+      "active_in_current_cut": true
     },
     {
       "id": "rain_field",
@@ -470,7 +482,8 @@
       "status": "NEEDS_REVALIDATION",
       "source_obligation_ids": [
         "OBL-FR-003"
-      ]
+      ],
+      "active_in_current_cut": true
     },
     {
       "id": "exterior_lightning",
@@ -506,7 +519,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-exterior_lightning",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "exterior_camera_push",
@@ -542,7 +556,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-exterior_camera_push",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "creation_chamber_composition",
@@ -584,7 +599,8 @@
         "SRC-FR-002"
       ],
       "decision_id": "DEC-creation_chamber_composition",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "creation_chamber_architecture",
@@ -625,17 +641,14 @@
         "SRC-FR-011"
       ],
       "decision_id": "DEC-creation_chamber_architecture",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "timber_wall_beams",
       "category": "architecture_detail",
       "importance": "SUPPORT",
-      "shot_ids": [
-        "creation_chamber",
-        "victor_at_door",
-        "recoil_tableau"
-      ],
+      "shot_ids": [],
       "purpose": "Give the chamber construction weight and period texture without decorative patterning.",
       "checklist_profile": "architecture",
       "requirements": {
@@ -663,7 +676,14 @@
       },
       "source_ids": [],
       "decision_id": "DEC-timber_wall_beams",
-      "status": "NEEDS_REVALIDATION"
+      "status": "INACTIVE_REPLACED_OR_REMOVED",
+      "active_in_current_cut": false,
+      "previous_shot_ids": [
+        "creation_chamber",
+        "victor_at_door",
+        "recoil_tableau"
+      ],
+      "inactive_reason": "Replaced by sparse stone/plaster chamber architecture in V5.3."
     },
     {
       "id": "laboratory_floor",
@@ -700,7 +720,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-laboratory_floor",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "laboratory_door",
@@ -740,16 +761,14 @@
         "SRC-FR-001"
       ],
       "decision_id": "DEC-laboratory_door",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "laboratory_shelves_papers",
       "category": "support_prop_cluster",
       "importance": "SUPPORT",
-      "shot_ids": [
-        "creation_chamber",
-        "victor_at_door"
-      ],
+      "shot_ids": [],
       "purpose": "Suggest obsessive study without turning the room into generic clutter.",
       "checklist_profile": "prop",
       "requirements": {
@@ -777,7 +796,13 @@
       },
       "source_ids": [],
       "decision_id": "DEC-laboratory_shelves_papers",
-      "status": "NEEDS_REVALIDATION"
+      "status": "INACTIVE_REPLACED_OR_REMOVED",
+      "active_in_current_cut": false,
+      "previous_shot_ids": [
+        "creation_chamber",
+        "victor_at_door"
+      ],
+      "inactive_reason": "Removed from current chamber because it read as low-detail filler beside upgraded HERO assets."
     },
     {
       "id": "creation_bed_slab",
@@ -816,7 +841,8 @@
         "SRC-FR-001"
       ],
       "decision_id": "DEC-creation_bed_slab",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "creature_drapery",
@@ -857,16 +883,14 @@
         "SRC-FR-002"
       ],
       "decision_id": "DEC-creature_drapery",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "open_folio",
       "category": "book_document",
       "importance": "PRIMARY",
-      "shot_ids": [
-        "creation_chamber",
-        "recoil_tableau"
-      ],
+      "shot_ids": [],
       "purpose": "Echo the canonical foreground book motif while remaining plausible in Victor's workspace.",
       "checklist_profile": "prop",
       "requirements": {
@@ -896,16 +920,19 @@
         "SRC-FR-001"
       ],
       "decision_id": "DEC-open_folio",
-      "status": "NEEDS_REVALIDATION"
+      "status": "INACTIVE_REPLACED_OR_REMOVED",
+      "active_in_current_cut": false,
+      "previous_shot_ids": [
+        "creation_chamber",
+        "recoil_tableau"
+      ],
+      "inactive_reason": "Removed from current creation tableau; no longer needed to carry the composition."
     },
     {
       "id": "skull_foreground",
       "category": "anatomical_prop",
       "importance": "PRIMARY",
-      "shot_ids": [
-        "creation_chamber",
-        "recoil_tableau"
-      ],
+      "shot_ids": [],
       "purpose": "Provide a death/creation motif and depth cue without becoming Halloween iconography.",
       "checklist_profile": "prop",
       "requirements": {
@@ -935,7 +962,13 @@
         "SRC-FR-001"
       ],
       "decision_id": "DEC-skull_foreground",
-      "status": "NEEDS_REVALIDATION"
+      "status": "INACTIVE_REPLACED_OR_REMOVED",
+      "active_in_current_cut": false,
+      "previous_shot_ids": [
+        "creation_chamber",
+        "recoil_tableau"
+      ],
+      "inactive_reason": "Removed from current creation tableau because the generic foreground prop lowered the detail hierarchy."
     },
     {
       "id": "foreground_copper_cable",
@@ -976,7 +1009,8 @@
         "SRC-FR-006"
       ],
       "decision_id": "DEC-foreground_copper_cable",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "victor_silhouette",
@@ -1019,16 +1053,14 @@
         "SRC-FR-009"
       ],
       "decision_id": "DEC-victor_silhouette",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "victor_head_profile",
       "category": "face_head",
       "importance": "HERO",
-      "shot_ids": [
-        "victor_at_door",
-        "recoil_tableau"
-      ],
+      "shot_ids": [],
       "purpose": "Show fear/revulsion with a period-authored partial profile rather than avatar facial geometry.",
       "checklist_profile": "character",
       "requirements": {
@@ -1058,7 +1090,13 @@
         "SRC-FR-001"
       ],
       "decision_id": "DEC-victor_head_profile",
-      "status": "NEEDS_REVALIDATION"
+      "status": "INACTIVE_REPLACED_OR_REMOVED",
+      "active_in_current_cut": false,
+      "previous_shot_ids": [
+        "victor_at_door",
+        "recoil_tableau"
+      ],
+      "inactive_reason": "Dedicated portrait/close-up use removed from current cut. Current Victor asset is approved only for medium/full-body recoil framing."
     },
     {
       "id": "victor_hair",
@@ -1095,7 +1133,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-victor_hair",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "victor_coat",
@@ -1137,7 +1176,8 @@
         "SRC-FR-009"
       ],
       "decision_id": "DEC-victor_coat",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "victor_collar_cravat",
@@ -1178,17 +1218,14 @@
         "SRC-FR-009"
       ],
       "decision_id": "DEC-victor_collar_cravat",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "victor_hand",
       "category": "hand",
       "importance": "HERO",
-      "shot_ids": [
-        "victor_at_door",
-        "galvanic_contact",
-        "recoil_tableau"
-      ],
+      "shot_ids": [],
       "purpose": "Carry fear/control through believable hand anatomy, grip and gesture.",
       "checklist_profile": "anatomy",
       "requirements": {
@@ -1216,7 +1253,14 @@
       },
       "source_ids": [],
       "decision_id": "DEC-victor_hand",
-      "status": "NEEDS_REVALIDATION"
+      "status": "INACTIVE_REPLACED_OR_REMOVED",
+      "active_in_current_cut": false,
+      "previous_shot_ids": [
+        "victor_at_door",
+        "galvanic_contact",
+        "recoil_tableau"
+      ],
+      "inactive_reason": "Standalone Victor/POV hand removed from current cut; apparatus interaction now uses a controllable brass contact/lever and the doorway pose does not require a separate hand Item."
     },
     {
       "id": "victor_recoil_pose",
@@ -1259,7 +1303,8 @@
       "status": "NEEDS_REVALIDATION",
       "source_obligation_ids": [
         "OBL-FR-013"
-      ]
+      ],
+      "active_in_current_cut": true
     },
     {
       "id": "creature_body_proportions",
@@ -1308,7 +1353,8 @@
         "OBL-FR-008",
         "OBL-FR-009",
         "OBL-FR-010"
-      ]
+      ],
+      "active_in_current_cut": true
     },
     {
       "id": "creature_head_shape",
@@ -1356,7 +1402,8 @@
         "OBL-FR-009",
         "OBL-FR-010",
         "OBL-FR-012"
-      ]
+      ],
+      "active_in_current_cut": true
     },
     {
       "id": "creature_hair",
@@ -1400,7 +1447,8 @@
       "status": "NEEDS_REVALIDATION",
       "source_obligation_ids": [
         "OBL-FR-011"
-      ]
+      ],
+      "active_in_current_cut": true
     },
     {
       "id": "creature_eye",
@@ -1446,7 +1494,8 @@
       "source_obligation_ids": [
         "OBL-FR-006",
         "OBL-FR-012"
-      ]
+      ],
+      "active_in_current_cut": true
     },
     {
       "id": "creature_rise_motion",
@@ -1489,7 +1538,8 @@
       "status": "NEEDS_REVALIDATION",
       "source_obligation_ids": [
         "OBL-FR-008"
-      ]
+      ],
+      "active_in_current_cut": true
     },
     {
       "id": "voltaic_pile",
@@ -1533,7 +1583,8 @@
       "status": "NEEDS_REVALIDATION",
       "source_obligation_ids": [
         "OBL-FR-005"
-      ]
+      ],
+      "active_in_current_cut": true
     },
     {
       "id": "leyden_jar_primary",
@@ -1576,7 +1627,8 @@
       "status": "NEEDS_REVALIDATION",
       "source_obligation_ids": [
         "OBL-FR-005"
-      ]
+      ],
+      "active_in_current_cut": true
     },
     {
       "id": "leyden_jar_secondary",
@@ -1618,7 +1670,8 @@
       "status": "NEEDS_REVALIDATION",
       "source_obligation_ids": [
         "OBL-FR-005"
-      ]
+      ],
+      "active_in_current_cut": true
     },
     {
       "id": "brass_contact",
@@ -1660,7 +1713,8 @@
       "status": "NEEDS_REVALIDATION",
       "source_obligation_ids": [
         "OBL-FR-005"
-      ]
+      ],
+      "active_in_current_cut": true
     },
     {
       "id": "copper_wire_network",
@@ -1704,7 +1758,8 @@
       "status": "NEEDS_REVALIDATION",
       "source_obligation_ids": [
         "OBL-FR-005"
-      ]
+      ],
+      "active_in_current_cut": true
     },
     {
       "id": "electric_arc",
@@ -1743,15 +1798,14 @@
         "SRC-FR-004"
       ],
       "decision_id": "DEC-electric_arc",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "anatomy_pages",
       "category": "scientific_document",
       "importance": "PRIMARY",
-      "shot_ids": [
-        "galvanic_contact"
-      ],
+      "shot_ids": [],
       "purpose": "Ground Victor's work in period scientific visual culture without inventing modern diagrams.",
       "checklist_profile": "apparatus",
       "requirements": {
@@ -1781,7 +1835,12 @@
         "SRC-FR-004"
       ],
       "decision_id": "DEC-anatomy_pages",
-      "status": "NEEDS_REVALIDATION"
+      "status": "INACTIVE_REPLACED_OR_REMOVED",
+      "active_in_current_cut": false,
+      "previous_shot_ids": [
+        "galvanic_contact"
+      ],
+      "inactive_reason": "Removed from current apparatus macro as low-value scientific filler; historical apparatus evidence remains in source records."
     },
     {
       "id": "laboratory_fog",
@@ -1819,7 +1878,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-laboratory_fog",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "interior_lightning",
@@ -1860,7 +1920,8 @@
         "SRC-FR-012"
       ],
       "decision_id": "DEC-interior_lightning",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "creation_camera_drift",
@@ -1896,7 +1957,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-creation_camera_drift",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "victor_door_shadow",
@@ -1935,7 +1997,8 @@
       "status": "NEEDS_REVALIDATION",
       "source_obligation_ids": [
         "OBL-FR-013"
-      ]
+      ],
+      "active_in_current_cut": true
     },
     {
       "id": "first_eye_shadow_mask",
@@ -1974,7 +2037,8 @@
       "status": "NEEDS_REVALIDATION",
       "source_obligation_ids": [
         "OBL-FR-006"
-      ]
+      ],
+      "active_in_current_cut": true
     },
     {
       "id": "linen_closeup_edge",
@@ -2012,7 +2076,8 @@
         "SRC-FR-001"
       ],
       "decision_id": "DEC-linen_closeup_edge",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "lightning_cut",
@@ -2048,7 +2113,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-lightning_cut",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "shadow_cut",
@@ -2084,7 +2150,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-shadow_cut",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "arc_match_cut",
@@ -2120,7 +2187,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-arc_match_cut",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "title_frankenstein",
@@ -2158,7 +2226,8 @@
         "SRC-FR-003"
       ],
       "decision_id": "DEC-title_frankenstein",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "subtitle_modern_prometheus",
@@ -2196,7 +2265,8 @@
         "SRC-FR-003"
       ],
       "decision_id": "DEC-subtitle_modern_prometheus",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "audio_low_drone",
@@ -2237,7 +2307,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-audio_low_drone",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "audio_noise_roomtone",
@@ -2278,7 +2349,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-audio_noise_roomtone",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "thunder_cues",
@@ -2315,7 +2387,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-thunder_cues",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "footstep_cues",
@@ -2351,7 +2424,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-footstep_cues",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "electrical_crackle_audio",
@@ -2388,7 +2462,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-electrical_crackle_audio",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "arc_hit_audio",
@@ -2424,7 +2499,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-arc_hit_audio",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "victor_breath",
@@ -2460,7 +2536,8 @@
       },
       "source_ids": [],
       "decision_id": "DEC-victor_breath",
-      "status": "NEEDS_REVALIDATION"
+      "status": "NEEDS_REVALIDATION",
+      "active_in_current_cut": true
     },
     {
       "id": "creature_heartbeat",
@@ -2499,7 +2576,8 @@
       "status": "NEEDS_REVALIDATION",
       "source_obligation_ids": [
         "OBL-FR-007"
-      ]
+      ],
+      "active_in_current_cut": true
     }
   ]
 }
