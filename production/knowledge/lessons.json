@@ -342,6 +342,60 @@
       "confidence": "HIGH",
       "status": "ENCODED",
       "superseded_by": null
+    },
+    {
+      "id": "LESSON-014",
+      "title": "Hero-detail upgrades require supporting-scene simplification or matching detail",
+      "scope": "CATEGORY",
+      "source_context": [
+        "E-VID-005 clean asset integration"
+      ],
+      "observed_weakness": "High-information creature/Victor/apparatus assets looked substantially better than the primitive renderer, but placing them inside the old coded room created a visible detail/style mismatch.",
+      "evidence": [
+        "The first asset-integration contact sheet showed premium engraved figures surrounded by primitive anatomy pages, shelves, skull icon and geometric room dressing.",
+        "Removing weak filler and reducing the chamber to window, apparatus, slab, candle, shadow and atmosphere produced a much stronger frame."
+      ],
+      "root_cause": "Detail hierarchy was inconsistent: HERO assets improved while SUPPORT/environment Items remained below the new quality floor.",
+      "consequence": "The shot reads as a collage of high- and low-quality sources even when each HERO asset is strong.",
+      "prevention_rule": "When a HERO asset raises the visual ceiling, either raise nearby SUPPORT Items to the same standard or remove/simplify them. Do not preserve weak filler for completeness.",
+      "detection_method": "Review the frame at thumbnail and full size; if surrounding objects look visibly cheaper/more generic than the focal asset, simplify or replace them before adding more effects.",
+      "implementation_changes": [
+        "V5.3 chamber rebuilt as a sparse composition around premium assets",
+        "Primitive skull/book/anatomy-page clutter removed from the clean test"
+      ],
+      "validation": [
+        "Clean creation/recoil stills clearly outperform the mixed-detail asset-integration stills."
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
+    },
+    {
+      "id": "LESSON-015",
+      "title": "Choose asset articulation level from the motion the shot actually requires",
+      "scope": "GLOBAL",
+      "source_context": [
+        "V5.3 3-second recoil motion test"
+      ],
+      "observed_weakness": "A single flattened high-detail body asset can be transformed convincingly for breathing, tremor, slight lift and camera motion, but cannot produce independent limb articulation without distortion.",
+      "evidence": [
+        "The V5.3 recoil test supports subtle whole-body movement and a cinematic wide shot.",
+        "The literary requirement for convulsive limb motion would need independent limb regions, a rig, mesh deformation, or a separate animated asset to be shown clearly."
+      ],
+      "root_cause": "Static-art quality and motion degrees of freedom are separate requirements.",
+      "consequence": "Selecting a beautiful static asset without defining required articulation can force crude warping or under-deliver the action.",
+      "prevention_rule": "Before approving a moving Item, define required degrees of freedom. Use a flat asset for rigid/subtle motion; use separated layers/rig/mesh or a dedicated motion asset when independent articulation is narratively visible.",
+      "detection_method": "Item motion requirements must specify whether motion is rigid transform, deformable surface, or articulated parts before final asset structure is chosen.",
+      "implementation_changes": [
+        "V5.3 wide creature motion uses restrained rigid/subtle transforms only",
+        "True convulsive limb articulation remains unresolved rather than being falsely claimed"
+      ],
+      "validation": [
+        "Approval motion test documents what the asset can and cannot perform."
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
     }
   ]
 }
