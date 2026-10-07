@@ -271,3 +271,30 @@ A high-quality still does not prove animation suitability.
 ## Detail-hierarchy check
 
 Shot approval also checks relative quality: a strong HERO Item can make nearby SUPPORT assets fail by comparison. Replace, simplify or remove mismatched filler rather than hiding it with post-processing.
+
+
+## Shot-scale approval
+
+Each selected visual asset records the shot scales/use cases it has actually passed.
+
+A candidate may be:
+- approved at medium scale;
+- rejected at portrait scale;
+- approved as a background silhouette;
+- rejected as a macro/detail source.
+
+Do not inherit approval from one scale to another.
+
+If an asset fails the required scale, either create a dedicated candidate or redesign the shot. The production system is allowed to change the shot when that produces a stronger result.
+
+## Interaction-removal rule
+
+A weak interaction asset is not automatically mandatory because the storyboard originally requested it.
+
+If a hand/contact/face insert is below the quality floor, compare:
+- dedicated higher-quality asset;
+- alternate framing;
+- deterministic prop motion;
+- cut/match/action in adjacent shot.
+
+Delete the weak Item from the active shot if another design expresses the narrative beat better.
