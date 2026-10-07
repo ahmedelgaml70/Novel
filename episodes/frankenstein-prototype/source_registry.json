@@ -374,7 +374,8 @@
         "creature_eye",
         "creature_rise_motion",
         "interior_lightning",
-        "victor_recoil_pose"
+        "victor_recoil_pose",
+        "victor_door_shadow"
       ],
       "rights": {
         "status": "PUBLIC_DOMAIN_IN_USA_PROJECT_GUTENBERG_TERMS_APPLY_TO_GUTENBERG_EDITION",
@@ -387,7 +388,7 @@
       },
       "discovered_at": "2026-10-07",
       "status": "SOURCE_CONTRACT_CANDIDATE",
-      "notes": "Photo-reprint transcription of the 1818 edition. Creation passage: one in the morning, rain against panes, nearly burnt-out candle, dull yellow eye, hard breathing, convulsive limb motion; limbs proportionate, flowing lustrous black hair, watery pale eyes, shrivelled complexion, straight black lips. Ingolstadt arrival mentions a high white steeple. Do not infer a specific electrical apparatus from 'instruments of life'. No source contract is currently locked."
+      "notes": "Photo-reprint transcription of the 1818 edition. Creation passage: one in the morning, rain against panes, nearly burnt-out candle, dull yellow eye, hard breathing, convulsive limb motion; limbs proportionate, flowing lustrous black hair, watery pale eyes, shrivelled complexion, straight black lips. Ingolstadt arrival mentions a high white steeple. Do not infer a specific electrical apparatus from 'instruments of life'. No source contract is currently locked. Core creation-scene and Ingolstadt-steeple constraints were directly compared across the 1818 and 1831 Gutenberg texts on 2026-10-07 and are shared for the currently tracked obligations."
     },
     {
       "id": "SRC-FR-013",
@@ -406,7 +407,18 @@
         "subtitle_modern_prometheus",
         "creation_chamber_composition",
         "victor_recoil_pose",
-        "creature_eye"
+        "creature_eye",
+        "ingolstadt_roofline",
+        "laboratory_exterior_building",
+        "gothic_laboratory_window",
+        "storm_sky",
+        "rain_field",
+        "creature_body_proportions",
+        "creature_head_shape",
+        "creature_hair",
+        "creature_rise_motion",
+        "interior_lightning",
+        "victor_door_shadow"
       ],
       "rights": {
         "status": "PUBLIC_DOMAIN_IN_USA_PROJECT_GUTENBERG_TERMS_APPLY_TO_GUTENBERG_EDITION",
@@ -419,7 +431,7 @@
       },
       "discovered_at": "2026-10-07",
       "status": "SOURCE_CONTRACT_CANDIDATE",
-      "notes": "Use to compare edition-dependent wording/art-direction decisions. Do not mix 1818 and 1831 source contracts silently. No source contract is currently locked."
+      "notes": "Use to compare edition-dependent wording/art-direction decisions. Do not mix 1818 and 1831 source contracts silently. No source contract is currently locked. Core creation-scene and Ingolstadt-steeple constraints were directly compared across the 1818 and 1831 Gutenberg texts on 2026-10-07 and are shared for the currently tracked obligations."
     }
   ]
 }
