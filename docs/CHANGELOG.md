@@ -116,3 +116,26 @@ This file records meaningful changes to the Novel machine. Design rationale belo
 ### Reproducibility
 - Added the canonical Living Engraving JavaScript renderer, manifest, method state, validator, render command and pinned `skia-canvas` dependency under `production/living_engraving/`.
 - Shot-local audio/light cues remain in the scene manifest rather than a hidden absolute timeline.
+
+
+## 2026-10-07 — production governance
+
+### Living Engraving production method
+- Added canonical current-method documentation and separated it from visual-version history.
+- Added atomic Item governance and category-specific Item checklists.
+- Added a source policy separating evidence/reference sources from visible asset candidates.
+- Added machine-readable Item, source and asset-decision records for the Frankenstein prototype.
+- Added the canonical current JavaScript renderer package under `production/living_engraving/`.
+
+### Frankenstein prototype audit
+- Decomposed the 24-second V5.1 prototype into 62 independently judgeable Items.
+- Recorded 62 Item decision records rather than grandfathering existing renderer art into approval.
+- Rejected the current generic Ingolstadt skyline for final use and identified period/location-specific research directions.
+- Added historical/art/costume/scientific source records instead of treating asset availability as selection evidence.
+
+### V5.2.1 source-fidelity layer
+- Designated Project Gutenberg #42324 (1831 edition) as the prototype literary source and retained #41445 (1818) as comparative evidence.
+- Added 13 Chapter V source-fidelity obligations and cross-linked them to affected Items.
+- Identified the nearly extinguished candle and hard breathing as underrepresented/missing in the current render.
+- Explicitly classified the galvanic apparatus as an interpretive historical reconstruction rather than a canonically specified machine.
+- Upgraded validation to check Item↔obligation references and report strict-final blockers by category.
