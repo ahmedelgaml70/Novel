@@ -589,6 +589,32 @@
       "confidence": "HIGH",
       "status": "ENCODED",
       "superseded_by": null
+    },
+    {
+      "id": "LESSON-023",
+      "title": "Story specificity should come from runtime constraints and direction before custom animation",
+      "scope": "GLOBAL",
+      "source_context": [
+        "V5.4.1 ready-rigged animation proof"
+      ],
+      "observed_weakness": "A ready animation library can feel generic if the pipeline assumes every literary action requires a uniquely authored animation clip.",
+      "evidence": [
+        "The V5.4.1 proof shows ready clips already provide the difficult biomechanical motion.",
+        "Three.js supports independent mixers, crossfades/additive animation, and IK addons for constrained interaction."
+      ],
+      "root_cause": "Specificity was incorrectly assigned to the animation file itself instead of to the combination of motion, contact, gaze, prop response, character design, camera and editing.",
+      "consequence": "The system would unnecessarily author animations that could be produced much faster from ready motion primitives.",
+      "prevention_rule": "Before custom animation, try to specialize a ready clip using contact/IK targets, look-at, prop motion, clip surgery, additive layers and shot design.",
+      "detection_method": "Custom animation proposals must show why the FAST_PATH specialization ladder failed for the required beat.",
+      "implementation_changes": [
+        "Added docs/production/FAST_PATH.md"
+      ],
+      "validation": [
+        "Next Frankenstein-specific beat should use ready clips plus runtime constraints before any custom action animation is considered."
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
     }
   ]
 }
