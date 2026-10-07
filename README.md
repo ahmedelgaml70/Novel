@@ -171,3 +171,13 @@ See:
 - [docs/production/SOURCE_POLICY.md](docs/production/SOURCE_POLICY.md)
 - [docs/production/VERSION_HISTORY.md](docs/production/VERSION_HISTORY.md)
 - [episodes/frankenstein-prototype/README.md](episodes/frankenstein-prototype/README.md)
+
+### Ready-free real-animation direction
+
+The current motion architecture is moving to ready rigged 3D assets rather than flat character images.
+
+- `docs/production/READY_FREE_ASSET_STRATEGY.md` — ready-free-first search and escalation policy.
+- `docs/experiments/E-VID-006_READY_RIGGED_ANIMATION.md` — current 8–10 second proof.
+- `production/knowledge/ready_free_asset_sources.json` — vetted free asset ecosystems.
+
+Current primary candidate: Quaternius universal humanoid ecosystem; KayKit is the fallback. No custom rigging/locomotion is allowed in the first proof.
