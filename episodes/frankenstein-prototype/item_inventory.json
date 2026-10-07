@@ -1,0 +1,2408 @@
+{
+  "schema_version": "1.0",
+  "episode_id": "frankenstein-prototype",
+  "method_version": "5.2",
+  "visual_baseline": "5.1",
+  "generated_from": "V5.1 atomic audit",
+  "final_gate_note": "V5.1 is a prototype benchmark. Items are not grandfathered into final approval.",
+  "counts": {
+    "items": 62
+  },
+  "items": [
+    {
+      "id": "paper_field",
+      "category": "global_material",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "ingolstadt_storm",
+        "creation_chamber",
+        "victor_at_door",
+        "galvanic_contact",
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "purpose": "Create the physical paper substrate without reading as a digital texture overlay.",
+      "checklist_profile": "global_material",
+      "requirements": {
+        "story": [
+          "Support the Living Engraving material without competing with story information."
+        ],
+        "period": [
+          "Evokes engraved/printed material appropriate to the chosen early-19th-century visual language."
+        ],
+        "visual": [
+          "Must remain subtle at delivery size; must not make the image look like a generic filter."
+        ],
+        "motion": [
+          "Temporal variation must be deterministic and low amplitude."
+        ],
+        "continuity": [
+          "Same material identity across shots unless a motivated change is specified."
+        ],
+        "technical": [
+          "Must survive H.264 compression without crawling or moire."
+        ],
+        "rights": [
+          "Procedural/bespoke or rights-cleared source evidence required."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-paper_field",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "ink_speck_grain",
+      "category": "global_material",
+      "importance": "SUPPORT",
+      "shot_ids": [
+        "ingolstadt_storm",
+        "creation_chamber",
+        "victor_at_door",
+        "galvanic_contact",
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "purpose": "Break digital cleanliness with restrained ink/print irregularity while preserving faces and text.",
+      "checklist_profile": "global_material",
+      "requirements": {
+        "story": [
+          "Support the Living Engraving material without competing with story information."
+        ],
+        "period": [
+          "Evokes engraved/printed material appropriate to the chosen early-19th-century visual language."
+        ],
+        "visual": [
+          "Must remain subtle at delivery size; must not make the image look like a generic filter."
+        ],
+        "motion": [
+          "Temporal variation must be deterministic and low amplitude."
+        ],
+        "continuity": [
+          "Same material identity across shots unless a motivated change is specified."
+        ],
+        "technical": [
+          "Must survive H.264 compression without crawling or moire."
+        ],
+        "rights": [
+          "Procedural/bespoke or rights-cleared source evidence required."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-ink_speck_grain",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "vignette_value_structure",
+      "category": "global_material",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "ingolstadt_storm",
+        "creation_chamber",
+        "victor_at_door",
+        "galvanic_contact",
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "purpose": "Control peripheral value so attention stays on narrative focal areas without a generic vignette look.",
+      "checklist_profile": "global_material",
+      "requirements": {
+        "story": [
+          "Support the Living Engraving material without competing with story information."
+        ],
+        "period": [
+          "Evokes engraved/printed material appropriate to the chosen early-19th-century visual language."
+        ],
+        "visual": [
+          "Must remain subtle at delivery size; must not make the image look like a generic filter."
+        ],
+        "motion": [
+          "Temporal variation must be deterministic and low amplitude."
+        ],
+        "continuity": [
+          "Same material identity across shots unless a motivated change is specified."
+        ],
+        "technical": [
+          "Must survive H.264 compression without crawling or moire."
+        ],
+        "rights": [
+          "Procedural/bespoke or rights-cleared source evidence required."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-vignette_value_structure",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "engraving_hatching",
+      "category": "global_material",
+      "importance": "HERO",
+      "shot_ids": [
+        "ingolstadt_storm",
+        "creation_chamber",
+        "victor_at_door",
+        "galvanic_contact",
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "purpose": "Make shadow volume read as authored engraving rather than a software filter.",
+      "checklist_profile": "global_material",
+      "requirements": {
+        "story": [
+          "Support the Living Engraving material without competing with story information."
+        ],
+        "period": [
+          "Evokes engraved/printed material appropriate to the chosen early-19th-century visual language."
+        ],
+        "visual": [
+          "Must remain subtle at delivery size; must not make the image look like a generic filter."
+        ],
+        "motion": [
+          "Temporal variation must be deterministic and low amplitude."
+        ],
+        "continuity": [
+          "Same material identity across shots unless a motivated change is specified."
+        ],
+        "technical": [
+          "Must survive H.264 compression without crawling or moire."
+        ],
+        "rights": [
+          "Procedural/bespoke or rights-cleared source evidence required."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-001",
+        "SRC-FR-002"
+      ],
+      "decision_id": "DEC-engraving_hatching",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "living_engraving_palette",
+      "category": "global_material",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "ingolstadt_storm",
+        "creation_chamber",
+        "victor_at_door",
+        "galvanic_contact",
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "purpose": "Define the film's restricted parchment/ink/sepia/cyan/brass color hierarchy.",
+      "checklist_profile": "global_material",
+      "requirements": {
+        "story": [
+          "Support the Living Engraving material without competing with story information."
+        ],
+        "period": [
+          "Evokes engraved/printed material appropriate to the chosen early-19th-century visual language."
+        ],
+        "visual": [
+          "Must remain subtle at delivery size; must not make the image look like a generic filter."
+        ],
+        "motion": [
+          "Temporal variation must be deterministic and low amplitude."
+        ],
+        "continuity": [
+          "Same material identity across shots unless a motivated change is specified."
+        ],
+        "technical": [
+          "Must survive H.264 compression without crawling or moire."
+        ],
+        "rights": [
+          "Procedural/bespoke or rights-cleared source evidence required."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-living_engraving_palette",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "ingolstadt_roofline",
+      "category": "architecture_exterior",
+      "importance": "HERO",
+      "shot_ids": [
+        "ingolstadt_storm"
+      ],
+      "purpose": "Make the establishing shot recognisably grounded in historic Ingolstadt rather than a generic Gothic city.",
+      "checklist_profile": "architecture",
+      "requirements": {
+        "story": [
+          "Must identify the intended place/room rather than only signal 'Gothic'."
+        ],
+        "period": [
+          "Architecture/materials/proportions must fit the story period and named location where applicable."
+        ],
+        "visual": [
+          "Strong readable silhouette; detail density matched to focal importance."
+        ],
+        "motion": [
+          "Parallax/camera response must preserve architectural solidity."
+        ],
+        "continuity": [
+          "Same building/room identity across recurring shots."
+        ],
+        "technical": [
+          "Clean geometry/edges at delivery resolution and during camera movement."
+        ],
+        "rights": [
+          "Every external visual reference logged; visible source asset requires explicit reuse rights."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-010",
+        "SRC-FR-011"
+      ],
+      "decision_id": "DEC-ingolstadt_roofline",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "laboratory_exterior_building",
+      "category": "architecture_exterior",
+      "importance": "HERO",
+      "shot_ids": [
+        "ingolstadt_storm"
+      ],
+      "purpose": "Give Victor's lodging/laboratory a plausible period building identity and a focal target for the push-in.",
+      "checklist_profile": "architecture",
+      "requirements": {
+        "story": [
+          "Must identify the intended place/room rather than only signal 'Gothic'."
+        ],
+        "period": [
+          "Architecture/materials/proportions must fit the story period and named location where applicable."
+        ],
+        "visual": [
+          "Strong readable silhouette; detail density matched to focal importance."
+        ],
+        "motion": [
+          "Parallax/camera response must preserve architectural solidity."
+        ],
+        "continuity": [
+          "Same building/room identity across recurring shots."
+        ],
+        "technical": [
+          "Clean geometry/edges at delivery resolution and during camera movement."
+        ],
+        "rights": [
+          "Every external visual reference logged; visible source asset requires explicit reuse rights."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-010",
+        "SRC-FR-011"
+      ],
+      "decision_id": "DEC-laboratory_exterior_building",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "gothic_laboratory_window",
+      "category": "architecture_detail",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "ingolstadt_storm",
+        "creation_chamber",
+        "recoil_tableau"
+      ],
+      "purpose": "Create a recurring window motif connecting exterior and chamber while remaining period/location plausible.",
+      "checklist_profile": "architecture",
+      "requirements": {
+        "story": [
+          "Must identify the intended place/room rather than only signal 'Gothic'."
+        ],
+        "period": [
+          "Architecture/materials/proportions must fit the story period and named location where applicable."
+        ],
+        "visual": [
+          "Strong readable silhouette; detail density matched to focal importance."
+        ],
+        "motion": [
+          "Parallax/camera response must preserve architectural solidity."
+        ],
+        "continuity": [
+          "Same building/room identity across recurring shots."
+        ],
+        "technical": [
+          "Clean geometry/edges at delivery resolution and during camera movement."
+        ],
+        "rights": [
+          "Every external visual reference logged; visible source asset requires explicit reuse rights."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-001",
+        "SRC-FR-010"
+      ],
+      "decision_id": "DEC-gothic_laboratory_window",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "city_window_pattern",
+      "category": "architecture_detail",
+      "importance": "SUPPORT",
+      "shot_ids": [
+        "ingolstadt_storm"
+      ],
+      "purpose": "Populate the city with varied period window rhythms without cloned procedural repetition.",
+      "checklist_profile": "architecture",
+      "requirements": {
+        "story": [
+          "Must identify the intended place/room rather than only signal 'Gothic'."
+        ],
+        "period": [
+          "Architecture/materials/proportions must fit the story period and named location where applicable."
+        ],
+        "visual": [
+          "Strong readable silhouette; detail density matched to focal importance."
+        ],
+        "motion": [
+          "Parallax/camera response must preserve architectural solidity."
+        ],
+        "continuity": [
+          "Same building/room identity across recurring shots."
+        ],
+        "technical": [
+          "Clean geometry/edges at delivery resolution and during camera movement."
+        ],
+        "rights": [
+          "Every external visual reference logged; visible source asset requires explicit reuse rights."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-010"
+      ],
+      "decision_id": "DEC-city_window_pattern",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "storm_sky",
+      "category": "atmosphere",
+      "importance": "SUPPORT",
+      "shot_ids": [
+        "ingolstadt_storm"
+      ],
+      "purpose": "Establish oppressive storm mass and negative space for lightning.",
+      "checklist_profile": "atmosphere",
+      "requirements": {
+        "story": [
+          "Must intensify the current beat and depth, not function as a universal overlay."
+        ],
+        "period": [
+          "Weather/environment must be compatible with scene and setting."
+        ],
+        "visual": [
+          "Depth-aware density, direction and lighting response."
+        ],
+        "motion": [
+          "Movement follows wind/buoyancy/source and avoids mechanical looping."
+        ],
+        "continuity": [
+          "Direction/intensity coherent across adjacent shots unless motivated."
+        ],
+        "technical": [
+          "Stable under compression and deterministic."
+        ],
+        "rights": [
+          "Procedural by default; external texture/footage requires provenance."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-storm_sky",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "rain_field",
+      "category": "atmosphere",
+      "importance": "SUPPORT",
+      "shot_ids": [
+        "ingolstadt_storm"
+      ],
+      "purpose": "Provide depth-aware rain consistent with wind and camera without becoming a stock overlay.",
+      "checklist_profile": "atmosphere",
+      "requirements": {
+        "story": [
+          "Must intensify the current beat and depth, not function as a universal overlay."
+        ],
+        "period": [
+          "Weather/environment must be compatible with scene and setting."
+        ],
+        "visual": [
+          "Depth-aware density, direction and lighting response."
+        ],
+        "motion": [
+          "Movement follows wind/buoyancy/source and avoids mechanical looping."
+        ],
+        "continuity": [
+          "Direction/intensity coherent across adjacent shots unless motivated."
+        ],
+        "technical": [
+          "Stable under compression and deterministic."
+        ],
+        "rights": [
+          "Procedural by default; external texture/footage requires provenance."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-rain_field",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "exterior_lightning",
+      "category": "lighting_effect",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "ingolstadt_storm"
+      ],
+      "purpose": "Reveal architecture and drive the first cut with motivated storm light.",
+      "checklist_profile": "atmosphere",
+      "requirements": {
+        "story": [
+          "Must intensify the current beat and depth, not function as a universal overlay."
+        ],
+        "period": [
+          "Weather/environment must be compatible with scene and setting."
+        ],
+        "visual": [
+          "Depth-aware density, direction and lighting response."
+        ],
+        "motion": [
+          "Movement follows wind/buoyancy/source and avoids mechanical looping."
+        ],
+        "continuity": [
+          "Direction/intensity coherent across adjacent shots unless motivated."
+        ],
+        "technical": [
+          "Stable under compression and deterministic."
+        ],
+        "rights": [
+          "Procedural by default; external texture/footage requires provenance."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-exterior_lightning",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "exterior_camera_push",
+      "category": "camera",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "ingolstadt_storm"
+      ],
+      "purpose": "Move attention from city context toward Victor's laboratory with restrained depth response.",
+      "checklist_profile": "camera_edit",
+      "requirements": {
+        "story": [
+          "Every movement/cut must have a narrative reason."
+        ],
+        "period": [
+          "Not applicable except when modern visual grammar undermines the intended style."
+        ],
+        "visual": [
+          "Preserve focal hierarchy and engraving readability."
+        ],
+        "motion": [
+          "Easing/timing deliberate; no motion added only to avoid stillness."
+        ],
+        "continuity": [
+          "Screen direction and spatial relations remain coherent."
+        ],
+        "technical": [
+          "No unintended judder, crop failure or edge exposure."
+        ],
+        "rights": [
+          "No external asset dependency unless explicitly documented."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-exterior_camera_push",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "creation_chamber_composition",
+      "category": "composition",
+      "importance": "HERO",
+      "shot_ids": [
+        "creation_chamber",
+        "recoil_tableau"
+      ],
+      "purpose": "Stage creator, creature, doorway, window and foreground objects as a specific Frankenstein tableau rather than a generic lab.",
+      "checklist_profile": "architecture",
+      "requirements": {
+        "story": [
+          "Must identify the intended place/room rather than only signal 'Gothic'."
+        ],
+        "period": [
+          "Architecture/materials/proportions must fit the story period and named location where applicable."
+        ],
+        "visual": [
+          "Strong readable silhouette; detail density matched to focal importance."
+        ],
+        "motion": [
+          "Parallax/camera response must preserve architectural solidity."
+        ],
+        "continuity": [
+          "Same building/room identity across recurring shots."
+        ],
+        "technical": [
+          "Clean geometry/edges at delivery resolution and during camera movement."
+        ],
+        "rights": [
+          "Every external visual reference logged; visible source asset requires explicit reuse rights."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-001",
+        "SRC-FR-002"
+      ],
+      "decision_id": "DEC-creation_chamber_composition",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "creation_chamber_architecture",
+      "category": "architecture_interior",
+      "importance": "HERO",
+      "shot_ids": [
+        "creation_chamber",
+        "victor_at_door",
+        "recoil_tableau"
+      ],
+      "purpose": "Define a believable early-19th-century chamber that supports blocking and apparatus placement.",
+      "checklist_profile": "architecture",
+      "requirements": {
+        "story": [
+          "Must identify the intended place/room rather than only signal 'Gothic'."
+        ],
+        "period": [
+          "Architecture/materials/proportions must fit the story period and named location where applicable."
+        ],
+        "visual": [
+          "Strong readable silhouette; detail density matched to focal importance."
+        ],
+        "motion": [
+          "Parallax/camera response must preserve architectural solidity."
+        ],
+        "continuity": [
+          "Same building/room identity across recurring shots."
+        ],
+        "technical": [
+          "Clean geometry/edges at delivery resolution and during camera movement."
+        ],
+        "rights": [
+          "Every external visual reference logged; visible source asset requires explicit reuse rights."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-001",
+        "SRC-FR-011"
+      ],
+      "decision_id": "DEC-creation_chamber_architecture",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "timber_wall_beams",
+      "category": "architecture_detail",
+      "importance": "SUPPORT",
+      "shot_ids": [
+        "creation_chamber",
+        "victor_at_door",
+        "recoil_tableau"
+      ],
+      "purpose": "Give the chamber construction weight and period texture without decorative patterning.",
+      "checklist_profile": "architecture",
+      "requirements": {
+        "story": [
+          "Must identify the intended place/room rather than only signal 'Gothic'."
+        ],
+        "period": [
+          "Architecture/materials/proportions must fit the story period and named location where applicable."
+        ],
+        "visual": [
+          "Strong readable silhouette; detail density matched to focal importance."
+        ],
+        "motion": [
+          "Parallax/camera response must preserve architectural solidity."
+        ],
+        "continuity": [
+          "Same building/room identity across recurring shots."
+        ],
+        "technical": [
+          "Clean geometry/edges at delivery resolution and during camera movement."
+        ],
+        "rights": [
+          "Every external visual reference logged; visible source asset requires explicit reuse rights."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-timber_wall_beams",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "laboratory_floor",
+      "category": "architecture_detail",
+      "importance": "SUPPORT",
+      "shot_ids": [
+        "creation_chamber",
+        "recoil_tableau"
+      ],
+      "purpose": "Anchor bodies, cables and props to a believable floor plane and perspective.",
+      "checklist_profile": "architecture",
+      "requirements": {
+        "story": [
+          "Must identify the intended place/room rather than only signal 'Gothic'."
+        ],
+        "period": [
+          "Architecture/materials/proportions must fit the story period and named location where applicable."
+        ],
+        "visual": [
+          "Strong readable silhouette; detail density matched to focal importance."
+        ],
+        "motion": [
+          "Parallax/camera response must preserve architectural solidity."
+        ],
+        "continuity": [
+          "Same building/room identity across recurring shots."
+        ],
+        "technical": [
+          "Clean geometry/edges at delivery resolution and during camera movement."
+        ],
+        "rights": [
+          "Every external visual reference logged; visible source asset requires explicit reuse rights."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-laboratory_floor",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "laboratory_door",
+      "category": "architecture_detail",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "creation_chamber",
+        "victor_at_door",
+        "recoil_tableau"
+      ],
+      "purpose": "Create Victor's entrance/escape threshold and a strong shadow/framing device.",
+      "checklist_profile": "architecture",
+      "requirements": {
+        "story": [
+          "Must identify the intended place/room rather than only signal 'Gothic'."
+        ],
+        "period": [
+          "Architecture/materials/proportions must fit the story period and named location where applicable."
+        ],
+        "visual": [
+          "Strong readable silhouette; detail density matched to focal importance."
+        ],
+        "motion": [
+          "Parallax/camera response must preserve architectural solidity."
+        ],
+        "continuity": [
+          "Same building/room identity across recurring shots."
+        ],
+        "technical": [
+          "Clean geometry/edges at delivery resolution and during camera movement."
+        ],
+        "rights": [
+          "Every external visual reference logged; visible source asset requires explicit reuse rights."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-001"
+      ],
+      "decision_id": "DEC-laboratory_door",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "laboratory_shelves_papers",
+      "category": "support_prop_cluster",
+      "importance": "SUPPORT",
+      "shot_ids": [
+        "creation_chamber",
+        "victor_at_door"
+      ],
+      "purpose": "Suggest obsessive study without turning the room into generic clutter.",
+      "checklist_profile": "prop",
+      "requirements": {
+        "story": [
+          "Prop must have a reason to exist in this exact shot."
+        ],
+        "period": [
+          "Material/form/scale appropriate to period and room."
+        ],
+        "visual": [
+          "Avoid decorative generic clutter; silhouette must read when important."
+        ],
+        "motion": [
+          "Interaction/gravity plausible if touched or moving."
+        ],
+        "continuity": [
+          "Recurring prop identity maintained."
+        ],
+        "technical": [
+          "Detail appropriate to screen size."
+        ],
+        "rights": [
+          "Source and candidate rights known."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-laboratory_shelves_papers",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "creation_bed_slab",
+      "category": "hero_prop",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "creation_chamber",
+        "recoil_tableau"
+      ],
+      "purpose": "Support the creature physically and compositionally with a plausible bespoke work surface/bed.",
+      "checklist_profile": "prop",
+      "requirements": {
+        "story": [
+          "Prop must have a reason to exist in this exact shot."
+        ],
+        "period": [
+          "Material/form/scale appropriate to period and room."
+        ],
+        "visual": [
+          "Avoid decorative generic clutter; silhouette must read when important."
+        ],
+        "motion": [
+          "Interaction/gravity plausible if touched or moving."
+        ],
+        "continuity": [
+          "Recurring prop identity maintained."
+        ],
+        "technical": [
+          "Detail appropriate to screen size."
+        ],
+        "rights": [
+          "Source and candidate rights known."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-001"
+      ],
+      "decision_id": "DEC-creation_bed_slab",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "creature_drapery",
+      "category": "cloth",
+      "importance": "HERO",
+      "shot_ids": [
+        "creation_chamber",
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "purpose": "Conceal/reveal the creature with cloth that carries composition, gravity and movement.",
+      "checklist_profile": "anatomy",
+      "requirements": {
+        "story": [
+          "Anatomy/gesture must communicate the intended action or unease."
+        ],
+        "period": [
+          "No period-specific constraint unless clothing/grooming overlaps."
+        ],
+        "visual": [
+          "Avoid simplified avatar anatomy in HERO views."
+        ],
+        "motion": [
+          "Joint motion, centre of mass and line of action must be plausible."
+        ],
+        "continuity": [
+          "Proportions and distinctive forms remain stable."
+        ],
+        "technical": [
+          "Hands/eyes/faces checked at final pixel size."
+        ],
+        "rights": [
+          "Source references and any visible source assets must have known provenance."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-001",
+        "SRC-FR-002"
+      ],
+      "decision_id": "DEC-creature_drapery",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "open_folio",
+      "category": "book_document",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "creation_chamber",
+        "recoil_tableau"
+      ],
+      "purpose": "Echo the canonical foreground book motif while remaining plausible in Victor's workspace.",
+      "checklist_profile": "prop",
+      "requirements": {
+        "story": [
+          "Prop must have a reason to exist in this exact shot."
+        ],
+        "period": [
+          "Material/form/scale appropriate to period and room."
+        ],
+        "visual": [
+          "Avoid decorative generic clutter; silhouette must read when important."
+        ],
+        "motion": [
+          "Interaction/gravity plausible if touched or moving."
+        ],
+        "continuity": [
+          "Recurring prop identity maintained."
+        ],
+        "technical": [
+          "Detail appropriate to screen size."
+        ],
+        "rights": [
+          "Source and candidate rights known."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-001"
+      ],
+      "decision_id": "DEC-open_folio",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "skull_foreground",
+      "category": "anatomical_prop",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "creation_chamber",
+        "recoil_tableau"
+      ],
+      "purpose": "Provide a death/creation motif and depth cue without becoming Halloween iconography.",
+      "checklist_profile": "prop",
+      "requirements": {
+        "story": [
+          "Prop must have a reason to exist in this exact shot."
+        ],
+        "period": [
+          "Material/form/scale appropriate to period and room."
+        ],
+        "visual": [
+          "Avoid decorative generic clutter; silhouette must read when important."
+        ],
+        "motion": [
+          "Interaction/gravity plausible if touched or moving."
+        ],
+        "continuity": [
+          "Recurring prop identity maintained."
+        ],
+        "technical": [
+          "Detail appropriate to screen size."
+        ],
+        "rights": [
+          "Source and candidate rights known."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-001"
+      ],
+      "decision_id": "DEC-skull_foreground",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "foreground_copper_cable",
+      "category": "apparatus_detail",
+      "importance": "SUPPORT",
+      "shot_ids": [
+        "creation_chamber",
+        "galvanic_contact",
+        "recoil_tableau"
+      ],
+      "purpose": "Tie foreground depth to the electrical system and guide the eye toward the experiment.",
+      "checklist_profile": "apparatus",
+      "requirements": {
+        "story": [
+          "Must support Victor's experiment and the dramatic beat, not merely read as generic science."
+        ],
+        "period": [
+          "Use early-19th-century electrical/galvanic forms as evidence; distinguish fiction from historical fact."
+        ],
+        "visual": [
+          "Materials and construction logic readable in engraving style."
+        ],
+        "motion": [
+          "Controls/contact points/arcs must originate from plausible geometry."
+        ],
+        "continuity": [
+          "Same apparatus identity between wide and macro shots."
+        ],
+        "technical": [
+          "Small terminals/wires remain legible without visual clutter."
+        ],
+        "rights": [
+          "Museum/primary technical sources logged separately from image reuse rights."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-004",
+        "SRC-FR-006"
+      ],
+      "decision_id": "DEC-foreground_copper_cable",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "victor_silhouette",
+      "category": "character_identity",
+      "importance": "HERO",
+      "shot_ids": [
+        "creation_chamber",
+        "victor_at_door",
+        "recoil_tableau"
+      ],
+      "purpose": "Make Victor recognisable in shadow as a young early-19th-century student/scientist.",
+      "checklist_profile": "character",
+      "requirements": {
+        "story": [
+          "Must express this exact character and current emotional/action state."
+        ],
+        "period": [
+          "Body language, grooming and visible clothing must not read as modern."
+        ],
+        "visual": [
+          "Recognisable silhouette and authored engraving language; no generic avatar geometry."
+        ],
+        "motion": [
+          "Movement must have a clear action verb and plausible weight."
+        ],
+        "continuity": [
+          "Identity must persist across wide, medium, macro and partial-face views."
+        ],
+        "technical": [
+          "Anatomy and linework must remain stable under crop/scale."
+        ],
+        "rights": [
+          "Bespoke or rights-cleared reference/candidate provenance required."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-001",
+        "SRC-FR-007",
+        "SRC-FR-008",
+        "SRC-FR-009"
+      ],
+      "decision_id": "DEC-victor_silhouette",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "victor_head_profile",
+      "category": "face_head",
+      "importance": "HERO",
+      "shot_ids": [
+        "victor_at_door",
+        "recoil_tableau"
+      ],
+      "purpose": "Show fear/revulsion with a period-authored partial profile rather than avatar facial geometry.",
+      "checklist_profile": "character",
+      "requirements": {
+        "story": [
+          "Must express this exact character and current emotional/action state."
+        ],
+        "period": [
+          "Body language, grooming and visible clothing must not read as modern."
+        ],
+        "visual": [
+          "Recognisable silhouette and authored engraving language; no generic avatar geometry."
+        ],
+        "motion": [
+          "Movement must have a clear action verb and plausible weight."
+        ],
+        "continuity": [
+          "Identity must persist across wide, medium, macro and partial-face views."
+        ],
+        "technical": [
+          "Anatomy and linework must remain stable under crop/scale."
+        ],
+        "rights": [
+          "Bespoke or rights-cleared reference/candidate provenance required."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-001"
+      ],
+      "decision_id": "DEC-victor_head_profile",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "victor_hair",
+      "category": "hair",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "victor_at_door",
+        "recoil_tableau"
+      ],
+      "purpose": "Support Victor's period silhouette and stressed state without modern grooming cues.",
+      "checklist_profile": "character",
+      "requirements": {
+        "story": [
+          "Must express this exact character and current emotional/action state."
+        ],
+        "period": [
+          "Body language, grooming and visible clothing must not read as modern."
+        ],
+        "visual": [
+          "Recognisable silhouette and authored engraving language; no generic avatar geometry."
+        ],
+        "motion": [
+          "Movement must have a clear action verb and plausible weight."
+        ],
+        "continuity": [
+          "Identity must persist across wide, medium, macro and partial-face views."
+        ],
+        "technical": [
+          "Anatomy and linework must remain stable under crop/scale."
+        ],
+        "rights": [
+          "Bespoke or rights-cleared reference/candidate provenance required."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-victor_hair",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "victor_coat",
+      "category": "costume",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "creation_chamber",
+        "victor_at_door",
+        "recoil_tableau"
+      ],
+      "purpose": "Give Victor a deliberate period/social silhouette that remains consistent across shots.",
+      "checklist_profile": "costume",
+      "requirements": {
+        "story": [
+          "Must fit Victor's age, status, occupation and scene state rather than merely the century."
+        ],
+        "period": [
+          "Validate cut, collar, waist, sleeve, fastening, materials and footwear against a deliberate date interpretation."
+        ],
+        "visual": [
+          "Costume must support Victor's silhouette and not look like generic historical dress-up."
+        ],
+        "motion": [
+          "Cloth folds and coat movement must follow pose and gravity."
+        ],
+        "continuity": [
+          "Same garment identity across Victor shots."
+        ],
+        "technical": [
+          "Readable shape at silhouette scale and close crop."
+        ],
+        "rights": [
+          "Museum/fashion references logged; visible third-party assets require exact rights."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-007",
+        "SRC-FR-008",
+        "SRC-FR-009"
+      ],
+      "decision_id": "DEC-victor_coat",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "victor_collar_cravat",
+      "category": "costume_detail",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "victor_at_door",
+        "recoil_tableau"
+      ],
+      "purpose": "Provide period-specific neckwear/collar detail that helps read Victor at close range.",
+      "checklist_profile": "costume",
+      "requirements": {
+        "story": [
+          "Must fit Victor's age, status, occupation and scene state rather than merely the century."
+        ],
+        "period": [
+          "Validate cut, collar, waist, sleeve, fastening, materials and footwear against a deliberate date interpretation."
+        ],
+        "visual": [
+          "Costume must support Victor's silhouette and not look like generic historical dress-up."
+        ],
+        "motion": [
+          "Cloth folds and coat movement must follow pose and gravity."
+        ],
+        "continuity": [
+          "Same garment identity across Victor shots."
+        ],
+        "technical": [
+          "Readable shape at silhouette scale and close crop."
+        ],
+        "rights": [
+          "Museum/fashion references logged; visible third-party assets require exact rights."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-007",
+        "SRC-FR-008",
+        "SRC-FR-009"
+      ],
+      "decision_id": "DEC-victor_collar_cravat",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "victor_hand",
+      "category": "hand",
+      "importance": "HERO",
+      "shot_ids": [
+        "victor_at_door",
+        "galvanic_contact",
+        "recoil_tableau"
+      ],
+      "purpose": "Carry fear/control through believable hand anatomy, grip and gesture.",
+      "checklist_profile": "anatomy",
+      "requirements": {
+        "story": [
+          "Anatomy/gesture must communicate the intended action or unease."
+        ],
+        "period": [
+          "No period-specific constraint unless clothing/grooming overlaps."
+        ],
+        "visual": [
+          "Avoid simplified avatar anatomy in HERO views."
+        ],
+        "motion": [
+          "Joint motion, centre of mass and line of action must be plausible."
+        ],
+        "continuity": [
+          "Proportions and distinctive forms remain stable."
+        ],
+        "technical": [
+          "Hands/eyes/faces checked at final pixel size."
+        ],
+        "rights": [
+          "Source references and any visible source assets must have known provenance."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-victor_hand",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "victor_recoil_pose",
+      "category": "pose",
+      "importance": "HERO",
+      "shot_ids": [
+        "victor_at_door",
+        "recoil_tableau"
+      ],
+      "purpose": "Communicate the instant Victor rejects what he created through body weight and line of action.",
+      "checklist_profile": "anatomy",
+      "requirements": {
+        "story": [
+          "Anatomy/gesture must communicate the intended action or unease."
+        ],
+        "period": [
+          "No period-specific constraint unless clothing/grooming overlaps."
+        ],
+        "visual": [
+          "Avoid simplified avatar anatomy in HERO views."
+        ],
+        "motion": [
+          "Joint motion, centre of mass and line of action must be plausible."
+        ],
+        "continuity": [
+          "Proportions and distinctive forms remain stable."
+        ],
+        "technical": [
+          "Hands/eyes/faces checked at final pixel size."
+        ],
+        "rights": [
+          "Source references and any visible source assets must have known provenance."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-001"
+      ],
+      "decision_id": "DEC-victor_recoil_pose",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "creature_body_proportions",
+      "category": "creature_anatomy",
+      "importance": "HERO",
+      "shot_ids": [
+        "creation_chamber",
+        "recoil_tableau"
+      ],
+      "purpose": "Create an uncanny but anatomically coherent body based on the novel rather than later film clichés.",
+      "checklist_profile": "anatomy",
+      "requirements": {
+        "story": [
+          "Anatomy/gesture must communicate the intended action or unease."
+        ],
+        "period": [
+          "No period-specific constraint unless clothing/grooming overlaps."
+        ],
+        "visual": [
+          "Avoid simplified avatar anatomy in HERO views."
+        ],
+        "motion": [
+          "Joint motion, centre of mass and line of action must be plausible."
+        ],
+        "continuity": [
+          "Proportions and distinctive forms remain stable."
+        ],
+        "technical": [
+          "Hands/eyes/faces checked at final pixel size."
+        ],
+        "rights": [
+          "Source references and any visible source assets must have known provenance."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-001"
+      ],
+      "decision_id": "DEC-creature_body_proportions",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "creature_head_shape",
+      "category": "creature_anatomy",
+      "importance": "HERO",
+      "shot_ids": [
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "purpose": "Define a distinctive gaunt head that survives extreme close-up without copying later movie monsters.",
+      "checklist_profile": "anatomy",
+      "requirements": {
+        "story": [
+          "Anatomy/gesture must communicate the intended action or unease."
+        ],
+        "period": [
+          "No period-specific constraint unless clothing/grooming overlaps."
+        ],
+        "visual": [
+          "Avoid simplified avatar anatomy in HERO views."
+        ],
+        "motion": [
+          "Joint motion, centre of mass and line of action must be plausible."
+        ],
+        "continuity": [
+          "Proportions and distinctive forms remain stable."
+        ],
+        "technical": [
+          "Hands/eyes/faces checked at final pixel size."
+        ],
+        "rights": [
+          "Source references and any visible source assets must have known provenance."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-001"
+      ],
+      "decision_id": "DEC-creature_head_shape",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "creature_hair",
+      "category": "hair",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "purpose": "Use long dark hair as a source-aligned identity cue and framing device.",
+      "checklist_profile": "anatomy",
+      "requirements": {
+        "story": [
+          "Anatomy/gesture must communicate the intended action or unease."
+        ],
+        "period": [
+          "No period-specific constraint unless clothing/grooming overlaps."
+        ],
+        "visual": [
+          "Avoid simplified avatar anatomy in HERO views."
+        ],
+        "motion": [
+          "Joint motion, centre of mass and line of action must be plausible."
+        ],
+        "continuity": [
+          "Proportions and distinctive forms remain stable."
+        ],
+        "technical": [
+          "Hands/eyes/faces checked at final pixel size."
+        ],
+        "rights": [
+          "Source references and any visible source assets must have known provenance."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-001"
+      ],
+      "decision_id": "DEC-creature_hair",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "creature_eye",
+      "category": "face_detail",
+      "importance": "HERO",
+      "shot_ids": [
+        "first_eye"
+      ],
+      "purpose": "Deliver the awakening beat through one believable, disturbing eye rather than an effect-first monster eye.",
+      "checklist_profile": "anatomy",
+      "requirements": {
+        "story": [
+          "Anatomy/gesture must communicate the intended action or unease."
+        ],
+        "period": [
+          "No period-specific constraint unless clothing/grooming overlaps."
+        ],
+        "visual": [
+          "Avoid simplified avatar anatomy in HERO views."
+        ],
+        "motion": [
+          "Joint motion, centre of mass and line of action must be plausible."
+        ],
+        "continuity": [
+          "Proportions and distinctive forms remain stable."
+        ],
+        "technical": [
+          "Hands/eyes/faces checked at final pixel size."
+        ],
+        "rights": [
+          "Source references and any visible source assets must have known provenance."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-001"
+      ],
+      "decision_id": "DEC-creature_eye",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "creature_rise_motion",
+      "category": "character_motion",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "recoil_tableau"
+      ],
+      "purpose": "Make the first rise feel heavy/alive and emotionally intelligent rather than zombie-like.",
+      "checklist_profile": "anatomy",
+      "requirements": {
+        "story": [
+          "Anatomy/gesture must communicate the intended action or unease."
+        ],
+        "period": [
+          "No period-specific constraint unless clothing/grooming overlaps."
+        ],
+        "visual": [
+          "Avoid simplified avatar anatomy in HERO views."
+        ],
+        "motion": [
+          "Joint motion, centre of mass and line of action must be plausible."
+        ],
+        "continuity": [
+          "Proportions and distinctive forms remain stable."
+        ],
+        "technical": [
+          "Hands/eyes/faces checked at final pixel size."
+        ],
+        "rights": [
+          "Source references and any visible source assets must have known provenance."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-creature_rise_motion",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "voltaic_pile",
+      "category": "apparatus",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "creation_chamber",
+        "galvanic_contact",
+        "recoil_tableau"
+      ],
+      "purpose": "Provide historically plausible galvanic apparatus geometry that reads clearly in macro and wide shots.",
+      "checklist_profile": "apparatus",
+      "requirements": {
+        "story": [
+          "Must support Victor's experiment and the dramatic beat, not merely read as generic science."
+        ],
+        "period": [
+          "Use early-19th-century electrical/galvanic forms as evidence; distinguish fiction from historical fact."
+        ],
+        "visual": [
+          "Materials and construction logic readable in engraving style."
+        ],
+        "motion": [
+          "Controls/contact points/arcs must originate from plausible geometry."
+        ],
+        "continuity": [
+          "Same apparatus identity between wide and macro shots."
+        ],
+        "technical": [
+          "Small terminals/wires remain legible without visual clutter."
+        ],
+        "rights": [
+          "Museum/primary technical sources logged separately from image reuse rights."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-004",
+        "SRC-FR-006"
+      ],
+      "decision_id": "DEC-voltaic_pile",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "leyden_jar_primary",
+      "category": "apparatus",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "creation_chamber",
+        "galvanic_contact"
+      ],
+      "purpose": "Provide a credible charge-storage form with period materials/construction.",
+      "checklist_profile": "apparatus",
+      "requirements": {
+        "story": [
+          "Must support Victor's experiment and the dramatic beat, not merely read as generic science."
+        ],
+        "period": [
+          "Use early-19th-century electrical/galvanic forms as evidence; distinguish fiction from historical fact."
+        ],
+        "visual": [
+          "Materials and construction logic readable in engraving style."
+        ],
+        "motion": [
+          "Controls/contact points/arcs must originate from plausible geometry."
+        ],
+        "continuity": [
+          "Same apparatus identity between wide and macro shots."
+        ],
+        "technical": [
+          "Small terminals/wires remain legible without visual clutter."
+        ],
+        "rights": [
+          "Museum/primary technical sources logged separately from image reuse rights."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-004",
+        "SRC-FR-005"
+      ],
+      "decision_id": "DEC-leyden_jar_primary",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "leyden_jar_secondary",
+      "category": "apparatus",
+      "importance": "SUPPORT",
+      "shot_ids": [
+        "galvanic_contact"
+      ],
+      "purpose": "Support the electrical cluster without cloning the primary jar identically.",
+      "checklist_profile": "apparatus",
+      "requirements": {
+        "story": [
+          "Must support Victor's experiment and the dramatic beat, not merely read as generic science."
+        ],
+        "period": [
+          "Use early-19th-century electrical/galvanic forms as evidence; distinguish fiction from historical fact."
+        ],
+        "visual": [
+          "Materials and construction logic readable in engraving style."
+        ],
+        "motion": [
+          "Controls/contact points/arcs must originate from plausible geometry."
+        ],
+        "continuity": [
+          "Same apparatus identity between wide and macro shots."
+        ],
+        "technical": [
+          "Small terminals/wires remain legible without visual clutter."
+        ],
+        "rights": [
+          "Museum/primary technical sources logged separately from image reuse rights."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-004",
+        "SRC-FR-005"
+      ],
+      "decision_id": "DEC-leyden_jar_secondary",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "brass_contact",
+      "category": "apparatus_detail",
+      "importance": "HERO",
+      "shot_ids": [
+        "galvanic_contact"
+      ],
+      "purpose": "Create the exact tactile contact point that Victor manipulates at the shot's dramatic peak.",
+      "checklist_profile": "apparatus",
+      "requirements": {
+        "story": [
+          "Must support Victor's experiment and the dramatic beat, not merely read as generic science."
+        ],
+        "period": [
+          "Use early-19th-century electrical/galvanic forms as evidence; distinguish fiction from historical fact."
+        ],
+        "visual": [
+          "Materials and construction logic readable in engraving style."
+        ],
+        "motion": [
+          "Controls/contact points/arcs must originate from plausible geometry."
+        ],
+        "continuity": [
+          "Same apparatus identity between wide and macro shots."
+        ],
+        "technical": [
+          "Small terminals/wires remain legible without visual clutter."
+        ],
+        "rights": [
+          "Museum/primary technical sources logged separately from image reuse rights."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-004",
+        "SRC-FR-006"
+      ],
+      "decision_id": "DEC-brass_contact",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "copper_wire_network",
+      "category": "apparatus_detail",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "creation_chamber",
+        "galvanic_contact",
+        "recoil_tableau"
+      ],
+      "purpose": "Make electrical connectivity spatially plausible and compositionally useful.",
+      "checklist_profile": "apparatus",
+      "requirements": {
+        "story": [
+          "Must support Victor's experiment and the dramatic beat, not merely read as generic science."
+        ],
+        "period": [
+          "Use early-19th-century electrical/galvanic forms as evidence; distinguish fiction from historical fact."
+        ],
+        "visual": [
+          "Materials and construction logic readable in engraving style."
+        ],
+        "motion": [
+          "Controls/contact points/arcs must originate from plausible geometry."
+        ],
+        "continuity": [
+          "Same apparatus identity between wide and macro shots."
+        ],
+        "technical": [
+          "Small terminals/wires remain legible without visual clutter."
+        ],
+        "rights": [
+          "Museum/primary technical sources logged separately from image reuse rights."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-004",
+        "SRC-FR-006"
+      ],
+      "decision_id": "DEC-copper_wire_network",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "electric_arc",
+      "category": "effect",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "galvanic_contact",
+        "recoil_tableau"
+      ],
+      "purpose": "Translate charge into a brief cinematic event whose origin and endpoints remain visually plausible.",
+      "checklist_profile": "apparatus",
+      "requirements": {
+        "story": [
+          "Must support Victor's experiment and the dramatic beat, not merely read as generic science."
+        ],
+        "period": [
+          "Use early-19th-century electrical/galvanic forms as evidence; distinguish fiction from historical fact."
+        ],
+        "visual": [
+          "Materials and construction logic readable in engraving style."
+        ],
+        "motion": [
+          "Controls/contact points/arcs must originate from plausible geometry."
+        ],
+        "continuity": [
+          "Same apparatus identity between wide and macro shots."
+        ],
+        "technical": [
+          "Small terminals/wires remain legible without visual clutter."
+        ],
+        "rights": [
+          "Museum/primary technical sources logged separately from image reuse rights."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-004"
+      ],
+      "decision_id": "DEC-electric_arc",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "anatomy_pages",
+      "category": "scientific_document",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "galvanic_contact"
+      ],
+      "purpose": "Ground Victor's work in period scientific visual culture without inventing modern diagrams.",
+      "checklist_profile": "apparatus",
+      "requirements": {
+        "story": [
+          "Must support Victor's experiment and the dramatic beat, not merely read as generic science."
+        ],
+        "period": [
+          "Use early-19th-century electrical/galvanic forms as evidence; distinguish fiction from historical fact."
+        ],
+        "visual": [
+          "Materials and construction logic readable in engraving style."
+        ],
+        "motion": [
+          "Controls/contact points/arcs must originate from plausible geometry."
+        ],
+        "continuity": [
+          "Same apparatus identity between wide and macro shots."
+        ],
+        "technical": [
+          "Small terminals/wires remain legible without visual clutter."
+        ],
+        "rights": [
+          "Museum/primary technical sources logged separately from image reuse rights."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-004"
+      ],
+      "decision_id": "DEC-anatomy_pages",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "laboratory_fog",
+      "category": "atmosphere",
+      "importance": "SUPPORT",
+      "shot_ids": [
+        "creation_chamber",
+        "victor_at_door",
+        "recoil_tableau"
+      ],
+      "purpose": "Separate depth planes and thicken air without an unmotivated smoke-machine look.",
+      "checklist_profile": "atmosphere",
+      "requirements": {
+        "story": [
+          "Must intensify the current beat and depth, not function as a universal overlay."
+        ],
+        "period": [
+          "Weather/environment must be compatible with scene and setting."
+        ],
+        "visual": [
+          "Depth-aware density, direction and lighting response."
+        ],
+        "motion": [
+          "Movement follows wind/buoyancy/source and avoids mechanical looping."
+        ],
+        "continuity": [
+          "Direction/intensity coherent across adjacent shots unless motivated."
+        ],
+        "technical": [
+          "Stable under compression and deterministic."
+        ],
+        "rights": [
+          "Procedural by default; external texture/footage requires provenance."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-laboratory_fog",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "interior_lightning",
+      "category": "lighting_effect",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "creation_chamber",
+        "victor_at_door",
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "purpose": "Momentarily reveal forms and drive tension while remaining tied to the exterior storm.",
+      "checklist_profile": "atmosphere",
+      "requirements": {
+        "story": [
+          "Must intensify the current beat and depth, not function as a universal overlay."
+        ],
+        "period": [
+          "Weather/environment must be compatible with scene and setting."
+        ],
+        "visual": [
+          "Depth-aware density, direction and lighting response."
+        ],
+        "motion": [
+          "Movement follows wind/buoyancy/source and avoids mechanical looping."
+        ],
+        "continuity": [
+          "Direction/intensity coherent across adjacent shots unless motivated."
+        ],
+        "technical": [
+          "Stable under compression and deterministic."
+        ],
+        "rights": [
+          "Procedural by default; external texture/footage requires provenance."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-interior_lightning",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "creation_camera_drift",
+      "category": "camera",
+      "importance": "SUPPORT",
+      "shot_ids": [
+        "creation_chamber"
+      ],
+      "purpose": "Create subtle discovery motion across the tableau without making flat layers feel like a slideshow.",
+      "checklist_profile": "camera_edit",
+      "requirements": {
+        "story": [
+          "Every movement/cut must have a narrative reason."
+        ],
+        "period": [
+          "Not applicable except when modern visual grammar undermines the intended style."
+        ],
+        "visual": [
+          "Preserve focal hierarchy and engraving readability."
+        ],
+        "motion": [
+          "Easing/timing deliberate; no motion added only to avoid stillness."
+        ],
+        "continuity": [
+          "Screen direction and spatial relations remain coherent."
+        ],
+        "technical": [
+          "No unintended judder, crop failure or edge exposure."
+        ],
+        "rights": [
+          "No external asset dependency unless explicitly documented."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-creation_camera_drift",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "victor_door_shadow",
+      "category": "lighting_composition",
+      "importance": "HERO",
+      "shot_ids": [
+        "victor_at_door"
+      ],
+      "purpose": "Use doorway shadow to reveal only the facial information needed for fear and conceal weak/generic portrait cues.",
+      "checklist_profile": "camera_edit",
+      "requirements": {
+        "story": [
+          "Every movement/cut must have a narrative reason."
+        ],
+        "period": [
+          "Not applicable except when modern visual grammar undermines the intended style."
+        ],
+        "visual": [
+          "Preserve focal hierarchy and engraving readability."
+        ],
+        "motion": [
+          "Easing/timing deliberate; no motion added only to avoid stillness."
+        ],
+        "continuity": [
+          "Screen direction and spatial relations remain coherent."
+        ],
+        "technical": [
+          "No unintended judder, crop failure or edge exposure."
+        ],
+        "rights": [
+          "No external asset dependency unless explicitly documented."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-victor_door_shadow",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "first_eye_shadow_mask",
+      "category": "lighting_composition",
+      "importance": "HERO",
+      "shot_ids": [
+        "first_eye"
+      ],
+      "purpose": "Control the extreme close-up so eye, nose edge, cheek and hair emerge selectively from darkness.",
+      "checklist_profile": "camera_edit",
+      "requirements": {
+        "story": [
+          "Every movement/cut must have a narrative reason."
+        ],
+        "period": [
+          "Not applicable except when modern visual grammar undermines the intended style."
+        ],
+        "visual": [
+          "Preserve focal hierarchy and engraving readability."
+        ],
+        "motion": [
+          "Easing/timing deliberate; no motion added only to avoid stillness."
+        ],
+        "continuity": [
+          "Screen direction and spatial relations remain coherent."
+        ],
+        "technical": [
+          "No unintended judder, crop failure or edge exposure."
+        ],
+        "rights": [
+          "No external asset dependency unless explicitly documented."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-first_eye_shadow_mask",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "linen_closeup_edge",
+      "category": "cloth_detail",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "first_eye"
+      ],
+      "purpose": "Frame the creature close-up with tactile drapery and continuity from the chamber tableau.",
+      "checklist_profile": "anatomy",
+      "requirements": {
+        "story": [
+          "Anatomy/gesture must communicate the intended action or unease."
+        ],
+        "period": [
+          "No period-specific constraint unless clothing/grooming overlaps."
+        ],
+        "visual": [
+          "Avoid simplified avatar anatomy in HERO views."
+        ],
+        "motion": [
+          "Joint motion, centre of mass and line of action must be plausible."
+        ],
+        "continuity": [
+          "Proportions and distinctive forms remain stable."
+        ],
+        "technical": [
+          "Hands/eyes/faces checked at final pixel size."
+        ],
+        "rights": [
+          "Source references and any visible source assets must have known provenance."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-001"
+      ],
+      "decision_id": "DEC-linen_closeup_edge",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "lightning_cut",
+      "category": "transition",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "ingolstadt_storm"
+      ],
+      "purpose": "Use a motivated flash to cut from exterior to interior without a decorative transition template.",
+      "checklist_profile": "camera_edit",
+      "requirements": {
+        "story": [
+          "Every movement/cut must have a narrative reason."
+        ],
+        "period": [
+          "Not applicable except when modern visual grammar undermines the intended style."
+        ],
+        "visual": [
+          "Preserve focal hierarchy and engraving readability."
+        ],
+        "motion": [
+          "Easing/timing deliberate; no motion added only to avoid stillness."
+        ],
+        "continuity": [
+          "Screen direction and spatial relations remain coherent."
+        ],
+        "technical": [
+          "No unintended judder, crop failure or edge exposure."
+        ],
+        "rights": [
+          "No external asset dependency unless explicitly documented."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-lightning_cut",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "shadow_cut",
+      "category": "transition",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "victor_at_door"
+      ],
+      "purpose": "Let encroaching shadow carry the cut from Victor to apparatus.",
+      "checklist_profile": "camera_edit",
+      "requirements": {
+        "story": [
+          "Every movement/cut must have a narrative reason."
+        ],
+        "period": [
+          "Not applicable except when modern visual grammar undermines the intended style."
+        ],
+        "visual": [
+          "Preserve focal hierarchy and engraving readability."
+        ],
+        "motion": [
+          "Easing/timing deliberate; no motion added only to avoid stillness."
+        ],
+        "continuity": [
+          "Screen direction and spatial relations remain coherent."
+        ],
+        "technical": [
+          "No unintended judder, crop failure or edge exposure."
+        ],
+        "rights": [
+          "No external asset dependency unless explicitly documented."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-shadow_cut",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "arc_match_cut",
+      "category": "transition",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "galvanic_contact"
+      ],
+      "purpose": "Use the electric arc's shape/brightness to motivate the match into the eye awakening.",
+      "checklist_profile": "camera_edit",
+      "requirements": {
+        "story": [
+          "Every movement/cut must have a narrative reason."
+        ],
+        "period": [
+          "Not applicable except when modern visual grammar undermines the intended style."
+        ],
+        "visual": [
+          "Preserve focal hierarchy and engraving readability."
+        ],
+        "motion": [
+          "Easing/timing deliberate; no motion added only to avoid stillness."
+        ],
+        "continuity": [
+          "Screen direction and spatial relations remain coherent."
+        ],
+        "technical": [
+          "No unintended judder, crop failure or edge exposure."
+        ],
+        "rights": [
+          "No external asset dependency unless explicitly documented."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-arc_match_cut",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "title_frankenstein",
+      "category": "typography",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "recoil_tableau"
+      ],
+      "purpose": "Resolve the film with a title treatment deliberately tied to the chosen 1818/1831 publication-art direction.",
+      "checklist_profile": "typography",
+      "requirements": {
+        "story": [
+          "Typography must reinforce the exact novel/edition relationship and final beat."
+        ],
+        "period": [
+          "Hierarchy/proportion informed by a deliberately chosen publication-era direction."
+        ],
+        "visual": [
+          "Kerning, spacing, contrast and scale belong to the Living Engraving image."
+        ],
+        "motion": [
+          "Appearance/disappearance timed to narrative resolution."
+        ],
+        "continuity": [
+          "Title/subtitle system consistent."
+        ],
+        "technical": [
+          "Safe area and legibility verified at target sizes."
+        ],
+        "rights": [
+          "Typeface licence and historical reference provenance recorded."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-003"
+      ],
+      "decision_id": "DEC-title_frankenstein",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "subtitle_modern_prometheus",
+      "category": "typography",
+      "importance": "SUPPORT",
+      "shot_ids": [
+        "recoil_tableau"
+      ],
+      "purpose": "Support the title hierarchy with period-aware spacing and a deliberate decision about source wording.",
+      "checklist_profile": "typography",
+      "requirements": {
+        "story": [
+          "Typography must reinforce the exact novel/edition relationship and final beat."
+        ],
+        "period": [
+          "Hierarchy/proportion informed by a deliberately chosen publication-era direction."
+        ],
+        "visual": [
+          "Kerning, spacing, contrast and scale belong to the Living Engraving image."
+        ],
+        "motion": [
+          "Appearance/disappearance timed to narrative resolution."
+        ],
+        "continuity": [
+          "Title/subtitle system consistent."
+        ],
+        "technical": [
+          "Safe area and legibility verified at target sizes."
+        ],
+        "rights": [
+          "Typeface licence and historical reference provenance recorded."
+        ]
+      },
+      "source_ids": [
+        "SRC-FR-003"
+      ],
+      "decision_id": "DEC-subtitle_modern_prometheus",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "audio_low_drone",
+      "category": "audio_music",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "ingolstadt_storm",
+        "creation_chamber",
+        "victor_at_door",
+        "galvanic_contact",
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "purpose": "Carry dread under the sequence without becoming generic trailer ambience.",
+      "checklist_profile": "audio",
+      "requirements": {
+        "story": [
+          "Cue must perform a specific narrative/spatial/emotional job."
+        ],
+        "period": [
+          "Avoid obviously anachronistic diegetic sounds unless deliberately stylised."
+        ],
+        "visual": [
+          "N/A; synchronization must reinforce visible/off-screen cause."
+        ],
+        "motion": [
+          "Envelope, timing, rhythm and stereo placement deliberate."
+        ],
+        "continuity": [
+          "Acoustic space and motif identity persist logically."
+        ],
+        "technical": [
+          "48 kHz stereo baseline; no clipping; intelligible against speech/music."
+        ],
+        "rights": [
+          "Procedural/original or exact audio licence/provenance required."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-audio_low_drone",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "audio_noise_roomtone",
+      "category": "audio_ambience",
+      "importance": "SUPPORT",
+      "shot_ids": [
+        "ingolstadt_storm",
+        "creation_chamber",
+        "victor_at_door",
+        "galvanic_contact",
+        "first_eye",
+        "recoil_tableau"
+      ],
+      "purpose": "Maintain continuous acoustic space beneath event cues.",
+      "checklist_profile": "audio",
+      "requirements": {
+        "story": [
+          "Cue must perform a specific narrative/spatial/emotional job."
+        ],
+        "period": [
+          "Avoid obviously anachronistic diegetic sounds unless deliberately stylised."
+        ],
+        "visual": [
+          "N/A; synchronization must reinforce visible/off-screen cause."
+        ],
+        "motion": [
+          "Envelope, timing, rhythm and stereo placement deliberate."
+        ],
+        "continuity": [
+          "Acoustic space and motif identity persist logically."
+        ],
+        "technical": [
+          "48 kHz stereo baseline; no clipping; intelligible against speech/music."
+        ],
+        "rights": [
+          "Procedural/original or exact audio licence/provenance required."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-audio_noise_roomtone",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "thunder_cues",
+      "category": "audio_weather",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "ingolstadt_storm",
+        "recoil_tableau"
+      ],
+      "purpose": "Connect lightning events to believable distant/near storm impacts and editorial rhythm.",
+      "checklist_profile": "audio",
+      "requirements": {
+        "story": [
+          "Cue must perform a specific narrative/spatial/emotional job."
+        ],
+        "period": [
+          "Avoid obviously anachronistic diegetic sounds unless deliberately stylised."
+        ],
+        "visual": [
+          "N/A; synchronization must reinforce visible/off-screen cause."
+        ],
+        "motion": [
+          "Envelope, timing, rhythm and stereo placement deliberate."
+        ],
+        "continuity": [
+          "Acoustic space and motif identity persist logically."
+        ],
+        "technical": [
+          "48 kHz stereo baseline; no clipping; intelligible against speech/music."
+        ],
+        "rights": [
+          "Procedural/original or exact audio licence/provenance required."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-thunder_cues",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "footstep_cues",
+      "category": "foley",
+      "importance": "SUPPORT",
+      "shot_ids": [
+        "creation_chamber"
+      ],
+      "purpose": "Give Victor's movement material weight and room scale.",
+      "checklist_profile": "audio",
+      "requirements": {
+        "story": [
+          "Cue must perform a specific narrative/spatial/emotional job."
+        ],
+        "period": [
+          "Avoid obviously anachronistic diegetic sounds unless deliberately stylised."
+        ],
+        "visual": [
+          "N/A; synchronization must reinforce visible/off-screen cause."
+        ],
+        "motion": [
+          "Envelope, timing, rhythm and stereo placement deliberate."
+        ],
+        "continuity": [
+          "Acoustic space and motif identity persist logically."
+        ],
+        "technical": [
+          "48 kHz stereo baseline; no clipping; intelligible against speech/music."
+        ],
+        "rights": [
+          "Procedural/original or exact audio licence/provenance required."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-footstep_cues",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "electrical_crackle_audio",
+      "category": "audio_effect",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "creation_chamber",
+        "galvanic_contact"
+      ],
+      "purpose": "Create localized unstable electrical texture synchronized to apparatus activity.",
+      "checklist_profile": "audio",
+      "requirements": {
+        "story": [
+          "Cue must perform a specific narrative/spatial/emotional job."
+        ],
+        "period": [
+          "Avoid obviously anachronistic diegetic sounds unless deliberately stylised."
+        ],
+        "visual": [
+          "N/A; synchronization must reinforce visible/off-screen cause."
+        ],
+        "motion": [
+          "Envelope, timing, rhythm and stereo placement deliberate."
+        ],
+        "continuity": [
+          "Acoustic space and motif identity persist logically."
+        ],
+        "technical": [
+          "48 kHz stereo baseline; no clipping; intelligible against speech/music."
+        ],
+        "rights": [
+          "Procedural/original or exact audio licence/provenance required."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-electrical_crackle_audio",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "arc_hit_audio",
+      "category": "audio_effect",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "galvanic_contact"
+      ],
+      "purpose": "Give each visual arc a short, non-repetitive transient impact.",
+      "checklist_profile": "audio",
+      "requirements": {
+        "story": [
+          "Cue must perform a specific narrative/spatial/emotional job."
+        ],
+        "period": [
+          "Avoid obviously anachronistic diegetic sounds unless deliberately stylised."
+        ],
+        "visual": [
+          "N/A; synchronization must reinforce visible/off-screen cause."
+        ],
+        "motion": [
+          "Envelope, timing, rhythm and stereo placement deliberate."
+        ],
+        "continuity": [
+          "Acoustic space and motif identity persist logically."
+        ],
+        "technical": [
+          "48 kHz stereo baseline; no clipping; intelligible against speech/music."
+        ],
+        "rights": [
+          "Procedural/original or exact audio licence/provenance required."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-arc_hit_audio",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "victor_breath",
+      "category": "character_audio",
+      "importance": "PRIMARY",
+      "shot_ids": [
+        "victor_at_door"
+      ],
+      "purpose": "Make Victor's fear bodily and intimate without narration.",
+      "checklist_profile": "audio",
+      "requirements": {
+        "story": [
+          "Cue must perform a specific narrative/spatial/emotional job."
+        ],
+        "period": [
+          "Avoid obviously anachronistic diegetic sounds unless deliberately stylised."
+        ],
+        "visual": [
+          "N/A; synchronization must reinforce visible/off-screen cause."
+        ],
+        "motion": [
+          "Envelope, timing, rhythm and stereo placement deliberate."
+        ],
+        "continuity": [
+          "Acoustic space and motif identity persist logically."
+        ],
+        "technical": [
+          "48 kHz stereo baseline; no clipping; intelligible against speech/music."
+        ],
+        "rights": [
+          "Procedural/original or exact audio licence/provenance required."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-victor_breath",
+      "status": "NEEDS_REVALIDATION"
+    },
+    {
+      "id": "creature_heartbeat",
+      "category": "character_audio",
+      "importance": "HERO",
+      "shot_ids": [
+        "first_eye"
+      ],
+      "purpose": "Make the first sign of life visceral and pace the awakening close-up.",
+      "checklist_profile": "audio",
+      "requirements": {
+        "story": [
+          "Cue must perform a specific narrative/spatial/emotional job."
+        ],
+        "period": [
+          "Avoid obviously anachronistic diegetic sounds unless deliberately stylised."
+        ],
+        "visual": [
+          "N/A; synchronization must reinforce visible/off-screen cause."
+        ],
+        "motion": [
+          "Envelope, timing, rhythm and stereo placement deliberate."
+        ],
+        "continuity": [
+          "Acoustic space and motif identity persist logically."
+        ],
+        "technical": [
+          "48 kHz stereo baseline; no clipping; intelligible against speech/music."
+        ],
+        "rights": [
+          "Procedural/original or exact audio licence/provenance required."
+        ]
+      },
+      "source_ids": [],
+      "decision_id": "DEC-creature_heartbeat",
+      "status": "NEEDS_REVALIDATION"
+    }
+  ]
+}
