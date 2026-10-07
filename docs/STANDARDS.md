@@ -134,3 +134,18 @@ HERO Items should normally score >= 8 on every applicable critical dimension.
 A shot cannot be locked while any HERO Item is not `FINAL_APPROVED`, any PRIMARY Item lacks continuity approval, or a visible Item remains blocked, unknown-rights or `NEEDS_REVALIDATION`.
 
 See `docs/production/ITEM_GOVERNANCE.md`.
+
+## Adaptability and learning
+
+### Best-fit decisions, not doctrine
+- The universal system must not hardcode a particular novel, edition, style, renderer, asset, camera language or POV ratio unless that is an intentional episode-level decision.
+- During development, source/style/asset choices remain revisable when a demonstrably better solution appears.
+- Final reproducibility requires explicit decisions; it does not require preserving an inferior earlier decision.
+
+### Learn from weaknesses
+- Every material weakness should be analyzed for root cause and scope.
+- Reusable findings are promoted as EPISODE, STYLE, CATEGORY or GLOBAL lessons.
+- A weakness is not considered learned merely because it appears in a changelog.
+- Where appropriate, the lesson must produce a prevention mechanism: validator/test, structured record, checklist, current-method rule, benchmark, or explicit episode-only note.
+- Do not overgeneralize one novel's facts into universal rules.
+- Successful improvements should also be analyzed and preserved when reusable.
