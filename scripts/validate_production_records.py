@@ -114,9 +114,16 @@ def main():
             if iid not in item_map:
                 err("source",f"source {sid} references unknown item {iid}")
 
-    designated=obl.get("designated_source_id")
-    if designated not in source_map:
-        err("source_fidelity",f"designated source {designated!r} not present in source registry")
+    contract=obl.get("source_contract",{})
+    candidate_source_ids=contract.get("candidate_source_ids",[])
+    for sid in candidate_source_ids:
+        if sid not in source_map:
+            err("source_contract",f"source contract references unknown candidate source {sid}")
+    selected_source_id=contract.get("selected_source_id")
+    if selected_source_id is not None and selected_source_id not in candidate_source_ids:
+        err("source_contract",f"selected source {selected_source_id} is not in candidate_source_ids")
+    if contract.get("mode")!="BEST_FIT_REVISABLE":
+        err("source_contract","source contract mode must be BEST_FIT_REVISABLE")
 
     for o in obligations:
         oid=o.get("id")
@@ -216,12 +223,20 @@ def main():
                         if key in scores and scores[key]<8:
                             err("hard_gate",f"{iid}: selected candidate fails {key}={scores[key]}")
 
-        for o in obligations:
-            state=o.get("current_treatment","")
-            if o.get("importance")=="HERO" and state in UNRESOLVED_OBLIGATION_STATES:
-                err("source_fidelity",f"{o['id']}: unresolved HERO obligation ({state})")
-            if "CONTRADICTION" in state:
-                err("source_fidelity",f"{o['id']}: explicit source contradiction")
+        if contract.get("status")!="LOCKED" or not selected_source_id:
+            err("source_contract","final master requires a deliberately LOCKED source contract with a selected source")
+        else:
+            for o in obligations:
+                applicability=o.get("applicability",{})
+                sources=set(applicability.get("source_ids") or o.get("source_ids",[]))
+                applies=(applicability.get("type")=="COMMON_ACROSS_CANDIDATES" or selected_source_id in sources)
+                if not applies:
+                    continue
+                state=o.get("current_treatment","")
+                if o.get("importance")=="HERO" and state in UNRESOLVED_OBLIGATION_STATES:
+                    err("source_fidelity",f"{o['id']}: unresolved HERO obligation for selected source ({state})")
+                if "CONTRADICTION" in state:
+                    err("source_fidelity",f"{o['id']}: explicit source contradiction")
 
     if errors:
         detail=max(0,args.max_detail)
