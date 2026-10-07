@@ -31,6 +31,12 @@ jobs:
           npm install --no-save playwright@1.55.0
           npx playwright install --with-deps chromium
 
+      - name: Stage Draco decoder
+        working-directory: production/rigged3d
+        run: |
+          mkdir -p public/draco
+          cp node_modules/three/examples/jsm/libs/draco/gltf/* public/draco/
+
       - name: Download pinned ready assets
         run: |
           set -eux
