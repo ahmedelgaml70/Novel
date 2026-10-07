@@ -560,6 +560,98 @@
       "discovered_at": "2026-10-07",
       "status": "SUPPORTING_REFERENCE",
       "notes": "Useful to compare long-lived city massing/landmarks; too early to define the final story-period skyline by itself."
+    },
+    {
+      "id": "SRC-FR-018",
+      "title": "Coat — European, ca. 1790",
+      "creator": null,
+      "date": "ca. 1790",
+      "provider": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/172095",
+      "roles": [
+        "MUSEUM_OBJECT",
+        "COSTUME_REFERENCE",
+        "ASSET_CANDIDATE_SOURCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "victor_coat",
+        "victor_silhouette",
+        "victor_collar_cravat"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN_OPEN_ACCESS",
+        "commercial_asset_use": "ELIGIBLE",
+        "evidence_url": "https://www.metmuseum.org/art/collection/search/172095"
+      },
+      "quality": {
+        "authority": "HIGH",
+        "period_proximity": "DIEGETIC_LATE_18TH_CENTURY_CANDIDATE"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "ACTIVE_REFERENCE",
+      "notes": "Useful if Victor's costume follows the late-18th-century diegetic frame rather than publication-era dress. Surviving object evidence; still requires character/social/shot fit."
+    },
+    {
+      "id": "SRC-FR-019",
+      "title": "Frock coat — French, ca. 1790",
+      "creator": null,
+      "date": "ca. 1790",
+      "provider": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/91877",
+      "roles": [
+        "MUSEUM_OBJECT",
+        "COSTUME_REFERENCE",
+        "ASSET_CANDIDATE_SOURCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "victor_coat",
+        "victor_silhouette"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN_OPEN_ACCESS",
+        "commercial_asset_use": "ELIGIBLE",
+        "evidence_url": "https://www.metmuseum.org/art/collection/search/91877"
+      },
+      "quality": {
+        "authority": "HIGH",
+        "period_proximity": "DIEGETIC_LATE_18TH_CENTURY_CANDIDATE"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "ACTIVE_REFERENCE",
+      "notes": "Alternative late-18th-century coat silhouette. Use as candidate/reference, not automatic Victor costume."
+    },
+    {
+      "id": "SRC-FR-020",
+      "title": "Waistcoat — European, 1785–1800",
+      "creator": null,
+      "date": "1785-1800",
+      "provider": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/art/collection/search/90784",
+      "roles": [
+        "MUSEUM_OBJECT",
+        "COSTUME_REFERENCE",
+        "ASSET_CANDIDATE_SOURCE",
+        "RIGHTS_EVIDENCE"
+      ],
+      "supports_item_ids": [
+        "victor_collar_cravat",
+        "victor_silhouette",
+        "victor_coat"
+      ],
+      "rights": {
+        "status": "PUBLIC_DOMAIN_OPEN_ACCESS",
+        "commercial_asset_use": "ELIGIBLE",
+        "evidence_url": "https://www.metmuseum.org/art/collection/search/90784"
+      },
+      "quality": {
+        "authority": "HIGH",
+        "period_proximity": "DIEGETIC_LATE_18TH_CENTURY_CANDIDATE"
+      },
+      "discovered_at": "2026-10-07",
+      "status": "ACTIVE_REFERENCE",
+      "notes": "Useful for waist/neck/chest layering and period silhouette; decorative details should not be copied blindly."
     }
   ]
 }
