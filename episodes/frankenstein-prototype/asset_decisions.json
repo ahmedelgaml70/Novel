@@ -376,12 +376,39 @@
     {
       "id": "DEC-victor_silhouette",
       "item_id": "victor_silhouette",
-      "requirements_locked_before_search": false,
-      "candidates": [],
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "VICTOR-SIL-D-v53-full-body-engraved-recoil",
+          "origin": "BESPOKE_GENERATED_REFERENCE_SYNTHESIS",
+          "source_ids": [
+            "SRC-FR-001",
+            "SRC-FR-014",
+            "SRC-FR-018",
+            "SRC-FR-019",
+            "SRC-FR-020"
+          ],
+          "status": "MEDIUM_SCALE_SHOT_TESTED_PREFERRED_PROVISIONAL",
+          "scores": {
+            "story_specificity": 9,
+            "source_fidelity": 8,
+            "period_fit": 8,
+            "style_fit": 10,
+            "shot_fit": 9,
+            "continuity_fit": 8,
+            "animation_suitability": 7,
+            "technical_quality": 9,
+            "rights_confidence": 6,
+            "originality_non_genericity": 9
+          },
+          "reason": "Strong period recoil silhouette at medium/full-body scale. The same source fails portrait-scale enlargement; that use is explicitly rejected and the close-up shot was redesigned."
+        }
+      ],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "decision_status": "MEDIUM_SCALE_PREFERRED_PROVISIONAL",
+      "why_selected_or_pending": "Prefer the full-body engraved Victor for medium/recoil shots only. Do not use it as a portrait source.",
+      "remaining_risk": "Final diegetic costume contract, clean source provenance and dedicated portrait solution if any future portrait shot is retained.",
+      "preferred_candidate_id": "VICTOR-SIL-D-v53-full-body-engraved-recoil"
     },
     {
       "id": "DEC-victor_head_profile",
@@ -519,12 +546,39 @@
     {
       "id": "DEC-victor_recoil_pose",
       "item_id": "victor_recoil_pose",
-      "requirements_locked_before_search": false,
-      "candidates": [],
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "VICTOR-POSE-D-v53-recoil-full-body",
+          "origin": "BESPOKE_GENERATED_REFERENCE_SYNTHESIS",
+          "source_ids": [
+            "SRC-FR-012",
+            "SRC-FR-013",
+            "SRC-FR-014",
+            "SRC-FR-018",
+            "SRC-FR-019"
+          ],
+          "status": "SHOT_TESTED_PREFERRED_PROVISIONAL",
+          "scores": {
+            "story_specificity": 10,
+            "source_fidelity": 9,
+            "period_fit": 8,
+            "style_fit": 10,
+            "shot_fit": 9,
+            "continuity_fit": 8,
+            "animation_suitability": 7,
+            "technical_quality": 9,
+            "rights_confidence": 6,
+            "originality_non_genericity": 9
+          },
+          "reason": "The actual medium doorway/recoil frame communicates withdrawal and fear far more convincingly than the primitive pose. Movement remains mainly rigid/whole-body rather than fully articulated."
+        }
+      ],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "decision_status": "SHOT_TEST_PREFERRED_PROVISIONAL",
+      "why_selected_or_pending": "Prefer VICTOR-POSE-D for the medium recoil language; keep final approval blocked by source/costume/provenance requirements.",
+      "remaining_risk": "Need final costume-time decision and clean source file.",
+      "preferred_candidate_id": "VICTOR-POSE-D-v53-recoil-full-body"
     },
     {
       "id": "DEC-creature_body_proportions",
@@ -584,12 +638,39 @@
             "rights_confidence": 10
           },
           "reason": "Excellent anatomy evidence but poor final creature asset: too clinical, not story-specific, and would make the film look like an imported anatomy plate. Retain only as design/reference evidence."
+        },
+        {
+          "candidate_id": "CBODY-D-v53-high-information-engraved-body",
+          "origin": "BESPOKE_GENERATED_REFERENCE_SYNTHESIS",
+          "source_ids": [
+            "SRC-FR-012",
+            "SRC-FR-013",
+            "SRC-FR-014",
+            "SRC-FR-015",
+            "SRC-FR-016",
+            "SRC-FR-001"
+          ],
+          "status": "SHOT_AND_MOTION_TESTED_PREFERRED_PROVISIONAL",
+          "scores": {
+            "story_specificity": 9,
+            "source_fidelity": 8,
+            "period_fit": 8,
+            "style_fit": 9,
+            "shot_fit": 9,
+            "continuity_fit": 8,
+            "animation_suitability": 6,
+            "technical_quality": 9,
+            "rights_confidence": 6,
+            "originality_non_genericity": 9
+          },
+          "reason": "Actual creation/recoil shot tests materially outperform the primitive body: proportionate human anatomy, flowing hair/drapery and engraved surface quality read correctly at wide/medium scale. Flat asset supports restrained breathing/lift only; independent limb convulsion remains unresolved. Generated-asset rights/provenance require final confirmation before approval."
         }
       ],
       "selected_candidate_id": null,
-      "decision_status": "CANDIDATES_COMPARED_REQUIRES_SHOT_TEST",
-      "why_selected_or_pending": "Two bespoke directions remain viable. Render A and B in the creation/recoil framing before selection; do not select from research scores alone.",
-      "remaining_risk": "Anatomy, silhouette, drapery interaction and delivery-size readability remain untested."
+      "decision_status": "SHOT_TEST_PREFERRED_PROVISIONAL",
+      "why_selected_or_pending": "Prefer CBODY-D for the current visual direction at wide/medium scale. Do not mark final until a clean individual source and required articulation/rights gates pass.",
+      "remaining_risk": "Independent limb convulsion, clean final source file and final rights review remain open.",
+      "preferred_candidate_id": "CBODY-D-v53-high-information-engraved-body"
     },
     {
       "id": "DEC-creature_head_shape",
@@ -643,12 +724,38 @@
             "rights_confidence": 10
           },
           "reason": "Blockheaded/scarred/deformed monster shorthand is rejected because it is generic, later-iconography driven, and conflicts with the source idea of proportionate limbs/features originally selected as beautiful."
+        },
+        {
+          "candidate_id": "CHEAD-D-v53-engraved-human-head",
+          "origin": "BESPOKE_GENERATED_REFERENCE_SYNTHESIS",
+          "source_ids": [
+            "SRC-FR-012",
+            "SRC-FR-013",
+            "SRC-FR-014",
+            "SRC-FR-015",
+            "SRC-FR-001"
+          ],
+          "status": "SHOT_AND_MOTION_TESTED_PREFERRED_PROVISIONAL",
+          "scores": {
+            "story_specificity": 9,
+            "source_fidelity": 9,
+            "period_fit": 8,
+            "style_fit": 10,
+            "shot_fit": 9,
+            "continuity_fit": 8,
+            "animation_suitability": 7,
+            "technical_quality": 9,
+            "rights_confidence": 6,
+            "originality_non_genericity": 9
+          },
+          "reason": "First-eye close-up reads as a proportionate human head made uncanny by complexion, socket, hair, shadow and animation rather than generic monster deformation. Passed close-up and eye-reveal motion tests."
         }
       ],
       "selected_candidate_id": null,
-      "decision_status": "CANDIDATES_COMPARED_REQUIRES_SHOT_TEST",
-      "why_selected_or_pending": "A and B require matched close-up tests under identical lighting/crop. No head direction is selected from concept description alone.",
-      "remaining_risk": "Face anatomy and expression may still feel illustrative or generic at final pixel size."
+      "decision_status": "SHOT_TEST_PREFERRED_PROVISIONAL",
+      "why_selected_or_pending": "Prefer CHEAD-D for current lookdev. It is visually stronger than primitive and generic-grotesque directions, but remains provisional pending clean final source/provenance.",
+      "remaining_risk": "Final alpha/source cleanup and continuity with the final full-body asset remain open.",
+      "preferred_candidate_id": "CHEAD-D-v53-engraved-human-head"
     },
     {
       "id": "DEC-creature_hair",
@@ -764,12 +871,37 @@
             "rights_confidence": 10
           },
           "reason": "Rejected despite visual punch: it turns the eye into a modern sci-fi/electrical trope and directly weakens the dull-yellow/watery source description."
+        },
+        {
+          "candidate_id": "CEYE-D-v53-real-engraved-eye-reveal",
+          "origin": "BESPOKE_GENERATED_REFERENCE_SYNTHESIS_PLUS_JS_OCCLUSION",
+          "source_ids": [
+            "SRC-FR-012",
+            "SRC-FR-013",
+            "SRC-FR-014",
+            "SRC-FR-015"
+          ],
+          "status": "SHOT_AND_MOTION_TESTED_PREFERRED_PROVISIONAL",
+          "scores": {
+            "story_specificity": 10,
+            "source_fidelity": 9,
+            "period_fit": 9,
+            "style_fit": 10,
+            "shot_fit": 10,
+            "continuity_fit": 8,
+            "animation_suitability": 9,
+            "technical_quality": 9,
+            "rights_confidence": 6,
+            "originality_non_genericity": 10
+          },
+          "reason": "Uses the real engraved eye and a JavaScript occlusion mask for closed->partial->open states. Avoids the rejected electric-blue-glow trope and preserves a dull yellow/watery reading. Passed start/mid/end motion frames after alpha-compositing fix."
         }
       ],
       "selected_candidate_id": null,
-      "decision_status": "CANDIDATES_COMPARED_REQUIRES_SHOT_TEST",
-      "why_selected_or_pending": "Render A and B at the exact first-eye crop, including shadow mask and motion. Select based on readability, dread and integration—not brightness.",
-      "remaining_risk": "Macro readability versus subtlety is unresolved."
+      "decision_status": "SHOT_TEST_PREFERRED_PROVISIONAL",
+      "why_selected_or_pending": "Prefer CEYE-D. Final approval waits for clean individual source/provenance and continuity with the final Creature head.",
+      "remaining_risk": "Rights/provenance and final head continuity are unresolved.",
+      "preferred_candidate_id": "CEYE-D-v53-real-engraved-eye-reveal"
     },
     {
       "id": "DEC-creature_rise_motion",
@@ -832,7 +964,7 @@
     {
       "id": "DEC-voltaic_pile",
       "item_id": "voltaic_pile",
-      "requirements_locked_before_search": false,
+      "requirements_locked_before_search": true,
       "candidates": [
         {
           "candidate_id": "current_bespoke_pile_v5_1",
@@ -900,17 +1032,41 @@
             "originality_non_genericity": 10
           },
           "reason": "Best period experimental visual vocabulary; particularly useful for contextualizing the fictional laboratory."
+        },
+        {
+          "candidate_id": "PILE-D-v53-high-information-apparatus",
+          "origin": "BESPOKE_GENERATED_REFERENCE_SYNTHESIS",
+          "source_ids": [
+            "SRC-FR-004",
+            "SRC-FR-006"
+          ],
+          "status": "SHOT_AND_MOTION_TESTED_PREFERRED_PROVISIONAL",
+          "scores": {
+            "story_specificity": 9,
+            "source_fidelity": 8,
+            "period_fit": 9,
+            "functional_accuracy": 8,
+            "style_fit": 10,
+            "shot_fit": 10,
+            "continuity_fit": 8,
+            "animation_suitability": 9,
+            "technical_quality": 9,
+            "rights_confidence": 6,
+            "originality_non_genericity": 9
+          },
+          "reason": "Macro shot gains substantially more engraved material/construction detail than the primitive pile. Interaction is now handled by a separate JS contact lever rather than forcing a contaminated hand asset."
         }
       ],
       "selected_candidate_id": null,
-      "decision_status": "CANDIDATES_COMPARED",
-      "why_selected_or_pending": "Refine the bespoke pile by synthesizing museum geometry and Aldini-era experimental visual language; then compare approval frames.",
-      "remaining_risk": "The novel does not specify one exact real apparatus; historical plausibility must not be misrepresented as canonical source detail."
+      "decision_status": "SHOT_TEST_PREFERRED_PROVISIONAL",
+      "why_selected_or_pending": "Prefer PILE-D for the macro visual direction, pending final-source/provenance and historical construction review.",
+      "remaining_risk": "Generated source/provenance and exact functional reconstruction still need final validation.",
+      "preferred_candidate_id": "PILE-D-v53-high-information-apparatus"
     },
     {
       "id": "DEC-leyden_jar_primary",
       "item_id": "leyden_jar_primary",
-      "requirements_locked_before_search": false,
+      "requirements_locked_before_search": true,
       "candidates": [
         {
           "candidate_id": "current_bespoke_jar_v5_1",
@@ -977,12 +1133,36 @@
             "originality_non_genericity": 10
           },
           "reason": "Strengthens period galvanism context and house-style integration."
+        },
+        {
+          "candidate_id": "JAR-D-v53-high-information-leyden-jar",
+          "origin": "BESPOKE_GENERATED_REFERENCE_SYNTHESIS",
+          "source_ids": [
+            "SRC-FR-004",
+            "SRC-FR-005"
+          ],
+          "status": "SHOT_AND_MOTION_TESTED_PREFERRED_PROVISIONAL",
+          "scores": {
+            "story_specificity": 8,
+            "source_fidelity": 8,
+            "period_fit": 9,
+            "functional_accuracy": 8,
+            "style_fit": 10,
+            "shot_fit": 9,
+            "continuity_fit": 8,
+            "animation_suitability": 9,
+            "technical_quality": 9,
+            "rights_confidence": 6,
+            "originality_non_genericity": 9
+          },
+          "reason": "The engraved jar integrates visually with the pile and passes the macro shot readability gate. Final historical construction details remain to be checked."
         }
       ],
       "selected_candidate_id": null,
-      "decision_status": "CANDIDATES_COMPARED",
-      "why_selected_or_pending": "Redraw/adjust the jar after construction-detail comparison; do not use the museum raster image under its standard noncommercial image licence.",
-      "remaining_risk": "Final geometry and shot fit still unapproved."
+      "decision_status": "SHOT_TEST_PREFERRED_PROVISIONAL",
+      "why_selected_or_pending": "Prefer JAR-D for current macro lookdev, but retain museum-based direction as the factual validation source.",
+      "remaining_risk": "Final functional/historical and generated-source rights review remain open.",
+      "preferred_candidate_id": "JAR-D-v53-high-information-leyden-jar"
     },
     {
       "id": "DEC-leyden_jar_secondary",
@@ -1064,12 +1244,37 @@
     {
       "id": "DEC-brass_contact",
       "item_id": "brass_contact",
-      "requirements_locked_before_search": false,
-      "candidates": [],
+      "requirements_locked_before_search": true,
+      "candidates": [
+        {
+          "candidate_id": "CONTACT-D-v53-js-brass-lever",
+          "origin": "BESPOKE_JS_GEOMETRY_FROM_PERIOD_APPARATUS_REQUIREMENTS",
+          "source_ids": [
+            "SRC-FR-004",
+            "SRC-FR-006"
+          ],
+          "status": "SHOT_AND_MOTION_TESTED_PREFERRED_PROVISIONAL",
+          "scores": {
+            "story_specificity": 9,
+            "source_fidelity": 8,
+            "period_fit": 9,
+            "functional_accuracy": 8,
+            "style_fit": 9,
+            "shot_fit": 10,
+            "continuity_fit": 10,
+            "animation_suitability": 10,
+            "technical_quality": 10,
+            "rights_confidence": 10,
+            "originality_non_genericity": 9
+          },
+          "reason": "The hand candidate was removed after failing isolation/shot fit. A simple brass lever/contact built in JS is more controllable, visually clean and functionally legible; it closes over time and directly anchors the electrical arc."
+        }
+      ],
       "selected_candidate_id": null,
-      "decision_status": "NEEDS_REVALIDATION",
-      "why_selected_or_pending": "V5.1 was created before atomic requirements-before-search and candidate-comparison governance. This Item must be deliberately revalidated before final use.",
-      "remaining_risk": "Prototype implementation must not be grandfathered into final production."
+      "decision_status": "SHOT_TEST_PREFERRED_PROVISIONAL",
+      "why_selected_or_pending": "Prefer CONTACT-D over the weak hand-driven interaction. Final historical geometry still needs factual review, but the shot mechanism itself passes.",
+      "remaining_risk": "Historical contact geometry is interpretive and should not be overclaimed as canonical apparatus.",
+      "preferred_candidate_id": "CONTACT-D-v53-js-brass-lever"
     },
     {
       "id": "DEC-copper_wire_network",
