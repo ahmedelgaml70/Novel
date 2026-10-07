@@ -30,9 +30,7 @@ jobs:
         run: |
           npm install --no-audit --no-fund
           npm install --no-save playwright@1.55.0
-          npx playwright install --with-deps chromium
-          sudo apt-get update
-          sudo apt-get install -y ffmpeg
+          google-chrome --version
 
       - name: Vendor Three.js Draco decoder
         working-directory: production/rigged3d
@@ -92,7 +90,13 @@ jobs:
           OUT_DIR: render-output-frankenstein
           DURATION: '8'
           FPS: '24'
+          BROWSER_CHANNEL: chrome
         run: node tools/capture_demo.mjs
+
+      - name: Install FFmpeg after capture
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
 
       - name: Encode MP4 and review contact sheet
         working-directory: production/rigged3d
