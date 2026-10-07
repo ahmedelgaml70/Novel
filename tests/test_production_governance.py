@@ -17,7 +17,16 @@ class ProductionGovernanceTests(unittest.TestCase):
         self.assertIn("62 items",p.stdout)
         self.assertIn("13 sources",p.stdout)
         self.assertIn("14 source obligations",p.stdout)
+        self.assertIn("9 reusable lessons",p.stdout)
         self.assertIn("STRUCTURAL GATE: PASS",p.stdout)
+
+    def test_source_contract_is_revisable_and_not_preselected(self):
+        import json
+        contract=json.loads((ROOT/"episodes/frankenstein-prototype/source_contract.json").read_text())
+        self.assertEqual(contract["mode"],"BEST_FIT_REVISABLE")
+        self.assertEqual(contract["status"],"OPEN")
+        self.assertIsNone(contract["selected_source_id"])
+        self.assertGreaterEqual(len(contract["candidates"]),2)
 
     def test_current_prototype_is_not_falsely_final(self):
         p=self.run_validator("--strict-final","--max-detail","5")
