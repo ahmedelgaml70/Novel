@@ -94,3 +94,20 @@ Each visual version must answer four questions:
 4. What new defect or ceiling became visible after the change?
 
 A version number is not earned by cosmetic code changes. It must represent a meaningful visual, methodological or pipeline improvement that is documented and reproducible.
+
+
+## V5.2.1 — Literary-source obligation layer
+
+**Goal:** prevent source-fidelity details from disappearing merely because no renderer Item existed for them.
+
+**Changed:**
+- designated the exact 1831 Project Gutenberg edition (#42324) as the prototype source text;
+- retained the 1818 Project Gutenberg edition (#41445) as comparative evidence;
+- added source obligations independent of visual-reference assets;
+- linked affected Items bidirectionally to those obligations;
+- upgraded strict-final validation to block unresolved HERO obligations and explicit source contradictions;
+- converted validator output from an unbounded error dump into detailed examples plus blocker-category totals.
+
+**Immediate findings:** the nearly exhausted candle is absent from the current render; hard breathing is underrepresented; the creature eye/skin treatment needs closer fidelity; and the galvanic apparatus is an interpretive historical reconstruction rather than a canonically specified machine.
+
+**Visual render:** none claimed. This version improves evidence/control for the next visual rebuild.
