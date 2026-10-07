@@ -2,7 +2,7 @@
 
 **Episode ID:** `frankenstein-prototype`  
 **Visual baseline:** Living Engraving V5.1, 24 seconds  
-**Governance method:** V5.2  
+**Governance method:** V5.2.2  
 **Status:** prototype benchmark / not final-asset approved
 
 This folder is the first worked example of the atomic production-governance method.
@@ -27,6 +27,7 @@ Use:
 
 - `item_inventory.json` to see what exists and what each Item must achieve;
 - `source_registry.json` to see the research/evidence trail;
+- `source_obligations.json` to see edition-bound literary constraints and the currently OPEN/revisable source contract;
 - `asset_decisions.json` to see candidate comparisons, rejections and unresolved choices;
 - `scene_manifest.json` to see the current 24-second shot/timing benchmark;
 - `VERSION_LOG.md` to see episode-specific defects and improvements.
@@ -38,3 +39,9 @@ Structural governance passes. Final-production approval does not.
 That is intentional: the validator must not confuse “documented” with “good enough to publish.”
 
 The next visual version is earned only after the highest-risk HERO/PRIMARY Items are re-researched, redesigned and approved under V5.2.
+
+## Generalization boundary
+
+Frankenstein is a worked example of the production system, not a template for other novels.
+
+The current source contract remains OPEN and compares multiple edition sources. No Frankenstein edition, Living Engraving style choice, asset or scene rule is allowed to become a universal requirement merely because it was useful in this benchmark.
