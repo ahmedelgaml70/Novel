@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "E-VID-005",
+  "policy": "Asset authoring method is chosen per Item. HERO assets require independent source files when clean isolation/animation matters.",
+  "candidates": [
+    {
+      "id": "ASSET-SHEET-001",
+      "kind": "generated_asset_sheet",
+      "status": "REJECTED_FOR_HERO_EXTRACTION",
+      "purpose": "Test whether one high-detail engraving sheet could supply multiple isolated production assets.",
+      "generation": {
+        "provider": "OpenAI image generation",
+        "generated_at": "2026-10-07",
+        "gen_id": "1bd0f4c9-30dd-4ae7-991f-8050957a2314",
+        "prompt_summary": "High-detail 19th-century gothic engraving asset sheet with creature, scientist, hand, window, laboratory table, apparatus and props."
+      },
+      "findings": {
+        "usable_or_promising": [
+          "creature reclining body",
+          "gothic window",
+          "large isolated hand"
+        ],
+        "failed_or_contaminated": [
+          "creature head",
+          "Victor recoil figure",
+          "apparatus"
+        ],
+        "reason": "Overlapping collage layout prevents reliable alpha-safe extraction of several HERO elements."
+      },
+      "decision": "Do not use the sheet as the canonical source for HERO assets. Regenerate/acquire hero elements individually."
+    }
+  ],
+  "next_required_individual_assets": [
+    "creature_full_body_reclining",
+    "creature_head_closeup",
+    "victor_recoil_full_body",
+    "victor_gripping_hand",
+    "ingolstadt_exterior_or_architectural_layer",
+    "galvanic_apparatus_contact_macro"
+  ]
+}
