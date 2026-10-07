@@ -245,3 +245,11 @@ When an Item is replaced:
 7. do not keep two active current selections for the same Item.
 
 The repository should always make it obvious what is current.
+
+## Learning closeout
+
+When an Item fails or an improvement materially succeeds, decide whether the finding is EPISODE, STYLE, CATEGORY or GLOBAL.
+
+A meaningful issue is not closed by replacement alone. Record the reusable lesson in the learning system when appropriate, including root cause, prevention and detection. Then encode the prevention in the strongest reasonable mechanism: validator/test, structured record, checklist, method rule, benchmark or episode-only note.
+
+Do not promote novel-specific facts into global rules. See `LEARNING_SYSTEM.md`.
