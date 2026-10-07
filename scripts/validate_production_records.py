@@ -79,6 +79,9 @@ def main():
     obligations=obl["obligations"]
     decisions=dec["decisions"]
 
+    active_items=[it for it in items if it.get("active_in_current_cut",True)]
+    inactive_items=[it for it in items if not it.get("active_in_current_cut",True)]
+
     item_map={}
     source_map={}
     obligation_map={}
@@ -238,7 +241,7 @@ def main():
             err("temporal_context","invalid temporal-context status")
 
     if args.strict_final:
-        for it in items:
+        for it in active_items:
             if it["importance"] not in FINAL_REQUIRED:
                 continue
             iid=it["id"]
@@ -287,9 +290,9 @@ def main():
         return 2
 
     print(
-        f"OK: {len(items)} items, {len(sources)} sources, "
-        f"{len(obligations)} source obligations, {len(decisions)} decisions, "
-        f"{len(lessons)} reusable lessons, {len(shot_ids)} shots"
+        f"OK: {len(items)} items ({len(active_items)} active, {len(inactive_items)} inactive-history), "
+        f"{len(sources)} sources, {len(obligations)} source obligations, "
+        f"{len(decisions)} decisions, {len(lessons)} reusable lessons, {len(shot_ids)} shots"
     )
     print("STRICT FINAL GATE: PASS" if args.strict_final else
           "STRUCTURAL GATE: PASS (this does not imply final asset approval)")
