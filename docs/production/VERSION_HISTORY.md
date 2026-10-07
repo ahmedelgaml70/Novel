@@ -196,3 +196,21 @@ A version number is not earned by cosmetic code changes. It must represent a mea
 **Current rule:** no full V5.3 film is promoted until HERO-shot locks pass.
 
 **Visual render:** partial lookdev and motion tests only. V5.1 remains the last complete baseline.
+
+## V5.4.0-dev — Ready-rigged real-animation pivot
+
+**Trigger:** V5.3 hybrid assets improved illustration quality but still could not solve genuine articulated character performance.
+
+**Problem identified:** a flattened image can be moved, warped and masked, but it is still not a real animated actor.
+
+**New constraint:** do not build rigs, locomotion cycles, recoil cycles, rooms or furniture when compatible free ready assets already exist.
+
+**Primary proof stack:** Quaternius Universal Base Characters + Universal Animation Library + Universal Animation Library 2 + compatible ready outfits/environments/props, rendered through Three.js.
+
+**Fallback:** KayKit humanoids/animations, Kenney environments, Poly Haven HERO props.
+
+**First test:** E-VID-006, an 8–10 second real-animation proof using only ready rigged characters and ready animation clips for the core performance.
+
+**Style policy:** prove real skeletal motion first with simple toon/outline rendering. Do not spend time on a custom engraving shader until the animation gate passes.
+
+**Visual render:** not yet claimed. V5.4-dev is an architectural pivot and test definition.
