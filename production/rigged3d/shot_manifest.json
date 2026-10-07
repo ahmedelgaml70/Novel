@@ -8,8 +8,8 @@
     "ready_asset_first": true
   },
   "assets": {
-    "actor_a": "/assets/human_a.glb",
-    "actor_b": "/assets/human_b.glb",
+    "actor_a": "/assets/human_male.glb",
+    "actor_b": "/assets/human_male.glb",
     "environment": "/assets/environment.glb"
   },
   "beats": [
