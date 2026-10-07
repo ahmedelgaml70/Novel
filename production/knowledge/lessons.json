@@ -423,6 +423,32 @@
       "confidence": "HIGH",
       "status": "ENCODED",
       "superseded_by": null
+    },
+    {
+      "id": "LESSON-017",
+      "title": "High-quality cutout art still needs physical integration into the set",
+      "scope": "CATEGORY",
+      "source_context": [
+        "V5.3 Victor doorway and chamber integration"
+      ],
+      "observed_weakness": "The imported Victor figure initially looked like a picture pasted inside a rectangular frame even though the source art itself was high quality.",
+      "evidence": [
+        "Replacing the rectangular door with an arched architectural opening and clipping/occluding Victor inside it produced a more spatially credible frame.",
+        "The improvement came from set/character integration rather than from changing the Victor asset."
+      ],
+      "root_cause": "Asset quality and compositing quality were evaluated separately; the scene lacked architectural occlusion and grounding cues.",
+      "consequence": "Good source art can still read as collage/sticker art.",
+      "prevention_rule": "Integrate characters through architecture, occlusion, contact shadows, floor relationship and local light. Do not treat a framed rectangle as sufficient scene integration.",
+      "detection_method": "Shot review asks whether the character appears to occupy the same physical space as the environment at thumbnail and full size.",
+      "implementation_changes": [
+        "V5.3 rectangular Victor doorway replaced by arched opening with clipping/occlusion"
+      ],
+      "validation": [
+        "Matched frame shows improved physical integration without changing the source figure."
+      ],
+      "confidence": "HIGH",
+      "status": "ENCODED",
+      "superseded_by": null
     }
   ]
 }
