@@ -13,3 +13,8 @@ The renderer is **not evidence that every visual Item is final-approved**. Quali
 Do not add alternate active renderers beside `render_current.js`. Replace the canonical implementation when a method change is accepted; preserve history in Git and the version logs.
 
 Generated frames, WAV files and MP4 masters are runtime/output artifacts and are not the source of truth.
+
+
+## Governance status
+
+Method metadata is at **5.2.1**. This version adds atomic Item/source-fidelity governance but does not claim a new visual render beyond the V5.1 prototype. Use `make production-validate` for structural validation and `make production-strict` only as the final approval gate.
