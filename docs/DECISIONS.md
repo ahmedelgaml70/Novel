@@ -291,3 +291,39 @@ When a method is replaced, obsolete current instructions are removed rather than
 Assets/Items created before the current governance method do not automatically become approved because they already render.
 
 The Frankenstein V5.1 benchmark is explicitly subject to V5.2 atomic revalidation. Structural reproducibility and final asset approval are separate gates.
+
+## D-022 — Source contracts are best-fit and revisable
+
+**Status:** Accepted
+
+Source/edition/translation selection is an episode-level decision, not a universal framework rule.
+
+The system compares candidate sources against completeness, adaptation goal, edition significance, wording consequences, translation quality, rights/provenance and creative value.
+
+During development the contract may remain OPEN/PROVISIONAL and may be replaced when a materially better source appears. A final master requires an explicit source contract for reproducibility, but the framework never preselects a specific edition.
+
+Changing the source contract invalidates dependent source obligations and requires targeted revalidation.
+
+## D-023 — Universal production system is separate from style modules and episodes
+
+**Status:** Accepted
+
+The architecture has three layers:
+
+1. universal production governance;
+2. optional style/renderer module;
+3. episode/novel-specific project data.
+
+Living Engraving is one style module. Frankenstein is one worked benchmark. Neither defines the universal system.
+
+## D-024 — Formal production learning loop
+
+**Status:** Accepted
+
+Material failures and successful improvements are captured as structured lessons with scope, evidence, root cause, prevention rule, detection method and implementation/validation state.
+
+Lesson scopes are EPISODE, STYLE, CATEGORY and GLOBAL.
+
+A lesson is not considered complete merely because it is documented in a version log. Where appropriate, it must change a validator/test, structured record, checklist, method rule, benchmark or other prevention mechanism.
+
+Episode-specific facts are not promoted to global rules without a generalizable mechanism or supporting evidence.
