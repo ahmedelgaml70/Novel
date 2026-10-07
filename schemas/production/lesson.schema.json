@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Novel Production Lesson",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "scope",
+    "observed_weakness",
+    "root_cause",
+    "prevention_rule",
+    "detection_method",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "scope": {
+      "enum": [
+        "EPISODE",
+        "STYLE",
+        "CATEGORY",
+        "GLOBAL"
+      ]
+    },
+    "source_context": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "observed_weakness": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "root_cause": {
+      "type": "string"
+    },
+    "consequence": {
+      "type": "string"
+    },
+    "prevention_rule": {
+      "type": "string"
+    },
+    "detection_method": {
+      "type": "string"
+    },
+    "implementation_changes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "validation": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "confidence": {
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH"
+      ]
+    },
+    "status": {
+      "enum": [
+        "OBSERVED",
+        "ANALYZED",
+        "PREVENTION_PROPOSED",
+        "TESTED",
+        "PROMOTED",
+        "ENCODED",
+        "VERIFIED_IN_LATER_WORK",
+        "EPISODE_ONLY",
+        "REJECTED",
+        "SUPERSEDED"
+      ]
+    },
+    "superseded_by": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}
