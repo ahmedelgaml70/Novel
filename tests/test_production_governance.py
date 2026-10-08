@@ -14,12 +14,12 @@ class ProductionGovernanceTests(unittest.TestCase):
     def test_frankenstein_records_are_structurally_valid(self):
         p=self.run_validator()
         self.assertEqual(p.returncode,0,p.stdout+"\n"+p.stderr)
-        self.assertIn("62 items",p.stdout)
-        self.assertIn("55 active",p.stdout)
-        self.assertIn("7 inactive-history",p.stdout)
-        self.assertIn("20 sources",p.stdout)
+        self.assertIn("67 items",p.stdout)
+        self.assertIn("59 active",p.stdout)
+        self.assertIn("8 inactive-history",p.stdout)
+        self.assertIn("14 sources",p.stdout)
         self.assertIn("14 source obligations",p.stdout)
-        self.assertIn("21 reusable lessons",p.stdout)
+        self.assertIn("22 reusable lessons",p.stdout)
         self.assertIn("STRUCTURAL GATE: PASS",p.stdout)
 
     def test_source_contract_is_revisable_and_not_preselected(self):
@@ -43,6 +43,7 @@ class ProductionGovernanceTests(unittest.TestCase):
         self.assertNotEqual(p.returncode,0)
         self.assertIn("BLOCKER SUMMARY",p.stdout)
         self.assertIn("source_contract",p.stdout)
+        self.assertIn("quality=",p.stdout)
 
 if __name__=="__main__":
     unittest.main()

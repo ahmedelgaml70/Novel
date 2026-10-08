@@ -15,6 +15,7 @@ import json
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
+from validate_project_memory import check_project
 
 REQUIREMENT_FIELDS=("story","period","visual","motion","continuity","technical","rights")
 FINAL_REQUIRED={"HERO","PRIMARY"}
@@ -242,8 +243,6 @@ def main():
 
     if args.strict_final:
         for it in active_items:
-            if it["importance"] not in FINAL_REQUIRED:
-                continue
             iid=it["id"]
             d=decision_map[it["decision_id"]]
             if it["status"]!="FINAL_APPROVED":
@@ -277,6 +276,9 @@ def main():
                     err("source_fidelity",f"{o['id']}: unresolved HERO obligation for selected source ({state})")
                 if "CONTRADICTION" in state:
                     err("source_fidelity",f"{o['id']}: explicit source contradiction")
+
+    for message in check_project(root, args.episode, strict=args.strict_final):
+        err("quality",message)
 
     if errors:
         detail=max(0,args.max_detail)

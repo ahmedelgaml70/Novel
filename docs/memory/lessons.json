@@ -130,6 +130,32 @@
       ],
       "source": "User correction 2026-10-07; code audit where identified",
       "promotion_rule": "Keep project-scoped; revise if later evidence contradicts the implementation hypothesis, never silently discard the requirement."
+    },
+    {
+      "id": "L011",
+      "scope": "Novel/project",
+      "classification": "USER_REQUIREMENT",
+      "status": "ACTIVE",
+      "trigger": "User abandoned generated stills and raster-warp motion",
+      "action": "Use ready assets usable with Hyperframe and JavaScript. Preserve the documented Three.js skeletal baseline; verify Hyperframe compatibility before depending on it. Custom rig/model/animation work requires documented failure of ready alternatives.",
+      "evidence": [
+        "episodes/frankenstein-prototype/quality_review.json#Q003"
+      ],
+      "source": "User correction and repository learning audit 2026-10-07",
+      "promotion_rule": "Project-scoped; authority comes from user correction and dated repository evidence, not from the tool choice."
+    },
+    {
+      "id": "L012",
+      "scope": "Novel/project",
+      "classification": "USER_REQUIREMENT",
+      "status": "ACTIVE",
+      "trigger": "An outdated checkout caused already-rejected approaches to be repeated",
+      "action": "Fetch the repository, identify the latest main and relevant work branches, and read current memory plus experiment findings before production. Preserve abandoned work separately. Do not repeat the passed skeletal proof or mistake legacy method text for current approval.",
+      "evidence": [
+        "episodes/frankenstein-prototype/quality_review.json#Q010"
+      ],
+      "source": "User correction and repository learning audit 2026-10-07",
+      "promotion_rule": "Project-scoped; authority comes from user correction and dated repository evidence, not from the tool choice."
     }
   ]
 }

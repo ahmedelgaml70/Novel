@@ -158,7 +158,7 @@ Current production governance:
 - structural reproducibility and final asset approval are separate gates;
 - current instructions and historical version learning are stored separately.
 
-First worked audit: `episodes/frankenstein-prototype/` — 62 Items, 62 decision records, 20 research sources, 14 conditional source obligations, six benchmark shots. Frankenstein is a benchmark/example, not the shape of the universal system. Its episode records also separate diegetic time, publication/edition time, and visual-reference time in `temporal_context.json`.
+First worked audit: `episodes/frankenstein-prototype/` — 67 Items (59 active, 8 retired), 67 decision records, 14 research sources, 14 conditional source obligations, six benchmark shots. Frankenstein is a benchmark/example, not the shape of the universal system. Its episode records also separate diegetic time, publication/edition time, and visual-reference time in `temporal_context.json`.
 
 The V5.1 film is a prototype benchmark, **not** final-approved. The V5.2 strict-final gate intentionally remains red until each important Item wins its own evidence/candidate/shot-fit process.
 

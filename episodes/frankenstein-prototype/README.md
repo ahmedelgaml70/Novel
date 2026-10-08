@@ -11,7 +11,7 @@ This folder is the first worked example of the atomic production-governance meth
 
 V5.1 is useful as a visual benchmark, but it was built before the current requirements-before-search and candidate-comparison rules existed. Therefore its Items are **not grandfathered** into final approval.
 
-The current audit isolates 62 independently judgeable Items across:
+The current audit isolates 67 independently judgeable Items (59 active and 8 retired) across:
 
 - global paper/ink/material treatment;
 - Ingolstadt exterior;

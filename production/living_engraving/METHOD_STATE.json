@@ -18,5 +18,13 @@
   "diagnostics_cover_all_items": true,
   "project_memory": "../../docs/memory/STATE.md",
   "quality_review": "../../episodes/frankenstein-prototype/quality_review.json",
-  "style_status": "UNAPPROVED_REDESIGN_REQUIRED"
+  "style_status": "UNAPPROVED_REDESIGN_REQUIRED",
+  "performance_baseline": {
+    "version": "5.4.1",
+    "module": "../rigged3d",
+    "status": "DOCUMENTED_SKELETAL_ARCHITECTURE_GATE_PASS",
+    "findings": "../../docs/experiments/E-VID-006_FINDINGS.md",
+    "ready_asset_first": true,
+    "hyperframe_integration": "USER_REQUIRED_NOT_YET_VERIFIED"
+  }
 }

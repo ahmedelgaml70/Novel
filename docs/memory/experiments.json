@@ -78,7 +78,90 @@
         "Hand drawing remains schematic, fingers compressed; style and grip anatomy are not approved.",
         "Recurring-shot census found missing original Item bindings; inventory corrected and integration test added."
       ]
+    },
+    {
+      "id": "E-V55-ABANDONED-RASTER",
+      "date": "2026-10-07",
+      "defect_ids": [
+        "Q003",
+        "Q005",
+        "Q006",
+        "Q007",
+        "Q008",
+        "Q009",
+        "Q010"
+      ],
+      "hypothesis": "Generated high-detail art plus a mesh warp would provide plausible articulated engraving motion.",
+      "alternatives": [
+        "Ready rigged characters and animation clips",
+        "Dedicated layered animation art"
+      ],
+      "change": "Generated style comparisons, a complete geometric construction proof and a four-second isolated warped-character diagnostic.",
+      "checks": [
+        "Ten Node geometry/hash tests passed during the attempt.",
+        "The isolated raster motion diagnostic rendered 96 frames; diagnostic frame inspection showed torso pinching and coat deformation.",
+        "User explicitly rejected and abandoned the approach."
+      ],
+      "result": "USER_REJECTED_AND_ABANDONED",
+      "limitations": "Passing joint tests did not establish convincing visible anatomy, physical weight, contact or acting. Work was based on outdated documentation.",
+      "next": "Follow the latest V5.4.1 ready-skeletal baseline; no further raster-warp production work.",
+      "archive_git_stash": "8c11a8641bd19d805b2f4bc254faaf24f2cdbd5b"
+    },
+    {
+      "id": "E-BASELINE-LEARNING-20261007",
+      "date": "2026-10-07",
+      "defect_ids": [
+        "Q010"
+      ],
+      "hypothesis": "Synchronizing the current repository and connecting prior failures to explicit project requirements prevents repetition of rejected approaches.",
+      "alternatives": [
+        "Continue the local raster study: rejected by user",
+        "Repeat skeletal feasibility: unnecessary because the latest findings already report PASS"
+      ],
+      "change": "Read and synchronize latest main, preserve failed work, record the goal and lessons, reconcile obligation links and activity aliases, and retain Hyperframe/JavaScript direction without claiming an implementation. Restore the independent quality/memory gate in production validation and require all active Item statuses at strict-final.",
+      "checks": [
+        "Fetched and fast-forwarded to acb1054; read current project goal, standards, decisions, memory, experiment findings and learning/ready-asset policies.",
+        "Initial latest-main production validation exposed 19 missing source-obligation reverse links.",
+        "Before the final quality-gate integration repair, 33 Python tests and four Node tests passed; renderer and memory validation passed. Both separate final checks rejected unresolved approval.",
+        "After reconciliation, make production-validate passed: 67 Items, 59 active, eight retired, 14 sources, 14 obligations, 22 reusable lessons and six shots.",
+        "All 33 Python repository tests passed after restoring the quality-gate integration; four existing Node mechanism tests and renderer validation passed.",
+        "make production-validate-final rejected all 59 active Item states, the open source contract and 17 independent quality blockers (ten defects, six shots, style).",
+        "git diff --check passed."
+      ],
+      "result": "CURRENT_BASELINE_AND_MEMORY_RECONCILED",
+      "limitations": "No new film/artistic approval, no skeletal proof rerender, no verified Hyperframe integration.",
+      "next": "One story-specific Frankenstein beat using ready outfit/character, set and prop candidates on the proven skeletal path.",
+      "implementation_evidence": [
+        {
+          "path": "docs/memory/LEARNING_REVIEW.md",
+          "sha256": "5b45aaf1029a345bca482173805b4eeb518c42ccf1d9427af0c860b18cffc68b"
+        },
+        {
+          "path": "docs/production/CURRENT_METHOD.md",
+          "sha256": "2dba6a84bb72bf25dc9feff52867675b7f0251512f63a722ce0a109aca4965a5"
+        },
+        {
+          "path": "production/living_engraving/METHOD_STATE.json",
+          "sha256": "ec85915926d6fff1c08086cc8afd3f96655e999ecc811df2c1dc4c4928440f5e"
+        },
+        {
+          "path": "production/rigged3d/src/capture.js",
+          "sha256": "738fba03ae4203589fb5a4360f07bc86c6f5b4b23c8d730ba83f794cfee90b2d"
+        },
+        {
+          "path": "episodes/frankenstein-prototype/item_inventory.json",
+          "sha256": "f5bedfb06477f44dd0d391bfeeb088a761880c2aebfc6d4ae9eddbae84b8d447"
+        },
+        {
+          "path": "scripts/validate_production_records.py",
+          "sha256": "faa800a151bf5dcb36c6e15756d6b8309b1499013452638248f5a0ae32e7fa2a"
+        },
+        {
+          "path": "tests/test_production_governance.py",
+          "sha256": "f9a3681cc72b1b2faa560e4a97e00909cc823d44e69d4a98e721893d24a21f9f"
+        }
+      ]
     }
   ],
-  "current_experiment_id": "E-V54-MECHANICS"
+  "current_experiment_id": "E-BASELINE-LEARNING-20261007"
 }

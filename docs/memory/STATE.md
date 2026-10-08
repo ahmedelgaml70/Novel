@@ -48,3 +48,16 @@ Frankenstein V5.3 remains **USER_REJECTED** for style, anatomy, staging, physica
 - `episodes/frankenstein-prototype/quality_review.json` — unresolved historical film-quality defects.
 
 Automated checks validate structure/mechanics/evidence integrity. They do not certify artistic quality or human comprehension.
+
+## Session correction and project learning (2026-10-07)
+
+This checkout was synchronized to origin/main acb1054 after an outdated local
+branch caused a rejected V5.5 generated-still/warp experiment. That attempt is
+abandoned and preserved in Git stash 8c11a8641bd19d805b2f4bc254faaf24f2cdbd5b.
+Do not restore it as the production direction.
+
+User requires ready assets usable with Hyperframe and JavaScript. Three.js is the
+documented tested skeletal engine; Hyperframe integration has not been verified.
+Read LEARNING_REVIEW.md before new work. The documented skeletal proof passed;
+Frankenstein's final art, acting, source contract, sound and shot reviews remain
+open. Record repairs during this audit grant no new artistic approvals.

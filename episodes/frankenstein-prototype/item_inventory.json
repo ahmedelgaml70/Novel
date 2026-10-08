@@ -7,7 +7,8 @@
   "final_gate_note": "User-rejected art/style; mechanics diagnostics do not grant approval.",
   "counts": {
     "items": 67,
-    "active_items": 59
+    "active_items": 59,
+    "inactive_history": 8
   },
   "items": [
     {
@@ -50,7 +51,8 @@
       "source_ids": [],
       "decision_id": "DEC-paper_field",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "ink_speck_grain",
@@ -92,7 +94,8 @@
       "source_ids": [],
       "decision_id": "DEC-ink_speck_grain",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "vignette_value_structure",
@@ -134,7 +137,8 @@
       "source_ids": [],
       "decision_id": "DEC-vignette_value_structure",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "engraving_hatching",
@@ -179,7 +183,8 @@
       ],
       "decision_id": "DEC-engraving_hatching",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "living_engraving_palette",
@@ -221,7 +226,8 @@
       "source_ids": [],
       "decision_id": "DEC-living_engraving_palette",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "ingolstadt_roofline",
@@ -263,7 +269,11 @@
       ],
       "decision_id": "DEC-ingolstadt_roofline",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true,
+      "source_obligation_ids": [
+        "OBL-FR-014"
+      ]
     },
     {
       "id": "laboratory_exterior_building",
@@ -304,7 +314,11 @@
       ],
       "decision_id": "DEC-laboratory_exterior_building",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true,
+      "source_obligation_ids": [
+        "OBL-FR-014"
+      ]
     },
     {
       "id": "gothic_laboratory_window",
@@ -347,7 +361,11 @@
       ],
       "decision_id": "DEC-gothic_laboratory_window",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true,
+      "source_obligation_ids": [
+        "OBL-FR-003"
+      ]
     },
     {
       "id": "city_window_pattern",
@@ -386,7 +404,8 @@
       ],
       "decision_id": "DEC-city_window_pattern",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "storm_sky",
@@ -425,7 +444,11 @@
       ],
       "decision_id": "DEC-storm_sky",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true,
+      "source_obligation_ids": [
+        "OBL-FR-001"
+      ]
     },
     {
       "id": "rain_field",
@@ -465,7 +488,11 @@
       ],
       "decision_id": "DEC-rain_field",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true,
+      "source_obligation_ids": [
+        "OBL-FR-003"
+      ]
     },
     {
       "id": "exterior_lightning",
@@ -502,7 +529,8 @@
       "source_ids": [],
       "decision_id": "DEC-exterior_lightning",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "exterior_camera_push",
@@ -539,7 +567,8 @@
       "source_ids": [],
       "decision_id": "DEC-exterior_camera_push",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "creation_chamber_composition",
@@ -582,7 +611,8 @@
       ],
       "decision_id": "DEC-creation_chamber_composition",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "creation_chamber_architecture",
@@ -624,7 +654,8 @@
       ],
       "decision_id": "DEC-creation_chamber_architecture",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "timber_wall_beams",
@@ -663,7 +694,8 @@
       "source_ids": [],
       "decision_id": "DEC-timber_wall_beams",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "laboratory_floor",
@@ -701,7 +733,8 @@
       "source_ids": [],
       "decision_id": "DEC-laboratory_floor",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "laboratory_door",
@@ -742,7 +775,8 @@
       ],
       "decision_id": "DEC-laboratory_door",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "laboratory_shelves_papers",
@@ -781,7 +815,8 @@
       "source_ids": [],
       "decision_id": "DEC-laboratory_shelves_papers",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "creation_bed_slab",
@@ -822,7 +857,8 @@
       ],
       "decision_id": "DEC-creation_bed_slab",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "creature_drapery",
@@ -864,7 +900,8 @@
       ],
       "decision_id": "DEC-creature_drapery",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "open_folio",
@@ -904,7 +941,8 @@
       ],
       "decision_id": "DEC-open_folio",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "skull_foreground",
@@ -944,7 +982,8 @@
       ],
       "decision_id": "DEC-skull_foreground",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "foreground_copper_cable",
@@ -987,7 +1026,8 @@
       "decision_id": "DEC-foreground_copper_cable",
       "status": "REPLACED",
       "active": false,
-      "retirement_reason": "Disconnected decorative cable removed."
+      "retirement_reason": "Disconnected decorative cable removed.",
+      "active_in_current_cut": false
     },
     {
       "id": "victor_silhouette",
@@ -1031,7 +1071,8 @@
       ],
       "decision_id": "DEC-victor_silhouette",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "victor_head_profile",
@@ -1072,7 +1113,8 @@
       ],
       "decision_id": "DEC-victor_head_profile",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "victor_hair",
@@ -1111,7 +1153,8 @@
       "source_ids": [],
       "decision_id": "DEC-victor_hair",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "victor_coat",
@@ -1154,7 +1197,8 @@
       ],
       "decision_id": "DEC-victor_coat",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "victor_collar_cravat",
@@ -1197,7 +1241,8 @@
       ],
       "decision_id": "DEC-victor_collar_cravat",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "victor_hand",
@@ -1239,7 +1284,8 @@
       ],
       "decision_id": "DEC-victor_hand",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "victor_recoil_pose",
@@ -1281,7 +1327,11 @@
       ],
       "decision_id": "DEC-victor_recoil_pose",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true,
+      "source_obligation_ids": [
+        "OBL-FR-013"
+      ]
     },
     {
       "id": "creature_body_proportions",
@@ -1291,7 +1341,7 @@
         "creation_chamber",
         "recoil_tableau"
       ],
-      "purpose": "Create an uncanny but anatomically coherent body based on the novel rather than later film clichés.",
+      "purpose": "Create an uncanny but anatomically coherent body based on the novel rather than later film clich\u00e9s.",
       "checklist_profile": "anatomy",
       "requirements": {
         "story": [
@@ -1323,7 +1373,13 @@
       ],
       "decision_id": "DEC-creature_body_proportions",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true,
+      "source_obligation_ids": [
+        "OBL-FR-008",
+        "OBL-FR-009",
+        "OBL-FR-010"
+      ]
     },
     {
       "id": "creature_head_shape",
@@ -1365,7 +1421,13 @@
       ],
       "decision_id": "DEC-creature_head_shape",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true,
+      "source_obligation_ids": [
+        "OBL-FR-009",
+        "OBL-FR-010",
+        "OBL-FR-012"
+      ]
     },
     {
       "id": "creature_hair",
@@ -1408,7 +1470,11 @@
       ],
       "decision_id": "DEC-creature_hair",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true,
+      "source_obligation_ids": [
+        "OBL-FR-011"
+      ]
     },
     {
       "id": "creature_eye",
@@ -1451,7 +1517,12 @@
       ],
       "decision_id": "DEC-creature_eye",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true,
+      "source_obligation_ids": [
+        "OBL-FR-006",
+        "OBL-FR-012"
+      ]
     },
     {
       "id": "creature_rise_motion",
@@ -1491,7 +1562,11 @@
       ],
       "decision_id": "DEC-creature_rise_motion",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true,
+      "source_obligation_ids": [
+        "OBL-FR-008"
+      ]
     },
     {
       "id": "voltaic_pile",
@@ -1533,7 +1608,11 @@
       ],
       "decision_id": "DEC-voltaic_pile",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true,
+      "source_obligation_ids": [
+        "OBL-FR-005"
+      ]
     },
     {
       "id": "leyden_jar_primary",
@@ -1575,7 +1654,11 @@
       ],
       "decision_id": "DEC-leyden_jar_primary",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true,
+      "source_obligation_ids": [
+        "OBL-FR-005"
+      ]
     },
     {
       "id": "leyden_jar_secondary",
@@ -1616,7 +1699,11 @@
       "decision_id": "DEC-leyden_jar_secondary",
       "status": "REPLACED",
       "active": false,
-      "retirement_reason": "Unconnected duplicate vessel removed."
+      "retirement_reason": "Unconnected duplicate vessel removed.",
+      "active_in_current_cut": false,
+      "source_obligation_ids": [
+        "OBL-FR-005"
+      ]
     },
     {
       "id": "brass_contact",
@@ -1658,7 +1745,11 @@
       ],
       "decision_id": "DEC-brass_contact",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true,
+      "source_obligation_ids": [
+        "OBL-FR-005"
+      ]
     },
     {
       "id": "copper_wire_network",
@@ -1700,7 +1791,11 @@
       ],
       "decision_id": "DEC-copper_wire_network",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true,
+      "source_obligation_ids": [
+        "OBL-FR-005"
+      ]
     },
     {
       "id": "electric_arc",
@@ -1742,7 +1837,8 @@
       "decision_id": "DEC-electric_arc",
       "status": "REPLACED",
       "active": false,
-      "retirement_reason": "Unsupported discharge removed; no validated electrical model."
+      "retirement_reason": "Unsupported discharge removed; no validated electrical model.",
+      "active_in_current_cut": false
     },
     {
       "id": "anatomy_pages",
@@ -1782,7 +1878,8 @@
       ],
       "decision_id": "DEC-anatomy_pages",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "laboratory_fog",
@@ -1821,7 +1918,8 @@
       "source_ids": [],
       "decision_id": "DEC-laboratory_fog",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "interior_lightning",
@@ -1864,7 +1962,8 @@
       "decision_id": "DEC-interior_lightning",
       "status": "REPLACED",
       "active": false,
-      "replacement_note": "Interior lightning is removed; the creation text motivates a failing candle."
+      "replacement_note": "Interior lightning is removed; the creation text motivates a failing candle.",
+      "active_in_current_cut": false
     },
     {
       "id": "creation_camera_drift",
@@ -1901,7 +2000,8 @@
       "source_ids": [],
       "decision_id": "DEC-creation_camera_drift",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "victor_door_shadow",
@@ -1938,7 +2038,11 @@
       "source_ids": [],
       "decision_id": "DEC-victor_door_shadow",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true,
+      "source_obligation_ids": [
+        "OBL-FR-013"
+      ]
     },
     {
       "id": "first_eye_shadow_mask",
@@ -1975,7 +2079,11 @@
       "source_ids": [],
       "decision_id": "DEC-first_eye_shadow_mask",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true,
+      "source_obligation_ids": [
+        "OBL-FR-006"
+      ]
     },
     {
       "id": "linen_closeup_edge",
@@ -2014,7 +2122,8 @@
       ],
       "decision_id": "DEC-linen_closeup_edge",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "lightning_cut",
@@ -2051,7 +2160,8 @@
       "source_ids": [],
       "decision_id": "DEC-lightning_cut",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "shadow_cut",
@@ -2088,7 +2198,8 @@
       "source_ids": [],
       "decision_id": "DEC-shadow_cut",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "arc_match_cut",
@@ -2126,7 +2237,8 @@
       "decision_id": "DEC-arc_match_cut",
       "status": "REPLACED",
       "active": false,
-      "replacement_note": "Removed whole-frame arc transition; the cut now uses the eye-opening beat."
+      "replacement_note": "Removed whole-frame arc transition; the cut now uses the eye-opening beat.",
+      "active_in_current_cut": false
     },
     {
       "id": "title_frankenstein",
@@ -2166,7 +2278,8 @@
       ],
       "decision_id": "DEC-title_frankenstein",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "subtitle_modern_prometheus",
@@ -2205,7 +2318,8 @@
       ],
       "decision_id": "DEC-subtitle_modern_prometheus",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "audio_low_drone",
@@ -2247,7 +2361,8 @@
       "source_ids": [],
       "decision_id": "DEC-audio_low_drone",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "audio_noise_roomtone",
@@ -2289,7 +2404,8 @@
       "source_ids": [],
       "decision_id": "DEC-audio_noise_roomtone",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "thunder_cues",
@@ -2327,7 +2443,8 @@
       "source_ids": [],
       "decision_id": "DEC-thunder_cues",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "footstep_cues",
@@ -2365,7 +2482,8 @@
       "decision_id": "DEC-footstep_cues",
       "status": "REPLACED",
       "active": false,
-      "replacement_note": "Removed because the tableau does not show steps that would justify Foley."
+      "replacement_note": "Removed because the tableau does not show steps that would justify Foley.",
+      "active_in_current_cut": false
     },
     {
       "id": "electrical_crackle_audio",
@@ -2404,7 +2522,8 @@
       "decision_id": "DEC-electrical_crackle_audio",
       "status": "REPLACED",
       "active": false,
-      "retirement_reason": "Unsupported discharge sound removed."
+      "retirement_reason": "Unsupported discharge sound removed.",
+      "active_in_current_cut": false
     },
     {
       "id": "arc_hit_audio",
@@ -2442,7 +2561,8 @@
       "decision_id": "DEC-arc_hit_audio",
       "status": "REPLACED",
       "active": false,
-      "retirement_reason": "Unsupported discharge sound removed."
+      "retirement_reason": "Unsupported discharge sound removed.",
+      "active_in_current_cut": false
     },
     {
       "id": "victor_breath",
@@ -2481,7 +2601,8 @@
       ],
       "decision_id": "DEC-victor_breath",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "creature_heartbeat",
@@ -2518,7 +2639,11 @@
       "source_ids": [],
       "decision_id": "DEC-creature_heartbeat",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true,
+      "source_obligation_ids": [
+        "OBL-FR-007"
+      ]
     },
     {
       "id": "candle_stub",
@@ -2540,7 +2665,7 @@
           "Plausible material and scale for the chosen early-19th-century illustration language."
         ],
         "visual": [
-          "Small, deliberate, readable element; inspect at 1280×720 in context."
+          "Small, deliberate, readable element; inspect at 1280\u00d7720 in context."
         ],
         "motion": [
           "Deterministic variation; avoid loop-like motion and independent drift."
@@ -2560,7 +2685,8 @@
       ],
       "decision_id": "DEC-candle_stub",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "candle_flame",
@@ -2582,7 +2708,7 @@
           "Plausible material and scale for the chosen early-19th-century illustration language."
         ],
         "visual": [
-          "Small, deliberate, readable element; inspect at 1280×720 in context."
+          "Small, deliberate, readable element; inspect at 1280\u00d7720 in context."
         ],
         "motion": [
           "Deterministic variation; avoid loop-like motion and independent drift."
@@ -2602,7 +2728,8 @@
       ],
       "decision_id": "DEC-candle_flame",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "candle_light_pool",
@@ -2623,7 +2750,7 @@
           "Plausible material and scale for the chosen early-19th-century illustration language."
         ],
         "visual": [
-          "Small, deliberate, readable element; inspect at 1280×720 in context."
+          "Small, deliberate, readable element; inspect at 1280\u00d7720 in context."
         ],
         "motion": [
           "Deterministic variation; avoid loop-like motion and independent drift."
@@ -2643,7 +2770,8 @@
       ],
       "decision_id": "DEC-candle_light_pool",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "creature_hand",
@@ -2664,7 +2792,7 @@
           "Plausible material and scale for the chosen early-19th-century illustration language."
         ],
         "visual": [
-          "Small, deliberate, readable element; inspect at 1280×720 in context."
+          "Small, deliberate, readable element; inspect at 1280\u00d7720 in context."
         ],
         "motion": [
           "Deterministic variation; avoid loop-like motion and independent drift."
@@ -2684,7 +2812,8 @@
       ],
       "decision_id": "DEC-creature_hand",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     },
     {
       "id": "rain_patter_audio",
@@ -2706,7 +2835,7 @@
           "Plausible material and scale for the chosen early-19th-century illustration language."
         ],
         "visual": [
-          "Small, deliberate, readable element; inspect at 1280×720 in context."
+          "Small, deliberate, readable element; inspect at 1280\u00d7720 in context."
         ],
         "motion": [
           "Deterministic variation; avoid loop-like motion and independent drift."
@@ -2726,7 +2855,8 @@
       ],
       "decision_id": "DEC-rain_patter_audio",
       "status": "NEEDS_REVALIDATION",
-      "active": true
+      "active": true,
+      "active_in_current_cut": true
     }
   ]
 }
